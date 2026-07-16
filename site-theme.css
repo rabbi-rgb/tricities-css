@@ -2497,3 +2497,59 @@ body:has(.chabad_content_head) .form-all select:focus {
   outline-color: #249FD0 !important;
   box-shadow: 0 0 0 2px rgba(36, 159, 208, 0.14) !important;
 }
+/* ============================================================
+   CUSTOM PAGE HERO HEIGHT FIX
+   Restores full-height image banners on custom article pages.
+   ============================================================ */
+
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) {
+  min-height: 260px !important;
+  padding: 70px 20px !important;
+  box-sizing: border-box !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Center the title inside the hero */
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header {
+  width: 100% !important;
+  max-width: 1100px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+/* Keep hero title white */
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header__title {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.55) !important;
+}
+
+/* Keep small category/breadcrumb text white */
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs,
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs a,
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs__crumb {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.45) !important;
+}
+
+/* Mobile hero height */
+@media (max-width: 700px) {
+  html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) {
+    min-height: 210px !important;
+    padding: 48px 18px !important;
+  }
+
+  html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header__title {
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+  }
+}
