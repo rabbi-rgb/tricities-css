@@ -1,0 +1,2499 @@
+/* ============================================================
+   TRI-CITIES CHABAD â€” COMPLETE SITE THEME
+   Replace all previous custom CSS with this entire block.
+   ============================================================ */
+
+
+/* ============================================================
+   1. GOOGLE FONTS
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700;800&display=swap');
+
+
+/* ============================================================
+   2. BRAND COLOURS / THEME VARIABLES
+   ============================================================ */
+
+:root {
+  /* Main brand palette */
+  --tc-green: #578A45;
+  --tc-green-dark: #315F3C;
+  --tc-teal: #178F9F;
+  --tc-teal-dark: #0E6E7B;
+  --tc-aqua: #4CBECE;
+
+  /* Supporting colours */
+  --tc-ivory: #FBFAF6;
+  --tc-soft-green: #ECECEC;
+  --tc-soft-gray: #F3F5F3;
+  --tc-white: #FFFFFF;
+  --tc-text: #293633;
+  --tc-muted: #65706D;
+  --tc-border: #D9E5E0;
+
+  /* ChabadOne theme variable overrides */
+  --theme-primary-color: #178F9F;
+  --theme-secondary-color-alt1: #0E6E7B;
+  --theme-secondary-color-alt2: #4CBECE;
+  --theme-secondary-color-alt3: #4CBECE;
+  --theme-gradient-color-1: #4CBECE;
+  --theme-gradient-color-2: #249FAF;
+  --theme-gradient-color-3: #178F9F;
+  --theme-gradient-color-4: #0E6E7B;
+  --theme-footer-text: #FFFFFF;
+  --theme-footer-link: #E6FAF7;
+  --theme-alt-font: 'Montserrat', Arial, sans-serif;
+}
+
+
+/* ============================================================
+   3. GLOBAL TYPOGRAPHY
+   Avoids using * so icon fonts and ChabadOne widgets are safe.
+   ============================================================ */
+
+body,
+p,
+li,
+td,
+th,
+input,
+textarea,
+select,
+label,
+small,
+.form-all,
+.form-all input,
+.form-all textarea,
+.form-all select,
+.co_body,
+.co_body .content {
+  font-family: 'Inter', Arial, sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.header-title,
+.Content_Title,
+.content_title,
+.content_title_container h1,
+.article-header__title,
+button,
+input[type="submit"],
+input[type="button"],
+.co_menu_item span,
+.co_menu_item a,
+nav a,
+.readMore,
+.donate-button,
+.next-button {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+
+/* ============================================================
+   4. SITE BACKGROUNDS
+   ============================================================ */
+
+body,
+#BodyContainer,
+.co_body {
+  background: var(--tc-ivory);
+}
+
+/* Main non-hero homepage rows */
+.hp-table .hp-row:not(.hp-row-first):not(.hp_subscribe) {
+  background: var(--tc-ivory) !important;
+}
+
+/* Light alternating homepage sections */
+.hp-table .hp-row:nth-child(even):not(.hp-row-first):not(.hp_subscribe) {
+  background: var(--tc-soft-green) !important;
+}
+
+/* Keep grids and widgets clean */
+#co_ads_container,
+#customizable_promos,
+.latest_photos,
+.sneak-peek-container {
+  background-color: transparent !important;
+}
+
+
+/* ============================================================
+   5. HEADINGS AND BODY TEXT
+   ============================================================ */
+
+.co_body .content h1,
+.co_body .content h2,
+.co_body .content h3,
+.co_body .content h4,
+.co_body .content h5,
+.co_body .content h6,
+.content_title_container .content_title,
+.content_title_container h1,
+.article-header__title,
+.Content_Title,
+.header-title,
+.co_body .content .SCHeading_1,
+.form-header-group h1,
+.chabad_updates .widget_header.widget_header h5,
+[class*="widget-"] .widget_header.widget_header h5,
+.message .wrapper .widget_content .item .title,
+.message .wrapper .widget_content .item .title a,
+.message .wrapper .widget_content.message_format h6 {
+  color: var(--tc-green) !important;
+}
+
+.chabad_updates .widget_header.widget_header h5,
+[class*="widget-"] .widget_header.widget_header h5 {
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.co_body .content p,
+.co_body .content li,
+.article-body p,
+.article-body li {
+  color: var(--tc-text) !important;
+}
+
+
+/* ============================================================
+   6. LINKS
+   ============================================================ */
+
+.co_local_menu .item a, #LocalNavigationQuickLinks .header, #LocalNavigationQuickLinks .item, #LocalNavigationQuickLinks .item a, #LocalNavigationQuickLinks .item span {
+  color: var(--tc-teal) !important;
+}
+
+.co_local_menu .item a :hover, #LocalNavigationQuickLinks .header, #LocalNavigationQuickLinks .item, #LocalNavigationQuickLinks .item a, #LocalNavigationQuickLinks .item span:hover,
+#LocalNavigationQuickLinks .header, #LocalNavigationQuickLinks .item, #LocalNavigationQuickLinks .item a, #LocalNavigationQuickLinks .item span:focus, .co_local_menu .item a:focus {
+  color: var(--tc-green-dark) !important;
+}
+
+
+/* ============================================================
+   7. HEADER â€” HOMEPAGE HERO STATE
+   Transparent header with white navigation over hero image.
+   ============================================================ */
+
+body:not(.sites-article) #header:not(.on-scroll),
+body:not(.sites-article) #header:not(.on-scroll) #header_container {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+body:not(.sites-article) #header:not(.on-scroll) .branding-search #header_branding .site_title,
+body:not(.sites-article) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent,
+body:not(.sites-article) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a,
+body:not(.sites-article) #header:not(.on-scroll) #tabContentMain > td > span > div > a {
+  color: #FFFFFF !important;
+}
+
+body:not(.sites-article) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a:hover {
+  color: var(--tc-aqua) !important;
+}
+
+
+/* ============================================================
+   8. HEADER â€” SCROLLED HOMEPAGE / INNER PAGES
+   ============================================================ */
+
+#header.on-scroll,
+#header.on-scroll #header_container,
+body.sites-article #header,
+body.sites-article #header_container {
+  background: #FFFFFF !important;
+  box-shadow: 0 2px 12px rgba(31, 57, 52, 0.09) !important;
+}
+
+#header.on-scroll .branding-search #header_branding .site_title,
+body.sites-article .branding-search #header_branding .site_title {
+  color: var(--tc-teal) !important;
+}
+
+#header.on-scroll #tabContentMain .co_menu_item span.parent,
+#header.on-scroll #tabContentMain .co_menu_item span.parent a,
+#header.on-scroll #tabContentMain > td > span > div > a,
+body.sites-article #tabContentMain .co_menu_item span.parent,
+body.sites-article #tabContentMain .co_menu_item span.parent a,
+body.sites-article #tabContentMain > td > span > div > a {
+  color: var(--tc-teal) !important;
+}
+
+#header.on-scroll #tabContentMain .co_menu_item span.parent a:hover,
+body.sites-article #tabContentMain .co_menu_item span.parent a:hover,
+body.cco_body #tabContentMain .co_menu_item.selected span.parent a {
+  color: var(--tc-green) !important;
+}
+
+body.cco_body #tabContentMain .co_menu_item.selected a.parent:after {
+  background: var(--tc-green) !important;
+}
+
+
+/* ============================================================
+   9. DONATE BUTTON
+   White outline over hero. Solid green on white header.
+   ============================================================ */
+
+/* Homepage hero state */
+body:not(.sites-article) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a,
+body:not(.sites-article) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+body:not(.sites-article) #header:not(.on-scroll) .donate_link a {
+  background: transparent !important;
+  border: 2px solid #FFFFFF !important;
+  color: #FFFFFF !important;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
+}
+
+body:not(.sites-article) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+body:not(.sites-article) #header:not(.on-scroll) .donate_link a:hover {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+  color: #FFFFFF !important;
+}
+
+/* Scrolled homepage and internal-page state */
+#header.on-scroll #tabContentMain .co_menu_item.donate_link span.parent a,
+#header.on-scroll #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+body.sites-article #tabContentMain .co_menu_item.donate_link span.parent a,
+body.sites-article #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+#header.on-scroll .donate_link a,
+body.sites-article .donate_link a {
+  background: var(--tc-green) !important;
+  border: 2px solid var(--tc-green) !important;
+  color: #FFFFFF !important;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
+}
+
+#header.on-scroll #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+body.sites-article #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+#header.on-scroll .donate_link a:hover,
+body.sites-article .donate_link a:hover {
+  background: var(--tc-green-dark) !important;
+  border-color: var(--tc-green-dark) !important;
+  color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   10. SUBMENUS / DROPDOWNS
+   ============================================================ */
+
+.co_menu_item .co_submenu_container .menu_child {
+  border-top-color: var(--tc-green) !important;
+}
+
+#tabContentMain .co_menu_item.arrow .co_submenu_container a.item,
+#tabContentMain .co_menu_item.arrow .co_submenu_container a.item span,
+body.cco_body #tabContentMain .co_submenu_container .co_column a {
+  color: var(--tc-teal) !important;
+}
+
+#tabContentMain .co_menu_item.arrow .co_submenu_container a.item:hover,
+#tabContentMain .co_menu_item.arrow .co_submenu_container a.item:hover span,
+body.cco_body #tabContentMain .co_submenu_container .co_column a:hover {
+  color: var(--tc-green) !important;
+}
+
+/* Multi-level submenu arrows */
+.dir_ltr .co_menu_item.multi_level .co_submenu_container.reversed a.item img.arrow,
+.dir_rtl .co_menu_item.multi_level .co_submenu_container a.item img.arrow {
+  border-right-color: var(--tc-teal-dark) !important;
+}
+
+.dir_ltr .co_menu_item.multi_level .co_submenu_container a.item img.arrow,
+.dir_rtl .co_menu_item.multi_level .co_submenu_container.reversed a.item img.arrow {
+  border-left-color: var(--tc-teal-dark) !important;
+}
+
+.dir_ltr .co_menu_item.multi_level .co_submenu_container.reversed .menu_child.selected,
+.dir_rtl .co_menu_item.multi_level .co_submenu_container .menu_child.selected {
+  border-right-color: var(--tc-green) !important;
+}
+
+.dir_ltr .co_menu_item.multi_level .co_submenu_container .menu_child.selected,
+.dir_rtl .co_menu_item.multi_level .co_submenu_container.reversed .menu_child.selected {
+  border-left-color: var(--tc-green) !important;
+}
+
+
+/* ============================================================
+   11. READ MORE / OUTLINE BUTTONS
+   ============================================================ */
+
+.readMore,
+a.readMore,
+span.readMore,
+.widget_content .readMore,
+.hp-row .readMore,
+.banner .readMore,
+.article_index_container .readMore,
+.sneak-peek-container .readMore,
+[class*="widget-"] .readMore,
+[class^="widget-"].parsha .readMore {
+  border-color: var(--tc-teal) !important;
+  color: var(--tc-teal) !important;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
+}
+
+.readMore:hover,
+a.readMore:hover,
+span.readMore:hover,
+.widget_content .readMore:hover,
+.hp-row .readMore:hover,
+.banner .readMore:hover,
+.article_index_container .readMore:hover,
+.sneak-peek-container .readMore:hover,
+[class*="widget-"] .readMore:hover,
+[class^="widget-"].parsha .readMore:hover {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+  color: #FFFFFF !important;
+}
+
+/* Latest photos button text */
+.latest_photos .readMore span,
+.hp-row [class^="widget-"].latest_photos .readMore span {
+  color: var(--tc-teal) !important;
+}
+
+.latest_photos .readMore:hover span,
+.hp-row [class^="widget-"].latest_photos .readMore:hover span {
+  color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   12. HERO / PROMO SLIDER
+   ============================================================ */
+
+.hp-table .hp-row .promo_slider .slider .cycle-caption p big,
+.hp-table .hp-row .promo_slider .slider .cycle-caption big {
+  color: var(--tc-aqua) !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+.promo_slider .cycle-caption p > span {
+  color: #FFFFFF !important;
+}
+
+.hp-table .hp-row .promo_slider .slider .cycle-caption .readMore {
+  border-color: var(--tc-aqua) !important;
+  color: #FFFFFF !important;
+}
+
+.hp-table .hp-row .promo_slider .slider .cycle-caption .readMore:hover {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+  color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   13. PROGRAM TILES / SNEAK PEEK OVERLAYS
+   ============================================================ */
+
+.sneak-peek-container .sneak_peek .widget_content h6,
+.sneak-peek-container .sneak_peek .widget_content h6 a,
+.sneak-peek-container .sneak_peek .widget_content h6 a:hover,
+#co_ads_container #customizable_promos .sneak_peek[class*="widget-"] .widget_content h6,
+#co_ads_container #customizable_promos .sneak_peek[class*="widget-"] .widget_content h6 a,
+#co_ads_container #customizable_promos .sneak_peek[class*="widget-"] .widget_content h6 a:hover {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.72) !important;
+}
+
+.sneak-peek-container .sneak_peek .widget_content h6:hover,
+#co_ads_container #customizable_promos .sneak_peek[class*="widget-"] .widget_content h6:hover {
+  background: rgba(23, 143, 159, 0.34) !important;
+}
+
+
+/* ============================================================
+   14. ARTICLE INDEX TILES
+   Includes About Chabad / Our Team / Mission pages.
+   ============================================================ */
+
+.article_index_container .co_index.article_index .row .item .title,
+.article_index_container .co_index.article_index .row .item .title a,
+.article_index_container .co_index.article_index .row .item .title a:hover,
+.content .co_index.double.nested .item .wrapper.imageOnTop > a .title,
+.content .co_index.double.nested .item .wrapper.imageOnTop > a .title div {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.72) !important;
+}
+
+.article_index_container .co_index.article_index .row .item .title a:hover,
+.content .co_index.double.nested .item .wrapper.imageOnTop > a:hover .title {
+  background: rgba(23, 143, 159, 0.34) !important;
+}
+
+
+/* ============================================================
+   15. SUBSCRIBE SECTION
+   Teal gradient intentionally retained.
+   ============================================================ */
+
+.hp-table .hp_subscribe {
+  background: linear-gradient(
+    135deg,
+    #4CBECE 0%,
+    #249FAF 28%,
+    #178F9F 62%,
+    #0E6E7B 100%
+  ) !important;
+}
+
+.hp-row.hp_subscribe .widget_header h5,
+.hp-row.hp_subscribe .widget_header h5 span,
+.hp-row.hp_subscribe .widget_header h5 a,
+.hp_subscribe .widget_header h5,
+.hp_subscribe .widget_header h5 span,
+.hp_subscribe .widget_header h5 a {
+  color: #FFFFFF !important;
+}
+
+.hp_subscribe input[type="text"],
+.hp_subscribe input[type="email"] {
+  background: rgba(255, 255, 255, 0.93) !important;
+  border-color: rgba(255, 255, 255, 0.48) !important;
+  color: var(--tc-text) !important;
+}
+
+.hp_subscribe .wrapper #formContainer fieldset input[type="submit"] {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+  color: #FFFFFF !important;
+}
+
+.hp_subscribe .wrapper #formContainer fieldset input[type="submit"]:hover {
+  background: var(--tc-green-dark) !important;
+  border-color: var(--tc-green-dark) !important;
+}
+
+
+/* ============================================================
+   16. BANNER WIDGET
+   ============================================================ */
+
+.banner .widget_content.index_format .item {
+  background: linear-gradient(
+    135deg,
+    #4CBECE 0%,
+    #249FAF 28%,
+    #178F9F 62%,
+    #0E6E7B 100%
+  ) !important;
+}
+
+.banner .widget_content.index_format .item .title a,
+.banner .widget_content.index_format .item .readMore {
+  color: #FFFFFF !important;
+}
+
+.banner .widget_content.index_format .item .readMore {
+  border-color: #FFFFFF !important;
+}
+
+.banner .widget_content.index_format .item .readMore:hover {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+}
+
+
+/* ============================================================
+   17. ICONS
+   ============================================================ */
+
+.icon .chabad_updates .widget_content .item .icon img,
+.icon .widget_content .item .icon img {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(50%)
+    saturate(1450%) hue-rotate(148deg) brightness(95%) contrast(90%) !important;
+}
+
+.icon .chabad_updates .widget_content .item .icon.loaded a,
+.icon .widget_content .item .icon.loaded a {
+  background: linear-gradient(
+    135deg,
+    var(--tc-aqua),
+    var(--tc-teal),
+    var(--tc-teal-dark)
+  ) !important;
+}
+
+
+/* ============================================================
+   18. CALENDAR
+   ============================================================ */
+
+#calendar_header .cal_secondary_header,
+.cal_header_info a,
+#calendarPicker .header .active_date,
+#calendarPicker a,
+.list_view .list_info,
+.hp_content_wrapper [class*="widget-"].candlelighting
+.candlelighting_content .times_wrapper .bold.large {
+  color: var(--tc-teal) !important;
+}
+
+.cal_header_info a {
+  border-bottom-color: var(--tc-teal) !important;
+}
+
+.cal_header_buttons .cal_button .button,
+#calendarWrapper.gregorian #CivilCal,
+#calendarWrapper.jewish #JewishCal,
+#CalendarContentContainer .year_view .month .day_name td,
+#CalendarContentContainer .year_view .month .month_header,
+#calendar_header #CalendarViewContainer #AddCategoryFiltersButton {
+  background: var(--tc-teal) !important;
+}
+
+.cal_header_buttons .cal_button .button:hover,
+#calendar_header #CalendarViewContainer #AddCategoryFiltersButton:hover {
+  background: var(--tc-green) !important;
+}
+
+#CalendarToggle {
+  border-color: var(--tc-teal) !important;
+}
+
+/* Calendar icons */
+#calendar .item .content #jewish_history .title:before,
+#calendar .item .content #laws_customs .title:before,
+#calendar .item .content #daily_study .title:before,
+#calendar .item .content #torah_portion .title:before,
+#calendar .item .content #zmanim .candlelighting.title:before,
+#calendar.day .candlelighting.title:before,
+#calendar.list .candlelighting.title:before,
+.dir_ltr #calendar .item .content #events .title:before {
+  color: var(--tc-aqua) !important;
+}
+
+
+/* ============================================================
+   19. FORMS AND BUTTONS
+   ============================================================ */
+
+.co_body .content .form-all .form-submit-button {
+  background: var(--tc-teal) !important;
+  color: #FFFFFF !important;
+}
+
+.co_body .content .form-all .form-submit-button:hover,
+.co_body .content .form-all .form-submit-button:focus {
+  background: var(--tc-green) !important;
+}
+
+input,
+textarea,
+select {
+  border-color: var(--tc-border) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--tc-teal) !important;
+  outline-color: var(--tc-teal) !important;
+}
+
+.co_global_button.yellow .button {
+  background: var(--tc-teal) !important;
+  color: #FFFFFF !important;
+}
+
+.co_global_button.yellow .button:hover,
+.co_global_button.yellow .button:focus {
+  background: var(--tc-green) !important;
+  color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   20. MINI SLIDER / CHABAD UPDATES
+   ============================================================ */
+
+.hp_content_wrapper .mini_slider .sectiontitle {
+  color: var(--tc-green) !important;
+}
+
+.hp_content_wrapper .mini_slider .anythingControls .thumbNav li a {
+  border-color: var(--tc-teal) !important;
+}
+
+.hp_content_wrapper .mini_slider .anythingControls .thumbNav li a.cur {
+  background: var(--tc-teal) !important;
+}
+
+.hp_content_wrapper .chabad_updates .item a.readMore {
+  color: var(--tc-teal) !important;
+}
+
+.hp_content_wrapper .chabad_updates .item a.readMore:hover {
+  color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   21. DEPARTMENT INDEX / LABELS
+   ============================================================ */
+
+.co_body .content .department_index li:before {
+  border-left-color: var(--tc-teal) !important;
+}
+
+#co_department_index .co_body .clearfix {
+  background: rgba(23, 143, 159, 0.08) !important;
+}
+
+#co_department_index .co_body .clearfix .small_header {
+  background: var(--tc-teal) !important;
+}
+
+.cco_body .label_green {
+  border-color: var(--tc-teal-dark) !important;
+  color: var(--tc-teal-dark) !important;
+  background: rgba(14, 110, 123, 0.10) !important;
+}
+
+.cco_body .label_mustard {
+  border-color: var(--tc-aqua) !important;
+  color: var(--tc-teal) !important;
+  background: rgba(76, 190, 206, 0.12) !important;
+}
+
+.co_body .date_navigation {
+  border-bottom-color: var(--tc-aqua) !important;
+}
+
+
+/* ============================================================
+   22. LOCAL / SIDEBAR MENUS
+   ============================================================ */
+
+.co_local_menu .section_title div,
+.co_local_menu .section_title h1,
+.co_local_menu .section_title a,
+.co_local_menu > .header,
+.co_local_menu .header .section_title,
+.co_local_menu .header .section_title div,
+.co_local_menu .header .section_title a,
+.secondary_navigation .header {
+  color: var(--tc-green) !important;
+}
+
+.co_local_menu .item.selected .item_sub a,
+.co_local_menu .item .item_sub.selected a {
+  color: var(--tc-teal) !important;
+}
+
+
+/* ============================================================
+   23. TOP BAR / SEARCH BORDER DETAILS
+   ============================================================ */
+
+#header_container .links .cco_search_header #MainSearchForm,
+#header_container .links .subscribe_box .co_global_submit .button {
+  border-color: var(--tc-teal) !important;
+}
+
+#header_container .links .float_right + .float_left .topBarLink:last-child:after,
+#header_container .links .topBarLink:before {
+  color: var(--tc-teal) !important;
+}
+
+
+/* ============================================================
+   24. FOOTER
+   Deep green to deep teal gradient intentionally retained.
+   ============================================================ */
+
+#footer {
+  background: linear-gradient(
+    135deg,
+    #315F3C 0%,
+    #1F6C5A 38%,
+    #0E6E7B 100%
+  ) !important;
+  color: #FFFFFF !important;
+  border-top: none !important;
+}
+
+#footer .footer_container,
+#footer .footer_text,
+#footer .footer_text .footer3,
+#footer .footer_text .footer3 b,
+#footer .footer_text .footer3 span,
+#footer .footer_text .footer3 b span,
+#footer .copyright_text {
+  color: #FFFFFF !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+}
+
+#footer .footer3,
+#footer .footer3 b {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+}
+
+#footer a,
+#footer .footer_text a,
+#footer .privacy-link {
+  color: #E6FAF7 !important;
+  text-decoration: none !important;
+}
+
+#footer a:hover,
+#footer .footer_text a:hover,
+#footer .privacy-link:hover {
+  color: #FFFFFF !important;
+  text-decoration: underline !important;
+}
+
+#footer .footer_hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.22) !important;
+  display: block !important;
+}
+
+/* Footer social icons */
+#footer .cs-f-social-icons {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  background: transparent !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.18) !important;
+  padding: 18px 0 0 !important;
+  margin-top: 18px !important;
+}
+
+#footer .cs-f-social-icons a {
+  background: none !important;
+  color: #FFFFFF !important;
+  font-size: 1.2rem !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+#footer .cs-f-social-icons a:hover,
+#footer .cs-f-social-icons a.facebook_homepage:hover,
+#footer .cs-f-social-icons a.whatsapp_homepage:hover,
+#footer .cs-f-social-icons a.instagram_homepage:hover {
+  color: var(--tc-aqua) !important;
+}
+
+
+/* ============================================================
+   25. MOBILE
+   ============================================================ */
+
+.mobile .center_logo a span {
+  color: var(--tc-teal) !important;
+}
+
+.mobile .promo_slider .cycle-controlNav .circle {
+  border-color: var(--tc-aqua) !important;
+}
+
+.mobile .promo_slider .cycle-controlNav .circle.selected {
+  background: var(--tc-aqua) !important;
+}
+
+
+/* ============================================================
+   TRI-CITIES CHABAD â€” SCOPED LAYOUT + FOOTER REPAIR PATCH
+   Replaces the previous Layout + Footer Repair Patch only.
+   Keeps the fixes, but prevents homepage styling from leaking
+   onto custom-designed pages.
+   ============================================================ */
+
+
+/* ============================================================
+   BRAND VARIABLES
+   ============================================================ */
+
+:root {
+  --tc-green: #578A45;
+  --tc-green-dark: #315F3C;
+  --tc-teal: #178F9F;
+  --tc-teal-dark: #0E6E7B;
+  --tc-aqua: #4CBECE;
+
+  --tc-ivory: #FBFAF6;
+  --tc-soft-green: #ECECEC;
+  --tc-text: #293633;
+  --tc-border: #D9E5E0;
+}
+
+
+/* ============================================================
+   FIX 1 â€” HOMEPAGE BACKGROUNDS ONLY
+   No longer affects custom pages.
+   ============================================================ */
+
+body:has(.hp-table),
+body:has(.hp-table) #BodyContainer,
+body:has(.hp-table) .co_body {
+  background: var(--tc-ivory);
+}
+
+body:has(.hp-table) .hp-table .hp-row:not(.hp-row-first):not(.hp_subscribe) {
+  background: var(--tc-ivory) !important;
+  min-height: 0 !important;
+}
+
+/* Pale green only for homepage icon/action and gallery rows */
+body:has(.hp-table) .hp-table .hp-row:has(.icon),
+body:has(.hp-table) .hp-table .hp-row:has(.latest_photos) {
+  background: var(--tc-soft-green) !important;
+}
+
+/* Homepage programs, learning, events, and mission rows */
+body:has(.hp-table) .hp-table .hp-row:has(#co_ads_container),
+body:has(.hp-table) .hp-table .hp-row:has(.promo_slider),
+body:has(.hp-table) .hp-table .hp-row:has(.mini_slider),
+body:has(.hp-table) .hp-table .hp-row:has(.chabad_updates),
+body:has(.hp-table) .hp-table .hp-row:has(.candlelighting),
+body:has(.hp-table) .hp-table .hp-row:has(.parsha) {
+  background: var(--tc-ivory) !important;
+}
+
+
+/* ============================================================
+   FIX 2 â€” HOMEPAGE SPACING ONLY
+   ============================================================ */
+
+body:has(.hp-table) .hp-table .hp-row:not(.hp-row-first):not(.hp_subscribe) {
+  padding-top: 56px !important;
+  padding-bottom: 56px !important;
+}
+
+body:has(.hp-table) .hp-table .hp-row:not(.hp-row-first):not(.hp_subscribe) > .hp_content_wrapper,
+body:has(.hp-table) .hp-table .hp-row:not(.hp-row-first):not(.hp_subscribe) .hp_content_wrapper {
+  min-height: 0 !important;
+}
+
+body:has(.hp-table) .hp-table .hp-row:not(.hp-row-first):not(.hp_subscribe) .widget_header {
+  margin-bottom: 26px !important;
+}
+
+body:has(.hp-table) .hp-table .hp-row:not(.hp-row-first):not(.hp_subscribe) .widget_content {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+body:has(.hp-table) .hp-table .hp-row:has(#co_ads_container) {
+  padding-top: 62px !important;
+  padding-bottom: 64px !important;
+}
+
+body:has(.hp-table) .hp-table .hp-row:has(.icon) {
+  padding-top: 58px !important;
+  padding-bottom: 58px !important;
+}
+
+body:has(.hp-table) .hp-table .hp-row:has(.latest_photos) {
+  padding-top: 54px !important;
+  padding-bottom: 54px !important;
+}
+
+
+/* ============================================================
+   FIX 3 â€” HOMEPAGE SECTION HEADINGS ONLY
+   ============================================================ */
+
+body:has(.hp-table) .hp-table .hp-row .widget_header h5,
+body:has(.hp-table) .hp-table .hp-row .widget_header h5 a,
+body:has(.hp-table) .hp-table .chabad_updates .widget_header.widget_header h5,
+body:has(.hp-table) .hp-table [class*="widget-"] .widget_header.widget_header h5 {
+  color: var(--tc-green) !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.015em !important;
+}
+
+body:has(.hp-table) .hp-table .hp-row .promo_slider .slider .cycle-caption p big,
+body:has(.hp-table) .hp-table .hp-row .promo_slider .slider .cycle-caption big {
+  color: var(--tc-aqua) !important;
+}
+
+
+/* ============================================================
+   FIX 4 â€” DONATE BUTTON
+   Header-only styling. Safe on all pages.
+   ============================================================ */
+
+#header.on-scroll #tabContentMain .co_menu_item.donate_link span.parent a,
+#header.on-scroll #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+body.sites-article #tabContentMain .co_menu_item.donate_link span.parent a,
+body.sites-article #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+#header.on-scroll .donate_link a,
+body.sites-article .donate_link a {
+  background: var(--tc-green) !important;
+  border: 2px solid var(--tc-green) !important;
+  color: #FFFFFF !important;
+}
+
+#header.on-scroll #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+body.sites-article #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+#header.on-scroll .donate_link a:hover,
+body.sites-article .donate_link a:hover {
+  background: var(--tc-green-dark) !important;
+  border-color: var(--tc-green-dark) !important;
+  color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   FIX 5 â€” HOMEPAGE SUBSCRIBE SECTION ONLY
+   ============================================================ */
+
+body:has(.hp-table) .hp-table .hp_subscribe {
+  background: linear-gradient(
+    135deg,
+    #4CBECE 0%,
+    #249FAF 28%,
+    #178F9F 62%,
+    #0E6E7B 100%
+  ) !important;
+  padding-top: 58px !important;
+  padding-bottom: 58px !important;
+}
+
+body:has(.hp-table) .hp-row.hp_subscribe .widget_header h5,
+body:has(.hp-table) .hp-row.hp_subscribe .widget_header h5 span,
+body:has(.hp-table) .hp-row.hp_subscribe .widget_header h5 a,
+body:has(.hp-table) .hp_subscribe .widget_header h5,
+body:has(.hp-table) .hp_subscribe .widget_header h5 span,
+body:has(.hp-table) .hp_subscribe .widget_header h5 a {
+  color: #FFFFFF !important;
+}
+
+body:has(.hp-table) .hp_subscribe input[type="text"],
+body:has(.hp-table) .hp_subscribe input[type="email"],
+body:has(.hp-table) .hp_subscribe input[type="tel"],
+body:has(.hp-table) .hp_subscribe #formContainer input {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border-color: rgba(255, 255, 255, 0.60) !important;
+  color: #29403B !important;
+  -webkit-text-fill-color: #29403B !important;
+}
+
+body:has(.hp-table) .hp_subscribe input::placeholder,
+body:has(.hp-table) .hp_subscribe input::-webkit-input-placeholder,
+body:has(.hp-table) .hp_subscribe input::-moz-placeholder,
+body:has(.hp-table) .hp_subscribe input:-ms-input-placeholder {
+  color: #536E68 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #536E68 !important;
+}
+
+body:has(.hp-table) .hp_subscribe .wrapper #formContainer fieldset input[type="submit"] {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+body:has(.hp-table) .hp_subscribe .wrapper #formContainer fieldset input[type="submit"]:hover {
+  background: var(--tc-green-dark) !important;
+  border-color: var(--tc-green-dark) !important;
+}
+
+/* ============================================================
+   FIX 6 â€” CLEAN FOOTER REBUILD
+   Footer styling is intentionally global.
+   ============================================================ */
+
+#footer {
+  background: #073F3A !important;
+  color: rgba(255, 255, 255, 0.78) !important;
+  border-top: 0 !important;
+  padding: 54px 20px 46px !important;
+  text-align: center !important;
+}
+
+/* Main footer containers */
+#footer .footer_container,
+#footer .footer_text,
+#footer .footer3,
+#footer .footer_text .footer3,
+#footer .footer_text .footer3 span,
+#footer .footer_text .footer3 b,
+#footer .footer_text .footer3 b span {
+  background: transparent !important;
+  color: inherit !important;
+  text-align: center !important;
+}
+
+/* Main contact line */
+#footer .footer3,
+#footer .footer3 b,
+#footer .footer3 span,
+#footer .footer_text .footer3,
+#footer .footer_text .footer3 b,
+#footer .footer_text .footer3 b span {
+  color: rgba(255, 255, 255, 0.86) !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.8 !important;
+}
+
+/* Footer text / powered by line */
+#footer .footer_text,
+#footer .copyright_text,
+#footer .footer_text span,
+#footer .footer_text div {
+  color: rgba(255, 255, 255, 0.58) !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.03em !important;
+}
+
+/* Footer links */
+#footer a,
+#footer .footer_text a,
+#footer .privacy-link {
+  color: rgba(255, 255, 255, 0.66) !important;
+  text-decoration: none !important;
+}
+
+#footer a:hover,
+#footer .footer_text a:hover,
+#footer .privacy-link:hover {
+  color: #FFFFFF !important;
+  text-decoration: none !important;
+}
+
+/* Remove footer lines */
+#footer .footer_hr,
+#footer hr,
+#footer .cs-f-social-icons:before,
+#footer .cs-f-social-icons:after {
+  display: none !important;
+  border: 0 !important;
+  content: none !important;
+}
+
+
+/* ============================================================
+   FIX 7 â€” CLEAN FOOTER SOCIAL ICONS
+   Smaller icons, no large circles.
+   ============================================================ */
+
+#footer .cs-f-social-icons {
+  width: auto !important;
+  max-width: none !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 36px !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 28px auto 0 !important;
+  box-shadow: none !important;
+}
+
+#footer .cs-f-social-icons a,
+#footer .cs-f-social-icons a.facebook_homepage,
+#footer .cs-f-social-icons a.whatsapp_homepage,
+#footer .cs-f-social-icons a.instagram_homepage {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-indent: 0 !important;
+
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  color: rgba(255, 255, 255, 0.62) !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  overflow: visible !important;
+
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+/* Centers icon glyphs where ChabadOne uses pseudo-elements */
+#footer .cs-f-social-icons a:before,
+#footer .cs-f-social-icons a:after {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  line-height: 1 !important;
+  color: rgba(255, 255, 255, 0.62) !important;
+  font-size: 1rem !important;
+}
+
+/* Centers icon elements where ChabadOne uses inner markup */
+#footer .cs-f-social-icons a i,
+#footer .cs-f-social-icons a span,
+#footer .cs-f-social-icons a svg {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  line-height: 1 !important;
+  color: rgba(255, 255, 255, 0.62) !important;
+  fill: rgba(255, 255, 255, 0.62) !important;
+}
+
+#footer .cs-f-social-icons a:hover,
+#footer .cs-f-social-icons a.facebook_homepage:hover,
+#footer .cs-f-social-icons a.whatsapp_homepage:hover,
+#footer .cs-f-social-icons a.instagram_homepage:hover {
+  background: transparent !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+}
+
+#footer .cs-f-social-icons a:hover:before,
+#footer .cs-f-social-icons a:hover:after,
+#footer .cs-f-social-icons a:hover i,
+#footer .cs-f-social-icons a:hover span,
+#footer .cs-f-social-icons a:hover svg {
+  color: #FFFFFF !important;
+  fill: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   MOBILE FOOTER
+   ============================================================ */
+
+@media (max-width: 700px) {
+  #footer {
+    padding: 42px 18px 36px !important;
+  }
+
+  #footer .footer3,
+  #footer .footer3 b,
+  #footer .footer3 span,
+  #footer .footer_text .footer3,
+  #footer .footer_text .footer3 b,
+  #footer .footer_text .footer3 b span {
+    font-size: 0.86rem !important;
+    letter-spacing: 0.04em !important;
+    line-height: 1.9 !important;
+  }
+
+  #footer .footer_text,
+  #footer .copyright_text,
+  #footer .footer_text span,
+  #footer .footer_text div {
+    font-size: 0.72rem !important;
+  }
+
+  #footer .cs-f-social-icons {
+    gap: 28px !important;
+    margin-top: 24px !important;
+  }
+}
+/* ============================================================
+   FIX 8 â€” HOMEPAGE BUTTON CONSISTENCY ONLY
+   ============================================================ */
+
+body:has(.hp-table) .readMore,
+body:has(.hp-table) a.readMore,
+body:has(.hp-table) span.readMore,
+body:has(.hp-table) .widget_content .readMore,
+body:has(.hp-table) .hp-row .readMore,
+body:has(.hp-table) .banner .readMore,
+body:has(.hp-table) .article_index_container .readMore,
+body:has(.hp-table) .sneak-peek-container .readMore,
+body:has(.hp-table) [class*="widget-"] .readMore {
+  border-color: var(--tc-teal) !important;
+  color: var(--tc-teal) !important;
+}
+
+body:has(.hp-table) .readMore:hover,
+body:has(.hp-table) a.readMore:hover,
+body:has(.hp-table) span.readMore:hover,
+body:has(.hp-table) .widget_content .readMore:hover,
+body:has(.hp-table) .hp-row .readMore:hover,
+body:has(.hp-table) .banner .readMore:hover,
+body:has(.hp-table) .article_index_container .readMore:hover,
+body:has(.hp-table) .sneak-peek-container .readMore:hover,
+body:has(.hp-table) [class*="widget-"] .readMore:hover {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+  color: #FFFFFF !important;
+}
+
+
+/* ============================================================
+   FIX 8A â€” SEE MORE GALLERIES BUTTON
+   Match normal Learn More button style.
+   ============================================================ */
+
+body:has(.hp-table) .latest_photos .widget_content {
+  text-align: center !important;
+}
+
+/* Style the actual button wrapper */
+body:has(.hp-table) .latest_photos a.readMore,
+body:has(.hp-table) .latest_photos .readMore,
+body:has(.hp-table) .hp-row [class^="widget-"].latest_photos a.readMore,
+body:has(.hp-table) .hp-row [class*="widget-"].latest_photos a.readMore {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  margin: 40px auto 0 !important;
+  padding: 10px 24px !important;
+
+  background: transparent !important;
+  border: 2px solid var(--tc-teal) !important;
+  box-shadow: none !important;
+
+  color: var(--tc-teal) !important;
+  -webkit-text-fill-color: var(--tc-teal) !important;
+
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+
+  transition: background 0.2s ease,
+              border-color 0.2s ease,
+              color 0.2s ease !important;
+}
+
+/* Make the inner span behave like normal text, not its own button */
+body:has(.hp-table) .latest_photos a.readMore span,
+body:has(.hp-table) .latest_photos .readMore span,
+body:has(.hp-table) .hp-row [class^="widget-"].latest_photos a.readMore span,
+body:has(.hp-table) .hp-row [class*="widget-"].latest_photos a.readMore span {
+  display: inline !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+  text-align: inherit !important;
+}
+
+/* Hover state */
+body:has(.hp-table) .latest_photos a.readMore:hover,
+body:has(.hp-table) .latest_photos .readMore:hover,
+body:has(.hp-table) .hp-row [class^="widget-"].latest_photos a.readMore:hover,
+body:has(.hp-table) .hp-row [class*="widget-"].latest_photos a.readMore:hover {
+  background: var(--tc-green) !important;
+  border-color: var(--tc-green) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+body:has(.hp-table) .latest_photos a.readMore:hover span,
+body:has(.hp-table) .latest_photos .readMore:hover span,
+body:has(.hp-table) .hp-row [class^="widget-"].latest_photos a.readMore:hover span,
+body:has(.hp-table) .hp-row [class*="widget-"].latest_photos a.readMore:hover span {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* ============================================================
+   FIX 9 â€” HOMEPAGE ANCHOR OFFSET ONLY
+   Does not alter anchor behavior on custom pages.
+   ============================================================ */
+
+body:has(.hp-table) .hp-table [id],
+body:has(.hp-table) .hp-table section,
+body:has(.hp-table) .hp-table .hp-row {
+  scroll-margin-top: 105px !important;
+}
+
+
+/* ============================================================
+   TOP UTILITY BAR
+   Full-width white on inner pages, transparent on homepage.
+   ============================================================ */
+
+@media screen and (min-width: 768px) {
+
+  /* Inner pages: white bar stretches across browser width */
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links {
+    position: relative !important;
+    
+
+    width: auto !important;
+    max-width: none !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    margin: 0 !important;
+    padding: 10px 0 !important;
+
+    background: #FFFFFF !important;
+    box-shadow: 0 0 0 100vmax #FFFFFF !important;
+    clip-path: inset(0 -100vmax) !important;
+  }
+
+  /* Homepage: utility row stays transparent over hero image */
+  body:has(.hp-table) #header_container > div.clearfix.links {
+    position: relative !important;
+    
+
+    width: auto !important;
+    max-width: none !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+
+    margin: 0 !important;
+    padding: 10px 0 !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    clip-path: none !important;
+  }
+
+  /* Prevent an older pseudo-element attempt from adding white */
+  #header_container > div.clearfix.links::before,
+  #header_container > div.clearfix.links::after {
+    display: none !important;
+    content: none !important;
+  }
+}
+
+
+/* ============================================================
+   FOOTER â€” SUBTLER, SHORTER, WITH LARGER CENTERED ICONS
+   Paste at the very bottom of Custom CSS.
+   ============================================================ */
+
+#footer {
+  background: linear-gradient(
+    125deg,
+    #234F49 0%,
+    #1A6A63 52%,
+    #116F7B 100%
+  ) !important;
+
+  padding: 24px 0 22px !important;
+}
+
+/* Remove excess ChabadOne vertical spacing inside footer */
+#footer .wrapper.body_container,
+#footer .g960.footer_family_text.bottom_padding,
+#footer .footer_container.footer_text.copyright_text,
+#footer .bottom_padding.clear_float {
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Hide the old spacer divider image */
+#footer img.footer_hr {
+  display: none !important;
+}
+
+/* Main footer sentence: quieter and more refined */
+#footer .footer_inner_container {
+  text-align: center !important;
+}
+
+#footer .footer3,
+#footer .footer3 b {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 0.96rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.45 !important;
+}
+
+/* Powered by / privacy line */
+#footer .footer_inner_container {
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 0.68rem !important;
+  line-height: 1.45 !important;
+}
+
+#footer .footer_inner_container a,
+#footer .privacy-link {
+  color: rgba(255, 255, 255, 0.80) !important;
+}
+
+#footer .footer_inner_container a:hover,
+#footer .privacy-link:hover {
+  color: #FFFFFF !important;
+}
+
+/* Social row */
+#footer .cs-f-social-icons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 18px !important;
+
+  margin: 16px auto 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* The circles */
+#footer .cs-f-social-icons a,
+#footer .cs-f-social-icons a.facebook_homepage,
+#footer .cs-f-social-icons a.whatsapp_homepage,
+#footer .cs-f-social-icons a.instagram_homepage {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  background: rgba(255, 255, 255, 0.07) !important;
+  background-image: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.26) !important;
+  border-radius: 50% !important;
+
+  color: #FFFFFF !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-align: center !important;
+  text-indent: 0 !important;
+
+  overflow: hidden !important;
+  transform: none !important;
+
+  transition: background 0.2s ease,
+              border-color 0.2s ease,
+              transform 0.2s ease !important;
+}
+
+/* Font Awesome social symbols â€” larger and actually centered */
+#footer .cs-f-social-icons a.fa:before {
+  position: static !important;
+  display: block !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+  line-height: 1 !important;
+  text-align: center !important;
+
+  color: #FFFFFF !important;
+  font-size: 1.35rem !important;
+}
+
+/* Slightly tailor the Facebook glyph, which otherwise looks smaller */
+#footer .cs-f-social-icons a.fa-facebook:before {
+  font-size: 1.42rem !important;
+}
+
+#footer .cs-f-social-icons a:hover,
+#footer .cs-f-social-icons a.facebook_homepage:hover,
+#footer .cs-f-social-icons a.whatsapp_homepage:hover,
+#footer .cs-f-social-icons a.instagram_homepage:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 255, 255, 0.46) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+}
+
+
+/* Force the homepage mailing-list heading to white */
+
+html body.cco_body #BodyContainer .hp-table .hp-row.hp_subscribe
+.widget-4.subscribe.custom.v280.feed
+.wrapper .widget_header > h5,
+html body.cco_body #BodyContainer .hp-table .hp-row.hp_subscribe
+.widget-4.subscribe.custom.v280.feed
+.wrapper .widget_header > h5 *,
+html body.cco_body #BodyContainer .hp-table .hp-row.hp_subscribe
+.widget-4.subscribe.custom.v280.feed
+.wrapper .widget_header > h5 a {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: transparent !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.10) !important;
+}
+
+/* Optional supporting text under the form */
+html body.cco_body #BodyContainer .hp-table .hp-row.hp_subscribe
+.widget-4.subscribe.custom.v280.feed
+.wrapper .widget_content small:not(#response) {
+  color: rgba(255, 255, 255, 0.82) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.82) !important;
+}
+
+
+/* ============================================================
+   SAFE SHORT-PAGE FOOTER FIX
+   Keeps footer near the bottom without changing ChabadOne's
+   body/layout structure or pulling sidebars out of place.
+   ============================================================ */
+
+html,
+body {
+  min-height: 100% !important;
+}
+
+/* Only give the main page area enough minimum height.
+   Do NOT turn the body into a flex container. */
+body.cco_body #BodyContainer {
+  min-height: calc(100vh - 285px) !important;
+}
+
+/* Undo any flex behaviour from the prior sticky-footer attempt */
+body.cco_body {
+  display: block !important;
+  min-height: 0 !important;
+}
+
+body.cco_body #footer {
+  margin-top: 0 !important;
+  flex: none !important;
+}
+
+
+/* ============================================================
+   MOBILE MENU â€” COLOUR ONLY
+   Does not change width, position, height, or page layout.
+   ============================================================ */
+
+@media screen and (max-width: 767px) {
+
+  /* Keep ChabadOne's original slide-out layout intact */
+  #co_menu_container_wrapper {
+    background: transparent !important;
+  }
+
+  /* Main menu panel */
+  #co_menu_container {
+    background: linear-gradient(
+      165deg,
+      #0E6E7B 0%,
+      #176E73 52%,
+      #315F3C 100%
+    ) !important;
+  }
+
+  /* Bottom About | Search | Contact area */
+  #co_menu_container_wrapper .mobile-menu-bottom-links {
+    background: #315F3C !important;
+    border-top: 1px solid rgba(255,255,255,0.18) !important;
+  }
+
+  /* Main menu text */
+  #co_menu_container #tabContentMain > td.co_menu_item span.parent a.parent,
+  #co_menu_container #tabContentMain > td.co_menu_item span.parent > div > a.parent {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+  /* Dropdown arrows */
+  #co_menu_container .cs-menu-item-toggle:after,
+  #co_menu_container .cs-mobile-menu-close,
+  #co_menu_container .cs-mobile-menu-close i {
+    color: #FFFFFF !important;
+  }
+
+  /* Dropdown links */
+  #co_menu_container .co_submenu_container a.item,
+  #co_menu_container .co_submenu_container a.item span,
+  #co_menu_container .co_submenu_container a.child_item,
+  #co_menu_container .co_submenu_container a.child_item span {
+    color: rgba(255,255,255,0.90) !important;
+    -webkit-text-fill-color: rgba(255,255,255,0.90) !important;
+  }
+
+  /* Bottom links */
+  #co_menu_container_wrapper .mobile-menu-bottom-links a {
+    color: rgba(255,255,255,0.88) !important;
+    -webkit-text-fill-color: rgba(255,255,255,0.88) !important;
+  }
+
+  /* Donate */
+  #co_menu_container #tabContentMain > td.co_menu_item.donate_link span.parent a.parent,
+  #co_menu_container #tabContentMain > td.co_menu_item.donate_link span.parent > div > a.parent {
+    background: #578A45 !important;
+    border-color: #578A45 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+}
+
+
+/* ============================================================
+   MOBILE MENU â€” FIX OUTER BACKGROUND BEHIND BOTTOM LINKS
+   Colour only. No width, position, height, or layout changes.
+   ============================================================ */
+
+@media screen and (max-width: 767px) {
+
+  /*
+    This is the outer ChabadOne panel. It is what is still
+    showing bright aqua below the actual menu container.
+  */
+  html body.menu-open #header .header-wrapper .site-nav-wrapper,
+  html body.menu-open #header .header-wrapper .site-nav-wrapper #co_menu_container_wrapper,
+  html body.menu-open #header .header-wrapper .site-nav-wrapper #co_menu_container_wrapper:before,
+  html body.menu-open #header .header-wrapper .site-nav-wrapper #co_menu_container_wrapper:after {
+    background: #315F3C !important;
+    background-color: #315F3C !important;
+    background-image: none !important;
+  }
+
+  /*
+    Keep the main menu itself as the teal-to-green gradient.
+    The darker green behind it only appears below it.
+  */
+  html body.menu-open #header .header-wrapper #co_menu_container_wrapper #co_menu_container {
+    background: linear-gradient(
+      165deg,
+      #0E6E7B 0%,
+      #176E73 52%,
+      #315F3C 100%
+    ) !important;
+  }
+
+  /* About | Search | Contact strip */
+  html body.menu-open #header .header-wrapper
+  #co_menu_container_wrapper .mobile-menu-bottom-links,
+  html body.menu-open #header .header-wrapper
+  #co_menu_container_wrapper .mobile-menu-bottom-links:before,
+  html body.menu-open #header .header-wrapper
+  #co_menu_container_wrapper .mobile-menu-bottom-links:after {
+    background: #315F3C !important;
+    background-color: #315F3C !important;
+    background-image: none !important;
+    border-top-color: rgba(255, 255, 255, 0.18) !important;
+  }
+
+  html body.menu-open #header .header-wrapper
+  #co_menu_container_wrapper .mobile-menu-bottom-links a {
+    color: rgba(255, 255, 255, 0.88) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
+  }
+
+  html body.menu-open #header .header-wrapper
+  #co_menu_container_wrapper .mobile-menu-bottom-links a + a:before {
+    color: rgba(255, 255, 255, 0.42) !important;
+  }
+}
+
+
+/* ============================================================
+   HOMEPAGE SECTION COLOURS â€” DIRECT ROW TARGETING
+   Uses the actual homepage row order rather than :has().
+   ============================================================ */
+
+/* 2. Programs */
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(2),
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-of-type(2) {
+  background: #ECECEC !important;
+}
+
+/* 3. Our Mission */
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(3),
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-of-type(3) {
+  background: #FBFAF6 !important;
+}
+
+/* 4. Latest Photos */
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(4),
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-of-type(4) {
+  background: #ECECEC !important;
+}
+
+/* 5. Upcoming Events / Shabbat / Daily Thought */
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(5),
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-of-type(5) {
+  background: #F3F5F3 !important;
+}
+
+/* 6. I Would Like To */
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(6),
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-of-type(6) {
+  background: #ECECEC !important;
+}
+
+/* 7. Learning & Inspiration */
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(7),
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-of-type(7) {
+  background: #FBFAF6 !important;
+}
+
+/* Keep internal widget wrappers transparent so the row colour shows */
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(2) .sneak-peek-container,
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(3) .widget-4.message,
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(4) .widget-4.latest_photos,
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(5) .hp_content_wrapper,
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(6) .widget-4.icon,
+html body.cco_body #BodyContainer .hp-table > .hp-row:nth-child(7) .widget-4.promo_slider {
+  background: transparent !important;
+}
+
+
+/* ============================================================
+   SUBSCRIBE + FOOTER CONTRAST FIX
+   Makes the mailing-list section brighter and footer clearly darker.
+   ============================================================ */
+
+/* Mailing list section: brighter teal/aqua */
+html body.cco_body #BodyContainer .hp-table .hp-row.hp_subscribe,
+html body.cco_body #BodyContainer .hp-table .hp_subscribe {
+  background: linear-gradient(
+    135deg,
+    #4CBECE 0%,
+    #2BAFBE 38%,
+    #178F9F 72%,
+    #137C8B 100%
+  ) !important;
+}
+
+/* Footer: deeper green/navy so it separates clearly */
+html body.cco_body #footer {
+  background: linear-gradient(
+    135deg,
+    #173A34 0%,
+    #134C46 48%,
+    #0A4F5A 100%
+  ) !important;
+  border-top: 4px solid rgba(76, 190, 206, 0.22) !important;
+}
+
+/* Slightly strengthen footer text contrast */
+html body.cco_body #footer .footer3,
+html body.cco_body #footer .footer3 b {
+  color: #FFFFFF !important;
+}
+
+/* Make social circles a bit clearer on the darker footer */
+html body.cco_body #footer .cs-f-social-icons a,
+html body.cco_body #footer .cs-f-social-icons a.facebook_homepage,
+html body.cco_body #footer .cs-f-social-icons a.whatsapp_homepage,
+html body.cco_body #footer .cs-f-social-icons a.instagram_homepage {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(255, 255, 255, 0.34) !important;
+}
+
+
+/* ============================================================
+   SIDEBAR QUICK LINKS BACKGROUND FIX
+   Makes Quick Links match the page background.
+   ============================================================ */
+
+#LocalNavigationQuickLinks,
+#LocalNavigationQuickLinks.container,
+#LocalNavigationQuickLinks.local-navigation-quick-links,
+.secondary_navigation.local-navigation-quick-links {
+  background: var(--tc-ivory) !important;
+  background-color: var(--tc-ivory) !important;
+  box-shadow: none !important;
+}
+
+/* Remove the boxed look inside */
+#LocalNavigationQuickLinks .header,
+#LocalNavigationQuickLinks .item,
+#LocalNavigationQuickLinks .item a,
+#LocalNavigationQuickLinks .item span {
+  background: transparent !important;
+}
+
+/* Keep the divider softer */
+#LocalNavigationQuickLinks {
+  border-top: 1px solid rgba(87, 138, 69, 0.16) !important;
+  border-bottom: 1px solid rgba(87, 138, 69, 0.16) !important;
+}
+
+
+/* ============================================================
+   CUSTOM BACKGROUND HERO TITLES
+   Makes only custom image-hero page titles white.
+   Does not affect regular Chabad.org pages.
+   Does not affect Chai Club custom hero.
+   ============================================================ */
+
+/* Breadcrumb / step text */
+html body.cco_body
+.master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner)
+.breadcrumbs,
+html body.cco_body
+.master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner)
+.breadcrumbs a,
+html body.cco_body
+.master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner)
+.breadcrumbs__crumb {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Main title */
+html body.cco_body
+.master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner)
+.article-header__title {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* Subtitle/date */
+html body.cco_body
+.master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner)
+.article-header__subtitle,
+html body.cco_body
+.master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner)
+.set-direction-to-content h2 {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50) !important;
+}
+
+
+/* ============================================================
+   HEADER COLOUR FIX
+   Top bar is different from main menu.
+   Homepage hero stays readable.
+   Donate stays consistent.
+   ============================================================ */
+
+@media screen and (min-width: 768px) {
+
+  /* ============================================================
+     INNER PAGES / SCROLLED HEADER
+     ============================================================ */
+
+  /* Small top bar: dark green */
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links,
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links a,
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links .topBarLink,
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links .topBarLink *,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links a,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links .topBarLink,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links .topBarLink * {
+    color: #315F3C !important;
+    -webkit-text-fill-color: #315F3C !important;
+  }
+
+  /* Subscribe arrow in top bar */
+  body:not(:has(.hp-table)) #HeaderSubscribe:after,
+  body:not(:has(.hp-table)) .subscribe_link:after,
+  body:has(.hp-table) #header.on-scroll #HeaderSubscribe:after,
+  body:has(.hp-table) #header.on-scroll .subscribe_link:after {
+    border-top-color: #178F9F !important;
+    color: #178F9F !important;
+  }
+
+  /* Top bar hover */
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links a:hover,
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links .topBarLink:hover,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links a:hover,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links .topBarLink:hover {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
+  }
+
+  /* Top bar separators */
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links .topBarLink:before,
+  body:not(:has(.hp-table)) #header_container > div.clearfix.links .float_right + .float_left .topBarLink:last-child:after,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links .topBarLink:before,
+  body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links .float_right + .float_left .topBarLink:last-child:after {
+    color: #8A9A72 !important;
+    -webkit-text-fill-color: #8A9A72 !important;
+  }
+
+  /* Main menu: teal on white header */
+  body:not(:has(.hp-table)) #tabContentMain .co_menu_item span.parent,
+  body:not(:has(.hp-table)) #tabContentMain .co_menu_item span.parent a,
+  body:not(:has(.hp-table)) #tabContentMain > td > span > div > a,
+  body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item span.parent,
+  body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item span.parent a,
+  body:has(.hp-table) #header.on-scroll #tabContentMain > td > span > div > a {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
+  }
+
+  /* Main menu hover / active */
+  body:not(:has(.hp-table)) #tabContentMain .co_menu_item span.parent a:hover,
+  body:not(:has(.hp-table)) #tabContentMain .co_menu_item.selected span.parent a,
+  body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item span.parent a:hover,
+  body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item.selected span.parent a {
+    color: #578A45 !important;
+    -webkit-text-fill-color: #578A45 !important;
+  }
+
+  /* Donate on white header: solid green with white text */
+  body:not(:has(.hp-table)) #tabContentMain .co_menu_item.donate_link span.parent a,
+  body:not(:has(.hp-table)) #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+  body:not(:has(.hp-table)) .donate_link a,
+  body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item.donate_link span.parent a,
+  body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+  body:has(.hp-table) #header.on-scroll .donate_link a {
+    background: #578A45 !important;
+    border: 2px solid #578A45 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+
+  /* ============================================================
+     HOMEPAGE HERO STATE
+     Header over image before scrolling.
+     ============================================================ */
+
+  /* Small top bar over hero: soft white */
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links a,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links .topBarLink,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links .topBarLink *,
+  body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe,
+  body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe * {
+    color: rgba(255,255,255,0.86) !important;
+  }
+
+  /* Subscribe arrow over hero */
+  body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe:after,
+  body:has(.hp-table) #header:not(.on-scroll) .subscribe_link:after {
+    border-top-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+  }
+
+  /* Top bar separators over hero */
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links .topBarLink:before,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links .float_right + .float_left .topBarLink:last-child:after {
+    color: rgba(255,255,255,0.55) !important;
+    -webkit-text-fill-color: rgba(255,255,255,0.55) !important;
+  }
+
+  /* Main menu over hero: white */
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain > td > span > div > a {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+  /* Main menu hover over hero */
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a:hover {
+    color: #4CBECE !important;
+    -webkit-text-fill-color: #4CBECE !important;
+  }
+
+  /* Donate over hero: white outline with white text */
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+  body:has(.hp-table) #header:not(.on-scroll) .donate_link a {
+    background: transparent !important;
+    border: 2px solid #FFFFFF !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+  body:has(.hp-table) #header:not(.on-scroll) .donate_link a:hover {
+    background: #578A45 !important;
+    border-color: #578A45 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+}
+
+
+/* ============================================================
+   HOMEPAGE EVENTS / SHABBAT / DAILY THOUGHT COLOURS
+   Scoped only to the homepage middle info row.
+   ============================================================ */
+
+/* Main widget headings */
+body:has(.hp-table) .hp_content_wrapper .widget_header h5 {
+  color: #578A45 !important;
+  -webkit-text-fill-color: #578A45 !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* Upcoming Events dates */
+body:has(.hp-table) .hp_content_wrapper .upcoming_events small {
+  color: #8A806F !important;
+  -webkit-text-fill-color: #8A806F !important;
+  font-weight: 500 !important;
+}
+
+/* Upcoming Events links */
+body:has(.hp-table) .hp_content_wrapper .upcoming_events h6 a {
+  color: #178F9F !important;
+  -webkit-text-fill-color: #178F9F !important;
+  font-weight: 700 !important;
+}
+
+body:has(.hp-table) .hp_content_wrapper .upcoming_events h6 a:hover {
+  color: #578A45 !important;
+  -webkit-text-fill-color: #578A45 !important;
+}
+
+/* Candle Lighting section headings */
+body:has(.hp-table) .hp_content_wrapper .candlelighting .section_heading,
+body:has(.hp-table) .hp_content_wrapper .parsha_content .section_heading,
+body:has(.hp-table) .hp_content_wrapper .upcomingholiday_content .section_heading {
+  color: #4E5B57 !important;
+  -webkit-text-fill-color: #4E5B57 !important;
+  font-weight: 700 !important;
+}
+
+/* Candle Lighting location/subheading */
+body:has(.hp-table) .hp_content_wrapper .candlelighting .section_subheading {
+  color: #65706D !important;
+  -webkit-text-fill-color: #65706D !important;
+}
+
+/* Candle Lighting labels */
+body:has(.hp-table) .hp_content_wrapper .candlelighting .when_to_light {
+  color: #65706D !important;
+  -webkit-text-fill-color: #65706D !important;
+  font-weight: 600 !important;
+}
+
+/* Candle Lighting times */
+body:has(.hp-table) .hp_content_wrapper .candlelighting .times_wrapper .bold.large,
+body:has(.hp-table) .hp_content_wrapper .candlelighting .times_wrapper a .bold.large {
+  color: #178F9F !important;
+  -webkit-text-fill-color: #178F9F !important;
+  font-weight: 800 !important;
+}
+
+/* Candle Lighting links/date text */
+body:has(.hp-table) .hp_content_wrapper .candlelighting a {
+  color: #293633 !important;
+  -webkit-text-fill-color: #293633 !important;
+}
+
+/* Parsha / Holiday title links */
+body:has(.hp-table) .hp_content_wrapper .parsha_content a,
+body:has(.hp-table) .hp_content_wrapper .upcomingholiday_content a {
+  color: #4CBECE !important;
+  -webkit-text-fill-color: var(--tc-teal) !important;
+  font-weight: 800 !important;
+}
+
+body:has(.hp-table) .hp_content_wrapper .parsha_content a:hover,
+body:has(.hp-table) .hp_content_wrapper .upcomingholiday_content a:hover {
+  color: #578A45 !important;
+  -webkit-text-fill-color: #578A45 !important;
+}
+
+/* Holiday date */
+body:has(.hp-table) .hp_content_wrapper .upcomingholiday_content {
+  color: #65706D !important;
+  -webkit-text-fill-color: #65706D !important;
+}
+
+/* Daily Thought title */
+body:has(.hp-table) .hp_content_wrapper .daily_thought .title,
+body:has(.hp-table) .hp_content_wrapper .daily_thought .title a {
+  color: #293633 !important;
+  -webkit-text-fill-color: #293633 !important;
+  font-weight: 700 !important;
+}
+
+body:has(.hp-table) .hp_content_wrapper .daily_thought .title a:hover {
+  color: #178F9F !important;
+  -webkit-text-fill-color: #178F9F !important;
+}
+
+/* Daily Thought body text */
+body:has(.hp-table) .hp_content_wrapper .daily_thought .body,
+body:has(.hp-table) .hp_content_wrapper .daily_thought .body span,
+body:has(.hp-table) .hp_content_wrapper .daily_thought .inner {
+  color: #3F4B48 !important;
+  -webkit-text-fill-color: #3F4B48 !important;
+}
+
+/* View More Upcoming Events button */
+body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore {
+  color: #178F9F !important;
+  -webkit-text-fill-color: #178F9F !important;
+  border-color: #178F9F !important;
+  background: transparent !important;
+}
+
+body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore:hover {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #578A45 !important;
+  background: #578A45 !important;
+}
+
+
+/* Fix mobile ×‘×´×” getting cut off */
+@media (max-width: 1024px) {
+  html body.cco_body.sites-article #BodyContainer > .body_wrapper::before,
+  html body.cco_body.sites-article #BodyContainer > .body_wrapper:before {
+    top: 18px !important;
+    right: 12px !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
+
+
+/* Hide unwanted mobile local navigation title at bottom of pages */
+@media (max-width: 1024px) {
+  html body.cco_body.sites-article .co_local_menu,
+  html body.cco_body.sites-article [data-list-name="local navigation"],
+  html body.cco_body.sites-article .section_title,
+  html body.cco_body.sites-article .co_local_menu .header,
+  html body.cco_body.sites-article .co_local_menu a {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+
+/* Subscribe thank-you message */
+.hp_subscribe small#response.successarial_11.blue div {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.4px !important;
+  line-height: 1.4 !important;
+  text-align: center !important;
+  display: inline-block !important;
+  padding: 7px 10px !important;
+  background: rgba(255,255,255,0.14) !important;
+  border-radius: 4px !important;
+}
+.injected-featured-events-header h2 { text-transform: uppercase !important;}
+
+
+    /* Event card background */
+    .injected-event-card {
+        background: #FFFFFF !important;
+        border: 1px solid #D9E5E0 !important;
+    }
+
+    /* Event date text */
+    .event-meta-date {
+        color: #0E6E7B !important;
+    }
+
+    /* Event title */
+    .event-title a {
+        color: #178F9F !important;
+    }
+
+    /* Event description text */
+    .event-description-content {
+        color: #293633 !important;
+    }
+
+    /* Register / Info button */
+    .event-card-button {
+        background: #578A45 !important;
+        color: #FFFFFF !important;
+        border-color: #578A45 !important;
+    }
+    .event-card-button:hover {
+        background: #315F3C !important;
+        color: #FFFFFF !important;
+        border-color: #315F3C !important;
+    }
+
+    /* Carousel arrow buttons */
+    .events-carousel-arrow {
+        background: #FFFFFF !important;
+        color: #178F9F !important;
+    }
+    .events-carousel-arrow:hover {
+        background: #578A45 !important;
+        color: #FFFFFF !important;
+    }
+
+    /* View All card */
+    .view-all-card {
+        border-color: #578A45 !important;
+    }
+    .view-all-card .view-all-content h3 {
+        color: #0E6E7B !important;
+    }
+    .view-all-card .view-all-arrow {
+        color: #578A45 !important;
+    }
+
+
+/* Reduce top space above Hebrew School registration form */
+.master-content-wrapper {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.article-header {
+  padding-top: 10px !important;
+  padding-bottom: 12px !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.article-header__title {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Bring form closer to the title */
+#formContainer,
+#co_content_container,
+#ContentBody,
+.content-area-parent {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+/* ============================================================
+   FORM PAYMENT COLOUR FIX
+   Makes total, payment headings, billing headings, and submit
+   match Tri-Cities Chabad site theme.
+   ============================================================ */
+
+/* Override form colour variables */
+.form-all,
+.userform-form,
+#formContainer {
+  --primary-form-color: #178F9F !important;
+  --contrast-form-color: #178F9F !important;
+  --accent-form-color: #578A45 !important;
+  --accent-form-light: #EEF7F4 !important;
+  --accent-form-medium: #D9E5E0 !important;
+}
+
+/* Total amount */
+.form-all .form-payment-total,
+.form-all .form-payment-price,
+.form-all .payment_total,
+.form-all .total_area,
+.form-all [class*="total"] strong,
+.form-all [class*="total"] span {
+  color: #178F9F !important;
+  -webkit-text-fill-color: #178F9F !important;
+}
+
+/* Payment section headings: Credit Card, Billing Address, etc. */
+.form-all h2,
+.form-all h3,
+.form-all .form-header,
+.form-all .form-subHeader,
+.form-all .payment_footer h3,
+.form-all .payment_header,
+.form-all .payment-method-title,
+.form-all [class*="payment"] h3,
+.form-all [class*="billing"] h3,
+.form-all [class*="credit"] h3 {
+  color: #578A45 !important;
+  -webkit-text-fill-color: #578A45 !important;
+}
+
+/* Specifically catch blue labels/headings inside payment area */
+.form-all .form-payment-table h3,
+.form-all .form-payment-table h4,
+.form-all .form-payment-table label,
+.form-all .payment-form h3,
+.form-all .payment-form h4 {
+  color: #578A45 !important;
+  -webkit-text-fill-color: #578A45 !important;
+}
+
+/* Submit button */
+.form-all .form-submit-button,
+.form-all button[type="submit"],
+.form-all input[type="submit"],
+.userform-form .form-submit-button,
+.userform-form button[type="submit"],
+.userform-form input[type="submit"] {
+  background: #178F9F !important;
+  border-color: #178F9F !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border-radius: 8px !important;
+}
+
+/* Submit hover */
+.form-all .form-submit-button:hover,
+.form-all button[type="submit"]:hover,
+.form-all input[type="submit"]:hover,
+.userform-form .form-submit-button:hover,
+.userform-form button[type="submit"]:hover,
+.userform-form input[type="submit"]:hover {
+  background: #578A45 !important;
+  border-color: #578A45 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Input focus colour */
+.form-all input:focus,
+.form-all textarea:focus,
+.form-all select:focus {
+  border-color: #178F9F !important;
+  outline-color: #178F9F !important;
+  box-shadow: 0 0 0 2px rgba(23, 143, 159, 0.14) !important;
+}
+
+
+/* ============================================================
+   HEBREW SCHOOL SITE FORM COLOUR PROTECTION
+   Applies only to Hebrew School section pages that use
+   .chabad_content_head
+   Put this BELOW the global form colour fix.
+   ============================================================ */
+
+body:has(.chabad_content_head) .form-all,
+body:has(.chabad_content_head) .userform-form,
+body:has(.chabad_content_head) #formContainer {
+  --primary-form-color: #249FD0 !important;
+  --contrast-form-color: #249FD0 !important;
+  --accent-form-color: #249FD0 !important;
+  --accent-form-light: #EAF8FE !important;
+  --accent-form-medium: #D7F0FA !important;
+}
+
+/* Total amount */
+body:has(.chabad_content_head) .form-all .form-payment-total,
+body:has(.chabad_content_head) .form-all .form-payment-price,
+body:has(.chabad_content_head) .form-all .payment_total,
+body:has(.chabad_content_head) .form-all .total_area,
+body:has(.chabad_content_head) .form-all [class*="total"] strong,
+body:has(.chabad_content_head) .form-all [class*="total"] span {
+  color: #249FD0 !important;
+  -webkit-text-fill-color: #249FD0 !important;
+}
+
+/* Credit Card / Billing Address / form section headings */
+body:has(.chabad_content_head) .form-all h2,
+body:has(.chabad_content_head) .form-all h3,
+body:has(.chabad_content_head) .form-all .form-header,
+body:has(.chabad_content_head) .form-all .form-subHeader,
+body:has(.chabad_content_head) .form-all .payment_header,
+body:has(.chabad_content_head) .form-all .payment-method-title,
+body:has(.chabad_content_head) .form-all [class*="payment"] h3,
+body:has(.chabad_content_head) .form-all [class*="billing"] h3,
+body:has(.chabad_content_head) .form-all [class*="credit"] h3,
+body:has(.chabad_content_head) .form-all tr.credit_card th,
+body:has(.chabad_content_head) .form-all tr.billing_address th {
+  color: #249FD0 !important;
+  -webkit-text-fill-color: #249FD0 !important;
+}
+
+/* Submit button */
+body:has(.chabad_content_head) .form-all .form-submit-button,
+body:has(.chabad_content_head) .form-all button[type="submit"],
+body:has(.chabad_content_head) .form-all input[type="submit"],
+body:has(.chabad_content_head) .userform-form .form-submit-button,
+body:has(.chabad_content_head) .userform-form button[type="submit"],
+body:has(.chabad_content_head) .userform-form input[type="submit"] {
+  background: #249FD0 !important;
+  border-color: #249FD0 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Submit hover */
+body:has(.chabad_content_head) .form-all .form-submit-button:hover,
+body:has(.chabad_content_head) .form-all button[type="submit"]:hover,
+body:has(.chabad_content_head) .form-all input[type="submit"]:hover,
+body:has(.chabad_content_head) .userform-form .form-submit-button:hover,
+body:has(.chabad_content_head) .userform-form button[type="submit"]:hover,
+body:has(.chabad_content_head) .userform-form input[type="submit"]:hover {
+  background: #1D92BE !important;
+  border-color: #1D92BE !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Input focus */
+body:has(.chabad_content_head) .form-all input:focus,
+body:has(.chabad_content_head) .form-all textarea:focus,
+body:has(.chabad_content_head) .form-all select:focus {
+  border-color: #249FD0 !important;
+  outline-color: #249FD0 !important;
+  box-shadow: 0 0 0 2px rgba(36, 159, 208, 0.14) !important;
+}
