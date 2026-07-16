@@ -2502,9 +2502,10 @@ body:has(.chabad_content_head) .form-all select:focus {
    Restores full-height image banners on custom article pages.
    ============================================================ */
 
+/* Main custom image hero */
 html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) {
-  min-height: 260px !important;
-  padding: 70px 20px !important;
+  min-height: 310px !important;
+  padding: 88px 20px !important;
   box-sizing: border-box !important;
 
   display: flex !important;
@@ -2516,7 +2517,7 @@ html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.
   background-repeat: no-repeat !important;
 }
 
-/* Center the title inside the hero */
+/* Center title area inside hero */
 html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header {
   width: 100% !important;
   max-width: 1100px !important;
@@ -2525,31 +2526,67 @@ html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.
   text-align: center !important;
 }
 
-/* Keep hero title white */
+/* Main hero title */
 html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header__title {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
-  text-shadow: 0 3px 14px rgba(0,0,0,0.55) !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-size: 46px !important;
+  font-weight: 800 !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.02em !important;
+  text-align: center !important;
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.55) !important;
 }
 
-/* Keep small category/breadcrumb text white */
+/* Category / breadcrumb text above title */
 html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs,
 html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs a,
 html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs__crumb {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.45) !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45) !important;
 }
 
-/* Mobile hero height */
+/* Subtitle/date text, if present */
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header__subtitle,
+html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .set-direction-to-content h2 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  line-height: 1.45 !important;
+  text-align: center !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50) !important;
+}
+
+/* Mobile custom image hero */
 @media (max-width: 700px) {
   html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) {
-    min-height: 210px !important;
-    padding: 48px 18px !important;
+    min-height: 240px !important;
+    padding: 60px 18px !important;
+    background-position: center center !important;
   }
 
   html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header__title {
     font-size: 34px !important;
     line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs,
+  html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs a,
+  html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .breadcrumbs__crumb {
+    font-size: 12px !important;
+  }
+
+  html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .article-header__subtitle,
+  html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.custom-hero-banner) .set-direction-to-content h2 {
+    font-size: 15px !important;
   }
 }
