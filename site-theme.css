@@ -2583,3 +2583,71 @@ html body.cco_body .master-content-wrapper.g960[style*="background-image"]:not(.
     font-size: 15px !important;
   }
 }
+
+/* ============================================================
+   HIGH HOLIDAYS WEBMK MINISITE PROTECTION
+   Prevents Tri-Cities global CSS from overriding WebMk pages.
+   ============================================================ */
+
+/* Do not force Tri-Cities heading colors on High Holidays minisite */
+html.tc-high-holidays-minisite .co_body .content h1,
+html.tc-high-holidays-minisite .co_body .content h2,
+html.tc-high-holidays-minisite .co_body .content h3,
+html.tc-high-holidays-minisite .co_body .content h4,
+html.tc-high-holidays-minisite .co_body .content h5,
+html.tc-high-holidays-minisite .co_body .content h6,
+html.tc-high-holidays-minisite .content_title_container .content_title,
+html.tc-high-holidays-minisite .content_title_container h1,
+html.tc-high-holidays-minisite .article-header__title,
+html.tc-high-holidays-minisite .Content_Title,
+html.tc-high-holidays-minisite .header-title,
+html.tc-high-holidays-minisite .co_body .content .SCHeading_1 {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: inherit !important;
+}
+
+/* Do not force Tri-Cities body text on High Holidays minisite */
+html.tc-high-holidays-minisite .co_body .content p,
+html.tc-high-holidays-minisite .co_body .content li,
+html.tc-high-holidays-minisite .article-body p,
+html.tc-high-holidays-minisite .article-body li,
+html.tc-high-holidays-minisite .co_body .content td,
+html.tc-high-holidays-minisite .co_body .content th,
+html.tc-high-holidays-minisite .co_body .content div,
+html.tc-high-holidays-minisite .co_body .content span {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: inherit !important;
+}
+
+/* Do not force Tri-Cities button styles on High Holidays minisite */
+html.tc-high-holidays-minisite .co_body .content a,
+html.tc-high-holidays-minisite .co_body .content button,
+html.tc-high-holidays-minisite .co_body .content input[type="submit"],
+html.tc-high-holidays-minisite .co_body .content input[type="button"],
+html.tc-high-holidays-minisite .co_body .content .readMore,
+html.tc-high-holidays-minisite .co_body .content .form-submit-button {
+  font-family: inherit !important;
+}
+
+/* Do not apply the global form color fix on High Holidays minisite */
+html.tc-high-holidays-minisite .form-all,
+html.tc-high-holidays-minisite .userform-form,
+html.tc-high-holidays-minisite #formContainer {
+  --primary-form-color: inherit !important;
+  --contrast-form-color: inherit !important;
+  --accent-form-color: inherit !important;
+  --accent-form-light: inherit !important;
+  --accent-form-medium: inherit !important;
+}
+
+/* Keep the WebMk High Holidays section itself in control */
+html.tc-high-holidays-minisite .co_body .content [class*="hh"],
+html.tc-high-holidays-minisite .co_body .content [class*="high"],
+html.tc-high-holidays-minisite .co_body .content [class*="holiday"],
+html.tc-high-holidays-minisite .co_body .content [class*="webmk"] {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+  font-family: inherit !important;
+}
