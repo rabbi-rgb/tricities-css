@@ -2327,14 +2327,13 @@ body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore:hover {
 
 /* ============================================================
    FORM PAYMENT COLOUR FIX
-   Makes total, payment headings, billing headings, and submit
-   match Tri-Cities Chabad site theme.
+   Does NOT affect High Holidays minisite / WebMk pages.
    ============================================================ */
 
 /* Override form colour variables */
-.form-all,
-.userform-form,
-#formContainer {
+html:not(.tc-high-holidays-minisite) .form-all,
+html:not(.tc-high-holidays-minisite) .userform-form,
+html:not(.tc-high-holidays-minisite) #formContainer {
   --primary-form-color: #178F9F !important;
   --contrast-form-color: #178F9F !important;
   --accent-form-color: #578A45 !important;
@@ -2343,48 +2342,43 @@ body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore:hover {
 }
 
 /* Total amount */
-.form-all .form-payment-total,
-.form-all .form-payment-price,
-.form-all .payment_total,
-.form-all .total_area,
-.form-all [class*="total"] strong,
-.form-all [class*="total"] span {
+html:not(.tc-high-holidays-minisite) .form-all .form-payment-total,
+html:not(.tc-high-holidays-minisite) .form-all .form-payment-price,
+html:not(.tc-high-holidays-minisite) .form-all .payment_total,
+html:not(.tc-high-holidays-minisite) .form-all .total_area,
+html:not(.tc-high-holidays-minisite) .form-all [class*="total"] strong,
+html:not(.tc-high-holidays-minisite) .form-all [class*="total"] span {
   color: #178F9F !important;
   -webkit-text-fill-color: #178F9F !important;
 }
 
-/* Payment section headings: Credit Card, Billing Address, etc. */
-.form-all h2,
-.form-all h3,
-.form-all .form-header,
-.form-all .form-subHeader,
-.form-all .payment_footer h3,
-.form-all .payment_header,
-.form-all .payment-method-title,
-.form-all [class*="payment"] h3,
-.form-all [class*="billing"] h3,
-.form-all [class*="credit"] h3 {
-  color: #578A45 !important;
-  -webkit-text-fill-color: #578A45 !important;
-}
-
-/* Specifically catch blue labels/headings inside payment area */
-.form-all .form-payment-table h3,
-.form-all .form-payment-table h4,
-.form-all .form-payment-table label,
-.form-all .payment-form h3,
-.form-all .payment-form h4 {
+/* Payment section headings */
+html:not(.tc-high-holidays-minisite) .form-all h2,
+html:not(.tc-high-holidays-minisite) .form-all h3,
+html:not(.tc-high-holidays-minisite) .form-all .form-header,
+html:not(.tc-high-holidays-minisite) .form-all .form-subHeader,
+html:not(.tc-high-holidays-minisite) .form-all .payment_footer h3,
+html:not(.tc-high-holidays-minisite) .form-all .payment_header,
+html:not(.tc-high-holidays-minisite) .form-all .payment-method-title,
+html:not(.tc-high-holidays-minisite) .form-all [class*="payment"] h3,
+html:not(.tc-high-holidays-minisite) .form-all [class*="billing"] h3,
+html:not(.tc-high-holidays-minisite) .form-all [class*="credit"] h3,
+html:not(.tc-high-holidays-minisite) .form-all .form-payment-table h3,
+html:not(.tc-high-holidays-minisite) .form-all .form-payment-table h4,
+html:not(.tc-high-holidays-minisite) .form-all .form-payment-table label,
+html:not(.tc-high-holidays-minisite) .form-all .payment-form h3,
+html:not(.tc-high-holidays-minisite) .form-all .payment-form h4 {
   color: #578A45 !important;
   -webkit-text-fill-color: #578A45 !important;
 }
 
 /* Submit button */
-.form-all .form-submit-button,
-.form-all button[type="submit"],
-.form-all input[type="submit"],
-.userform-form .form-submit-button,
-.userform-form button[type="submit"],
-.userform-form input[type="submit"] {
+html:not(.tc-high-holidays-minisite) .form-all .form-submit-button,
+html:not(.tc-high-holidays-minisite) .form-all button[type="submit"],
+html:not(.tc-high-holidays-minisite) .form-all input[type="submit"],
+html:not(.tc-high-holidays-minisite) .userform-form .form-submit-button,
+html:not(.tc-high-holidays-minisite) .userform-form button[type="submit"],
+html:not(.tc-high-holidays-minisite) .userform-form input[type="submit"] {
   background: #178F9F !important;
   border-color: #178F9F !important;
   color: #ffffff !important;
@@ -2397,12 +2391,12 @@ body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore:hover {
 }
 
 /* Submit hover */
-.form-all .form-submit-button:hover,
-.form-all button[type="submit"]:hover,
-.form-all input[type="submit"]:hover,
-.userform-form .form-submit-button:hover,
-.userform-form button[type="submit"]:hover,
-.userform-form input[type="submit"]:hover {
+html:not(.tc-high-holidays-minisite) .form-all .form-submit-button:hover,
+html:not(.tc-high-holidays-minisite) .form-all button[type="submit"]:hover,
+html:not(.tc-high-holidays-minisite) .form-all input[type="submit"]:hover,
+html:not(.tc-high-holidays-minisite) .userform-form .form-submit-button:hover,
+html:not(.tc-high-holidays-minisite) .userform-form button[type="submit"]:hover,
+html:not(.tc-high-holidays-minisite) .userform-form input[type="submit"]:hover {
   background: #578A45 !important;
   border-color: #578A45 !important;
   color: #ffffff !important;
@@ -2410,14 +2404,13 @@ body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore:hover {
 }
 
 /* Input focus colour */
-.form-all input:focus,
-.form-all textarea:focus,
-.form-all select:focus {
+html:not(.tc-high-holidays-minisite) .form-all input:focus,
+html:not(.tc-high-holidays-minisite) .form-all textarea:focus,
+html:not(.tc-high-holidays-minisite) .form-all select:focus {
   border-color: #178F9F !important;
   outline-color: #178F9F !important;
   box-shadow: 0 0 0 2px rgba(23, 143, 159, 0.14) !important;
 }
-
 
 /* ============================================================
    HEBREW SCHOOL SITE FORM COLOUR PROTECTION
