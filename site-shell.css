@@ -374,3 +374,95 @@ body.cco_body #tabContentMain .co_submenu_container .co_column a:hover {
     min-height: 44px !important;
   }
 }
+/* ============================================================
+   FORM ACTION AREA CLEANUP
+   Safe shell styling for totals, checkbox, and submit buttons.
+   Does not touch page headings/content.
+   ============================================================ */
+
+/* Form colour variables */
+#formContainer,
+.form-all,
+.userform-form {
+  --primary-form-color: #178F9F !important;
+  --contrast-form-color: #178F9F !important;
+  --accent-form-color: #578A45 !important;
+  --accent-form-light: #EEF7F4 !important;
+  --accent-form-medium: #D9E5E0 !important;
+}
+
+/* Total amount: use site teal, not bright aqua */
+.form-all .form-payment-total,
+.form-all .form-payment-price,
+.form-all .payment_total,
+.form-all .total_area,
+.form-all [class*="total"] strong,
+.form-all [class*="total"] span {
+  color: #178F9F !important;
+  -webkit-text-fill-color: #178F9F !important;
+}
+
+/* Email opt-in checkbox */
+.form-all input[type="checkbox"]:checked + label:before,
+.form-all input[type="checkbox"]:checked + span:before,
+.form-all .form-checkbox:checked + label:before,
+.form-all .form-checkbox:checked + span:before {
+  background-color: #578A45 !important;
+  border-color: #578A45 !important;
+}
+
+/* Checkbox selected box / highlight row */
+.form-all .form-checkbox-item input:checked,
+.form-all input[type="checkbox"]:checked {
+  accent-color: #578A45 !important;
+}
+
+.form-all .form-checkbox-item,
+.form-all .form-single-column {
+  border-color: #D9E5E0 !important;
+}
+
+/* Stronger submit button catch */
+.form-all .form-submit-button,
+.form-all button.form-submit-button,
+.form-all input.form-submit-button,
+.form-all button[type="submit"],
+.form-all input[type="submit"],
+.form-all .jfInput-button,
+.form-all .jfButton,
+.form-all .submit-button,
+.userform-form .form-submit-button,
+.userform-form button[type="submit"],
+.userform-form input[type="submit"] {
+  background: #178F9F !important;
+  background-color: #178F9F !important;
+  background-image: none !important;
+  border-color: #178F9F !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+/* Submit hover */
+.form-all .form-submit-button:hover,
+.form-all button.form-submit-button:hover,
+.form-all input.form-submit-button:hover,
+.form-all button[type="submit"]:hover,
+.form-all input[type="submit"]:hover,
+.form-all .jfInput-button:hover,
+.form-all .jfButton:hover,
+.form-all .submit-button:hover,
+.userform-form .form-submit-button:hover,
+.userform-form button[type="submit"]:hover,
+.userform-form input[type="submit"]:hover {
+  background: #578A45 !important;
+  background-color: #578A45 !important;
+  border-color: #578A45 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
