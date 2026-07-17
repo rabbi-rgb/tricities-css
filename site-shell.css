@@ -466,3 +466,122 @@ body.cco_body #tabContentMain .co_submenu_container .co_column a:hover {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
+
+/* ============================================================
+   HIGH HOLIDAYS FORM STYLING
+   Maroon / gold form colours for WebMk High Holidays minisite.
+   ============================================================ */
+
+html.tc-high-holidays-minisite #formContainer,
+html.tc-high-holidays-minisite .form-all,
+html.tc-high-holidays-minisite .userform-form {
+  --primary-form-color: #A71938 !important;
+  --contrast-form-color: #A71938 !important;
+  --accent-form-color: #C99543 !important;
+  --accent-form-light: #FFF6E8 !important;
+  --accent-form-medium: #F4E3C4 !important;
+}
+
+/* Total amount */
+html.tc-high-holidays-minisite .form-all .form-payment-total,
+html.tc-high-holidays-minisite .form-all .form-payment-price,
+html.tc-high-holidays-minisite .form-all .payment_total,
+html.tc-high-holidays-minisite .form-all .total_area,
+html.tc-high-holidays-minisite .form-all [class*="total"] strong,
+html.tc-high-holidays-minisite .form-all [class*="total"] span {
+  color: #A71938 !important;
+  -webkit-text-fill-color: #A71938 !important;
+}
+
+/* Payment method boxes */
+html.tc-high-holidays-minisite .form-all .form-radio-item,
+html.tc-high-holidays-minisite .form-all .form-checkbox-item,
+html.tc-high-holidays-minisite .form-all .form-single-column {
+  border-color: rgba(167, 25, 56, 0.22) !important;
+}
+
+/* Selected radio / checkbox colour */
+html.tc-high-holidays-minisite .form-all input[type="radio"],
+html.tc-high-holidays-minisite .form-all input[type="checkbox"] {
+  accent-color: #A71938 !important;
+}
+
+/* Email opt-in selected row */
+html.tc-high-holidays-minisite .form-all .form-checkbox-item:has(input[type="checkbox"]:checked),
+html.tc-high-holidays-minisite .form-all .form-single-column:has(input[type="checkbox"]:checked),
+html.tc-high-holidays-minisite .form-all label:has(input[type="checkbox"]:checked) {
+  background: #FFF6E8 !important;
+  border-color: #C99543 !important;
+  color: #2E2A25 !important;
+  -webkit-text-fill-color: #2E2A25 !important;
+}
+
+/* Checkbox square when checked */
+html.tc-high-holidays-minisite .form-all input[type="checkbox"]:checked + label:before,
+html.tc-high-holidays-minisite .form-all input[type="checkbox"]:checked + span:before,
+html.tc-high-holidays-minisite .form-all .form-checkbox:checked + label:before,
+html.tc-high-holidays-minisite .form-all .form-checkbox:checked + span:before {
+  background-color: #A71938 !important;
+  border-color: #A71938 !important;
+}
+
+/* Submit button */
+html.tc-high-holidays-minisite .form-all .form-submit-button,
+html.tc-high-holidays-minisite .form-all button.form-submit-button,
+html.tc-high-holidays-minisite .form-all input.form-submit-button,
+html.tc-high-holidays-minisite .form-all button[type="submit"],
+html.tc-high-holidays-minisite .form-all input[type="submit"],
+html.tc-high-holidays-minisite .form-all .jfInput-button,
+html.tc-high-holidays-minisite .form-all .jfButton,
+html.tc-high-holidays-minisite .form-all .submit-button,
+html.tc-high-holidays-minisite .userform-form .form-submit-button,
+html.tc-high-holidays-minisite .userform-form button[type="submit"],
+html.tc-high-holidays-minisite .userform-form input[type="submit"] {
+  background: #A71938 !important;
+  background-color: #A71938 !important;
+  background-image: none !important;
+  border-color: #A71938 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+/* Submit hover */
+html.tc-high-holidays-minisite .form-all .form-submit-button:hover,
+html.tc-high-holidays-minisite .form-all button.form-submit-button:hover,
+html.tc-high-holidays-minisite .form-all input.form-submit-button:hover,
+html.tc-high-holidays-minisite .form-all button[type="submit"]:hover,
+html.tc-high-holidays-minisite .form-all input[type="submit"]:hover,
+html.tc-high-holidays-minisite .form-all .jfInput-button:hover,
+html.tc-high-holidays-minisite .form-all .jfButton:hover,
+html.tc-high-holidays-minisite .form-all .submit-button:hover,
+html.tc-high-holidays-minisite .userform-form .form-submit-button:hover,
+html.tc-high-holidays-minisite .userform-form button[type="submit"]:hover,
+html.tc-high-holidays-minisite .userform-form input[type="submit"]:hover {
+  background: #7E1029 !important;
+  background-color: #7E1029 !important;
+  border-color: #7E1029 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Input focus */
+html.tc-high-holidays-minisite .form-all input:focus,
+html.tc-high-holidays-minisite .form-all textarea:focus,
+html.tc-high-holidays-minisite .form-all select:focus {
+  border-color: #A71938 !important;
+  outline-color: #A71938 !important;
+  box-shadow: 0 0 0 2px rgba(167, 25, 56, 0.14) !important;
+}
+
+/* Selected payment method / selected option border */
+html.tc-high-holidays-minisite .form-all .form-radio-item:has(input[type="radio"]:checked),
+html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) {
+  border-color: #A71938 !important;
+  background: #FFF6E8 !important;
+}
