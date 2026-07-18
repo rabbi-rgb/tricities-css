@@ -671,3 +671,67 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
     -webkit-text-fill-color: #ffffff !important;
   }
 }
+/* ============================================================
+   HOMEPAGE HERO HEADER — STRONGER LOGO + TOP BAR FIX
+   Fixes site title and small utility links at top of homepage.
+   ============================================================ */
+
+@media screen and (min-width: 768px) {
+
+  /* Site title / logo text: force white on homepage hero */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container #header_branding,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container #header_branding *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container #header_branding a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container #header_branding span,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container #header_branding .site_title,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container #header_branding .site_title *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container .site_title,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container .site_title * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Small top-right utility bar: force light on homepage hero */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links span,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links div,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links .topBarLink,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links .topBarLink *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .subscribe_link,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .subscribe_link *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .cco_search_header,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .cco_search_header *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .search_icon,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .search_icon * {
+    color: rgba(255, 255, 255, 0.88) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.88) !important;
+  }
+
+  /* Hover state for small top links */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links a:hover,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > .clearfix.links .topBarLink:hover,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe:hover,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .subscribe_link:hover {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Subscribe arrow */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe:after,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .subscribe_link:after {
+    border-top-color: #ffffff !important;
+  }
+
+  /* Search icon */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .search_icon:before,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .search_icon:after,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .cco_search_header:before,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .cco_search_header:after {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+}
