@@ -585,3 +585,89 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
   border-color: #A71938 !important;
   background: #FFF6E8 !important;
 }
+/* ============================================================
+   HOMEPAGE HERO HEADER FIX
+   At top of homepage: white text over hero.
+   After scroll: normal teal/green styles remain.
+   ============================================================ */
+
+@media screen and (min-width: 768px) {
+
+  /* Homepage top state only */
+  body:has(.hp-table) #header:not(.on-scroll),
+  body:has(.hp-table) #header:not(.on-scroll) #header_container {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Site title: white on homepage hero */
+  body:has(.hp-table) #header:not(.on-scroll) .branding-search #header_branding .site_title,
+  body:has(.hp-table) #header:not(.on-scroll) #header_branding .site_title,
+  body:has(.hp-table) #header:not(.on-scroll) .site_title {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Main menu: white on homepage hero */
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain > td > span > div > a,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain a.parent {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a:hover,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain a.parent:hover {
+    color: #4CBECE !important;
+    -webkit-text-fill-color: #4CBECE !important;
+  }
+
+  /* Top utility links: white/light on homepage hero */
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links a,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links .topBarLink,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links .topBarLink *,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links span {
+    color: rgba(255, 255, 255, 0.86) !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.86) !important;
+  }
+
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links a:hover,
+  body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links .topBarLink:hover {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Subscribe dropdown arrow / search icon */
+  body:has(.hp-table) #header:not(.on-scroll) #HeaderSubscribe:after,
+  body:has(.hp-table) #header:not(.on-scroll) .subscribe_link:after {
+    border-top-color: #ffffff !important;
+    color: #ffffff !important;
+  }
+
+  body:has(.hp-table) #header:not(.on-scroll) .search_icon,
+  body:has(.hp-table) #header:not(.on-scroll) .cco_search_header,
+  body:has(.hp-table) #header:not(.on-scroll) .cco_search_header * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Donate: white outline on homepage hero */
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a,
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link.hover span.parent a,
+  body:has(.hp-table) #header:not(.on-scroll) .donate_link a {
+    background: transparent !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+  body:has(.hp-table) #header:not(.on-scroll) .donate_link a:hover {
+    background: #578A45 !important;
+    border-color: #578A45 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+}
