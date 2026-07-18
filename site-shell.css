@@ -735,3 +735,67 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
     -webkit-text-fill-color: #ffffff !important;
   }
 }
+/* ============================================================
+   SCROLLED HOMEPAGE UTILITY BAR FIX
+   Restores the small top utility links after scrolling.
+   ============================================================ */
+
+@media screen and (min-width: 768px) {
+
+  /* Show utility bar when homepage header is scrolled */
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    height: auto !important;
+    min-height: 24px !important;
+    max-height: none !important;
+
+    padding: 8px 0 6px !important;
+    margin: 0 !important;
+
+    background: #ffffff !important;
+    box-shadow: 0 0 0 100vmax #ffffff !important;
+    clip-path: inset(0 -100vmax) !important;
+    overflow: visible !important;
+  }
+
+  /* Utility links after scroll */
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links *,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links a,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links span,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links .topBarLink,
+  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe,
+  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe *,
+  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link,
+  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link * {
+    color: #315F3C !important;
+    -webkit-text-fill-color: #315F3C !important;
+  }
+
+  /* Hover after scroll */
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links a:hover,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links .topBarLink:hover,
+  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe:hover,
+  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link:hover {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
+  }
+
+  /* Subscribe arrow after scroll */
+  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe:after,
+  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link:after {
+    border-top-color: #178F9F !important;
+  }
+
+  /* Search icon after scroll */
+  html body.cco_body:has(.hp-table) #header.on-scroll .search_icon,
+  html body.cco_body:has(.hp-table) #header.on-scroll .search_icon *,
+  html body.cco_body:has(.hp-table) #header.on-scroll .cco_search_header,
+  html body.cco_body:has(.hp-table) #header.on-scroll .cco_search_header * {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
+  }
+}
