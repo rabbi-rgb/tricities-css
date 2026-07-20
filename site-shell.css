@@ -586,8 +586,9 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
   background: #FFF6E8 !important;
 }
 /* ============================================================
-   HOMEPAGE HEADER CLEAN FIX
-   Simple fix only. Does not move the utility bar.
+   HOMEPAGE HEADER STABLE FIX
+   Keeps homepage hero header clean.
+   Hides small utility bar on homepage only.
    ============================================================ */
 
 @media screen and (min-width: 768px) {
@@ -597,6 +598,28 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
   html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container {
     background: transparent !important;
     box-shadow: none !important;
+  }
+
+  /* IMPORTANT: hide the small utility bar on homepage only */
+  html body.cco_body:has(.hp-table) #header #header_container > div.clearfix.links {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Hide utility dropdowns/search popup on homepage too */
+  html body.cco_body:has(.hp-table) #HeaderSubscribeContainer,
+  html body.cco_body:has(.hp-table) #HeaderSubscribeContainer.topBarLayer,
+  html body.cco_body:has(.hp-table) .topBarLayer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
   }
 
   /* Homepage top: logo title white */
@@ -614,7 +637,7 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
     -webkit-text-fill-color: #ffffff !important;
   }
 
-  /* Homepage top: donate white outline */
+  /* Homepage top: Donate white outline */
   html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a,
   html body.cco_body:has(.hp-table) #header:not(.on-scroll) .donate_link a {
     background: transparent !important;
@@ -623,34 +646,21 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
     -webkit-text-fill-color: #ffffff !important;
   }
 
-  /* Homepage top: small utility links white, but do not change layout */
-  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links {
-    background: transparent !important;
-    box-shadow: none !important;
-    clip-path: none !important;
-  }
-
-  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links > .float_right > .topBarLink,
-  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links > .float_right > .topBarLink > a,
-  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links > .float_left > .topBarLink,
-  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links > .float_left > .topBarLink > a {
-    color: rgba(255,255,255,0.9) !important;
-    -webkit-text-fill-color: rgba(255,255,255,0.9) !important;
-  }
-
-  /* Scrolled homepage: back to normal white header */
+  /* Scrolled homepage: normal white header */
   html body.cco_body:has(.hp-table) #header.on-scroll,
   html body.cco_body:has(.hp-table) #header.on-scroll #header_container {
     background: #ffffff !important;
     box-shadow: 0 2px 12px rgba(31,57,52,0.09) !important;
   }
 
+  /* Scrolled homepage: title teal */
   html body.cco_body:has(.hp-table) #header.on-scroll #header_branding .site_title,
   html body.cco_body:has(.hp-table) #header.on-scroll .site_title {
     color: #178F9F !important;
     -webkit-text-fill-color: #178F9F !important;
   }
 
+  /* Scrolled homepage: menu teal */
   html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item span.parent,
   html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item span.parent a,
   html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain a.parent {
@@ -658,6 +668,7 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
     -webkit-text-fill-color: #178F9F !important;
   }
 
+  /* Scrolled homepage: Donate green */
   html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item.donate_link span.parent a,
   html body.cco_body:has(.hp-table) #header.on-scroll .donate_link a {
     background: #578A45 !important;
