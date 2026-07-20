@@ -594,6 +594,49 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
 @media screen and (min-width: 768px) {
 
   /* Homepage top: transparent header over hero */
+   /* Homepage top: utility bar white */
+html body.cco_body:has(.hp-table)
+#header:not(.on-scroll)
+#header_container > div.clearfix.links {
+  color: #ffffff !important;
+}
+
+html body.cco_body:has(.hp-table)
+#header:not(.on-scroll)
+#header_container > div.clearfix.links a,
+
+html body.cco_body:has(.hp-table)
+#header:not(.on-scroll)
+#header_container > div.clearfix.links span,
+
+html body.cco_body:has(.hp-table)
+#header:not(.on-scroll)
+#header_container > div.clearfix.links .topBarLink {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Scrolled homepage: utility bar teal */
+html body.cco_body:has(.hp-table)
+#header.on-scroll
+#header_container > div.clearfix.links {
+  color: #178F9F !important;
+}
+
+html body.cco_body:has(.hp-table)
+#header.on-scroll
+#header_container > div.clearfix.links a,
+
+html body.cco_body:has(.hp-table)
+#header.on-scroll
+#header_container > div.clearfix.links span,
+
+html body.cco_body:has(.hp-table)
+#header.on-scroll
+#header_container > div.clearfix.links .topBarLink {
+  color: #178F9F !important;
+  -webkit-text-fill-color: #178F9F !important;
+}
   html body.cco_body:has(.hp-table) #header:not(.on-scroll),
   html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container {
     background: transparent !important;
