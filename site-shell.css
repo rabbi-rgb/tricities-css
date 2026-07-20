@@ -735,3 +735,144 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
     -webkit-text-fill-color: #ffffff !important;
   }
 }
+/* ============================================================
+   HOMEPAGE HEADER FINAL FIX
+   Clean homepage header:
+   - top hero: transparent header, white text
+   - scrolled: white header, teal/green text
+   - utility bar visible in both states
+   ============================================================ */
+
+@media screen and (min-width: 768px) {
+
+  /* Homepage header should sit over hero */
+  html body.cco_body:has(.hp-table) #header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    overflow: visible !important;
+  }
+
+  /* Top of homepage: transparent */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll),
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container {
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  /* Scrolled homepage: white */
+  html body.cco_body:has(.hp-table) #header.on-scroll,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container {
+    background: #ffffff !important;
+    box-shadow: 0 2px 12px rgba(31,57,52,0.09) !important;
+    overflow: visible !important;
+  }
+
+  /* Utility bar layout, both top and scrolled */
+  html body.cco_body:has(.hp-table) #header #header_container > div.clearfix.links {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 9px !important;
+
+    width: auto !important;
+    height: auto !important;
+    min-height: 20px !important;
+    max-height: none !important;
+
+    margin: 0 42px 0 auto !important;
+    padding: 8px 0 0 !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    clip-path: none !important;
+    overflow: visible !important;
+
+    text-align: right !important;
+    float: none !important;
+  }
+
+  html body.cco_body:has(.hp-table) #header #header_container > div.clearfix.links *,
+  html body.cco_body:has(.hp-table) #header #header_container > div.clearfix.links a,
+  html body.cco_body:has(.hp-table) #header #header_container > div.clearfix.links span,
+  html body.cco_body:has(.hp-table) #header #header_container > div.clearfix.links div {
+    float: none !important;
+  }
+
+  /* Top hero utility links: white */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links span {
+    color: rgba(255,255,255,0.9) !important;
+    -webkit-text-fill-color: rgba(255,255,255,0.9) !important;
+  }
+
+  /* Scrolled utility links: green */
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links *,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links a,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links span {
+    color: #315F3C !important;
+    -webkit-text-fill-color: #315F3C !important;
+  }
+
+  /* Site title white at top */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_branding,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_branding *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .site_title,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .site_title * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Site title teal after scroll */
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_branding,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_branding *,
+  html body.cco_body:has(.hp-table) #header.on-scroll .site_title,
+  html body.cco_body:has(.hp-table) #header.on-scroll .site_title * {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
+  }
+
+  /* Main menu white at top */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain a.parent {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Main menu teal after scroll */
+  html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item span.parent,
+  html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item span.parent a,
+  html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain a.parent {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
+  }
+
+  /* Donate white outline at top */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .donate_link a {
+    background: transparent !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Donate green after scroll */
+  html body.cco_body:has(.hp-table) #header.on-scroll #tabContentMain .co_menu_item.donate_link span.parent a,
+  html body.cco_body:has(.hp-table) #header.on-scroll .donate_link a {
+    background: #578A45 !important;
+    border: 2px solid #578A45 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+}
