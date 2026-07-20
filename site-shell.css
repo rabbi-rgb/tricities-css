@@ -600,26 +600,6 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
     box-shadow: none !important;
   }
 
-  /* IMPORTANT: hide the small utility bar on homepage only */
-  html body.cco_body:has(.hp-table) #header #header_container > div.clearfix.links {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    max-height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    overflow: hidden !important;
-  }
-
-  /* Hide utility dropdowns/search popup on homepage too */
-  html body.cco_body:has(.hp-table) #HeaderSubscribeContainer,
-  html body.cco_body:has(.hp-table) #HeaderSubscribeContainer.topBarLayer,
-  html body.cco_body:has(.hp-table) .topBarLayer {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
   }
 
   /* Homepage top: logo title white */
