@@ -736,66 +736,117 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
   }
 }
 /* ============================================================
-   SCROLLED HOMEPAGE UTILITY BAR FIX
-   Restores the small top utility links after scrolling.
+   HOMEPAGE HEADER EMERGENCY RESET
+   Fixes the oversized dark header block on homepage.
+   Keeps homepage top header white over hero.
+   Keeps scrolled header clean and compact.
    ============================================================ */
 
 @media screen and (min-width: 768px) {
 
-  /* Show utility bar when homepage header is scrolled */
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links {
+  /* Homepage top state: header floats over hero, not above it */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    z-index: 9999 !important;
+  }
+
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .header-wrapper {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  /* Top utility links on homepage hero */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
 
+    position: relative !important;
     height: auto !important;
-    min-height: 24px !important;
+    min-height: 0 !important;
     max-height: none !important;
 
-    padding: 8px 0 6px !important;
     margin: 0 !important;
+    padding: 10px 0 0 !important;
 
-    background: #ffffff !important;
-    box-shadow: 0 0 0 100vmax #ffffff !important;
-    clip-path: inset(0 -100vmax) !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    clip-path: none !important;
     overflow: visible !important;
   }
 
-  /* Utility links after scroll */
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links,
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links *,
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links a,
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links span,
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links .topBarLink,
-  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe,
-  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe *,
-  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link,
-  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link * {
-    color: #315F3C !important;
-    -webkit-text-fill-color: #315F3C !important;
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container > div.clearfix.links span {
+    color: rgba(255,255,255,0.88) !important;
+    -webkit-text-fill-color: rgba(255,255,255,0.88) !important;
   }
 
-  /* Hover after scroll */
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links a:hover,
-  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > .clearfix.links .topBarLink:hover,
-  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe:hover,
-  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link:hover {
-    color: #178F9F !important;
-    -webkit-text-fill-color: #178F9F !important;
+  /* Logo / site title white on homepage hero */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_branding,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_branding *,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .site_title,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .site_title * {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
   }
 
-  /* Subscribe arrow after scroll */
-  html body.cco_body:has(.hp-table) #header.on-scroll #HeaderSubscribe:after,
-  html body.cco_body:has(.hp-table) #header.on-scroll .subscribe_link:after {
-    border-top-color: #178F9F !important;
+  /* Main menu white on homepage hero */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain a.parent {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
   }
 
-  /* Search icon after scroll */
-  html body.cco_body:has(.hp-table) #header.on-scroll .search_icon,
-  html body.cco_body:has(.hp-table) #header.on-scroll .search_icon *,
-  html body.cco_body:has(.hp-table) #header.on-scroll .cco_search_header,
-  html body.cco_body:has(.hp-table) #header.on-scroll .cco_search_header * {
-    color: #178F9F !important;
-    -webkit-text-fill-color: #178F9F !important;
+  /* Donate white outline on homepage hero */
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a,
+  html body.cco_body:has(.hp-table) #header:not(.on-scroll) .donate_link a {
+    background: transparent !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  /* Scrolled homepage header: clean compact white header */
+  html body.cco_body:has(.hp-table) #header.on-scroll,
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container,
+  html body.cco_body:has(.hp-table) #header.on-scroll .header-wrapper {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    background: #ffffff !important;
+    box-shadow: 0 2px 12px rgba(31,57,52,0.09) !important;
+    overflow: visible !important;
+  }
+
+  /* Do NOT force the utility bar after scroll. That was causing the broken giant header. */
+  html body.cco_body:has(.hp-table) #header.on-scroll #header_container > div.clearfix.links {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
   }
 }
