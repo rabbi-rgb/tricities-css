@@ -587,62 +587,37 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
 }
 /* ============================================================
    HOMEPAGE HEADER STABLE FIX
-   Keeps homepage hero header clean.
-   Hides small utility bar on homepage only.
+   Keeps the homepage header clean over the hero.
+   Restores and colours the utility bar.
    ============================================================ */
 
 @media screen and (min-width: 768px) {
 
   /* Homepage top: transparent header over hero */
-   /* Homepage top: utility bar white */
-html body.cco_body:has(.hp-table)
-#header:not(.on-scroll)
-#header_container > div.clearfix.links {
-  color: #ffffff !important;
-}
-
-html body.cco_body:has(.hp-table)
-#header:not(.on-scroll)
-#header_container > div.clearfix.links a,
-
-html body.cco_body:has(.hp-table)
-#header:not(.on-scroll)
-#header_container > div.clearfix.links span,
-
-html body.cco_body:has(.hp-table)
-#header:not(.on-scroll)
-#header_container > div.clearfix.links .topBarLink {
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-}
-
-/* Scrolled homepage: utility bar teal */
-html body.cco_body:has(.hp-table)
-#header.on-scroll
-#header_container > div.clearfix.links {
-  color: #178F9F !important;
-}
-
-html body.cco_body:has(.hp-table)
-#header.on-scroll
-#header_container > div.clearfix.links a,
-
-html body.cco_body:has(.hp-table)
-#header.on-scroll
-#header_container > div.clearfix.links span,
-
-html body.cco_body:has(.hp-table)
-#header.on-scroll
-#header_container > div.clearfix.links .topBarLink {
-  color: #178F9F !important;
-  -webkit-text-fill-color: #178F9F !important;
-}
   html body.cco_body:has(.hp-table) #header:not(.on-scroll),
   html body.cco_body:has(.hp-table) #header:not(.on-scroll) #header_container {
     background: transparent !important;
     box-shadow: none !important;
   }
 
+  /* Homepage top: utility bar white */
+  html body.cco_body:has(.hp-table)
+  #header:not(.on-scroll)
+  #header_container > div.clearfix.links {
+    color: #ffffff !important;
+  }
+
+  html body.cco_body:has(.hp-table)
+  #header:not(.on-scroll)
+  #header_container > div.clearfix.links a,
+  html body.cco_body:has(.hp-table)
+  #header:not(.on-scroll)
+  #header_container > div.clearfix.links span,
+  html body.cco_body:has(.hp-table)
+  #header:not(.on-scroll)
+  #header_container > div.clearfix.links .topBarLink {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
   }
 
   /* Homepage top: logo title white */
@@ -673,7 +648,27 @@ html body.cco_body:has(.hp-table)
   html body.cco_body:has(.hp-table) #header.on-scroll,
   html body.cco_body:has(.hp-table) #header.on-scroll #header_container {
     background: #ffffff !important;
-    box-shadow: 0 2px 12px rgba(31,57,52,0.09) !important;
+    box-shadow: 0 2px 12px rgba(31, 57, 52, 0.09) !important;
+  }
+
+  /* Scrolled homepage: utility bar teal */
+  html body.cco_body:has(.hp-table)
+  #header.on-scroll
+  #header_container > div.clearfix.links {
+    color: #178F9F !important;
+  }
+
+  html body.cco_body:has(.hp-table)
+  #header.on-scroll
+  #header_container > div.clearfix.links a,
+  html body.cco_body:has(.hp-table)
+  #header.on-scroll
+  #header_container > div.clearfix.links span,
+  html body.cco_body:has(.hp-table)
+  #header.on-scroll
+  #header_container > div.clearfix.links .topBarLink {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
   }
 
   /* Scrolled homepage: title teal */
@@ -699,4 +694,5 @@ html body.cco_body:has(.hp-table)
     color: #ffffff !important;
     -webkit-text-fill-color: #ffffff !important;
   }
+
 }
