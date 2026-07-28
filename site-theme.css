@@ -2758,20 +2758,22 @@ body:has(a[href*="/aid/6583317/"]) .co_body .content button {
   font-family: revert !important;
 }
 /* ============================================================
-   CONTACT PAGE — MODERN CLASSY DESIGN
+   CONTACT PAGE — COMPLETE MODERN DESIGN
+   Desktop and mobile.
    Page: /tools/feedback.htm
-   Scoped by html.tc-contact-modern-page
-
-   Important:
-   Does not style #co_body, #co_body_container, .g260, .g300,
-   generic forms, the site header, or the footer.
    ============================================================ */
 
-/* Page atmosphere */
+html.tc-contact-modern-page,
+html.tc-contact-modern-page body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 html.tc-contact-modern-page body {
   background:
     radial-gradient(
-      circle at 10% 7%,
+      circle at 10% 8%,
       rgba(195, 151, 79, 0.13) 0%,
       transparent 33%
     ),
@@ -2791,9 +2793,14 @@ html.tc-contact-modern-page #BodyContainer {
   background: transparent !important;
 }
 
+/* Hide the old ChabadOne contact layout after the new one is built */
+html.tc-contact-modern-page
+.tc-contact-old-layout-hidden {
+  display: none !important;
+}
+
 /* ============================================================
-   TITLE AREA
-   Only the wrapper containing the article title.
+   TITLE
    ============================================================ */
 
 html.tc-contact-modern-page
@@ -2802,16 +2809,27 @@ html.tc-contact-modern-page
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: transparent !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fbf9f5 0%,
+      #f7f0e7 100%
+    ) !important;
+
+  border-bottom:
+    1px solid rgba(195, 151, 79, 0.14) !important;
 }
 
 html.tc-contact-modern-page .article-header {
   width: 100% !important;
   max-width: 1120px !important;
+
   margin: 0 auto !important;
-  padding: 62px 24px 38px !important;
-  background: transparent !important;
+  padding: 54px 24px 38px !important;
+
   text-align: center !important;
+  background: transparent !important;
   box-sizing: border-box !important;
 }
 
@@ -2820,601 +2838,132 @@ html.tc-contact-modern-page .article-header__title {
   font-size: 0 !important;
 }
 
-html.tc-contact-modern-page .article-header__title::after {
+html.tc-contact-modern-page
+.article-header__title::after {
   content: "We’d love to hear from you" !important;
   display: block !important;
 
   color: #30352f !important;
   -webkit-text-fill-color: #30352f !important;
 
-  font-family: Georgia, "Times New Roman", Times, serif !important;
-  font-size: 56px !important;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    Times,
+    serif !important;
+
+  font-size: 52px !important;
   font-weight: 400 !important;
   line-height: 1.08 !important;
-  letter-spacing: -1.3px !important;
+  letter-spacing: -1.1px !important;
 }
 
 html.tc-contact-modern-page .article-header::after {
   content: "Have a question, want to visit, or just want to connect? Send us a message and we’ll get back to you soon." !important;
 
   display: block !important;
-  max-width: 690px !important;
-  margin: 17px auto 0 !important;
+  max-width: 650px !important;
+
+  margin: 15px auto 0 !important;
 
   color: #6d746d !important;
-  font-family: 'Inter', Arial, sans-serif !important;
-  font-size: 17px !important;
-  font-weight: 400 !important;
+
+  font-family:
+    'Inter',
+    Arial,
+    sans-serif !important;
+
+  font-size: 16px !important;
   line-height: 1.65 !important;
 }
 
 /* ============================================================
-   CONTACT CONTENT
-   #ContentBody contains the form/sidebar area, not the site shell.
+   MAIN LAYOUT
    ============================================================ */
 
 html.tc-contact-modern-page #ContentBody {
   width: 100% !important;
-  max-width: 1120px !important;
-  margin: 0 auto !important;
-  padding: 0 24px 76px !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 36px 24px 76px !important;
+
   background: transparent !important;
   box-sizing: border-box !important;
 }
 
-/* ============================================================
-   CONTACT FORM ONLY
-   Targets the form containing both an email field and textarea.
-   Does not touch search, subscribe or header forms.
-   ============================================================ */
-
 html.tc-contact-modern-page
-#ContentBody
-form:has(textarea):has(input[type="text"]) {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 38px !important;
-
-  background: rgba(255, 253, 248, 0.97) !important;
-  border: 1px solid rgba(255, 255, 255, 0.80) !important;
-  border-radius: 26px !important;
-  box-shadow: 0 18px 50px rgba(47, 54, 47, 0.10) !important;
-
-  box-sizing: border-box !important;
-}
-
-/* Form card title */
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea):has(input[type="text"])::before {
-  content: "Send a message" !important;
-  display: block !important;
-
-  margin: 0 0 25px !important;
-  padding: 0 0 17px !important;
-
-  color: #30352f !important;
-  font-family: Georgia, "Times New Roman", Times, serif !important;
-  font-size: 33px !important;
-  font-weight: 400 !important;
-  line-height: 1.15 !important;
-
-  border-bottom: 1px solid rgba(195, 151, 79, 0.26) !important;
-}
-
-/* Labels */
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-label,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.form_label,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.field_label {
-  color: #465248 !important;
-  font-family: 'Inter', Arial, sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  line-height: 1.4 !important;
-}
-
-/* Inputs */
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input[type="text"],
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input[type="email"],
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-textarea,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-select,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.co_form_input {
-  width: 100% !important;
-  max-width: 100% !important;
-  min-height: 47px !important;
-
-  padding: 11px 14px !important;
-
-  background: #ffffff !important;
-  border: 1px solid rgba(69, 82, 72, 0.19) !important;
-  border-radius: 11px !important;
-
-  color: #30352f !important;
-  font-family: 'Inter', Arial, sans-serif !important;
-  font-size: 15px !important;
-
-  outline: none !important;
-  box-shadow: none !important;
-  box-sizing: border-box !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-textarea {
-  min-height: 215px !important;
-  resize: vertical !important;
-}
-
-/* Focus state */
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input[type="text"]:focus,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input[type="email"]:focus,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-textarea:focus,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-select:focus {
-  border-color: #c3974f !important;
-  box-shadow: 0 0 0 3px rgba(195, 151, 79, 0.14) !important;
-}
-
-/* Placeholder */
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input::placeholder,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-textarea::placeholder {
-  color: #91968f !important;
-  opacity: 1 !important;
-}
-
-/* Email opt-in */
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input[type="checkbox"] {
-  accent-color: #6f7d4c !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-small,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.small {
-  color: #737b74 !important;
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-}
-
-/* Submit button */
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input[type="submit"],
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-button[type="submit"],
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.co_global_button button,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.co_global_button input {
-  min-height: 48px !important;
-  padding: 0 29px !important;
-
-  background: #6f7d4c !important;
-  border: 0 !important;
-  border-radius: 999px !important;
-
-  color: #ffffff !important;
-  -webkit-text-fill-color: #ffffff !important;
-
-  font-family: 'Montserrat', Arial, sans-serif !important;
-  font-size: 13px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.055em !important;
-  text-transform: uppercase !important;
-
-  box-shadow: 0 10px 24px rgba(111, 125, 76, 0.23) !important;
-  cursor: pointer !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-input[type="submit"]:hover,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-button[type="submit"]:hover,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.co_global_button button:hover,
-
-html.tc-contact-modern-page
-#ContentBody
-form:has(textarea)
-.co_global_button input:hover {
-  background: #59643e !important;
-}
-
-/* ============================================================
-   EXISTING RIGHT SIDEBAR
-   Uses actual ChabadOne local-navigation elements.
-   No grid-width selectors.
-   ============================================================ */
-
-html.tc-contact-modern-page
-#ContentBody
-#LocalNavigationQuickLinks,
-
-html.tc-contact-modern-page
-#ContentBody
-.co_local_menu,
-
-html.tc-contact-modern-page
-#ContentBody
-#MosadInformation,
-
-html.tc-contact-modern-page
-#ContentBody
-.contact_info {
-  background: rgba(255, 253, 248, 0.97) !important;
-  border: 1px solid rgba(255, 255, 255, 0.80) !important;
-  border-radius: 21px !important;
-  padding: 23px !important;
-  margin-bottom: 17px !important;
-  box-shadow: 0 13px 34px rgba(47, 54, 47, 0.08) !important;
-  box-sizing: border-box !important;
-}
-
-/* Sidebar headings */
-html.tc-contact-modern-page
-#ContentBody
-#LocalNavigationQuickLinks .header,
-
-html.tc-contact-modern-page
-#ContentBody
-.co_local_menu .header,
-
-html.tc-contact-modern-page
-#ContentBody
-#MosadInformation .header,
-
-html.tc-contact-modern-page
-#ContentBody
-.contact_info .header {
-  color: #6f7d4c !important;
-  font-family: 'Montserrat', Arial, sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.075em !important;
-  line-height: 1.4 !important;
-  text-transform: uppercase !important;
-}
-
-/* Sidebar links */
-html.tc-contact-modern-page
-#ContentBody
-#LocalNavigationQuickLinks a,
-
-html.tc-contact-modern-page
-#ContentBody
-.co_local_menu a,
-
-html.tc-contact-modern-page
-#ContentBody
-#MosadInformation a,
-
-html.tc-contact-modern-page
-#ContentBody
-.contact_info a {
-  color: #178f9f !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-#LocalNavigationQuickLinks a:hover,
-
-html.tc-contact-modern-page
-#ContentBody
-.co_local_menu a:hover,
-
-html.tc-contact-modern-page
-#ContentBody
-#MosadInformation a:hover,
-
-html.tc-contact-modern-page
-#ContentBody
-.contact_info a:hover {
-  color: #59643e !important;
-}
-
-/* ============================================================
-   MOBILE
-   ============================================================ */
-
-@media screen and (max-width: 760px) {
-  html.tc-contact-modern-page .article-header {
-    padding: 40px 18px 27px !important;
-  }
-
-  html.tc-contact-modern-page .article-header__title::after {
-    font-size: 40px !important;
-    line-height: 1.12 !important;
-    letter-spacing: -0.7px !important;
-  }
-
-  html.tc-contact-modern-page .article-header::after {
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-  }
-
-  html.tc-contact-modern-page #ContentBody {
-    padding: 0 14px 50px !important;
-  }
-
-  html.tc-contact-modern-page
-  #ContentBody
-  form:has(textarea):has(input[type="text"]) {
-    padding: 23px !important;
-    border-radius: 21px !important;
-  }
-
-  html.tc-contact-modern-page
-  #ContentBody
-  form:has(textarea):has(input[type="text"])::before {
-    font-size: 28px !important;
-  }
-
-  html.tc-contact-modern-page
-  #ContentBody
-  form:has(textarea)
-  textarea {
-    min-height: 180px !important;
-  }
-
-  html.tc-contact-modern-page
-  #ContentBody
-  #LocalNavigationQuickLinks,
-
-  html.tc-contact-modern-page
-  #ContentBody
-  .co_local_menu,
-
-  html.tc-contact-modern-page
-  #ContentBody
-  #MosadInformation,
-
-  html.tc-contact-modern-page
-  #ContentBody
-  .contact_info {
-    padding: 20px !important;
-    border-radius: 18px !important;
-  }
-}
-/* ============================================================
-   CONTACT PAGE — FINAL LAYOUT AND POLISH
-   Keeps existing form structure and fields untouched.
-   ============================================================ */
-
-/* Make the title flow into the warm page instead of a white slab */
-html.tc-contact-modern-page
-.master-content-wrapper.g960:has(.article-header) {
-  background:
-    linear-gradient(
-      180deg,
-      #fbf8f2 0%,
-      #f7f0e6 100%
-    ) !important;
-
-  border-bottom:
-    1px solid rgba(195, 151, 79, 0.14) !important;
-}
-
-html.tc-contact-modern-page .article-header {
-  padding-top: 52px !important;
-  padding-bottom: 35px !important;
-}
-
-html.tc-contact-modern-page .article-header__title::after {
-  font-size: 52px !important;
-  letter-spacing: -1.1px !important;
-}
-
-html.tc-contact-modern-page .article-header::after {
-  max-width: 650px !important;
-  margin-top: 14px !important;
-  font-size: 16px !important;
-}
-
-/* Give the content room to breathe */
-html.tc-contact-modern-page #ContentBody {
-  max-width: 1140px !important;
-  padding-top: 34px !important;
-  padding-bottom: 72px !important;
-}
-
-/* Replace the old float layout with a proper two-column layout */
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-layout {
+#tcContactModernLayout {
   display: grid !important;
+
   grid-template-columns:
     minmax(0, 1fr)
-    300px !important;
+    320px !important;
 
-  gap: 28px !important;
+  gap: 30px !important;
   align-items: start !important;
 
   width: 100% !important;
-  max-width: 1060px !important;
+  max-width: 1080px !important;
 
   margin: 0 auto !important;
   padding: 0 !important;
 
-  background: transparent !important;
-  border: 0 !important;
   box-sizing: border-box !important;
 }
 
-/* Remove ChabadOne's old fixed widths, floats and dividing lines */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-form-column,
-
+#tcContactModernLayout,
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column {
-  display: block !important;
-  float: none !important;
-
-  width: auto !important;
+#tcContactModernLayout * {
+  box-sizing: border-box !important;
   min-width: 0 !important;
-  max-width: none !important;
-
-  height: auto !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  background: transparent !important;
-  border: 0 !important;
-  box-sizing: border-box !important;
-}
-
-/* Form fills the full left column */
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-form-column
-form:has(textarea) {
-  width: 100% !important;
-  max-width: none !important;
-
-  margin: 0 !important;
-  padding: 38px !important;
-
-  border:
-    1px solid rgba(255, 255, 255, 0.82) !important;
-
-  border-top:
-    4px solid rgba(195, 151, 79, 0.72) !important;
-
-  border-radius: 25px !important;
-
-  box-shadow:
-    0 18px 46px rgba(47, 54, 47, 0.09) !important;
-}
-
-/* Slightly cleaner form heading */
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-form-column
-form:has(textarea)::before {
-  margin-bottom: 27px !important;
-  padding-bottom: 18px !important;
-
-  font-size: 32px !important;
-
-  border-bottom:
-    1px solid rgba(195, 151, 79, 0.21) !important;
 }
 
 /* ============================================================
-   ONE COHESIVE RIGHT-SIDE CARD
+   CARDS
    ============================================================ */
 
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column {
-  padding: 28px !important;
+#tcContactMainCard,
 
-  background: rgba(255, 253, 248, 0.97) !important;
+html.tc-contact-modern-page
+#tcContactSidebarCard {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  margin: 0 !important;
+  padding: 36px !important;
+
+  background: rgba(255, 253, 248, 0.98) !important;
 
   border:
     1px solid rgba(255, 255, 255, 0.82) !important;
 
-  border-top:
-    4px solid rgba(111, 125, 76, 0.75) !important;
-
   border-radius: 25px !important;
 
   box-shadow:
-    0 18px 46px rgba(47, 54, 47, 0.09) !important;
+    0 18px 48px rgba(47, 54, 47, 0.09) !important;
+
+  overflow: hidden !important;
 }
 
-/* New sidebar heading */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column::before {
-  content: "Reach us" !important;
-  display: block !important;
+#tcContactMainCard {
+  border-top:
+    4px solid rgba(195, 151, 79, 0.75) !important;
+}
 
-  margin: 0 0 21px !important;
-  padding: 0 0 16px !important;
+html.tc-contact-modern-page
+#tcContactSidebarCard {
+  border-top:
+    4px solid rgba(111, 125, 76, 0.78) !important;
+}
+
+html.tc-contact-modern-page
+.tc-contact-card-title {
+  margin: 0 0 26px !important;
+  padding: 0 0 18px !important;
 
   color: #30352f !important;
 
@@ -3424,7 +2973,7 @@ html.tc-contact-modern-page
     Times,
     serif !important;
 
-  font-size: 29px !important;
+  font-size: 31px !important;
   font-weight: 400 !important;
   line-height: 1.15 !important;
 
@@ -3432,12 +2981,14 @@ html.tc-contact-modern-page
     1px solid rgba(195, 151, 79, 0.22) !important;
 }
 
-/*
- * Remove the separate little white boxes inside the unified card.
- */
+/* ============================================================
+   CONTACT FORM
+   ============================================================ */
+
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column > * {
+#tcContactMainCard form {
+  display: block !important;
+
   width: 100% !important;
   max-width: none !important;
 
@@ -3450,70 +3001,186 @@ html.tc-contact-modern-page
   box-shadow: none !important;
 }
 
-/* Space and divide the existing sidebar sections */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column > * + * {
-  margin-top: 24px !important;
-  padding-top: 23px !important;
-
-  border-top:
-    1px solid rgba(195, 151, 79, 0.20) !important;
+#tcContactMainCard form::before {
+  display: none !important;
+  content: none !important;
 }
 
-/* Remove nested ChabadOne card backgrounds */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-#LocalNavigationQuickLinks,
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-.co_local_menu,
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-div,
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-table,
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-tbody,
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-tr,
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-td {
+#tcContactMainCard form table {
+  width: 100% !important;
   max-width: 100% !important;
-  background: transparent !important;
+
+  margin: 0 !important;
+
+  table-layout: auto !important;
+  border-collapse: separate !important;
+}
+
+html.tc-contact-modern-page
+#tcContactMainCard form td {
+  max-width: 100% !important;
+}
+
+html.tc-contact-modern-page
+#tcContactMainCard label,
+
+html.tc-contact-modern-page
+#tcContactMainCard .form_label,
+
+html.tc-contact-modern-page
+#tcContactMainCard .field_label {
+  color: #465248 !important;
+
+  font-family:
+    'Inter',
+    Arial,
+    sans-serif !important;
+
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+html.tc-contact-modern-page
+#tcContactMainCard input[type="text"],
+
+html.tc-contact-modern-page
+#tcContactMainCard input[type="email"],
+
+html.tc-contact-modern-page
+#tcContactMainCard textarea,
+
+html.tc-contact-modern-page
+#tcContactMainCard select,
+
+html.tc-contact-modern-page
+#tcContactMainCard .co_form_input {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 47px !important;
+
+  margin: 0 !important;
+  padding: 11px 14px !important;
+
+  background: #ffffff !important;
+
+  border:
+    1px solid rgba(69, 82, 72, 0.19) !important;
+
+  border-radius: 11px !important;
+
+  color: #30352f !important;
+
+  font-family:
+    'Inter',
+    Arial,
+    sans-serif !important;
+
+  font-size: 15px !important;
+
+  outline: none !important;
   box-shadow: none !important;
 }
 
-/* Sidebar section labels */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-.header,
+#tcContactMainCard textarea {
+  min-height: 220px !important;
+  resize: vertical !important;
+}
 
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-#LocalNavigationQuickLinks .header {
-  display: block !important;
+#tcContactMainCard input[type="text"]:focus,
 
-  margin: 0 0 11px !important;
+html.tc-contact-modern-page
+#tcContactMainCard input[type="email"]:focus,
+
+html.tc-contact-modern-page
+#tcContactMainCard textarea:focus,
+
+html.tc-contact-modern-page
+#tcContactMainCard select:focus {
+  border-color: #c3974f !important;
+
+  box-shadow:
+    0 0 0 3px rgba(195, 151, 79, 0.14) !important;
+}
+
+html.tc-contact-modern-page
+#tcContactMainCard input::placeholder,
+
+html.tc-contact-modern-page
+#tcContactMainCard textarea::placeholder {
+  color: #91968f !important;
+  opacity: 1 !important;
+}
+
+html.tc-contact-modern-page
+#tcContactMainCard input[type="checkbox"] {
+  accent-color: #6f7d4c !important;
+}
+
+/* Submit */
+html.tc-contact-modern-page
+#tcContactMainCard input[type="submit"],
+
+html.tc-contact-modern-page
+#tcContactMainCard button[type="submit"],
+
+html.tc-contact-modern-page
+#tcContactMainCard .co_global_button button,
+
+html.tc-contact-modern-page
+#tcContactMainCard .co_global_button input {
+  min-height: 48px !important;
+  padding: 0 29px !important;
+
+  background: #6f7d4c !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+
+  font-family:
+    'Montserrat',
+    Arial,
+    sans-serif !important;
+
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+
+  box-shadow:
+    0 10px 24px rgba(111, 125, 76, 0.23) !important;
+}
+
+html.tc-contact-modern-page
+#tcContactMainCard input[type="submit"]:hover,
+
+html.tc-contact-modern-page
+#tcContactMainCard button[type="submit"]:hover,
+
+html.tc-contact-modern-page
+#tcContactMainCard .co_global_button button:hover,
+
+html.tc-contact-modern-page
+#tcContactMainCard .co_global_button input:hover {
+  background: #59643e !important;
+}
+
+/* ============================================================
+   REACH US SIDEBAR
+   ============================================================ */
+
+html.tc-contact-modern-page
+#tcContactSidebarCard
+.tc-contact-small-heading {
+  margin: 0 0 12px !important;
 
   color: #6f7d4c !important;
 
@@ -3525,50 +3192,79 @@ html.tc-contact-modern-page
   font-size: 11px !important;
   font-weight: 800 !important;
   letter-spacing: 0.08em !important;
-  line-height: 1.4 !important;
   text-transform: uppercase !important;
 }
 
-/* Turn Quick Links into tidy menu rows */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-#LocalNavigationQuickLinks .item {
-  margin: 0 0 7px !important;
+#tcContactSidebarCard
+.tc-contact-quick-section {
+  padding-bottom: 23px !important;
+
+  border-bottom:
+    1px solid rgba(195, 151, 79, 0.20) !important;
 }
 
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-#LocalNavigationQuickLinks .item a {
+#tcContactSidebarCard
+.tc-contact-information-section {
+  padding-top: 23px !important;
+}
+
+html.tc-contact-modern-page
+#tcContactSidebarCard div,
+
+html.tc-contact-modern-page
+#tcContactSidebarCard table,
+
+html.tc-contact-modern-page
+#tcContactSidebarCard tbody,
+
+html.tc-contact-modern-page
+#tcContactSidebarCard tr,
+
+html.tc-contact-modern-page
+#tcContactSidebarCard td {
+  width: auto !important;
+  max-width: 100% !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html.tc-contact-modern-page
+#tcContactSidebarCard .item {
+  margin: 0 0 8px !important;
+}
+
+html.tc-contact-modern-page
+#tcContactSidebarCard .item a {
   display: block !important;
 
   padding: 10px 12px !important;
 
   background: #f8f2e9 !important;
+
   border:
-    1px solid rgba(195, 151, 79, 0.14) !important;
+    1px solid rgba(195, 151, 79, 0.15) !important;
+
   border-radius: 10px !important;
 
   color: #3f5550 !important;
 
   font-size: 13px !important;
   font-weight: 700 !important;
-  line-height: 1.25 !important;
+  text-decoration: none !important;
 }
 
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column
-#LocalNavigationQuickLinks .item a:hover {
+#tcContactSidebarCard .item a:hover {
   background: #eef1e7 !important;
   color: #59643e !important;
 }
 
-/* Contact details typography */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column {
+#tcContactSidebarCard {
   color: #4a534b !important;
 
   font-family:
@@ -3581,151 +3277,231 @@ html.tc-contact-modern-page
 }
 
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column a {
+#tcContactSidebarCard a {
   color: #178f9f !important;
   font-weight: 700 !important;
   text-decoration: none !important;
 }
 
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column a:hover {
+#tcContactSidebarCard a:hover {
   color: #59643e !important;
 }
 
-/* Give personnel entries some separation */
 html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column li {
-  margin-bottom: 13px !important;
+#tcContactSidebarCard ul {
+  margin: 10px 0 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+html.tc-contact-modern-page
+#tcContactSidebarCard li {
+  position: relative !important;
+
+  margin: 0 0 17px !important;
+  padding: 0 0 0 15px !important;
+}
+
+html.tc-contact-modern-page
+#tcContactSidebarCard li::before {
+  content: "" !important;
+
+  position: absolute !important;
+  left: 0 !important;
+  top: 8px !important;
+
+  width: 5px !important;
+  height: 5px !important;
+
+  background: #c3974f !important;
+  border-radius: 50% !important;
 }
 
 /* ============================================================
-   MOBILE
+   MOBILE — PREVENT CUT-OFF
    ============================================================ */
 
 @media screen and (max-width: 800px) {
-  html.tc-contact-modern-page
-  #ContentBody
-  .tc-contact-layout {
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
+  html.tc-contact-modern-page .article-header {
+    padding: 40px 18px 28px !important;
   }
 
   html.tc-contact-modern-page
-  #ContentBody
-  .tc-contact-form-column
-  form:has(textarea) {
-    padding: 23px !important;
-    border-radius: 21px !important;
+  .article-header__title::after {
+    font-size: 39px !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.7px !important;
+  }
+
+  html.tc-contact-modern-page .article-header::after {
+    max-width: 520px !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  html.tc-contact-modern-page #ContentBody {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding:
+      22px
+      12px
+      50px !important;
+
+    overflow-x: hidden !important;
   }
 
   html.tc-contact-modern-page
-  #ContentBody
-  .tc-contact-sidebar-column {
-    padding: 23px !important;
-    border-radius: 21px !important;
+  #tcContactModernLayout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    gap: 17px !important;
   }
 
   html.tc-contact-modern-page
-  #ContentBody
-  .tc-contact-sidebar-column::before {
-    font-size: 27px !important;
+  #tcContactMainCard,
+
+  html.tc-contact-modern-page
+  #tcContactSidebarCard {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 22px !important;
+
+    border-radius: 20px !important;
+    overflow: hidden !important;
+  }
+
+  html.tc-contact-modern-page
+  .tc-contact-card-title {
+    margin-bottom: 22px !important;
+    padding-bottom: 15px !important;
+
+    font-size: 28px !important;
+  }
+
+  /*
+   * ChabadOne's contact form uses tables.
+   * Convert them into stacked blocks on mobile.
+   */
+  html.tc-contact-modern-page
+  #tcContactMainCard form table,
+
+  html.tc-contact-modern-page
+  #tcContactMainCard form tbody,
+
+  html.tc-contact-modern-page
+  #tcContactMainCard form tr,
+
+  html.tc-contact-modern-page
+  #tcContactMainCard form td {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  html.tc-contact-modern-page
+  #tcContactMainCard form td {
+    margin-bottom: 12px !important;
+  }
+
+  html.tc-contact-modern-page
+  #tcContactMainCard input[type="text"],
+
+  html.tc-contact-modern-page
+  #tcContactMainCard input[type="email"],
+
+  html.tc-contact-modern-page
+  #tcContactMainCard textarea,
+
+  html.tc-contact-modern-page
+  #tcContactMainCard select,
+
+  html.tc-contact-modern-page
+  #tcContactMainCard .co_form_input {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+  }
+
+  html.tc-contact-modern-page
+  #tcContactMainCard textarea {
+    min-height: 180px !important;
+  }
+
+  html.tc-contact-modern-page
+  #tcContactMainCard input[type="submit"],
+
+  html.tc-contact-modern-page
+  #tcContactMainCard button[type="submit"],
+
+  html.tc-contact-modern-page
+  #tcContactMainCard .co_global_button button,
+
+  html.tc-contact-modern-page
+  #tcContactMainCard .co_global_button input {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  html.tc-contact-modern-page
+  #tcContactSidebarCard
+  table,
+
+  html.tc-contact-modern-page
+  #tcContactSidebarCard
+  tbody,
+
+  html.tc-contact-modern-page
+  #tcContactSidebarCard
+  tr,
+
+  html.tc-contact-modern-page
+  #tcContactSidebarCard
+  td {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
   }
 }
-/* ============================================================
-   CONTACT PAGE — CHABADONE TABLE LAYOUT RESET
-   Activates after the contact-page script adds the classes.
-   ============================================================ */
 
-html.tc-contact-modern-page
-#ContentBody
-table.tc-contact-layout-table {
-  display: block !important;
+@media screen and (max-width: 420px) {
+  html.tc-contact-modern-page #ContentBody {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
 
-  width: 100% !important;
-  max-width: 1060px !important;
-
-  margin: 0 auto !important;
-  padding: 0 !important;
-
-  background: transparent !important;
-  border: 0 !important;
-  border-collapse: separate !important;
-  table-layout: auto !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-table.tc-contact-layout-table
-> tbody.tc-contact-layout-tbody {
-  display: block !important;
-  width: 100% !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-table.tc-contact-layout-table
-> tbody.tc-contact-layout-tbody
-> tr.tc-contact-layout {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 300px !important;
-  gap: 28px !important;
-  align-items: start !important;
-
-  width: 100% !important;
-  max-width: none !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  background: transparent !important;
-  border: 0 !important;
-}
-
-/* Hide old ChabadOne spacer/divider cells */
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-layout
-> *:not(.tc-contact-form-column):not(.tc-contact-sidebar-column) {
-  display: none !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-form-column,
-
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-sidebar-column {
-  display: block !important;
-  float: none !important;
-
-  width: auto !important;
-  min-width: 0 !important;
-  max-width: none !important;
-
-  margin: 0 !important;
-  vertical-align: top !important;
-}
-
-/* Make the form fill the main column */
-html.tc-contact-modern-page
-#ContentBody
-.tc-contact-form-column
-form:has(textarea) {
-  width: 100% !important;
-}
-
-/* Mobile stacking */
-@media screen and (max-width: 800px) {
   html.tc-contact-modern-page
-  #ContentBody
-  table.tc-contact-layout-table
-  > tbody.tc-contact-layout-tbody
-  > tr.tc-contact-layout {
-    grid-template-columns: 1fr !important;
-    gap: 18px !important;
+  #tcContactMainCard,
+
+  html.tc-contact-modern-page
+  #tcContactSidebarCard {
+    padding: 19px !important;
+  }
+
+  html.tc-contact-modern-page
+  .article-header__title::after {
+    font-size: 35px !important;
   }
 }
