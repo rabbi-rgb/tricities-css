@@ -3772,384 +3772,414 @@ html.tc-contact-modern-page
   }
 }
 /* ============================================================
-   CONTACT PAGE — SIDEBAR DEFINITIVE FIX
-   Targets the actual ChabadOne sidebar table cell.
+   CONTACT PAGE — FINAL COHESIVE DESIGN
+   Requires contact-page-final-header.txt in Custom Header Code.
    ============================================================ */
 
-/* Desktop row: form + sidebar */
-html.tc-contact-modern-page
-#ContentBody
-tr:has(#LocalNavigationQuickLinks) {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 310px !important;
-  gap: 30px !important;
-  align-items: start !important;
+html.tc-contact-final-page,
+html.tc-contact-final-page body {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
 
+html.tc-contact-final-page body {
+  background: #f4ebdf !important;
+}
+
+html.tc-contact-final-page #BodyContainer {
+  background: transparent !important;
+}
+
+/* Make the title and content feel like one continuous page */
+html.tc-contact-final-page .master-content-wrapper.g960:has(.article-header) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(190,149,83,.10), transparent 34%),
+    radial-gradient(circle at 88% 12%, rgba(73,110,96,.08), transparent 35%),
+    linear-gradient(180deg, #fbf8f3 0%, #f4ebdf 100%) !important;
+  border: 0 !important;
+}
+
+html.tc-contact-final-page .article-header {
   width: 100% !important;
   max-width: 1080px !important;
-
   margin: 0 auto !important;
-  padding: 0 !important;
-
+  padding: 48px 20px 76px !important;
+  text-align: center !important;
   background: transparent !important;
-  border: 0 !important;
-}
-
-/* All cells in that row */
-html.tc-contact-modern-page
-#ContentBody
-tr:has(#LocalNavigationQuickLinks)
-> td {
-  display: block !important;
-  float: none !important;
-
-  width: auto !important;
-  min-width: 0 !important;
-  max-width: none !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
-
-  background: transparent !important;
-  border: 0 !important;
-  vertical-align: top !important;
-}
-
-/* Hide empty spacer cells */
-html.tc-contact-modern-page
-#ContentBody
-tr:has(#LocalNavigationQuickLinks)
-> td:empty {
-  display: none !important;
-}
-
-/* ============================================================
-   ONE UNIFIED REACH-US CARD
-   ============================================================ */
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks) {
-  display: block !important;
-
-  width: 310px !important;
-  min-width: 0 !important;
-  max-width: 310px !important;
-
-  margin: 0 !important;
-  padding: 28px !important;
-
-  background: rgba(255, 253, 249, 0.98) !important;
-  background-image: none !important;
-
-  border: 1px solid rgba(255, 255, 255, 0.85) !important;
-  border-top: 4px solid #6d7a4d !important;
-  border-radius: 24px !important;
-
-  box-shadow:
-    0 18px 46px rgba(45, 51, 45, 0.10) !important;
-
-  color: #485149 !important;
-
-  font-family: 'Inter', Arial, sans-serif !important;
-  font-size: 13px !important;
-  line-height: 1.58 !important;
-
   box-sizing: border-box !important;
+}
+
+html.tc-contact-final-page .article-header__title {
+  margin: 0 !important;
+  font-size: 0 !important;
+}
+
+html.tc-contact-final-page .article-header__title::after {
+  content: "We’d love to hear from you" !important;
+  display: block !important;
+  color: #30352f !important;
+  -webkit-text-fill-color: #30352f !important;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  font-size: 52px !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.1px !important;
+}
+
+html.tc-contact-final-page .article-header::after {
+  content: "Have a question, want to visit, or just want to connect? Send us a message and we’ll get back to you soon." !important;
+  display: block !important;
+  max-width: 650px !important;
+  margin: 15px auto 0 !important;
+  color: #687169 !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+html.tc-contact-final-page #ContentBody {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 22px 76px !important;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(190,149,83,.09), transparent 35%),
+    radial-gradient(circle at 92% 14%, rgba(73,110,96,.07), transparent 36%),
+    linear-gradient(180deg, #f4ebdf 0%, #efe3d4 100%) !important;
+  box-sizing: border-box !important;
+}
+
+html.tc-contact-final-page #tcContactFinalLayout,
+html.tc-contact-final-page #tcContactFinalLayout * {
+  box-sizing: border-box !important;
+  min-width: 0 !important;
+}
+
+html.tc-contact-final-page #tcContactFinalLayout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 320px !important;
+  gap: 28px !important;
+  align-items: start !important;
+  width: 100% !important;
+  max-width: 1060px !important;
+  margin: -32px auto 0 !important;
+  padding: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+html.tc-contact-final-page #tcContactFinalFormCard,
+html.tc-contact-final-page #tcContactFinalSidebar {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 36px !important;
+  background: rgba(255,253,249,.98) !important;
+  border: 1px solid rgba(255,255,255,.86) !important;
+  border-radius: 25px !important;
+  box-shadow: 0 20px 52px rgba(45,51,45,.10) !important;
   overflow: hidden !important;
 }
 
-/* Reach Us title */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)::before {
-  content: "Reach us" !important;
-  display: block !important;
-
-  margin: 0 0 22px !important;
-  padding: 0 0 17px !important;
-
-  color: #30352f !important;
-  -webkit-text-fill-color: #30352f !important;
-
-  font-family:
-    Georgia,
-    "Times New Roman",
-    Times,
-    serif !important;
-
-  font-size: 29px !important;
-  font-weight: 400 !important;
-  line-height: 1.15 !important;
-
-  border-bottom:
-    1px solid rgba(189, 149, 87, 0.23) !important;
+html.tc-contact-final-page #tcContactFinalFormCard {
+  border-top: 4px solid #bd9557 !important;
 }
 
-/* Remove every old white/square module background inside the card */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-> *,
+html.tc-contact-final-page #tcContactFinalSidebar {
+  border-top: 4px solid #6d7a4d !important;
+}
 
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-.co_local_menu,
+html.tc-contact-final-page .tc-contact-final-title {
+  margin: 0 0 27px !important;
+  padding: 0 0 18px !important;
+  color: #30352f !important;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  border-bottom: 1px solid rgba(189,149,87,.22) !important;
+}
 
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks,
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-div,
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-table,
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-tbody,
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-tr,
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-td {
-  width: auto !important;
-  max-width: 100% !important;
-
+/* Form reset */
+html.tc-contact-final-page #tcContactFinalFormCard form {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   background: transparent !important;
-  background-image: none !important;
-
   border: 0 !important;
   border-radius: 0 !important;
-
   box-shadow: none !important;
 }
 
-/* Quick Links section */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks {
-  display: block !important;
+html.tc-contact-final-page #tcContactFinalFormCard form::before,
+html.tc-contact-final-page #tcContactFinalFormCard form::after {
+  display: none !important;
+  content: none !important;
+}
 
+html.tc-contact-final-page #tcContactFinalFormCard form table {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  table-layout: auto !important;
+}
+
+html.tc-contact-final-page #tcContactFinalFormCard label,
+html.tc-contact-final-page #tcContactFinalFormCard .form_label,
+html.tc-contact-final-page #tcContactFinalFormCard .field_label {
+  color: #465148 !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+html.tc-contact-final-page #tcContactFinalFormCard input[type="text"],
+html.tc-contact-final-page #tcContactFinalFormCard input[type="email"],
+html.tc-contact-final-page #tcContactFinalFormCard textarea,
+html.tc-contact-final-page #tcContactFinalFormCard select,
+html.tc-contact-final-page #tcContactFinalFormCard .co_form_input {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 12px 14px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(70,81,72,.18) !important;
+  border-radius: 11px !important;
+  color: #30352f !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 15px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+html.tc-contact-final-page #tcContactFinalFormCard textarea {
+  min-height: 225px !important;
+  resize: vertical !important;
+}
+
+html.tc-contact-final-page #tcContactFinalFormCard input[type="text"]:focus,
+html.tc-contact-final-page #tcContactFinalFormCard input[type="email"]:focus,
+html.tc-contact-final-page #tcContactFinalFormCard textarea:focus,
+html.tc-contact-final-page #tcContactFinalFormCard select:focus {
+  border-color: #bd9557 !important;
+  box-shadow: 0 0 0 3px rgba(189,149,87,.14) !important;
+}
+
+html.tc-contact-final-page #tcContactFinalFormCard input[type="checkbox"] {
+  accent-color: #6d7a4d !important;
+}
+
+html.tc-contact-final-page .tc-contact-final-submit-wrap {
+  display: flex !important;
+  justify-content: flex-end !important;
+  width: 100% !important;
+  margin-top: 20px !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html.tc-contact-final-page .tc-contact-final-submit {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 150px !important;
+  min-height: 49px !important;
+  margin: 0 !important;
+  padding: 0 28px !important;
+  background: #6d7a4d !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: .055em !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 10px 25px rgba(109,122,77,.24) !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
+
+html.tc-contact-final-page .tc-contact-final-submit:hover {
+  background: #56613d !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Unified sidebar */
+html.tc-contact-final-page #tcContactFinalSidebar div,
+html.tc-contact-final-page #tcContactFinalSidebar table,
+html.tc-contact-final-page #tcContactFinalSidebar tbody,
+html.tc-contact-final-page #tcContactFinalSidebar tr,
+html.tc-contact-final-page #tcContactFinalSidebar td {
+  max-width: 100% !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html.tc-contact-final-page .tc-contact-final-section {
   width: 100% !important;
   margin: 0 !important;
-  padding: 0 0 23px !important;
-
-  border-bottom:
-    1px solid rgba(189, 149, 87, 0.20) !important;
-}
-
-/* Contact/personnel section after Quick Links */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks
-~ * {
-  display: block !important;
-
-  width: 100% !important;
-  margin: 23px 0 0 !important;
-  padding: 23px 0 0 !important;
-
-  border-top:
-    1px solid rgba(189, 149, 87, 0.20) !important;
-}
-
-/* Avoid two divider lines when modules are direct siblings */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks
-+ * {
-  border-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-/* Sidebar headings */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-.header,
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks .header {
-  display: block !important;
-
-  margin: 0 0 13px !important;
   padding: 0 !important;
+}
 
+html.tc-contact-final-page .tc-contact-final-info {
+  margin-top: 24px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid rgba(189,149,87,.20) !important;
+}
+
+html.tc-contact-final-page .tc-contact-final-label,
+html.tc-contact-final-page #tcContactFinalSidebar .header {
+  display: block !important;
+  margin: 0 0 12px !important;
   color: #6d7a4d !important;
   -webkit-text-fill-color: #6d7a4d !important;
-
   font-family: 'Montserrat', Arial, sans-serif !important;
   font-size: 11px !important;
   font-weight: 800 !important;
-  letter-spacing: 0.08em !important;
+  letter-spacing: .08em !important;
   line-height: 1.4 !important;
   text-transform: uppercase !important;
 }
 
-/* Quick Links */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks
-.item {
-  margin: 0 0 8px !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks
-.item a {
+html.tc-contact-final-page .tc-contact-final-quick a {
   display: block !important;
-
+  margin: 0 0 8px !important;
   padding: 10px 12px !important;
-
   background: #f8f2e9 !important;
-  border:
-    1px solid rgba(189, 149, 87, 0.15) !important;
+  border: 1px solid rgba(189,149,87,.15) !important;
   border-radius: 10px !important;
-
   color: #3f5550 !important;
   -webkit-text-fill-color: #3f5550 !important;
-
   font-size: 13px !important;
   font-weight: 700 !important;
   line-height: 1.25 !important;
   text-decoration: none !important;
 }
 
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-#LocalNavigationQuickLinks
-.item a:hover {
+html.tc-contact-final-page .tc-contact-final-quick a:hover {
   background: #eef1e7 !important;
-
   color: #56613d !important;
   -webkit-text-fill-color: #56613d !important;
 }
 
-/* Personnel and contact links */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-a {
+html.tc-contact-final-page .tc-contact-final-info {
+  color: #485149 !important;
+  font-family: 'Inter', Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.58 !important;
+}
+
+html.tc-contact-final-page .tc-contact-final-info a {
   color: #178f9f !important;
   -webkit-text-fill-color: #178f9f !important;
-
   font-weight: 700 !important;
   text-decoration: none !important;
 }
 
-/* Personnel list */
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-ul {
-  margin: 10px 0 0 !important;
-  padding: 0 !important;
-  list-style: none !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-li {
-  position: relative !important;
-
-  margin: 0 0 18px !important;
-  padding: 0 0 0 14px !important;
-}
-
-html.tc-contact-modern-page
-#ContentBody
-td:has(#LocalNavigationQuickLinks)
-li::before {
-  content: "" !important;
-
-  position: absolute !important;
-  top: 8px !important;
-  left: 0 !important;
-
-  width: 5px !important;
-  height: 5px !important;
-
-  background: #bd9557 !important;
-  border-radius: 50% !important;
-}
-
-/* ============================================================
-   MOBILE — FULL-WIDTH SIDEBAR, NO CUT-OFF
-   ============================================================ */
-
-@media screen and (max-width: 760px) {
-  html.tc-contact-modern-page
-  #ContentBody
-  tr:has(#LocalNavigationQuickLinks) {
-    display: block !important;
-
-    width: 100% !important;
-    max-width: 100% !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
+/* Mobile */
+@media screen and (max-width: 800px) {
+  html.tc-contact-final-page .article-header {
+    padding: 38px 17px 60px !important;
   }
 
-  html.tc-contact-modern-page
-  #ContentBody
-  tr:has(#LocalNavigationQuickLinks)
-  > td {
-    display: block !important;
-
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-
-    margin: 0 0 18px !important;
+  html.tc-contact-final-page .article-header__title::after {
+    font-size: 39px !important;
+    line-height: 1.12 !important;
+    letter-spacing: -.7px !important;
   }
 
-  html.tc-contact-modern-page
-  #ContentBody
-  td:has(#LocalNavigationQuickLinks) {
-    display: block !important;
+  html.tc-contact-final-page .article-header::after {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
 
+  html.tc-contact-final-page #ContentBody {
+    padding: 0 10px 50px !important;
+  }
+
+  html.tc-contact-final-page #tcContactFinalLayout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px !important;
     width: 100% !important;
-    min-width: 0 !important;
     max-width: 100% !important;
+    margin-top: -22px !important;
+  }
 
-    margin: 18px 0 0 !important;
+  html.tc-contact-final-page #tcContactFinalFormCard,
+  html.tc-contact-final-page #tcContactFinalSidebar {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
     padding: 22px !important;
-
     border-radius: 20px !important;
-
-    box-sizing: border-box !important;
-    overflow: hidden !important;
   }
 
-  html.tc-contact-modern-page
-  #ContentBody
-  td:has(#LocalNavigationQuickLinks)
-  * {
+  html.tc-contact-final-page .tc-contact-final-title {
+    font-size: 28px !important;
+    margin-bottom: 22px !important;
+    padding-bottom: 15px !important;
+  }
+
+  html.tc-contact-final-page #tcContactFinalFormCard form table,
+  html.tc-contact-final-page #tcContactFinalFormCard form tbody,
+  html.tc-contact-final-page #tcContactFinalFormCard form tr,
+  html.tc-contact-final-page #tcContactFinalFormCard form td {
+    display: block !important;
+    width: 100% !important;
     max-width: 100% !important;
-    box-sizing: border-box !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  html.tc-contact-final-page #tcContactFinalFormCard form td {
+    margin-bottom: 12px !important;
+  }
+
+  html.tc-contact-final-page .tc-contact-final-submit-wrap {
+    justify-content: stretch !important;
+  }
+
+  html.tc-contact-final-page .tc-contact-final-submit {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  html.tc-contact-final-page .article-header__title::after {
+    font-size: 35px !important;
+  }
+
+  html.tc-contact-final-page #ContentBody {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  html.tc-contact-final-page #tcContactFinalFormCard,
+  html.tc-contact-final-page #tcContactFinalSidebar {
+    padding: 19px !important;
   }
 }
