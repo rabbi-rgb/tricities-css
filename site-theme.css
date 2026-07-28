@@ -2758,280 +2758,501 @@ body:has(a[href*="/aid/6583317/"]) .co_body .content button {
   font-family: revert !important;
 }
 /* ============================================================
-   CONTACT PAGE — SAFE MODERN REDESIGN
+   CONTACT PAGE — MODERN CLASSY DESIGN
    Page: /tools/feedback.htm
    Scoped by html.tc-contact-modern-page
-   Does NOT touch .cco_body
+
+   Important:
+   Does not style #co_body, #co_body_container, .g260, .g300,
+   generic forms, the site header, or the footer.
    ============================================================ */
 
-html.tc-contact-modern-page {
+/* Page atmosphere */
+html.tc-contact-modern-page body {
   background:
-    radial-gradient(circle at 12% 8%, rgba(201,154,67,.14) 0%, transparent 32%),
-    radial-gradient(circle at 90% 18%, rgba(23,143,159,.10) 0%, transparent 34%),
-    linear-gradient(180deg, #FBF7EF 0%, #F1E7D9 100%) !important;
+    radial-gradient(
+      circle at 10% 7%,
+      rgba(195, 151, 79, 0.13) 0%,
+      transparent 33%
+    ),
+    radial-gradient(
+      circle at 90% 13%,
+      rgba(76, 122, 108, 0.10) 0%,
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #fbf7ef 0%,
+      #f2e8da 100%
+    ) !important;
 }
 
-html.tc-contact-modern-page body,
-html.tc-contact-modern-page #BodyContainer,
-html.tc-contact-modern-page #ContentBody,
-html.tc-contact-modern-page .body_wrapper,
-html.tc-contact-modern-page .content_full_width {
+html.tc-contact-modern-page #BodyContainer {
   background: transparent !important;
 }
 
-/* Title area */
-html.tc-contact-modern-page header.article-header,
+/* ============================================================
+   TITLE AREA
+   Only the wrapper containing the article title.
+   ============================================================ */
+
+html.tc-contact-modern-page
+.master-content-wrapper.g960:has(.article-header) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
 html.tc-contact-modern-page .article-header {
-  max-width: 1080px !important;
+  width: 100% !important;
+  max-width: 1120px !important;
   margin: 0 auto !important;
-  padding: 54px 24px 28px !important;
-  text-align: center !important;
+  padding: 62px 24px 38px !important;
   background: transparent !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
 }
 
 html.tc-contact-modern-page .article-header__title {
-  font-size: 0 !important;
   margin: 0 !important;
+  font-size: 0 !important;
 }
 
-html.tc-contact-modern-page .article-header__title:after {
+html.tc-contact-modern-page .article-header__title::after {
   content: "We’d love to hear from you" !important;
   display: block !important;
-  color: #2E332D !important;
+
+  color: #30352f !important;
+  -webkit-text-fill-color: #30352f !important;
+
   font-family: Georgia, "Times New Roman", Times, serif !important;
   font-size: 56px !important;
-  line-height: 1.08 !important;
   font-weight: 400 !important;
-  letter-spacing: -1.2px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.3px !important;
 }
 
-html.tc-contact-modern-page header.article-header:after,
-html.tc-contact-modern-page .article-header:after {
+html.tc-contact-modern-page .article-header::after {
   content: "Have a question, want to visit, or just want to connect? Send us a message and we’ll get back to you soon." !important;
+
   display: block !important;
-  max-width: 680px !important;
-  margin: 16px auto 0 !important;
-  color: #68706A !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+  max-width: 690px !important;
+  margin: 17px auto 0 !important;
+
+  color: #6d746d !important;
+  font-family: 'Inter', Arial, sans-serif !important;
   font-size: 17px !important;
+  font-weight: 400 !important;
   line-height: 1.65 !important;
 }
 
-/* Main content wrapper — safe selector, not body */
-html.tc-contact-modern-page #co_body_container,
-html.tc-contact-modern-page #co_body {
-  max-width: 1080px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+/* ============================================================
+   CONTACT CONTENT
+   #ContentBody contains the form/sidebar area, not the site shell.
+   ============================================================ */
 
-/* Contact form card */
-html.tc-contact-modern-page form {
-  background: #FFFDF8 !important;
-  border: 1px solid rgba(255,255,255,.78) !important;
-  border-radius: 28px !important;
-  padding: 34px !important;
-  box-shadow: 0 18px 48px rgba(46,51,45,.10) !important;
+html.tc-contact-modern-page #ContentBody {
+  width: 100% !important;
+  max-width: 1120px !important;
+  margin: 0 auto !important;
+  padding: 0 24px 76px !important;
+  background: transparent !important;
   box-sizing: border-box !important;
 }
 
-html.tc-contact-modern-page form:before {
+/* ============================================================
+   CONTACT FORM ONLY
+   Targets the form containing both an email field and textarea.
+   Does not touch search, subscribe or header forms.
+   ============================================================ */
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea):has(input[type="text"]) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 38px !important;
+
+  background: rgba(255, 253, 248, 0.97) !important;
+  border: 1px solid rgba(255, 255, 255, 0.80) !important;
+  border-radius: 26px !important;
+  box-shadow: 0 18px 50px rgba(47, 54, 47, 0.10) !important;
+
+  box-sizing: border-box !important;
+}
+
+/* Form card title */
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea):has(input[type="text"])::before {
   content: "Send a message" !important;
   display: block !important;
-  color: #2E332D !important;
+
+  margin: 0 0 25px !important;
+  padding: 0 0 17px !important;
+
+  color: #30352f !important;
   font-family: Georgia, "Times New Roman", Times, serif !important;
-  font-size: 32px !important;
-  line-height: 1.15 !important;
+  font-size: 33px !important;
   font-weight: 400 !important;
-  margin: 0 0 22px !important;
-  padding-bottom: 14px !important;
-  border-bottom: 1px solid rgba(201,154,67,.26) !important;
+  line-height: 1.15 !important;
+
+  border-bottom: 1px solid rgba(195, 151, 79, 0.26) !important;
 }
 
 /* Labels */
-html.tc-contact-modern-page form label,
-html.tc-contact-modern-page form .form_label,
-html.tc-contact-modern-page form .field_label,
-html.tc-contact-modern-page form b,
-html.tc-contact-modern-page form strong {
-  color: #435045 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+label,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.form_label,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.field_label {
+  color: #465248 !important;
+  font-family: 'Inter', Arial, sans-serif !important;
   font-size: 13px !important;
-  font-weight: 800 !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
 }
 
 /* Inputs */
-html.tc-contact-modern-page form input[type="text"],
-html.tc-contact-modern-page form input[type="email"],
-html.tc-contact-modern-page form textarea,
-html.tc-contact-modern-page form select,
-html.tc-contact-modern-page form .co_form_input,
-html.tc-contact-modern-page form .form-textbox,
-html.tc-contact-modern-page form .form-textarea {
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input[type="text"],
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input[type="email"],
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+textarea,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+select,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.co_form_input {
   width: 100% !important;
   max-width: 100% !important;
-  min-height: 46px !important;
+  min-height: 47px !important;
+
+  padding: 11px 14px !important;
+
   background: #ffffff !important;
-  border: 1px solid rgba(67,80,69,.18) !important;
-  border-radius: 12px !important;
-  color: #2E332D !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+  border: 1px solid rgba(69, 82, 72, 0.19) !important;
+  border-radius: 11px !important;
+
+  color: #30352f !important;
+  font-family: 'Inter', Arial, sans-serif !important;
   font-size: 15px !important;
-  padding: 11px 13px !important;
-  box-shadow: none !important;
+
   outline: none !important;
+  box-shadow: none !important;
   box-sizing: border-box !important;
 }
 
-html.tc-contact-modern-page form textarea,
-html.tc-contact-modern-page form .form-textarea {
-  min-height: 220px !important;
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+textarea {
+  min-height: 215px !important;
   resize: vertical !important;
 }
 
-html.tc-contact-modern-page form input[type="text"]:focus,
-html.tc-contact-modern-page form input[type="email"]:focus,
-html.tc-contact-modern-page form textarea:focus,
-html.tc-contact-modern-page form select:focus,
-html.tc-contact-modern-page form .co_form_input:focus,
-html.tc-contact-modern-page form .form-textbox:focus,
-html.tc-contact-modern-page form .form-textarea:focus {
-  border-color: #C99A43 !important;
-  box-shadow: 0 0 0 3px rgba(201,154,67,.14) !important;
+/* Focus state */
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input[type="text"]:focus,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input[type="email"]:focus,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+textarea:focus,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+select:focus {
+  border-color: #c3974f !important;
+  box-shadow: 0 0 0 3px rgba(195, 151, 79, 0.14) !important;
 }
 
-/* Checkbox */
-html.tc-contact-modern-page form input[type="checkbox"] {
-  accent-color: #6D7B46 !important;
+/* Placeholder */
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input::placeholder,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+textarea::placeholder {
+  color: #91968f !important;
+  opacity: 1 !important;
 }
 
-html.tc-contact-modern-page form input[type="checkbox"] + label,
-html.tc-contact-modern-page form .small,
-html.tc-contact-modern-page form small {
-  color: #68706A !important;
+/* Email opt-in */
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input[type="checkbox"] {
+  accent-color: #6f7d4c !important;
+}
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+small,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.small {
+  color: #737b74 !important;
   font-size: 13px !important;
-  line-height: 1.45 !important;
+  line-height: 1.5 !important;
 }
 
 /* Submit button */
-html.tc-contact-modern-page form input[type="submit"],
-html.tc-contact-modern-page form button[type="submit"],
-html.tc-contact-modern-page form .form-submit-button,
-html.tc-contact-modern-page form .co_global_button button,
-html.tc-contact-modern-page form .co_global_button input {
-  background: #6D7B46 !important;
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input[type="submit"],
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+button[type="submit"],
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.co_global_button button,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.co_global_button input {
+  min-height: 48px !important;
+  padding: 0 29px !important;
+
+  background: #6f7d4c !important;
   border: 0 !important;
   border-radius: 999px !important;
+
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
-  min-height: 48px !important;
-  padding: 0 28px !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 14px !important;
-  font-weight: 800 !important;
-  letter-spacing: .04em !important;
-  text-transform: uppercase !important;
-  box-shadow: 0 10px 24px rgba(109,123,70,.22) !important;
-}
 
-html.tc-contact-modern-page form input[type="submit"]:hover,
-html.tc-contact-modern-page form button[type="submit"]:hover,
-html.tc-contact-modern-page form .form-submit-button:hover,
-html.tc-contact-modern-page form .co_global_button button:hover,
-html.tc-contact-modern-page form .co_global_button input:hover {
-  background: #566236 !important;
-}
-
-/* Sidebar: style existing boxes only, do not reposition page */
-html.tc-contact-modern-page .right_column,
-html.tc-contact-modern-page .rightColumn,
-html.tc-contact-modern-page .content_sidebar,
-html.tc-contact-modern-page .co_local_menu,
-html.tc-contact-modern-page .g260,
-html.tc-contact-modern-page .g300 {
-  background: transparent !important;
-}
-
-html.tc-contact-modern-page .right_column > *,
-html.tc-contact-modern-page .rightColumn > *,
-html.tc-contact-modern-page .content_sidebar > *,
-html.tc-contact-modern-page .co_local_menu > *,
-html.tc-contact-modern-page .g260 > *,
-html.tc-contact-modern-page .g300 > * {
-  background: #FFFDF8 !important;
-  border: 1px solid rgba(255,255,255,.78) !important;
-  border-radius: 22px !important;
-  padding: 22px !important;
-  margin-bottom: 16px !important;
-  box-shadow: 0 12px 32px rgba(46,51,45,.08) !important;
-}
-
-/* Sidebar headings and links */
-html.tc-contact-modern-page .right_column h2,
-html.tc-contact-modern-page .rightColumn h2,
-html.tc-contact-modern-page .content_sidebar h2,
-html.tc-contact-modern-page .co_local_menu h2,
-html.tc-contact-modern-page .g260 h2,
-html.tc-contact-modern-page .g300 h2,
-html.tc-contact-modern-page .right_column .header,
-html.tc-contact-modern-page .rightColumn .header,
-html.tc-contact-modern-page .content_sidebar .header,
-html.tc-contact-modern-page .co_local_menu .header,
-html.tc-contact-modern-page .g260 .header,
-html.tc-contact-modern-page .g300 .header {
-  color: #6D7B46 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
   font-size: 13px !important;
-  font-weight: 900 !important;
-  letter-spacing: .08em !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.055em !important;
+  text-transform: uppercase !important;
+
+  box-shadow: 0 10px 24px rgba(111, 125, 76, 0.23) !important;
+  cursor: pointer !important;
+}
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+input[type="submit"]:hover,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+button[type="submit"]:hover,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.co_global_button button:hover,
+
+html.tc-contact-modern-page
+#ContentBody
+form:has(textarea)
+.co_global_button input:hover {
+  background: #59643e !important;
+}
+
+/* ============================================================
+   EXISTING RIGHT SIDEBAR
+   Uses actual ChabadOne local-navigation elements.
+   No grid-width selectors.
+   ============================================================ */
+
+html.tc-contact-modern-page
+#ContentBody
+#LocalNavigationQuickLinks,
+
+html.tc-contact-modern-page
+#ContentBody
+.co_local_menu,
+
+html.tc-contact-modern-page
+#ContentBody
+#MosadInformation,
+
+html.tc-contact-modern-page
+#ContentBody
+.contact_info {
+  background: rgba(255, 253, 248, 0.97) !important;
+  border: 1px solid rgba(255, 255, 255, 0.80) !important;
+  border-radius: 21px !important;
+  padding: 23px !important;
+  margin-bottom: 17px !important;
+  box-shadow: 0 13px 34px rgba(47, 54, 47, 0.08) !important;
+  box-sizing: border-box !important;
+}
+
+/* Sidebar headings */
+html.tc-contact-modern-page
+#ContentBody
+#LocalNavigationQuickLinks .header,
+
+html.tc-contact-modern-page
+#ContentBody
+.co_local_menu .header,
+
+html.tc-contact-modern-page
+#ContentBody
+#MosadInformation .header,
+
+html.tc-contact-modern-page
+#ContentBody
+.contact_info .header {
+  color: #6f7d4c !important;
+  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.075em !important;
+  line-height: 1.4 !important;
   text-transform: uppercase !important;
 }
 
-html.tc-contact-modern-page .right_column a,
-html.tc-contact-modern-page .rightColumn a,
-html.tc-contact-modern-page .content_sidebar a,
-html.tc-contact-modern-page .co_local_menu a,
-html.tc-contact-modern-page .g260 a,
-html.tc-contact-modern-page .g300 a {
-  color: #178F9F !important;
-  text-decoration: none !important;
+/* Sidebar links */
+html.tc-contact-modern-page
+#ContentBody
+#LocalNavigationQuickLinks a,
+
+html.tc-contact-modern-page
+#ContentBody
+.co_local_menu a,
+
+html.tc-contact-modern-page
+#ContentBody
+#MosadInformation a,
+
+html.tc-contact-modern-page
+#ContentBody
+.contact_info a {
+  color: #178f9f !important;
   font-weight: 700 !important;
+  text-decoration: none !important;
 }
 
-/* Mobile */
-@media screen and (max-width: 849px) {
-  html.tc-contact-modern-page header.article-header,
+html.tc-contact-modern-page
+#ContentBody
+#LocalNavigationQuickLinks a:hover,
+
+html.tc-contact-modern-page
+#ContentBody
+.co_local_menu a:hover,
+
+html.tc-contact-modern-page
+#ContentBody
+#MosadInformation a:hover,
+
+html.tc-contact-modern-page
+#ContentBody
+.contact_info a:hover {
+  color: #59643e !important;
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 760px) {
   html.tc-contact-modern-page .article-header {
-    padding: 36px 18px 22px !important;
+    padding: 40px 18px 27px !important;
   }
 
-  html.tc-contact-modern-page .article-header__title:after {
+  html.tc-contact-modern-page .article-header__title::after {
     font-size: 40px !important;
     line-height: 1.12 !important;
+    letter-spacing: -0.7px !important;
   }
 
-  html.tc-contact-modern-page header.article-header:after,
-  html.tc-contact-modern-page .article-header:after {
+  html.tc-contact-modern-page .article-header::after {
     font-size: 15px !important;
+    line-height: 1.6 !important;
   }
 
-  html.tc-contact-modern-page #co_body_container,
-  html.tc-contact-modern-page #co_body {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
+  html.tc-contact-modern-page #ContentBody {
+    padding: 0 14px 50px !important;
   }
 
-  html.tc-contact-modern-page form {
-    padding: 22px !important;
-    border-radius: 22px !important;
+  html.tc-contact-modern-page
+  #ContentBody
+  form:has(textarea):has(input[type="text"]) {
+    padding: 23px !important;
+    border-radius: 21px !important;
   }
 
-  html.tc-contact-modern-page form:before {
+  html.tc-contact-modern-page
+  #ContentBody
+  form:has(textarea):has(input[type="text"])::before {
     font-size: 28px !important;
   }
 
-  html.tc-contact-modern-page form textarea,
-  html.tc-contact-modern-page form .form-textarea {
+  html.tc-contact-modern-page
+  #ContentBody
+  form:has(textarea)
+  textarea {
     min-height: 180px !important;
+  }
+
+  html.tc-contact-modern-page
+  #ContentBody
+  #LocalNavigationQuickLinks,
+
+  html.tc-contact-modern-page
+  #ContentBody
+  .co_local_menu,
+
+  html.tc-contact-modern-page
+  #ContentBody
+  #MosadInformation,
+
+  html.tc-contact-modern-page
+  #ContentBody
+  .contact_info {
+    padding: 20px !important;
+    border-radius: 18px !important;
   }
 }
