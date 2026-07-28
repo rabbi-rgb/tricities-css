@@ -2758,9 +2758,10 @@ body:has(a[href*="/aid/6583317/"]) .co_body .content button {
   font-family: revert !important;
 }
 /* ============================================================
-   CONTACT PAGE — MODERN CLASSY REDESIGN
+   CONTACT PAGE — SAFE MODERN REDESIGN
    Page: /tools/feedback.htm
    Scoped by html.tc-contact-modern-page
+   Does NOT touch .cco_body
    ============================================================ */
 
 html.tc-contact-modern-page {
@@ -2774,33 +2775,26 @@ html.tc-contact-modern-page body,
 html.tc-contact-modern-page #BodyContainer,
 html.tc-contact-modern-page #ContentBody,
 html.tc-contact-modern-page .body_wrapper,
-html.tc-contact-modern-page .content_full_width,
-html.tc-contact-modern-page .master-content-wrapper {
+html.tc-contact-modern-page .content_full_width {
   background: transparent !important;
 }
 
-/* Main title area */
-html.tc-contact-modern-page .article-header,
-html.tc-contact-modern-page header.article-header {
+/* Title area */
+html.tc-contact-modern-page header.article-header,
+html.tc-contact-modern-page .article-header {
   max-width: 1080px !important;
   margin: 0 auto !important;
-  padding: 52px 24px 30px !important;
+  padding: 54px 24px 28px !important;
   text-align: center !important;
+  background: transparent !important;
 }
 
-html.tc-contact-modern-page .article-header__title,
-html.tc-contact-modern-page h1 {
-  color: #2E332D !important;
-  font-family: Georgia, "Times New Roman", Times, serif !important;
+html.tc-contact-modern-page .article-header__title {
   font-size: 0 !important;
-  line-height: 1.05 !important;
-  font-weight: 400 !important;
-  letter-spacing: -1px !important;
   margin: 0 !important;
 }
 
-html.tc-contact-modern-page .article-header__title:after,
-html.tc-contact-modern-page h1:after {
+html.tc-contact-modern-page .article-header__title:after {
   content: "We’d love to hear from you" !important;
   display: block !important;
   color: #2E332D !important;
@@ -2811,8 +2805,8 @@ html.tc-contact-modern-page h1:after {
   letter-spacing: -1.2px !important;
 }
 
-html.tc-contact-modern-page .article-header:after,
-html.tc-contact-modern-page header.article-header:after {
+html.tc-contact-modern-page header.article-header:after,
+html.tc-contact-modern-page .article-header:after {
   content: "Have a question, want to visit, or just want to connect? Send us a message and we’ll get back to you soon." !important;
   display: block !important;
   max-width: 680px !important;
@@ -2823,31 +2817,16 @@ html.tc-contact-modern-page header.article-header:after {
   line-height: 1.65 !important;
 }
 
-/* Main content layout */
-html.tc-contact-modern-page .cco_body,
+/* Main content wrapper — safe selector, not body */
 html.tc-contact-modern-page #co_body_container,
 html.tc-contact-modern-page #co_body {
-  max-width: 1120px !important;
-  margin: 0 auto 72px !important;
-  padding: 0 24px !important;
-  box-sizing: border-box !important;
+  max-width: 1080px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-/* Try to turn the form/sidebar area into a clean two-column layout */
-@media screen and (min-width: 850px) {
-  html.tc-contact-modern-page .cco_body {
-    display: grid !important;
-    grid-template-columns: minmax(0, 1fr) 315px !important;
-    gap: 28px !important;
-    align-items: start !important;
-  }
-}
-
-/* Left form card */
-html.tc-contact-modern-page form,
-html.tc-contact-modern-page .co_form,
-html.tc-contact-modern-page .form,
-html.tc-contact-modern-page .feedback_form {
+/* Contact form card */
+html.tc-contact-modern-page form {
   background: #FFFDF8 !important;
   border: 1px solid rgba(255,255,255,.78) !important;
   border-radius: 28px !important;
@@ -2856,10 +2835,7 @@ html.tc-contact-modern-page .feedback_form {
   box-sizing: border-box !important;
 }
 
-/* Add a warm top line to the form */
-html.tc-contact-modern-page form:before,
-html.tc-contact-modern-page .co_form:before,
-html.tc-contact-modern-page .feedback_form:before {
+html.tc-contact-modern-page form:before {
   content: "Send a message" !important;
   display: block !important;
   color: #2E332D !important;
@@ -2873,25 +2849,25 @@ html.tc-contact-modern-page .feedback_form:before {
 }
 
 /* Labels */
-html.tc-contact-modern-page label,
-html.tc-contact-modern-page .co_form label,
-html.tc-contact-modern-page .form_label,
-html.tc-contact-modern-page .field_label {
+html.tc-contact-modern-page form label,
+html.tc-contact-modern-page form .form_label,
+html.tc-contact-modern-page form .field_label,
+html.tc-contact-modern-page form b,
+html.tc-contact-modern-page form strong {
   color: #435045 !important;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 13px !important;
   font-weight: 800 !important;
-  letter-spacing: .02em !important;
 }
 
 /* Inputs */
-html.tc-contact-modern-page input[type="text"],
-html.tc-contact-modern-page input[type="email"],
-html.tc-contact-modern-page textarea,
-html.tc-contact-modern-page select,
-html.tc-contact-modern-page .co_form_input,
-html.tc-contact-modern-page .form-textbox,
-html.tc-contact-modern-page .form-textarea {
+html.tc-contact-modern-page form input[type="text"],
+html.tc-contact-modern-page form input[type="email"],
+html.tc-contact-modern-page form textarea,
+html.tc-contact-modern-page form select,
+html.tc-contact-modern-page form .co_form_input,
+html.tc-contact-modern-page form .form-textbox,
+html.tc-contact-modern-page form .form-textarea {
   width: 100% !important;
   max-width: 100% !important;
   min-height: 46px !important;
@@ -2907,41 +2883,42 @@ html.tc-contact-modern-page .form-textarea {
   box-sizing: border-box !important;
 }
 
-html.tc-contact-modern-page textarea,
-html.tc-contact-modern-page .form-textarea {
-  min-height: 210px !important;
+html.tc-contact-modern-page form textarea,
+html.tc-contact-modern-page form .form-textarea {
+  min-height: 220px !important;
   resize: vertical !important;
 }
 
-html.tc-contact-modern-page input[type="text"]:focus,
-html.tc-contact-modern-page input[type="email"]:focus,
-html.tc-contact-modern-page textarea:focus,
-html.tc-contact-modern-page select:focus,
-html.tc-contact-modern-page .co_form_input:focus,
-html.tc-contact-modern-page .form-textbox:focus,
-html.tc-contact-modern-page .form-textarea:focus {
+html.tc-contact-modern-page form input[type="text"]:focus,
+html.tc-contact-modern-page form input[type="email"]:focus,
+html.tc-contact-modern-page form textarea:focus,
+html.tc-contact-modern-page form select:focus,
+html.tc-contact-modern-page form .co_form_input:focus,
+html.tc-contact-modern-page form .form-textbox:focus,
+html.tc-contact-modern-page form .form-textarea:focus {
   border-color: #C99A43 !important;
   box-shadow: 0 0 0 3px rgba(201,154,67,.14) !important;
 }
 
-/* Email opt-in */
-html.tc-contact-modern-page input[type="checkbox"] {
+/* Checkbox */
+html.tc-contact-modern-page form input[type="checkbox"] {
   accent-color: #6D7B46 !important;
 }
 
-html.tc-contact-modern-page input[type="checkbox"] + label,
-html.tc-contact-modern-page .small {
+html.tc-contact-modern-page form input[type="checkbox"] + label,
+html.tc-contact-modern-page form .small,
+html.tc-contact-modern-page form small {
   color: #68706A !important;
   font-size: 13px !important;
   line-height: 1.45 !important;
 }
 
 /* Submit button */
-html.tc-contact-modern-page input[type="submit"],
-html.tc-contact-modern-page button[type="submit"],
-html.tc-contact-modern-page .form-submit-button,
-html.tc-contact-modern-page .co_global_button button,
-html.tc-contact-modern-page .co_global_button input {
+html.tc-contact-modern-page form input[type="submit"],
+html.tc-contact-modern-page form button[type="submit"],
+html.tc-contact-modern-page form .form-submit-button,
+html.tc-contact-modern-page form .co_global_button button,
+html.tc-contact-modern-page form .co_global_button input {
   background: #6D7B46 !important;
   border: 0 !important;
   border-radius: 999px !important;
@@ -2957,31 +2934,28 @@ html.tc-contact-modern-page .co_global_button input {
   box-shadow: 0 10px 24px rgba(109,123,70,.22) !important;
 }
 
-html.tc-contact-modern-page input[type="submit"]:hover,
-html.tc-contact-modern-page button[type="submit"]:hover,
-html.tc-contact-modern-page .form-submit-button:hover,
-html.tc-contact-modern-page .co_global_button button:hover,
-html.tc-contact-modern-page .co_global_button input:hover {
+html.tc-contact-modern-page form input[type="submit"]:hover,
+html.tc-contact-modern-page form button[type="submit"]:hover,
+html.tc-contact-modern-page form .form-submit-button:hover,
+html.tc-contact-modern-page form .co_global_button button:hover,
+html.tc-contact-modern-page form .co_global_button input:hover {
   background: #566236 !important;
 }
 
-/* Right sidebar cards */
+/* Sidebar: style existing boxes only, do not reposition page */
 html.tc-contact-modern-page .right_column,
 html.tc-contact-modern-page .rightColumn,
-html.tc-contact-modern-page .sidebar,
-html.tc-contact-modern-page .co_local_menu,
 html.tc-contact-modern-page .content_sidebar,
+html.tc-contact-modern-page .co_local_menu,
 html.tc-contact-modern-page .g260,
 html.tc-contact-modern-page .g300 {
   background: transparent !important;
-  border: 0 !important;
 }
 
 html.tc-contact-modern-page .right_column > *,
 html.tc-contact-modern-page .rightColumn > *,
-html.tc-contact-modern-page .sidebar > *,
-html.tc-contact-modern-page .co_local_menu > *,
 html.tc-contact-modern-page .content_sidebar > *,
+html.tc-contact-modern-page .co_local_menu > *,
 html.tc-contact-modern-page .g260 > *,
 html.tc-contact-modern-page .g300 > * {
   background: #FFFDF8 !important;
@@ -2992,16 +2966,19 @@ html.tc-contact-modern-page .g300 > * {
   box-shadow: 0 12px 32px rgba(46,51,45,.08) !important;
 }
 
-/* Sidebar headings */
+/* Sidebar headings and links */
 html.tc-contact-modern-page .right_column h2,
 html.tc-contact-modern-page .rightColumn h2,
-html.tc-contact-modern-page .sidebar h2,
-html.tc-contact-modern-page .co_local_menu h2,
 html.tc-contact-modern-page .content_sidebar h2,
+html.tc-contact-modern-page .co_local_menu h2,
 html.tc-contact-modern-page .g260 h2,
 html.tc-contact-modern-page .g300 h2,
 html.tc-contact-modern-page .right_column .header,
-html.tc-contact-modern-page .sidebar .header {
+html.tc-contact-modern-page .rightColumn .header,
+html.tc-contact-modern-page .content_sidebar .header,
+html.tc-contact-modern-page .co_local_menu .header,
+html.tc-contact-modern-page .g260 .header,
+html.tc-contact-modern-page .g300 .header {
   color: #6D7B46 !important;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 13px !important;
@@ -3010,25 +2987,10 @@ html.tc-contact-modern-page .sidebar .header {
   text-transform: uppercase !important;
 }
 
-/* Sidebar links/text */
-html.tc-contact-modern-page .right_column,
-html.tc-contact-modern-page .rightColumn,
-html.tc-contact-modern-page .sidebar,
-html.tc-contact-modern-page .co_local_menu,
-html.tc-contact-modern-page .content_sidebar,
-html.tc-contact-modern-page .g260,
-html.tc-contact-modern-page .g300 {
-  color: #435045 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.55 !important;
-}
-
 html.tc-contact-modern-page .right_column a,
 html.tc-contact-modern-page .rightColumn a,
-html.tc-contact-modern-page .sidebar a,
-html.tc-contact-modern-page .co_local_menu a,
 html.tc-contact-modern-page .content_sidebar a,
+html.tc-contact-modern-page .co_local_menu a,
 html.tc-contact-modern-page .g260 a,
 html.tc-contact-modern-page .g300 a {
   color: #178F9F !important;
@@ -3036,64 +2998,40 @@ html.tc-contact-modern-page .g300 a {
   font-weight: 700 !important;
 }
 
-html.tc-contact-modern-page .right_column a:hover,
-html.tc-contact-modern-page .rightColumn a:hover,
-html.tc-contact-modern-page .sidebar a:hover,
-html.tc-contact-modern-page .co_local_menu a:hover,
-html.tc-contact-modern-page .content_sidebar a:hover,
-html.tc-contact-modern-page .g260 a:hover,
-html.tc-contact-modern-page .g300 a:hover {
-  color: #6D7B46 !important;
-}
-
-/* Reduce old divider lines */
-html.tc-contact-modern-page hr,
-html.tc-contact-modern-page .divider,
-html.tc-contact-modern-page .separator {
-  border-color: rgba(201,154,67,.22) !important;
-}
-
 /* Mobile */
 @media screen and (max-width: 849px) {
-  html.tc-contact-modern-page .article-header,
-  html.tc-contact-modern-page header.article-header {
+  html.tc-contact-modern-page header.article-header,
+  html.tc-contact-modern-page .article-header {
     padding: 36px 18px 22px !important;
   }
 
-  html.tc-contact-modern-page .article-header__title:after,
-  html.tc-contact-modern-page h1:after {
+  html.tc-contact-modern-page .article-header__title:after {
     font-size: 40px !important;
     line-height: 1.12 !important;
   }
 
-  html.tc-contact-modern-page .article-header:after,
-  html.tc-contact-modern-page header.article-header:after {
+  html.tc-contact-modern-page header.article-header:after,
+  html.tc-contact-modern-page .article-header:after {
     font-size: 15px !important;
   }
 
-  html.tc-contact-modern-page .cco_body,
   html.tc-contact-modern-page #co_body_container,
   html.tc-contact-modern-page #co_body {
-    padding: 0 14px !important;
-    margin-bottom: 48px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
   }
 
-  html.tc-contact-modern-page form,
-  html.tc-contact-modern-page .co_form,
-  html.tc-contact-modern-page .form,
-  html.tc-contact-modern-page .feedback_form {
+  html.tc-contact-modern-page form {
     padding: 22px !important;
     border-radius: 22px !important;
   }
 
-  html.tc-contact-modern-page form:before,
-  html.tc-contact-modern-page .co_form:before,
-  html.tc-contact-modern-page .feedback_form:before {
+  html.tc-contact-modern-page form:before {
     font-size: 28px !important;
   }
 
-  html.tc-contact-modern-page textarea,
-  html.tc-contact-modern-page .form-textarea {
+  html.tc-contact-modern-page form textarea,
+  html.tc-contact-modern-page form .form-textarea {
     min-height: 180px !important;
   }
 }
