@@ -3634,3 +3634,98 @@ html.tc-contact-modern-page
     font-size: 27px !important;
   }
 }
+/* ============================================================
+   CONTACT PAGE — CHABADONE TABLE LAYOUT RESET
+   Activates after the contact-page script adds the classes.
+   ============================================================ */
+
+html.tc-contact-modern-page
+#ContentBody
+table.tc-contact-layout-table {
+  display: block !important;
+
+  width: 100% !important;
+  max-width: 1060px !important;
+
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: 0 !important;
+  border-collapse: separate !important;
+  table-layout: auto !important;
+}
+
+html.tc-contact-modern-page
+#ContentBody
+table.tc-contact-layout-table
+> tbody.tc-contact-layout-tbody {
+  display: block !important;
+  width: 100% !important;
+}
+
+html.tc-contact-modern-page
+#ContentBody
+table.tc-contact-layout-table
+> tbody.tc-contact-layout-tbody
+> tr.tc-contact-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 300px !important;
+  gap: 28px !important;
+  align-items: start !important;
+
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: 0 !important;
+}
+
+/* Hide old ChabadOne spacer/divider cells */
+html.tc-contact-modern-page
+#ContentBody
+.tc-contact-layout
+> *:not(.tc-contact-form-column):not(.tc-contact-sidebar-column) {
+  display: none !important;
+}
+
+html.tc-contact-modern-page
+#ContentBody
+.tc-contact-form-column,
+
+html.tc-contact-modern-page
+#ContentBody
+.tc-contact-sidebar-column {
+  display: block !important;
+  float: none !important;
+
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  vertical-align: top !important;
+}
+
+/* Make the form fill the main column */
+html.tc-contact-modern-page
+#ContentBody
+.tc-contact-form-column
+form:has(textarea) {
+  width: 100% !important;
+}
+
+/* Mobile stacking */
+@media screen and (max-width: 800px) {
+  html.tc-contact-modern-page
+  #ContentBody
+  table.tc-contact-layout-table
+  > tbody.tc-contact-layout-tbody
+  > tr.tc-contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+}
