@@ -697,26 +697,27 @@ html.tc-high-holidays-minisite .form-all label:has(input[type="radio"]:checked) 
 
 }
 /* ============================================================
-   HIGH HOLIDAY RESERVATIONS — POLISHED FORM V3
-   Replaces the previous page-specific High Holiday form block.
-   Applies only when #hh-reservations-intro is present.
+   HIGH HOLIDAY RESERVATIONS - COMPLETE LAYOUT RESET
+   Page-specific styling for aid 7431739.
+   Requires id="hh-reservations-intro" on the introduction wrapper.
    ============================================================ */
 
 body:has(#hh-reservations-intro) {
   --hh-burgundy: #A91838;
-  --hh-burgundy-dark: #82102A;
-  --hh-gold: #C38A2E;
-  --hh-gold-soft: #F2DFC0;
+  --hh-burgundy-dark: #7F1029;
+  --hh-burgundy-pale: #FBEFF2;
+  --hh-gold: #BE8528;
+  --hh-gold-pale: #F8ECD6;
   --hh-ink: #302B28;
-  --hh-muted: #706760;
-  --hh-line: #E5D9CC;
-  --hh-page: #FAF6F0;
-  --hh-card: #FFFFFF;
+  --hh-muted: #6E655F;
+  --hh-line: #E4D9CD;
+  --hh-page: #FAF7F2;
+  --hh-white: #FFFFFF;
   --hh-choice: #FFFDFC;
   --hh-selected: #FFF3DE;
+  scroll-padding-top: 150px;
 }
 
-/* Keep ChabadOne controls in the High Holiday palette */
 body:has(#hh-reservations-intro) #formContainer,
 body:has(#hh-reservations-intro) .form-all,
 body:has(#hh-reservations-intro) .userform-form {
@@ -727,43 +728,49 @@ body:has(#hh-reservations-intro) .userform-form {
   --accent-form-medium: var(--hh-line) !important;
 }
 
-/* Intro card: visually connect the copy to the hero */
-body:has(#hh-reservations-intro) #hh-reservations-intro {
-  position: relative !important;
-  z-index: 2 !important;
-  width: calc(100% - 32px) !important;
-  max-width: 960px !important;
-  margin: -34px auto 24px !important;
-  padding: 30px 34px !important;
-  box-sizing: border-box !important;
-  background: #FFFFFF !important;
-  border: 1px solid var(--hh-line) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 14px 34px rgba(70, 42, 27, 0.10) !important;
-  scroll-margin-top: 150px !important;
-}
-
-/* Warm form band and centered card */
 body:has(#hh-reservations-intro) #formContainer {
-  padding: 28px 0 48px !important;
+  margin: 0 !important;
+  padding: 24px 0 48px !important;
   background: var(--hh-page) !important;
 }
 
+body:has(#hh-reservations-intro) #hh-reservations-intro {
+  position: relative !important;
+  z-index: 1 !important;
+  width: calc(100% - 36px) !important;
+  max-width: 1040px !important;
+  margin: 34px auto 24px !important;
+  padding: 30px 34px !important;
+  box-sizing: border-box !important;
+  overflow: visible !important;
+  background: var(--hh-white) !important;
+  border: 1px solid var(--hh-line) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 28px rgba(75, 47, 30, 0.08) !important;
+  scroll-margin-top: 150px !important;
+}
+
+body:has(#hh-reservations-intro) #hh-reservations-intro h1,
+body:has(#hh-reservations-intro) #hh-reservations-intro h2,
+body:has(#hh-reservations-intro) #hh-reservations-intro h3 {
+  margin-top: 0 !important;
+  overflow: visible !important;
+}
+
 body:has(#hh-reservations-intro) #co_content_container .form-all {
-  width: calc(100% - 32px) !important;
-  max-width: 960px !important;
+  width: calc(100% - 36px) !important;
+  max-width: 1040px !important;
   margin: 0 auto !important;
   padding: 30px 34px 34px !important;
   box-sizing: border-box !important;
-  background: var(--hh-card) !important;
+  background: var(--hh-white) !important;
   border: 1px solid var(--hh-line) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 14px 34px rgba(70, 42, 27, 0.08) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 28px rgba(75, 47, 30, 0.07) !important;
   color: var(--hh-ink) !important;
   font-family: Arial, Helvetica, sans-serif !important;
 }
 
-/* Remove default form spacing that makes the page unnecessarily long */
 body:has(#hh-reservations-intro) #co_content_container .form-section {
   margin: 0 !important;
   padding: 0 !important;
@@ -771,19 +778,20 @@ body:has(#hh-reservations-intro) #co_content_container .form-section {
 
 body:has(#hh-reservations-intro) #co_content_container .form-line {
   margin: 0 !important;
-  padding: 9px 0 !important;
+  padding: 8px 0 !important;
+  box-sizing: border-box !important;
   background: transparent !important;
 }
 
-/* Numbered section headers */
 body:has(#hh-reservations-intro) #co_content_container .form-header-group {
-  margin: 24px 0 12px !important;
+  margin: 26px 0 12px !important;
   padding: 16px 18px !important;
-  background: linear-gradient(135deg, #FFF9F2 0%, #FCF4EA 100%) !important;
-  border: 1px solid var(--hh-line) !important;
+  background: linear-gradient(135deg, #FFF8F3 0%, #FDF1F3 100%) !important;
+  border: 1px solid #EACFD5 !important;
   border-left: 5px solid var(--hh-burgundy) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 12px rgba(70, 42, 27, 0.04) !important;
+  border-radius: 11px !important;
+  box-shadow: none !important;
+  scroll-margin-top: 150px !important;
 }
 
 body:has(#hh-reservations-intro) #co_content_container .form-header-group:first-child {
@@ -805,36 +813,43 @@ body:has(#hh-reservations-intro) #co_content_container .form-subHeader {
   color: var(--hh-muted) !important;
   -webkit-text-fill-color: var(--hh-muted) !important;
   font-size: 13px !important;
-  line-height: 1.5 !important;
+  line-height: 1.45 !important;
 }
 
-/* Date and information callouts inside the generated form */
-body:has(#hh-reservations-intro) #co_content_container li[data-type="control_text"] {
-  margin: 12px 0 6px !important;
-  padding: 0 !important;
-}
-
-body:has(#hh-reservations-intro) #co_content_container li[data-type="control_text"] .form-html {
+body:has(#hh-reservations-intro) #co_content_container .form-html:not(:has(#hh-reservations-intro)) {
   margin: 0 !important;
   padding: 13px 16px !important;
   background: #FFF9F1 !important;
-  border: 1px solid #EFE2D1 !important;
+  border: 1px solid #EFE1CF !important;
   border-left: 4px solid var(--hh-gold) !important;
   border-radius: 9px !important;
   color: var(--hh-ink) !important;
   -webkit-text-fill-color: var(--hh-ink) !important;
   font-size: 13px !important;
   line-height: 1.5 !important;
+  scroll-margin-top: 150px !important;
 }
 
-/* Hide the unfinished text row directly above Submit */
-body:has(#hh-reservations-intro)
-#co_content_container
-li[data-type="control_text"]:has(+ li[data-type="control_button"]) {
+body:has(#hh-reservations-intro) #co_content_container .form-html:not(:has(#hh-reservations-intro)) p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+body:has(#hh-reservations-intro) #co_content_container .form-html:not(:has(#hh-reservations-intro)) p + p {
+  margin-top: 7px !important;
+}
+
+body:has(#hh-reservations-intro) #co_content_container .form-html:not(:has(#hh-reservations-intro)) strong,
+body:has(#hh-reservations-intro) #co_content_container .form-html:not(:has(#hh-reservations-intro)) b {
+  color: var(--hh-burgundy) !important;
+  -webkit-text-fill-color: var(--hh-burgundy) !important;
+}
+
+body:has(#hh-reservations-intro) #co_content_container li.form-line:has(.form-html):has(+ li[data-type="control_button"]),
+body:has(#hh-reservations-intro) #co_content_container .form-line:has(.form-html):has(+ .form-line .form-submit-button) {
   display: none !important;
 }
 
-/* Labels */
 body:has(#hh-reservations-intro) #co_content_container .form-label,
 body:has(#hh-reservations-intro) #co_content_container .form-label-top {
   margin: 0 0 7px !important;
@@ -859,7 +874,6 @@ body:has(#hh-reservations-intro) #co_content_container .form-sub-label-container
   line-height: 1.3 !important;
 }
 
-/* Inputs */
 body:has(#hh-reservations-intro) #co_content_container input[type="text"],
 body:has(#hh-reservations-intro) #co_content_container input[type="email"],
 body:has(#hh-reservations-intro) #co_content_container input[type="tel"],
@@ -870,14 +884,14 @@ body:has(#hh-reservations-intro) #co_content_container .form-textbox,
 body:has(#hh-reservations-intro) #co_content_container .form-dropdown {
   min-height: 46px !important;
   padding: 10px 12px !important;
-  box-sizing: border-box !important;
-  background: #FFFFFF !important;
-  border: 1px solid #D7CEC5 !important;
-  border-radius: 9px !important;
+  border: 1px solid #D7CEC4 !important;
+  border-radius: 8px !important;
+  background: var(--hh-white) !important;
   color: var(--hh-ink) !important;
   -webkit-text-fill-color: var(--hh-ink) !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
   font-size: 14px !important;
-  box-shadow: inset 0 1px 1px rgba(61, 38, 24, 0.02) !important;
 }
 
 body:has(#hh-reservations-intro) #co_content_container textarea {
@@ -896,37 +910,93 @@ body:has(#hh-reservations-intro) #co_content_container select:focus,
 body:has(#hh-reservations-intro) #co_content_container textarea:focus,
 body:has(#hh-reservations-intro) #co_content_container .form-textbox:focus,
 body:has(#hh-reservations-intro) #co_content_container .form-dropdown:focus {
-  outline: 0 !important;
   border-color: var(--hh-gold) !important;
-  box-shadow: 0 0 0 3px rgba(195, 138, 46, 0.16) !important;
+  outline: 0 !important;
+  box-shadow: 0 0 0 3px rgba(190, 133, 40, 0.16) !important;
 }
 
-/* Compact attendance counters */
+@media screen and (min-width: 701px) {
+  body:has(#hh-reservations-intro) #co_content_container .form-line:has(input[type="number"]) {
+    display: inline-block !important;
+    width: calc(50% - 10px) !important;
+    vertical-align: top !important;
+  }
+
+  body:has(#hh-reservations-intro) #co_content_container .form-line:has(input[type="number"]):has(+ .form-line input[type="number"]) {
+    margin-right: 16px !important;
+  }
+
+  body:has(#hh-reservations-intro) #co_content_container .form-line:has(input[type="tel"]),
+  body:has(#hh-reservations-intro) #co_content_container .form-line:has(input[type="email"]) {
+    display: inline-block !important;
+    width: calc(50% - 10px) !important;
+    vertical-align: top !important;
+  }
+
+  body:has(#hh-reservations-intro) #co_content_container .form-line:has(input[type="tel"]) {
+    margin-right: 16px !important;
+  }
+}
+
 body:has(#hh-reservations-intro) #co_content_container input[type="number"] {
   width: 66px !important;
   min-width: 66px !important;
   min-height: 46px !important;
   padding: 8px !important;
-  box-sizing: border-box !important;
-  border-color: #D7CEC5 !important;
+  border-color: #D7CEC4 !important;
   color: var(--hh-ink) !important;
   -webkit-text-fill-color: var(--hh-ink) !important;
   text-align: center !important;
+  box-sizing: border-box !important;
 }
 
-/* Force checkbox and radio groups into a usable desktop grid */
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_checkbox"] .form-single-column,
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_checkbox"] .form-multiple-column,
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_radio"] .form-single-column,
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_radio"] .form-multiple-column {
+body:has(#hh-reservations-intro) #co_content_container .form-single-column,
+body:has(#hh-reservations-intro) #co_content_container .form-multiple-column {
+  box-sizing: border-box !important;
+}
+
+body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-checkbox-item ~ .form-checkbox-item) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+  gap: 10px 12px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-checkbox-item ~ .form-checkbox-item) > br {
+  display: none !important;
+}
+
+body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-checkbox-item ~ .form-checkbox-item) .form-checkbox-item {
+  flex: 0 0 calc(50% - 6px) !important;
+  width: calc(50% - 6px) !important;
+}
+
+body:has(#hh-reservations-intro) #co_content_container .form-single-column:not(:has(.form-checkbox-item ~ .form-checkbox-item)) .form-checkbox-item {
+  width: 100% !important;
+  background: var(--hh-burgundy-pale) !important;
+  border-color: #E8C8D0 !important;
+}
+
+@media screen and (min-width: 901px) {
+  body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-checkbox-item) {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-checkbox-item) > br {
+    display: none !important;
+  }
+}
+
+body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-radio-item ~ .form-radio-item),
+body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-radio-item) {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   gap: 10px !important;
@@ -935,35 +1005,11 @@ body:has(#hh-reservations-intro)
   padding: 0 !important;
 }
 
-/* ChabadOne may insert line breaks between choices */
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_checkbox"] .form-single-column > br,
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_checkbox"] .form-multiple-column > br,
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_radio"] .form-single-column > br,
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_radio"] .form-multiple-column > br {
+body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-radio-item ~ .form-radio-item) > br,
+body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-radio-item) > br {
   display: none !important;
 }
 
-/* A group with only one choice should stay full width */
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_checkbox"]:not(:has(.form-checkbox-item ~ .form-checkbox-item))
-.form-checkbox-item,
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line[data-type="control_radio"]:not(:has(.form-radio-item ~ .form-radio-item))
-.form-radio-item {
-  grid-column: 1 / -1 !important;
-}
-
-/* Choice cards */
 body:has(#hh-reservations-intro) #co_content_container .form-checkbox-item,
 body:has(#hh-reservations-intro) #co_content_container .form-radio-item {
   display: flex !important;
@@ -979,14 +1025,14 @@ body:has(#hh-reservations-intro) #co_content_container .form-radio-item {
   box-sizing: border-box !important;
   background: var(--hh-choice) !important;
   border: 1px solid #DDD4CA !important;
-  border-radius: 10px !important;
-  box-shadow: 0 2px 5px rgba(70, 42, 27, 0.025) !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease !important;
 }
 
 body:has(#hh-reservations-intro) #co_content_container .form-checkbox-item:hover,
 body:has(#hh-reservations-intro) #co_content_container .form-radio-item:hover {
-  background: #FFF9F0 !important;
+  background: #FFF9EF !important;
   border-color: #CDB68F !important;
   transform: translateY(-1px) !important;
 }
@@ -1014,32 +1060,42 @@ body:has(#hh-reservations-intro) #co_content_container .form-radio-item label {
   color: var(--hh-ink) !important;
   -webkit-text-fill-color: var(--hh-ink) !important;
   font-size: 13.5px !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   line-height: 1.35 !important;
   cursor: pointer !important;
 }
 
-/* Other sponsorship amount */
+body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-checkbox-item) .form-checkbox-item {
+  min-height: 72px !important;
+  align-items: flex-start !important;
+}
+
 body:has(#hh-reservations-intro) #co_content_container .form-checkbox-item input[type="text"],
 body:has(#hh-reservations-intro) #co_content_container .form-radio-item input[type="text"] {
   flex: 1 1 110px !important;
   width: 100% !important;
   min-width: 90px !important;
-  max-width: 150px !important;
-  min-height: 38px !important;
+  max-width: 160px !important;
+  min-height: 40px !important;
   margin-left: 4px !important;
 }
 
-/* Total */
+body:has(#hh-reservations-intro) #co_content_container .form-line:has(.form-radio-item) {
+  margin-top: 12px !important;
+  padding: 18px !important;
+  background: #FFF9F1 !important;
+  border: 1px solid #EEDFCB !important;
+  border-radius: 11px 11px 0 0 !important;
+}
+
 body:has(#hh-reservations-intro) #co_content_container .form-line:has(.form-payment-total),
 body:has(#hh-reservations-intro) #co_content_container .form-line:has(.form-payment-price),
 body:has(#hh-reservations-intro) #co_content_container .form-line:has(.payment_total),
 body:has(#hh-reservations-intro) #co_content_container .form-line:has(.total_area) {
-  margin-top: 12px !important;
-  padding: 17px 18px !important;
-  background: #FFF8EC !important;
-  border: 1px solid var(--hh-gold-soft) !important;
-  border-radius: 11px !important;
+  padding: 16px 18px !important;
+  background: #FFF9F1 !important;
+  border-right: 1px solid #EEDFCB !important;
+  border-left: 1px solid #EEDFCB !important;
 }
 
 body:has(#hh-reservations-intro) #co_content_container .form-payment-total,
@@ -1049,22 +1105,29 @@ body:has(#hh-reservations-intro) #co_content_container .form-payment-price *,
 body:has(#hh-reservations-intro) #co_content_container .payment_total,
 body:has(#hh-reservations-intro) #co_content_container .payment_total *,
 body:has(#hh-reservations-intro) #co_content_container .total_area,
-body:has(#hh-reservations-intro) #co_content_container .total_area * {
+body:has(#hh-reservations-intro) #co_content_container .total_area *,
+body:has(#hh-reservations-intro) #co_content_container [class*="payment-total"] {
   color: var(--hh-burgundy) !important;
   -webkit-text-fill-color: var(--hh-burgundy) !important;
   font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 25px !important;
   font-weight: 700 !important;
 }
 
-/* Email opt-in */
-body:has(#hh-reservations-intro)
-#co_content_container
-.form-line:has(input[type="checkbox"]:checked)
-.form-checkbox-item {
-  border-color: var(--hh-gold) !important;
+body:has(#hh-reservations-intro) #co_content_container .form-line:has(input[type="checkbox"]):has(+ .form-line .form-submit-button) {
+  padding: 14px 18px 18px !important;
+  background: #FFF9F1 !important;
+  border-right: 1px solid #EEDFCB !important;
+  border-bottom: 1px solid #EEDFCB !important;
+  border-left: 1px solid #EEDFCB !important;
+  border-radius: 0 0 11px 11px !important;
 }
 
-/* Submit button */
+body:has(#hh-reservations-intro) #co_content_container .form-line:has(input[type="checkbox"]):has(+ .form-line .form-submit-button) .form-checkbox-item {
+  min-height: 50px !important;
+  background: var(--hh-white) !important;
+}
+
 body:has(#hh-reservations-intro) #co_content_container .form-submit-button,
 body:has(#hh-reservations-intro) #co_content_container button[type="submit"],
 body:has(#hh-reservations-intro) #co_content_container input[type="submit"] {
@@ -1072,21 +1135,20 @@ body:has(#hh-reservations-intro) #co_content_container input[type="submit"] {
   width: 100% !important;
   max-width: none !important;
   min-height: 56px !important;
-  margin: 18px auto 0 !important;
+  margin: 14px auto 0 !important;
   padding: 14px 24px !important;
-  box-sizing: border-box !important;
+  border: 1px solid var(--hh-burgundy) !important;
+  border-radius: 9px !important;
   background: var(--hh-burgundy) !important;
   background-image: none !important;
-  border: 1px solid var(--hh-burgundy) !important;
-  border-radius: 10px !important;
-  color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
+  color: var(--hh-white) !important;
+  -webkit-text-fill-color: var(--hh-white) !important;
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 15px !important;
   font-weight: 800 !important;
   letter-spacing: 0.04em !important;
   text-transform: uppercase !important;
-  box-shadow: 0 8px 18px rgba(169, 24, 56, 0.20) !important;
+  box-shadow: 0 8px 18px rgba(169, 24, 56, 0.18) !important;
   cursor: pointer !important;
 }
 
@@ -1098,30 +1160,42 @@ body:has(#hh-reservations-intro) #co_content_container input[type="submit"]:hove
   transform: translateY(-1px) !important;
 }
 
-/* Mobile */
+@media screen and (max-width: 900px) {
+  body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-checkbox-item) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+}
+
 @media screen and (max-width: 700px) {
+  body:has(#hh-reservations-intro) {
+    scroll-padding-top: 100px;
+  }
 
   body:has(#hh-reservations-intro) #hh-reservations-intro {
     width: calc(100% - 20px) !important;
-    margin-top: -20px !important;
-    margin-bottom: 16px !important;
+    margin-top: 18px !important;
+    margin-bottom: 14px !important;
     padding: 21px 17px !important;
-    border-radius: 13px !important;
+    border-radius: 12px !important;
+    scroll-margin-top: 100px !important;
   }
 
   body:has(#hh-reservations-intro) #formContainer {
-    padding: 18px 0 28px !important;
+    padding: 14px 0 28px !important;
   }
 
   body:has(#hh-reservations-intro) #co_content_container .form-all {
     width: calc(100% - 20px) !important;
     padding: 20px 15px 24px !important;
-    border-radius: 13px !important;
+    border-radius: 12px !important;
   }
 
   body:has(#hh-reservations-intro) #co_content_container .form-header-group {
     margin-top: 18px !important;
     padding: 13px 14px !important;
+    scroll-margin-top: 100px !important;
   }
 
   body:has(#hh-reservations-intro) #co_content_container .form-header {
@@ -1132,18 +1206,19 @@ body:has(#hh-reservations-intro) #co_content_container input[type="submit"]:hove
     padding: 7px 0 !important;
   }
 
-  body:has(#hh-reservations-intro)
-  #co_content_container
-  .form-line[data-type="control_checkbox"] .form-single-column,
-  body:has(#hh-reservations-intro)
-  #co_content_container
-  .form-line[data-type="control_checkbox"] .form-multiple-column,
-  body:has(#hh-reservations-intro)
-  #co_content_container
-  .form-line[data-type="control_radio"] .form-single-column,
-  body:has(#hh-reservations-intro)
-  #co_content_container
-  .form-line[data-type="control_radio"] .form-multiple-column {
+  body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-checkbox-item ~ .form-checkbox-item) {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-checkbox-item ~ .form-checkbox-item) .form-checkbox-item {
+    width: 100% !important;
+  }
+
+  body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-checkbox-item),
+  body:has(#hh-reservations-intro) #co_content_container .form-single-column:has(.form-radio-item ~ .form-radio-item),
+  body:has(#hh-reservations-intro) #co_content_container .form-multiple-column:has(.form-radio-item) {
     grid-template-columns: 1fr !important;
     gap: 8px !important;
   }
@@ -1152,6 +1227,7 @@ body:has(#hh-reservations-intro) #co_content_container input[type="submit"]:hove
   body:has(#hh-reservations-intro) #co_content_container .form-radio-item {
     min-height: 52px !important;
     padding: 11px 12px !important;
+    transform: none !important;
   }
 
   body:has(#hh-reservations-intro) #co_content_container input[type="text"],
@@ -1165,5 +1241,4 @@ body:has(#hh-reservations-intro) #co_content_container input[type="submit"]:hove
     min-height: 46px !important;
     font-size: 16px !important;
   }
-
 }
