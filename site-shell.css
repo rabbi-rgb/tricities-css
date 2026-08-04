@@ -964,3 +964,13 @@ body:has(#hh-reservations-intro) #co_content_container input[type="submit"]:hove
   }
 
 }
+}
+
+/* ============================================================
+   HIGH HOLIDAY RESERVATIONS — POLISH V2
+   APPEND this after the existing High Holiday form add-on.
+   ============================================================ */
+
+body:has(#hh-reservations-intro) {
+  ...
+}
