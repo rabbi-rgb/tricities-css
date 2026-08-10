@@ -3978,3 +3978,22 @@ html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
   padding-inline: 6px !important;
   font-size: 14px !important;
 }
+
+
+/* Chai Club — prevent the custom amount spinner from clipping “Other”. */
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-other-input {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  appearance: textfield !important;
+  -moz-appearance: textfield !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-other-input::-webkit-inner-spin-button,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-other-input::-webkit-outer-spin-button {
+  margin: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+}
