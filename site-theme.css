@@ -3152,3 +3152,137 @@ html:is(.tc-chai,:has(form[id="5995797"])) #id_25{margin:0!important;padding:24p
 @media(max-width:520px){html:is(.tc-chai,:has(form[id="5995797"])) .body_wrapper #co_content_container>.clearfix>.master-content-wrapper{min-height:245px!important;padding:26px 12px!important}html:is(.tc-chai,:has(form[id="5995797"])) .article-header__title{font-size:44px!important}html:is(.tc-chai,:has(form[id="5995797"])) .article-header:after{font-size:13px}html:is(.tc-chai,:has(form[id="5995797"])) form[id="5995797"] .form-all{padding-inline:11px!important}html:is(.tc-chai,:has(form[id="5995797"])) :is(.chai-section-1>div:nth-child(2),.chai-partner-left>div:nth-child(2),#tc-chai-head h2,#id_25 .form-html>div>div>div:first-child){font-size:34px!important}html:is(.tc-chai,:has(form[id="5995797"])) #tc-chai-head{padding:25px 21px!important}html:is(.tc-chai,:has(form[id="5995797"])) form[id="5995797"] :is(#id_3,#id_4,#id_6){padding-inline:18px!important}html:is(.tc-chai,:has(form[id="5995797"])) form[id="5995797"] :is(#id_8,#id_18,#id_19){padding:15px!important}html:is(.tc-chai,:has(form[id="5995797"])) #id_25 summary{padding:15px 44px 15px 15px!important;font-size:15px!important}}
 @media(prefers-reduced-motion:reduce){html:is(.tc-chai,:has(form[id="5995797"])) form[id="5995797"] *{transition:none!important;animation:none!important}}
 html:is(.tc-chai,:has(form[id="5995797"])) form[id="5995797"]:not(:has(#tc-chai-head)) #id_3::before{content:"Join the Chai Club";display:block;margin:0 0 20px;color:#10252f;font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(30px,4vw,42px);font-weight:700;line-height:1.05;}
+
+/* ============================================================
+   CHAI CLUB — UNIFIED SURFACE + HERO HEADER
+   Scoped to form 5995797 so no other page is changed.
+   ============================================================ */
+
+html:is(.tc-chai, :has(form[id="5995797"])) {
+  --chai-page: #fbfaf7;
+  --chai-ink: #10252f;
+  --chai-teal: #217f83;
+  --chai-gold: #bd8a32;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) body,
+html:is(.tc-chai, :has(form[id="5995797"])) #content,
+html:is(.tc-chai, :has(form[id="5995797"])) #BodyContainer,
+html:is(.tc-chai, :has(form[id="5995797"])) .body_wrapper,
+html:is(.tc-chai, :has(form[id="5995797"])) #co_content_container {
+  background: var(--chai-page) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #co_body_container {
+  background: transparent !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"],
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] .form-all,
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-main-wrapper,
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-1,
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-2,
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-3 {
+  background: transparent !important;
+}
+
+/* A wider editorial rhythm, without turning the form into a wall of text. */
+html:is(.tc-chai, :has(form[id="5995797"])) #co_body_container {
+  width: min(1160px, 100%) !important;
+  max-width: 1160px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] :is(.form-all, .form-section) {
+  max-width: 1040px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-1 {
+  padding-top: 76px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-impact-col,
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-recognition-section > div,
+html:is(.tc-chai, :has(form[id="5995797"])) #tc-chai-head,
+html:is(.tc-chai, :has(form[id="5995797"])) #id_7,
+html:is(.tc-chai, :has(form[id="5995797"])) #id_25 details {
+  border-color: rgba(16, 37, 47, 0.11) !important;
+  box-shadow: 0 12px 34px rgba(16, 37, 47, 0.065) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-impact-col,
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-recognition-section > div,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] :is(#id_3, #id_4, #id_6, #id_8, #id_18, #id_19),
+html:is(.tc-chai, :has(form[id="5995797"])) #id_7,
+html:is(.tc-chai, :has(form[id="5995797"])) #id_25 details {
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #tc-chai-head {
+  background: linear-gradient(135deg, rgba(33, 127, 131, 0.075), rgba(255, 255, 255, 0.94) 68%) !important;
+}
+
+@media screen and (min-width: 821px) {
+  /* Reuse the site's saved transparent hero header, scoped to Chai Club. */
+  html:is(.tc-chai, :has(form[id="5995797"])) #content {
+    margin-top: 0 !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) {
+    background: linear-gradient(180deg, rgba(7, 24, 28, 0.80) 0%, rgba(7, 24, 28, 0.48) 68%, rgba(7, 24, 28, 0) 100%) !important;
+    box-shadow: none !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #header_container,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #header_container > div.clearfix.links {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #header_container > div.clearfix.links,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #header_container > div.clearfix.links a,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) .branding-search #header_branding .site_title,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #tabContentMain > td > span > div > a {
+    color: #fff !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #tabContentMain .co_menu_item span.parent a:hover,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #header_container > div.clearfix.links a:hover {
+    color: #dff4ee !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) .donate_link a {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.90) !important;
+    color: #fff !important;
+    box-shadow: none !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) #tabContentMain .co_menu_item.donate_link span.parent a:hover,
+  html:is(.tc-chai, :has(form[id="5995797"])) #header:not(.on-scroll) .donate_link a:hover {
+    background: #578a45 !important;
+    border-color: #578a45 !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .body_wrapper #co_content_container > .clearfix > .master-content-wrapper {
+    min-height: 470px !important;
+    padding: 158px 24px 86px !important;
+    background-position: 50% 48% !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .article-header__title {
+    font-size: clamp(54px, 5.4vw, 78px) !important;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  html:is(.tc-chai, :has(form[id="5995797"])) #co_body_container {
+    width: 100% !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-1 {
+    padding-top: 50px !important;
+  }
+}
