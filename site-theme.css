@@ -3964,3 +3964,17 @@ html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Chai Club — keep the custom amount label fully readable. */
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item {
+  gap: 8px !important;
+  padding-inline: 12px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-other-input {
+  padding-inline: 6px !important;
+  font-size: 14px !important;
+}
