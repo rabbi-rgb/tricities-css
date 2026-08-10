@@ -3914,3 +3914,53 @@ html:is(.tc-chai, :has(form[id="5995797"])) .chai-answer a {
     gap: 10px;
   }
 }
+
+
+/* ============================================================
+   CHAI CLUB — TIER OPTION CONTAINMENT
+   Keeps each amount choice inside its Bronze/Silver/Gold card.
+   ============================================================ */
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-multiple-column {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item label {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) :is(.form-radio-other-input, input[type="text"]) {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 520px) {
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+    :is(#id_8, #id_18, #id_19) .form-multiple-column {
+    grid-template-columns: 1fr !important;
+  }
+}
