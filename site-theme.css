@@ -3300,11 +3300,11 @@ html:is(.tc-chai, :has(form[id="5995797"])) body.cco_body
   min-height: 440px !important;
   height: auto !important;
   padding: 150px 24px 74px !important;
-  background-color: #0a4256 !important;
+  background-color: #0b5f75 !important;
   background-image:
-    radial-gradient(circle at 14% 18%, rgba(76, 190, 206, 0.34), transparent 32%),
-    radial-gradient(circle at 88% 76%, rgba(189, 138, 50, 0.18), transparent 34%),
-    linear-gradient(135deg, #0d6b7b 0%, #0a4d62 46%, #082f49 100%) !important;
+    radial-gradient(circle at 14% 18%, rgba(111, 224, 224, 0.28), transparent 34%),
+    radial-gradient(circle at 88% 76%, rgba(225, 181, 99, 0.16), transparent 36%),
+    linear-gradient(135deg, #0d8395 0%, #0b627a 52%, #093f67 100%) !important;
   background-position: center !important;
   background-size: cover !important;
   overflow: hidden !important;
@@ -3315,17 +3315,20 @@ html:is(.tc-chai, :has(form[id="5995797"])) body.cco_body
   .master-content-wrapper.g960[style*="background-image"]::before {
   content: "CHAI  CHAI  CHAI" !important;
   position: absolute !important;
-  top: 46% !important;
-  left: 50% !important;
+  inset: 0 !important;
   z-index: 0 !important;
-  width: max-content !important;
-  color: rgba(255, 255, 255, 0.045) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  color: rgba(255, 255, 255, 0.055) !important;
   background: none !important;
   font: 800 clamp(92px, 11vw, 184px)/0.86 Montserrat, Arial, sans-serif !important;
   letter-spacing: 0.025em !important;
   white-space: nowrap !important;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.075) !important;
-  transform: translate(-50%, -50%) rotate(-5deg) !important;
+  transform: rotate(-4deg) !important;
   pointer-events: none !important;
 }
 
@@ -3364,7 +3367,8 @@ html:is(.tc-chai, :has(form[id="5995797"])) body.cco_body
 }
 
 html:is(.tc-chai, :has(form[id="5995797"])) body.cco_body
-  .master-content-wrapper.g960 .article-header__title {
+  #BodyContainer #co_content_container
+  .master-content-wrapper.g960 .article-header h1.article-header__title {
   margin: 0 !important;
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
