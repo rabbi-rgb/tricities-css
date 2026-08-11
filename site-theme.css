@@ -4548,3 +4548,10 @@ html:is(.tc-chai, :has(form[id="5995797"])) #id_2 .form-submit-button:hover {
   }
 }
 
+
+
+/* Chai Club copy polish */
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html > div{font-size:0!important}
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html > div::after{content:"Choose your monthly gift";font:600 clamp(30px,3vw,38px)/1.15 "Cormorant Garamond",Georgia,serif!important}
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 > .form-label-left > label:first-child{font-size:0!important}
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 > .form-label-left > label:first-child::after{content:"Dedicate this gift (optional)";font-size:13px!important}
