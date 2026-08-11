@@ -1549,34 +1549,39 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
 }
 
 /* Final specificity bridge over ChabadOne's later, ID-heavy form theme. */
-html.tc-chai body.cco_body form#5995797 #id_12
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12
   :is(.chai-kicker, .chai-intro-copy p, .chai-impact-number,
       .chai-impact-item p) {
   font-family: Montserrat, Arial, sans-serif !important;
 }
 
-html.tc-chai body.cco_body form#5995797 #id_25
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25
   :is(.chai-partners-kicker, .chai-faq-kicker, .chai-faq summary,
       .chai-answer) {
   font-family: Montserrat, Arial, sans-serif !important;
 }
 
 @media screen and (max-width: 520px) {
-  html.tc-chai body.cco_body #BodyContainer #co_content_container
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    #BodyContainer #co_content_container
     > .clearfix > .master-content-wrapper {
     min-height: 244px !important;
     height: 244px !important;
     padding: 34px 14px !important;
   }
 
-  html.tc-chai body.cco_body #BodyContainer #co_content_container
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    #BodyContainer #co_content_container
     > .clearfix > .master-content-wrapper .article-header {
     min-height: 0 !important;
     height: auto !important;
     padding: 0 !important;
   }
 
-  html.tc-chai body.cco_body #BodyContainer #co_content_container
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    #BodyContainer #co_content_container
     > .clearfix > .master-content-wrapper .article-header
     h1.article-header__title {
     padding: 0 !important;
@@ -1584,12 +1589,14 @@ html.tc-chai body.cco_body form#5995797 #id_25
     line-height: 1 !important;
   }
 
-  html.tc-chai body.cco_body form#5995797 #id_12 .chai-intro {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_12 .chai-intro {
     padding: 30px 0 24px !important;
     gap: 18px !important;
   }
 
-  html.tc-chai body.cco_body form#5995797 #id_12
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_12
     .chai-intro-copy > p:not(.chai-kicker) {
     margin-top: 12px !important;
     font-size: 13.5px !important;
