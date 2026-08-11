@@ -1343,3 +1343,146 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final #id_2 .form-submit-butto
     line-height: 1.55 !important;
   }
 }
+
+/* ============================================================
+   CHAI CLUB — FINAL TYPE CONSISTENCY
+   A single editorial serif for headings and a single sans for UI/copy.
+   The form id in :has() deliberately outranks older embedded theme rules.
+   ============================================================ */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  :is(.chai-main-wrapper, .chai-main-wrapper p, .chai-main-wrapper li,
+      .chai-kicker, .chai-impact-number, .chai-partners-kicker,
+      .chai-faq-kicker, .chai-faq summary, .chai-answer,
+      form[id="5995797"] .form-label-left,
+      form[id="5995797"] .form-label,
+      form[id="5995797"] label,
+      form[id="5995797"] input,
+      form[id="5995797"] select,
+      form[id="5995797"] textarea,
+      form[id="5995797"] button,
+      form[id="5995797"] .form-submit-button) {
+  font-family: Montserrat, Arial, sans-serif !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  :is(.article-header__title,
+      form[id="5995797"] h2,
+      form[id="5995797"] h3,
+      #tc-chai-head h2,
+      .chai-partners-title) {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  letter-spacing: -.015em !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  .chai-impact-item h3 {
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  line-height: 1.12 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  .chai-faq h2 {
+  font-size: 38px !important;
+  font-weight: 600 !important;
+  line-height: 1.06 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  #id_2 .form-submit-button {
+  font-family: Montserrat, Arial, sans-serif !important;
+  letter-spacing: .08em !important;
+}
+
+@media screen and (max-width: 520px) {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .master-content-wrapper {
+    min-height: 244px !important;
+    height: auto !important;
+    padding: 34px 14px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .article-header {
+    padding: 0 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .article-header__title {
+    padding: 0 !important;
+    font-size: 42px !important;
+    line-height: 1 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .article-header::before {
+    margin-bottom: 9px !important;
+    font-size: 10px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .article-header::after {
+    max-width: 285px !important;
+    margin-top: 10px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-intro {
+    padding: 30px 0 24px !important;
+    gap: 18px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-intro h2 {
+    max-width: 10em !important;
+    font-size: 34px !important;
+    line-height: 1.02 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-intro-copy > p:not(.chai-kicker) {
+    margin-top: 12px !important;
+    font-size: 13.5px !important;
+    line-height: 1.56 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-impact-item {
+    grid-template-columns: 26px 1fr !important;
+    gap: 9px !important;
+    padding: 12px 0 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-impact-item h3 {
+    margin-bottom: 2px !important;
+    font-size: 19px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-impact-item p {
+    font-size: 12.75px !important;
+    line-height: 1.5 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-partners-title {
+    font-size: 24px !important;
+    line-height: 1.08 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    .chai-faq h2 {
+    font-size: 27px !important;
+    line-height: 1.04 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    #id_25 .chai-faq summary {
+    padding: 11px 27px 11px 0 !important;
+    font-size: 13px !important;
+    line-height: 1.42 !important;
+  }
+}
