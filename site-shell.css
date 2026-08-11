@@ -1612,7 +1612,7 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
    ============================================================ */
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_52, #id_53, #id_56).form-line {
   display: block !important;
   width: 100% !important;
@@ -1626,10 +1626,10 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_52, #id_53, #id_56) :is(.form-input-wide, .form-html),
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_52, #id_53, #id_56) .form-html > div {
   width: 100% !important;
   max-width: none !important;
@@ -1638,7 +1638,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_52, #id_53, #id_56) table {
   display: table !important;
   width: 100% !important;
@@ -1651,13 +1651,13 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_52, #id_53, #id_56) table td {
   padding: 6px 0 7px 16px !important;
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_52, #id_53, #id_56) h3 {
   margin: 0 0 2px !important;
   color: var(--hh-refine-maroon, #a71938) !important;
@@ -1669,7 +1669,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_52, #id_53, #id_56) p {
   margin: 0 !important;
   color: var(--hh-refine-muted, #69635d) !important;
@@ -1681,7 +1681,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 
 /* Attend-all is a compact shortcut, not a second heading block. */
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57).form-line {
   display: block !important;
   width: 100% !important;
@@ -1695,7 +1695,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57) > .form-label-left {
   display: block !important;
   width: 100% !important;
@@ -1705,10 +1705,10 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57) > .form-label-left > label:first-child,
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_51, #id_44, #id_39) > .form-label-left > label:first-child {
   color: var(--hh-refine-muted, #69635d) !important;
   font-family: Montserrat, Arial, sans-serif !important;
@@ -1720,10 +1720,10 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57) > .form-input,
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57) .form-single-column {
   display: block !important;
   width: 100% !important;
@@ -1734,7 +1734,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57) .form-checkbox-item {
   display: flex !important;
   align-items: center !important;
@@ -1751,7 +1751,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 
 /* Individual choices stay visually distinct and easy to scan. */
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_51, #id_44, #id_39).form-line {
   display: block !important;
   float: none !important;
@@ -1766,7 +1766,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_51, #id_44, #id_39) > .form-label-left {
   display: block !important;
   width: 100% !important;
@@ -1775,7 +1775,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_51, #id_44, #id_39) > .form-input {
   display: block !important;
   width: 100% !important;
@@ -1784,7 +1784,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_51, #id_44, #id_39) .form-single-column {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -1799,7 +1799,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_51, #id_44, #id_39) .form-checkbox-item {
   display: flex !important;
   align-items: flex-start !important;
@@ -1817,13 +1817,13 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_51, #id_44, #id_39) .form-checkbox-item:last-child:nth-child(odd) {
   grid-column: 1 / -1 !important;
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
   .form-checkbox-item input[type="checkbox"] {
   flex: 0 0 18px !important;
@@ -1833,7 +1833,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
   .form-checkbox-item label {
   flex: 1 1 auto !important;
@@ -1847,7 +1847,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 }
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-  #BodyContainer #formContainer form[id="7431739"]
+  #cco_body #co_content_container #formContainer form[id="7431739"]
   :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
   .form-checkbox-item:has(input:checked) {
   border-color: rgba(167, 25, 56, .58) !important;
@@ -1857,7 +1857,7 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 
 @media (hover: hover) {
   html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-    #BodyContainer #formContainer form[id="7431739"]
+    #cco_body #co_content_container #formContainer form[id="7431739"]
     :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
     .form-checkbox-item:hover {
     border-color: rgba(181, 138, 69, .48) !important;
@@ -1867,26 +1867,26 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 
 @media screen and (max-width: 720px) {
   html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-    #BodyContainer #formContainer form[id="7431739"]
+    #cco_body #co_content_container #formContainer form[id="7431739"]
     :is(#id_52, #id_53, #id_56).form-line {
     margin-top: 20px !important;
   }
 
   html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-    #BodyContainer #formContainer form[id="7431739"]
+    #cco_body #co_content_container #formContainer form[id="7431739"]
     :is(#id_52, #id_53, #id_56) h3 {
     font-size: 23px !important;
   }
 
   html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-    #BodyContainer #formContainer form[id="7431739"]
+    #cco_body #co_content_container #formContainer form[id="7431739"]
     :is(#id_51, #id_44, #id_39) .form-single-column {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 7px !important;
   }
 
   html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
-    #BodyContainer #formContainer form[id="7431739"]
+    #cco_body #co_content_container #formContainer form[id="7431739"]
     :is(#id_51, #id_44, #id_39) .form-checkbox-item {
     min-height: 48px !important;
     padding: 10px 11px !important;
