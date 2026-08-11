@@ -1818,7 +1818,8 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
 
 html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
   #cco_body #co_content_container #formContainer form[id="7431739"]
-  :is(#id_51, #id_44, #id_39) .form-checkbox-item:last-child:nth-child(odd) {
+  :is(#id_51, #id_44, #id_39)
+  .form-checkbox-item:nth-last-child(2):nth-child(odd) {
   grid-column: 1 / -1 !important;
 }
 
