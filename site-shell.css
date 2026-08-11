@@ -1171,3 +1171,175 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final #id_2 .form-submit-butto
   }
 }
 
+/* ============================================================
+   PHONE-SIZE FINISHING — LIVE HIGH HOLIDAYS + CHAI CLUB
+   ============================================================ */
+@media screen and (max-width: 720px) {
+  /* The holiday template rotates and enlarges this container by default.
+     Reset the container and rotate only the small arrow artwork. */
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    .nav-wrapper {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    .nav-wrapper #mobile-menu-expand {
+    position: absolute !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: -12px !important;
+    left: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    min-width: 44px !important;
+    max-width: 44px !important;
+    height: 26px !important;
+    min-height: 26px !important;
+    max-height: 26px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid rgba(89, 71, 57, .12) !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, .97) !important;
+    box-shadow: 0 5px 14px rgba(52, 39, 31, .1) !important;
+    transform: translateX(-50%) !important;
+    overflow: hidden !important;
+    z-index: 7 !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    .nav-wrapper #mobile-menu-expand img {
+    display: block !important;
+    width: 12px !important;
+    min-width: 12px !important;
+    max-width: 12px !important;
+    height: 7px !important;
+    min-height: 7px !important;
+    max-height: 7px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    .nav-wrapper.expanded #mobile-menu-expand img {
+    transform: rotate(180deg) !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #hh-step-1 {
+    scroll-margin-top: 96px !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  /* Compact the Chai Club opening without losing the editorial rhythm. */
+  html.tc-chai body.cco_body .master-content-wrapper {
+    min-height: 244px !important;
+    height: auto !important;
+    padding: 36px 14px !important;
+  }
+
+  html.tc-chai body.cco_body .article-header {
+    padding: 0 !important;
+  }
+
+  html.tc-chai body.cco_body .article-header__title {
+    padding: 0 !important;
+    font-size: 42px !important;
+    line-height: 1 !important;
+  }
+
+  html.tc-chai body.cco_body .article-header::before {
+    margin-bottom: 10px !important;
+    font-size: 10px !important;
+  }
+
+  html.tc-chai body.cco_body .article-header::after {
+    max-width: 285px !important;
+    margin-top: 10px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  html.tc-chai body.cco_body .chai-intro {
+    padding: 30px 0 24px !important;
+    gap: 18px !important;
+  }
+
+  html.tc-chai body.cco_body .chai-kicker {
+    margin-bottom: 9px !important;
+    font-size: 10px !important;
+    letter-spacing: .15em !important;
+  }
+
+  html.tc-chai body.cco_body .chai-intro h2 {
+    max-width: 10em !important;
+    font-size: 34px !important;
+    line-height: 1.02 !important;
+  }
+
+  html.tc-chai body.cco_body .chai-intro-copy > p:not(.chai-kicker) {
+    margin-top: 12px !important;
+    font-size: 13.5px !important;
+    line-height: 1.56 !important;
+  }
+
+  html.tc-chai body.cco_body .chai-impact-item {
+    grid-template-columns: 26px 1fr !important;
+    gap: 9px !important;
+    padding: 12px 0 !important;
+  }
+
+  html.tc-chai body.cco_body .chai-impact-item h3 {
+    margin-bottom: 2px !important;
+    font-size: 17px !important;
+  }
+
+  html.tc-chai body.cco_body .chai-impact-item p {
+    font-size: 12.75px !important;
+    line-height: 1.5 !important;
+  }
+
+  html.tc-chai body.cco_body #id_25 details.chai-partners {
+    margin: 0 0 30px !important;
+    border: 0 !important;
+    border-top: 1px solid rgba(21, 48, 58, .1) !important;
+    border-bottom: 1px solid rgba(21, 48, 58, .1) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html.tc-chai body.cco_body #id_25 .chai-partners summary {
+    padding: 16px 0 !important;
+  }
+
+  html.tc-chai body.cco_body .chai-partners-title {
+    font-size: 24px !important;
+  }
+
+  html.tc-chai body.cco_body .chai-faq h2 {
+    font-size: 27px !important;
+    line-height: 1.04 !important;
+  }
+
+  html.tc-chai body.cco_body #id_25 .chai-faq summary {
+    padding: 11px 27px 11px 0 !important;
+    font-size: 13px !important;
+    line-height: 1.42 !important;
+  }
+
+  html.tc-chai body.cco_body #id_25 .chai-faq summary::after {
+    top: 9px !important;
+    font-size: 18px !important;
+  }
+
+  html.tc-chai body.cco_body #id_25 .chai-faq .chai-answer {
+    padding: 0 27px 12px 0 !important;
+    font-size: 12.75px !important;
+    line-height: 1.55 !important;
+  }
+}
