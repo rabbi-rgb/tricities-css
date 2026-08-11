@@ -4704,3 +4704,45 @@ html:is(.tc-chai, :has(form[id="5995797"])) .chai-answer {
     font-size: 14px !important;
   }
 }
+
+
+/* Win over the older form-field FAQ card rules without affecting other pages. */
+html:is(.tc-chai, :has(form[id="5995797"])) #id_25 .chai-faq details,
+html:is(.tc-chai, :has(form[id="5995797"])) #id_25 .chai-faq details[open] {
+  margin: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(21, 48, 58, .1) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #id_25 .chai-faq summary {
+  padding: 15px 38px 15px 0 !important;
+  color: rgba(21, 48, 58, .86) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #id_25 .chai-faq summary::after {
+  right: 1px !important;
+  top: 13px !important;
+  color: rgba(177, 125, 39, .72) !important;
+  font-size: 22px !important;
+  transform: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #id_25 .chai-faq .chai-answer {
+  max-width: 700px !important;
+  padding: 0 38px 16px 0 !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 520px) {
+  html:is(.tc-chai, :has(form[id="5995797"])) #id_25 .chai-faq summary {
+    padding: 14px 34px 14px 0 !important;
+    font-size: 14px !important;
+  }
+}
