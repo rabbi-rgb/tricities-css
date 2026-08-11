@@ -1893,3 +1893,12 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
     padding: 10px 11px !important;
   }
 }
+
+/* Preserve ChabadOne's built-in “attend all” conditional behavior.
+   Keep this after the reservation card layout so presentation CSS
+   can never force a conditionally hidden service group back onscreen. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39).form-line.form-field-hidden {
+  display: none !important;
+}
