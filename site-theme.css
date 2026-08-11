@@ -4063,3 +4063,488 @@ html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
     align-items: flex-start !important;
   }
 }
+
+
+/* Chai Club final polish — scoped to page/form 5995797 */
+
+html:is(.tc-chai, :has(form[id="5995797"])) {
+  --chai-panel: #ffffff;
+  --chai-soft: #f5f1e9;
+  --chai-soft-blue: #edf5f5;
+  --chai-ink: #15303a;
+  --chai-copy: #526b74;
+  --chai-blue: #217f83;
+  --chai-blue-dark: #14585d;
+  --chai-gold: #bd8a32;
+  --chai-line: rgba(21, 48, 58, .13);
+}
+
+/* Keep anchored sections below the sticky site header. */
+html:is(.tc-chai, :has(form[id="5995797"]))
+  :is(.chai-section-1, .chai-section-2, .chai-section-3, #tc-chai-head, #id_28, #id_25) {
+  scroll-margin-top: 150px;
+}
+
+/* A slightly shorter, calmer hero. */
+html:is(.tc-chai, :has(form[id="5995797"]))
+  .body_wrapper #co_content_container > .clearfix > .master-content-wrapper {
+  min-height: 330px !important;
+  padding-top: 42px !important;
+  padding-bottom: 42px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .article-header::before {
+  margin-bottom: 12px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .article-header::after {
+  margin-top: 14px !important;
+}
+
+/* Reduce the long editorial lead-in without losing hierarchy. */
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-1 {
+  padding-top: 54px !important;
+  padding-bottom: 42px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-1 > div:nth-child(2) {
+  max-width: 780px !important;
+  font-size: clamp(36px, 3.6vw, 48px) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-2 {
+  padding-top: 42px !important;
+  padding-bottom: 46px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-impact-col {
+  min-height: 205px !important;
+  padding: 22px 21px !important;
+  border-color: var(--chai-line) !important;
+  box-shadow: 0 8px 20px rgba(21, 48, 58, .055) !important;
+}
+
+/* The tier preview is useful, but it should read as a quiet guide. */
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-3 {
+  padding: 40px 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-partner-row {
+  gap: 30px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-partner-left > div:nth-child(2) {
+  font-size: clamp(35px, 3.5vw, 42px) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-self: center !important;
+  padding: 0 !important;
+  border: 1px solid var(--chai-line) !important;
+  border-left: 1px solid var(--chai-line) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, .74) !important;
+  overflow: hidden !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list > div {
+  padding: 18px 16px !important;
+  border-right: 1px solid var(--chai-line) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list > div:last-child {
+  border-right: 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list > div > div:first-child {
+  font-size: 21px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list > div > div:last-child {
+  font-size: 13px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-recognition-section {
+  padding: 28px 0 42px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-recognition-section > div {
+  padding: 23px 25px !important;
+  border-left-width: 3px !important;
+  box-shadow: none !important;
+}
+
+/* Giving form: the intro and identity fields become one clean sequence. */
+html:is(.tc-chai, :has(form[id="5995797"])) #tc-chai-head {
+  margin-bottom: 0 !important;
+  padding: 38px 0 22px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #tc-chai-head h2 {
+  font-size: clamp(36px, 3.8vw, 48px) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 {
+  min-height: 0 !important;
+  margin: 34px 0 0 !important;
+  padding: 0 0 14px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html > div {
+  padding: 0 !important;
+  color: var(--chai-ink) !important;
+  font: 600 clamp(30px, 3vw, 38px)/1.15 "Cormorant Garamond", Georgia, serif !important;
+}
+
+/* Tier columns: no card-inside-card effect. */
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  width: 32.2% !important;
+  min-height: 0 !important;
+  margin: 0 1.7% 12px 0 !important;
+  padding: 16px !important;
+  vertical-align: top !important;
+  border: 1px solid var(--chai-line) !important;
+  border-top: 3px solid var(--chai-gold) !important;
+  border-radius: 14px !important;
+  background: rgba(255, 255, 255, .78) !important;
+  box-shadow: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_18 {
+  border-top-color: var(--chai-blue) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_19 {
+  margin-right: 0 !important;
+  border-top-color: var(--chai-ink) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) > .form-label-left {
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 0 11px !important;
+  padding: 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) > .form-label-left > label:first-child {
+  color: var(--chai-ink) !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: .08em !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) > .form-input {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-multiple-column {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .clearfix {
+  display: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 0 11px !important;
+  border: 1px solid var(--chai-line) !important;
+  border-radius: 10px !important;
+  background: var(--chai-soft) !important;
+  box-shadow: none !important;
+  transition: border-color .18s ease, background-color .18s ease, transform .18s ease !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item:hover {
+  border-color: rgba(33, 127, 131, .5) !important;
+  background: var(--chai-soft-blue) !important;
+  transform: translateY(-1px) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item:has(> input[type="radio"]:checked) {
+  border-color: var(--chai-blue) !important;
+  background: var(--chai-blue-dark) !important;
+  color: #fff !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item:has(> input[type="radio"]:checked) label,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item:has(> input[type="radio"]:checked) label span {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item > input[type="radio"] {
+  flex: 0 0 auto !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 9px 0 0 !important;
+  accent-color: var(--chai-gold) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-item label {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  margin: 0 !important;
+  color: var(--chai-ink) !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_8, #id_18, #id_19) .form-radio-other-input {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 30px !important;
+  margin: 0 !important;
+  padding: 0 2px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: inherit !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+/* Preferences become two light, compact rows instead of more large cards. */
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] :is(#id_24, #id_26) {
+  min-height: 0 !important;
+  margin: 0 0 10px !important;
+  padding: 15px 18px !important;
+  border: 1px solid var(--chai-line) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, .7) !important;
+  box-shadow: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_24 {
+  border-color: rgba(189, 138, 50, .28) !important;
+  background: rgba(245, 241, 233, .72) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] :is(#id_24, #id_26) > .form-input,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] :is(#id_24, #id_26) .form-single-column,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] :is(#id_24, #id_26) .form-checkbox-item {
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_26 > .form-label-left {
+  width: 100% !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_26 > .form-label-left > label:first-child {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_26 .label-message {
+  margin-top: 2px !important;
+  color: var(--chai-copy) !important;
+  font-size: 11px !important;
+  line-height: 1.45 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_24, #id_26) input[type="checkbox"] {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 12px !important;
+  accent-color: var(--chai-blue) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+  :is(#id_24, #id_26) label {
+  color: var(--chai-ink) !important;
+  font-size: 14px !important;
+  line-height: 1.45 !important;
+}
+
+/* Optional dedication now aligns with the rest of the form. */
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 {
+  min-height: 0 !important;
+  margin: 16px 0 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 > .form-label-left {
+  width: 100% !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 > .form-label-left > label:first-child {
+  color: var(--chai-ink) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 > .form-input,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 .form-textarea-limit,
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 .form-textarea-limit > span {
+  display: block !important;
+  width: 100% !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #input_13 {
+  width: 100% !important;
+  min-height: 92px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #id_7 {
+  margin-top: 28px !important;
+  box-shadow: 0 9px 26px rgba(21, 48, 58, .055) !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #id_2 .form-submit-button {
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) #id_2 .form-submit-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 30px rgba(20, 88, 93, .26) !important;
+}
+
+@media (max-width: 820px) {
+  html:is(.tc-chai, :has(form[id="5995797"]))
+    .body_wrapper #co_content_container > .clearfix > .master-content-wrapper {
+    min-height: 290px !important;
+    padding: 46px 18px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-1 {
+    padding-top: 44px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list {
+    grid-template-columns: 1fr !important;
+    margin-top: 22px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list > div {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    gap: 18px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--chai-line) !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-tier-list > div:last-child {
+    border-bottom: 0 !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+    :is(#id_8, #id_18, #id_19) {
+    display: flex !important;
+    width: 100% !important;
+    margin: 0 0 10px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html:is(.tc-chai, :has(form[id="5995797"]))
+    .body_wrapper #co_content_container > .clearfix > .master-content-wrapper {
+    min-height: 250px !important;
+    padding: 34px 14px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .article-header__title {
+    font-size: 44px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .article-header::after {
+    max-width: 300px !important;
+    font-size: 13px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-section-1 > div:nth-child(2),
+  html:is(.tc-chai, :has(form[id="5995797"])) #tc-chai-head h2 {
+    font-size: 34px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 {
+    margin-top: 26px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html,
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html > div {
+    font-size: 30px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+    :is(#id_8, #id_18, #id_19) {
+    padding: 14px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+    :is(#id_8, #id_18, #id_19) .form-multiple-column {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+    :is(#id_8, #id_18, #id_19) .form-radio-item {
+    min-height: 46px !important;
+    padding: 0 9px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"]
+    :is(#id_24, #id_26) {
+    padding: 14px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) #id_7 {
+    margin-top: 22px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:is(.tc-chai, :has(form[id="5995797"])) * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
