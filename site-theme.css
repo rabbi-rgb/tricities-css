@@ -4584,3 +4584,123 @@ html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html
     padding-bottom: 38px !important;
   }
 }
+
+
+/* ============================================================
+   CHAI CLUB — EDITORIAL INTRO + QUIET FAQ
+   Keeps the opening section balanced and lets the FAQ recede.
+   ============================================================ */
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-intro {
+  padding: 58px 0 48px !important;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr) !important;
+  gap: 44px !important;
+  align-items: center !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-intro h2 {
+  max-width: 10.5em !important;
+  font-size: clamp(42px, 3.65vw, 50px) !important;
+  line-height: 1.01 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-intro-copy > p:not(.chai-kicker) {
+  max-width: 45em !important;
+  margin-top: 18px !important;
+  font-size: 15px !important;
+  line-height: 1.68 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-impact-item {
+  grid-template-columns: 34px 1fr !important;
+  gap: 14px !important;
+  padding: 18px 0 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-impact-item h3 {
+  margin-bottom: 4px !important;
+  font-size: 20px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-impact-item p {
+  font-size: 13.5px !important;
+  line-height: 1.58 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq {
+  width: min(820px, 100%) !important;
+  margin-inline: auto !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq-head {
+  max-width: 560px !important;
+  margin-bottom: 18px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq h2 {
+  font-size: clamp(32px, 3.1vw, 40px) !important;
+  line-height: 1.08 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq details {
+  margin: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(21, 48, 58, .1) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq summary {
+  padding: 15px 38px 15px 0 !important;
+  color: rgba(21, 48, 58, .86) !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq summary::after {
+  right: 1px !important;
+  top: 13px !important;
+  color: rgba(177, 125, 39, .72) !important;
+  font-size: 22px !important;
+}
+
+html:is(.tc-chai, :has(form[id="5995797"])) .chai-answer {
+  max-width: 700px !important;
+  padding: 0 38px 16px 0 !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 820px) {
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-intro {
+    padding: 44px 0 38px !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    align-items: start !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-intro h2 {
+    max-width: 12em !important;
+    font-size: clamp(38px, 10vw, 46px) !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-impact-item {
+    padding: 16px 0 !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq-head {
+    margin-bottom: 12px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq h2 {
+    font-size: 32px !important;
+  }
+
+  html:is(.tc-chai, :has(form[id="5995797"])) .chai-faq summary {
+    padding: 14px 34px 14px 0 !important;
+    font-size: 14px !important;
+  }
+}
