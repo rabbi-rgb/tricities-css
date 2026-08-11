@@ -4555,3 +4555,32 @@ html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html
 html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html > div::after{content:"Choose your monthly gift";font:600 clamp(30px,3vw,38px)/1.15 "Cormorant Garamond",Georgia,serif!important}
 html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 > .form-label-left > label:first-child{font-size:0!important}
 html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_13 > .form-label-left > label:first-child::after{content:"Dedicate this gift (optional)";font-size:13px!important}
+
+
+/* ============================================================
+   CHAI CLUB LIVE REGRESSION REPAIR
+   ============================================================ */
+html:is(.tc-chai, :has(form[id="5995797"])) #header,
+html:is(.tc-chai, :has(form[id="5995797"])) #header.on-scroll {
+  position: relative !important;
+  inset: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html > div > strong {
+  display: none !important;
+}
+html:is(.tc-chai, :has(form[id="5995797"])) form[id="5995797"] #id_28 .form-html > div::after {
+  display: block !important;
+  color: var(--chai-ink) !important;
+  font-size: clamp(30px, 3vw, 38px) !important;
+  letter-spacing: -.02em !important;
+}
+@media (min-width: 821px) {
+  html:is(.tc-chai, :has(form[id="5995797"])) .body_wrapper #co_content_container > .clearfix > .master-content-wrapper {
+    min-height: 340px !important;
+    height: 340px !important;
+    padding-top: 38px !important;
+    padding-bottom: 38px !important;
+  }
+}
