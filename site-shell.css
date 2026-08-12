@@ -1917,3 +1917,529 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
     padding-top: 0 !important;
   }
 }
+
+/* ============================================================
+   CHAI CLUB — CONNECTED STORY + QUIET GIVING FLOW
+   Final page-scoped layer over the older embedded form theme.
+   ============================================================ */
+html.tc-chai:has(form[id="5995797"]) {
+  --chai-flow-ink: #15303a;
+  --chai-flow-copy: #536b73;
+  --chai-flow-teal: #217f83;
+  --chai-flow-teal-dark: #14585d;
+  --chai-flow-gold: #b88732;
+  --chai-flow-paper: #fbfaf7;
+  --chai-flow-line: rgba(21, 48, 58, .13);
+}
+
+/* Let the welcome story lead naturally into the form. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12 .chai-intro {
+  width: min(100%, 1020px) !important;
+  margin: 0 auto !important;
+  padding: 54px 0 42px !important;
+  grid-template-columns: minmax(0, 1.04fr) minmax(340px, .96fr) !important;
+  gap: clamp(44px, 6vw, 70px) !important;
+  align-items: start !important;
+  border-bottom: 1px solid var(--chai-flow-line) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12 .chai-intro h2 {
+  max-width: 10em !important;
+  margin: 0 !important;
+  color: var(--chai-flow-ink) !important;
+  font-size: clamp(42px, 4vw, 52px) !important;
+  font-weight: 600 !important;
+  line-height: 1.01 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12 .chai-intro-copy > p:not(.chai-kicker) {
+  max-width: 43em !important;
+  margin: 16px 0 0 !important;
+  color: var(--chai-flow-copy) !important;
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12 .chai-impact-list {
+  border-top: 1px solid var(--chai-flow-line) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12 .chai-impact-item {
+  grid-template-columns: 30px minmax(0, 1fr) !important;
+  gap: 12px !important;
+  padding: 16px 0 !important;
+  border-bottom: 1px solid var(--chai-flow-line) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12 .chai-impact-item h3 {
+  margin: 0 0 3px !important;
+  color: var(--chai-flow-ink) !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_12 .chai-impact-item p {
+  color: var(--chai-flow-copy) !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body #tc-chai-head {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 48px 0 24px !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body #tc-chai-head h2 {
+  margin: 3px 0 7px !important;
+  color: var(--chai-flow-ink) !important;
+  font-size: clamp(39px, 4vw, 50px) !important;
+  font-weight: 600 !important;
+  line-height: 1.02 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body #tc-chai-head p {
+  max-width: 640px !important;
+  color: var(--chai-flow-copy) !important;
+  font-size: 14px !important;
+  line-height: 1.58 !important;
+}
+
+/* Contact details: fields, not a heavy card made from three stacked rows. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_3, #id_4, #id_6).form-line {
+  min-height: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  vertical-align: top !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_3.form-line {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 19px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_4.form-line,
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_6.form-line {
+  display: inline-block !important;
+  width: calc(50% - 9px) !important;
+  margin: 0 0 8px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_6.form-line {
+  margin-left: 14px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_3, #id_4, #id_6)
+  > .form-label-left {
+  margin: 0 0 7px !important;
+  color: var(--chai-flow-copy) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_3, #id_4, #id_6)
+  > .form-label-left > label:first-child {
+  color: #3f5961 !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 750 !important;
+  letter-spacing: .1em !important;
+  line-height: 1.35 !important;
+  text-transform: uppercase !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_3, #id_4, #id_6) > .form-input {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_3, #id_4, #id_6)
+  :is(input.form-textbox, input[type="email"], input[type="tel"]) {
+  width: 100% !important;
+  min-height: 50px !important;
+  border: 1px solid #d9d6cf !important;
+  border-radius: 9px !important;
+  background: rgba(255, 255, 255, .93) !important;
+  box-shadow: none !important;
+}
+
+/* Tiers behave like one elegant selector group on larger screens. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_28.form-line {
+  margin: 40px 0 0 !important;
+  padding: 20px 0 14px !important;
+  border-top: 1px solid var(--chai-flow-line) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_28 .form-html > div::after {
+  color: var(--chai-flow-ink) !important;
+  font-size: clamp(31px, 3vw, 39px) !important;
+  font-weight: 600 !important;
+  line-height: 1.08 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_28::after {
+  content: "Select the monthly amount that feels right for you." !important;
+  display: block !important;
+  margin-top: 7px !important;
+  color: var(--chai-flow-copy) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 12.5px !important;
+  line-height: 1.5 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19).form-line {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  width: 33.333% !important;
+  min-height: 184px !important;
+  margin: 0 0 14px !important;
+  padding: 17px !important;
+  border: 1px solid var(--chai-flow-line) !important;
+  border-top: 3px solid var(--chai-flow-gold) !important;
+  border-right-width: 0 !important;
+  border-radius: 0 !important;
+  background: rgba(255, 255, 255, .78) !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  vertical-align: top !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_8.form-line {
+  border-radius: 14px 0 0 14px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_18.form-line {
+  border-top-color: var(--chai-flow-teal) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_19.form-line {
+  border-top-color: var(--chai-flow-ink) !important;
+  border-right-width: 1px !important;
+  border-radius: 0 14px 14px 0 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  > .form-label-left > label:first-child {
+  color: var(--chai-flow-ink) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: .1em !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  .form-radio-item {
+  min-height: 46px !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  .form-radio-item:has(input:checked) {
+  border-color: var(--chai-flow-teal) !important;
+  background: var(--chai-flow-teal-dark) !important;
+  box-shadow: none !important;
+}
+
+/* The Chai Club is monthly by definition: make that choice feel settled. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_24.form-line {
+  position: relative !important;
+  margin: 0 0 18px !important;
+  padding: 16px 18px !important;
+  border: 1px solid rgba(33, 127, 131, .28) !important;
+  border-radius: 12px !important;
+  background: rgba(237, 245, 245, .86) !important;
+  box-shadow: none !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_24.form-line::before {
+  content: "MONTHLY MEMBERSHIP · REQUIRED" !important;
+  margin-bottom: 8px !important;
+  color: var(--chai-flow-teal-dark) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 9.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: .15em !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_24 label {
+  color: var(--chai-flow-ink) !important;
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_24 input[type="checkbox"] {
+  accent-color: var(--chai-flow-teal) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_24:has(input:checked) {
+  border-color: rgba(33, 127, 131, .46) !important;
+  background: rgba(231, 243, 242, .94) !important;
+}
+
+/* Optional questions sit quietly between the tier choice and payment. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_26.form-line {
+  margin: 0 0 14px !important;
+  padding: 14px 17px !important;
+  border-color: var(--chai-flow-line) !important;
+  background: rgba(255, 255, 255, .58) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_13.form-line {
+  margin: 16px 0 32px !important;
+}
+
+/* Give the conversion and after-form content distinct beats. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_2.form-line {
+  margin: 0 !important;
+  padding: 44px 0 62px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_2 .form-submit-button {
+  width: min(100%, 390px) !important;
+  min-height: 56px !important;
+  border-radius: 10px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25.form-line {
+  margin: 0 !important;
+  padding: 0 0 80px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25 .chai-after-form {
+  width: min(100%, 900px) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25 details.chai-partners {
+  margin: 0 0 62px !important;
+  border: 1px solid var(--chai-flow-line) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, .6) !important;
+  box-shadow: 0 8px 24px rgba(21, 48, 58, .045) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25 .chai-partners summary {
+  padding: 20px 22px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25 .chai-partners-list {
+  padding: 0 22px 22px !important;
+  color: var(--chai-flow-copy) !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25 .chai-faq {
+  width: min(100%, 760px) !important;
+  margin: 0 auto !important;
+  padding-top: 48px !important;
+  border-top: 1px solid var(--chai-flow-line) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25 .chai-faq-head {
+  margin-bottom: 14px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_25 .chai-faq h2 {
+  max-width: 14em !important;
+  margin: 4px 0 0 !important;
+  font-size: clamp(31px, 3vw, 38px) !important;
+  font-weight: 600 !important;
+  line-height: 1.04 !important;
+}
+
+@media screen and (max-width: 820px) {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_12 .chai-intro {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 26px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] :is(#id_8, #id_18, #id_19).form-line {
+    display: flex !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    margin: 0 0 11px !important;
+    border: 1px solid var(--chai-flow-line) !important;
+    border-top: 3px solid var(--chai-flow-gold) !important;
+    border-radius: 12px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_18.form-line {
+    border-top-color: var(--chai-flow-teal) !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_19.form-line {
+    border-top-color: var(--chai-flow-ink) !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_12 .chai-intro {
+    padding: 32px 0 30px !important;
+    gap: 23px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_12 .chai-intro h2 {
+    max-width: 11em !important;
+    font-size: 34px !important;
+    line-height: 1.02 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_12 .chai-intro-copy > p:not(.chai-kicker) {
+    margin-top: 13px !important;
+    font-size: 13.25px !important;
+    line-height: 1.58 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_12 .chai-impact-item {
+    padding: 13px 0 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body #tc-chai-head {
+    padding: 36px 0 20px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body #tc-chai-head h2 {
+    font-size: 36px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] :is(#id_4, #id_6).form-line {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 17px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_6.form-line {
+    margin-left: 0 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_28.form-line {
+    margin-top: 22px !important;
+    padding-top: 18px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_28 .form-html > div::after {
+    font-size: 30px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] :is(#id_8, #id_18, #id_19).form-line {
+    padding: 14px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_24.form-line {
+    padding: 14px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_2.form-line {
+    padding: 34px 0 50px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_25.form-line {
+    padding-bottom: 56px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_25 details.chai-partners {
+    margin-bottom: 48px !important;
+    border-right: 0 !important;
+    border-left: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_25 .chai-partners summary {
+    padding: 18px 0 !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_25 .chai-partners-list {
+    padding: 0 0 19px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_25 .chai-faq {
+    padding-top: 38px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_25 .chai-faq h2 {
+    font-size: 29px !important;
+  }
+
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] #id_25 .chai-faq summary {
+    padding: 12px 29px 12px 0 !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+}
