@@ -1344,6 +1344,131 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final #id_2 .form-submit-butto
   }
 }
 
+/* Chai Club tiers: make the three levels read as an intentional progression. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19).form-line {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_8.form-line {
+  background: linear-gradient(155deg, #fffdfa, rgba(246, 238, 226, .72)) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_18.form-line {
+  background: linear-gradient(155deg, #fbfefe, rgba(232, 244, 243, .82)) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_19.form-line {
+  border-color: rgba(184, 135, 50, .42) !important;
+  background: linear-gradient(155deg, #fffdf7, rgba(246, 235, 207, .92)) !important;
+  box-shadow: 0 10px 28px rgba(89, 63, 24, .08) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  > .form-label-left {
+  margin-bottom: 13px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  > .form-label-left > label:first-child {
+  color: var(--chai-flow-ink) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 24px !important;
+  font-weight: 650 !important;
+  letter-spacing: -.01em !important;
+  line-height: 1.05 !important;
+  text-transform: capitalize !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  > .form-label-left > label:first-child::before {
+  display: block !important;
+  margin-bottom: 5px !important;
+  color: var(--chai-flow-gold) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 8.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: .16em !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_8 > .form-label-left > label:first-child::before {
+  content: "Foundation level" !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_18 > .form-label-left > label:first-child::before {
+  content: "Community builder" !important;
+  color: var(--chai-flow-teal) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_19 > .form-label-left > label:first-child::before {
+  content: "Leadership level" !important;
+  color: #9b6b1f !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  > .form-label-left > label:first-child::after {
+  display: block !important;
+  margin-top: 6px !important;
+  color: var(--chai-flow-copy) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 10.5px !important;
+  font-weight: 550 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.4 !important;
+  text-transform: none !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_8 > .form-label-left > label:first-child::after {
+  content: "Begin a steady monthly partnership." !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_18 > .form-label-left > label:first-child::after {
+  content: "Strengthen programs month after month." !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_19 > .form-label-left > label:first-child::after {
+  content: "Lead the way with sustaining impact." !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  .form-radio-item {
+  background: rgba(255, 255, 255, .88) !important;
+  transition: transform .16s ease, border-color .16s ease, background-color .16s ease !important;
+}
+
+@media (hover: hover) {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] :is(#id_8, #id_18, #id_19)
+    .form-radio-item:hover {
+    transform: translateY(-1px) !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] :is(#id_8, #id_18, #id_19)
+    > .form-label-left > label:first-child {
+    font-size: 22px !important;
+  }
+}
+
 /* ============================================================
    CHAI CLUB — FINAL TYPE CONSISTENCY
    A single editorial serif for headings and a single sans for UI/copy.
@@ -2188,7 +2313,7 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
 
 html.tc-chai:has(form[id="5995797"]) body.cco_body
   form[id="5995797"] #id_24.form-line::before {
-  content: "MONTHLY MEMBERSHIP · REQUIRED" !important;
+  content: "MONTHLY MEMBERSHIP *" !important;
   margin-bottom: 8px !important;
   color: var(--chai-flow-teal-dark) !important;
   font-family: Montserrat, Arial, sans-serif !important;
@@ -2441,5 +2566,55 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
     padding: 12px 29px 12px 0 !important;
     font-size: 13px !important;
     line-height: 1.45 !important;
+  }
+}
+
+/* Final bridge: preserve the tier progression above older form overrides. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19).form-line {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_8.form-line {
+  background: linear-gradient(155deg, #fffdfa, rgba(246, 238, 226, .72)) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_18.form-line {
+  background: linear-gradient(155deg, #fbfefe, rgba(232, 244, 243, .82)) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_19.form-line {
+  border-color: rgba(184, 135, 50, .42) !important;
+  background: linear-gradient(155deg, #fffdf7, rgba(246, 235, 207, .92)) !important;
+  box-shadow: 0 10px 28px rgba(89, 63, 24, .08) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  > .form-label-left {
+  margin-bottom: 13px !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  > .form-label-left > label:first-child {
+  color: var(--chai-flow-ink) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 24px !important;
+  font-weight: 650 !important;
+  letter-spacing: -.01em !important;
+  line-height: 1.05 !important;
+  text-transform: capitalize !important;
+}
+
+@media screen and (max-width: 520px) {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body
+    form[id="5995797"] :is(#id_8, #id_18, #id_19)
+    > .form-label-left > label:first-child {
+    font-size: 22px !important;
   }
 }
