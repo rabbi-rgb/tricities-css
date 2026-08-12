@@ -1902,3 +1902,18 @@ html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
   :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39).form-line.form-field-hidden {
   display: none !important;
 }
+
+/* The desktop hero title crowds underneath the compact phone header.
+   The page context is already clear from the reservation flow, so keep
+   the mobile hero focused on the red field and shofar artwork. */
+@media screen and (max-width: 720px) {
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    .article-header__title {
+    display: none !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    .article-header {
+    padding-top: 0 !important;
+  }
+}
