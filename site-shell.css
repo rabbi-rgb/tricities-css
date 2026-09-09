@@ -2618,3 +2618,13 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
     font-size: 22px !important;
   }
 }
+
+
+/* Restore the native Sign In link and separator hidden by cdo-normalize.css. */
+#header #mychabad_login_bar #login_link {
+  display: inline;
+}
+
+#header #mychabad_login_bar::after {
+  display: inline;
+}
