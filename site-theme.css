@@ -4963,3 +4963,28 @@ html:has(meta[name="scope-aid"][content="420700"]) #co_index_container a:focus-v
     display: none !important;
   }
 }
+
+
+/* Standard library text links: retain brand colors in normal and visited states.
+   Excludes the custom holiday minisite, navigation, and button/image titles. */
+html:not(.tc-high-holidays-minisite) #co_index_container :is(p, .nested_item) a:not(.button),
+html:not(.tc-high-holidays-minisite) .co_body .content p a:not(.button) {
+  color: var(--tc-teal-dark, #0E6E7B) !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+html:not(.tc-high-holidays-minisite) #co_index_container :is(p, .nested_item) a:not(.button):hover,
+html:not(.tc-high-holidays-minisite) .co_body .content p a:not(.button):hover {
+  color: var(--tc-green-dark, #315F3C) !important;
+  text-decoration: underline;
+}
+
+/* Standard High Holidays library banner: allow room for the artwork.
+   This component is separate from custom page heroes and the local minisite. */
+@media screen {
+  html:not(.tc-high-holidays-minisite) .co_section_branding:has(.section_title > a[href*="/holidays/JewishNewYear/"]) {
+    height: clamp(120px, 13vw, 220px) !important;
+    min-height: 120px;
+    background-size: cover;
+    background-position: center;
+  }
+}
