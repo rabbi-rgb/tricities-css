@@ -4914,3 +4914,51 @@ html:is(.tc-chai, :has(form[id="5995797"])) #id_25 .chai-faq .chai-answer {
     line-height: 1.58 !important;
   }
 }
+
+
+/* Rosh Hashanah recipe index (420700): repair the legacy link-button
+   and stack only the outer recipe table on phones. */
+html:has(meta[name="scope-aid"][content="420700"]) #co_index_container #CoButton_wrapper {
+  float: none !important;
+  width: min(100%, 380px) !important;
+  margin: 24px auto !important;
+}
+html:has(meta[name="scope-aid"][content="420700"]) #co_index_container #CoButton_wrapper > a.button {
+  display: block !important;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 20px !important;
+  border-radius: 8px;
+  background: var(--tc-teal, #178F9F) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  line-height: 1.5;
+  text-align: center;
+  white-space: normal;
+}
+html:has(meta[name="scope-aid"][content="420700"]) #co_index_container #CoButton_wrapper > a.button:hover {
+  background: var(--tc-teal-dark, #0E6E7B) !important;
+}
+html:has(meta[name="scope-aid"][content="420700"]) #co_index_container :is(p, .nested_item) > a {
+  color: var(--tc-teal-dark, #0E6E7B);
+}
+html:has(meta[name="scope-aid"][content="420700"]) #co_index_container a:focus-visible {
+  outline: 3px solid var(--tc-teal, #178F9F);
+  outline-offset: 3px;
+}
+@media screen and (max-width: 640px) {
+  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index,
+  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody,
+  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row,
+  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row > td.item {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row > td.item {
+    padding: 0 0 28px !important;
+  }
+  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row > td.separator {
+    display: none !important;
+  }
+}
