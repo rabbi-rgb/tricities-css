@@ -1,0 +1,6 @@
+/* Tri-Cities Chabad site shell v42
+   Loads the stable site shell plus scoped JLI registration styles.
+   Safe globally because JLI rules are scoped to .jli-page. */
+
+@import url("./site-shell.css?v=41");
+@import url("./jli-registration.css?v=2");
