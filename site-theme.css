@@ -4988,3 +4988,9 @@ html:not(.tc-high-holidays-minisite) .co_body .content p a:not(.button):hover {
     background-position: center;
   }
 }
+
+/* Reservations: preserve Form Builder hidden fields over custom layouts.
+   The escaped ID below is the reservation form 7431739. */
+html body #formContainer form#\37 431739 .form-line.always-hidden[id] {
+  display: none !important;
+}
