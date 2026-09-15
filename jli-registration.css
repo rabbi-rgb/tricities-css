@@ -1,0 +1,601 @@
+/* ============================================================
+   TRI-CITIES CHABAD — JLI COURSE REGISTRATION
+   Scoped to .jli-page so ChabadOne/form CSS cannot leak in.
+   ============================================================ */
+
+.co_body .content .jli-page,
+.form-all .jli-page,
+.jli-page {
+  --jli-ink: #352c23;
+  --jli-green: #2e683b;
+  --jli-green-soft: #578a45;
+  --jli-cream: #faf8f1;
+  --jli-sand: #e7e2d5;
+  --jli-border: #dfd8c8;
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  color: var(--jli-ink) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.55 !important;
+  text-align: left !important;
+}
+
+.co_body .content .jli-page *,
+.form-all .jli-page *,
+.jli-page * {
+  box-sizing: border-box !important;
+}
+
+.co_body .content .jli-page p,
+.form-all .jli-page p,
+.jli-page p {
+  margin: 0 !important;
+  color: var(--jli-ink) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  line-height: 1.55 !important;
+}
+
+/* Brand */
+.co_body .content .jli-page .jli-brand,
+.form-all .jli-page .jli-brand,
+.jli-page .jli-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 8px 0 24px !important;
+  color: var(--jli-ink) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  line-height: 1.45 !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+}
+
+.co_body .content .jli-page .jli-brand img,
+.form-all .jli-page .jli-brand img,
+.jli-page .jli-brand img {
+  display: block !important;
+  width: 36px !important;
+  height: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Hero */
+.co_body .content .jli-page .jli-hero,
+.form-all .jli-page .jli-hero,
+.jli-page .jli-hero {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  width: 100% !important;
+  margin: 0 0 24px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: var(--jli-sand) !important;
+  border: 0 !important;
+  border-radius: 24px !important;
+  box-shadow: none !important;
+}
+
+.co_body .content .jli-page .jli-hero-copy,
+.form-all .jli-page .jli-hero-copy,
+.jli-page .jli-hero-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  min-width: 0 !important;
+  padding: 46px 36px 42px !important;
+  background: transparent !important;
+}
+
+.co_body .content .jli-page .jli-eyebrow,
+.form-all .jli-page .jli-eyebrow,
+.jli-page .jli-eyebrow {
+  margin: 0 0 13px !important;
+  color: #796a4e !important;
+  -webkit-text-fill-color: #796a4e !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 9px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 1.6px !important;
+  text-transform: uppercase !important;
+}
+
+.co_body .content .jli-page .jli-hero-title,
+.form-all .jli-page .jli-hero-title,
+.jli-page .jli-hero-title {
+  margin: 0 0 23px !important;
+  color: var(--jli-ink) !important;
+  -webkit-text-fill-color: var(--jli-ink) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(36px, 4.4vw, 48px) !important;
+  font-weight: 400 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -1px !important;
+  text-transform: none !important;
+}
+
+.co_body .content .jli-page .jli-hero-title em,
+.form-all .jli-page .jli-hero-title em,
+.jli-page .jli-hero-title em {
+  color: var(--jli-ink) !important;
+  -webkit-text-fill-color: var(--jli-ink) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 400 !important;
+}
+
+.co_body .content .jli-page .jli-hero-description,
+.form-all .jli-page .jli-hero-description,
+.jli-page .jli-hero-description {
+  max-width: 350px !important;
+  color: #343c37 !important;
+  -webkit-text-fill-color: #343c37 !important;
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+}
+
+.co_body .content .jli-page .jli-register-button,
+.form-all .jli-page .jli-register-button,
+.jli-page .jli-register-button {
+  display: inline-block !important;
+  align-self: flex-start !important;
+  width: auto !important;
+  margin: 25px 0 14px !important;
+  padding: 14px 22px !important;
+  background: var(--jli-green) !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+}
+
+.co_body .content .jli-page .jli-register-button:hover,
+.form-all .jli-page .jli-register-button:hover,
+.jli-page .jli-register-button:hover {
+  background: #255831 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.co_body .content .jli-page .jli-instructor,
+.form-all .jli-page .jli-instructor,
+.jli-page .jli-instructor {
+  color: #655f50 !important;
+  -webkit-text-fill-color: #655f50 !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+.co_body .content .jli-page .jli-hero-art,
+.form-all .jli-page .jli-hero-art,
+.jli-page .jli-hero-art {
+  display: block !important;
+  min-width: 0 !important;
+  min-height: 430px !important;
+  overflow: hidden !important;
+  background: #ded7c7 !important;
+  border: 0 !important;
+}
+
+.co_body .content .jli-page .jli-hero-art img,
+.form-all .jli-page .jli-hero-art img,
+.jli-page .jli-hero-art img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 430px !important;
+  max-width: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Course cards */
+.co_body .content .jli-page .jli-course-grid,
+.form-all .jli-page .jli-course-grid,
+.jli-page .jli-course-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  width: 100% !important;
+  margin: 0 0 24px !important;
+  padding: 0 !important;
+}
+
+.co_body .content .jli-page .jli-course-card,
+.form-all .jli-page .jli-course-card,
+.jli-page .jli-course-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: var(--jli-cream) !important;
+  border: 1px solid var(--jli-border) !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+}
+
+.co_body .content .jli-page .jli-course-image,
+.form-all .jli-page .jli-course-image,
+.jli-page .jli-course-image {
+  width: 100% !important;
+  height: 260px !important;
+  min-height: 260px !important;
+  overflow: hidden !important;
+  background: #e8e3d7 !important;
+}
+
+.co_body .content .jli-page .jli-course-image img,
+.form-all .jli-page .jli-course-image img,
+.jli-page .jli-course-image img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+.co_body .content .jli-page .jli-course-content,
+.form-all .jli-page .jli-course-content,
+.jli-page .jli-course-content {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  min-width: 0 !important;
+  padding: 19px 18px 20px !important;
+  background: transparent !important;
+}
+
+.co_body .content .jli-page .jli-course-meta,
+.form-all .jli-page .jli-course-meta,
+.jli-page .jli-course-meta {
+  margin: 0 0 9px !important;
+  color: #796a4e !important;
+  -webkit-text-fill-color: #796a4e !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 8px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 1.25px !important;
+  text-transform: uppercase !important;
+}
+
+.co_body .content .jli-page .jli-course-title,
+.form-all .jli-page .jli-course-title,
+.jli-page .jli-course-title {
+  margin: 0 0 13px !important;
+  color: var(--jli-green-soft) !important;
+  -webkit-text-fill-color: var(--jli-green-soft) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  line-height: 1.14 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  overflow-wrap: break-word !important;
+}
+
+.co_body .content .jli-page .jli-course-description,
+.form-all .jli-page .jli-course-description,
+.jli-page .jli-course-description {
+  margin: 0 0 16px !important;
+  color: var(--jli-ink) !important;
+  -webkit-text-fill-color: var(--jli-ink) !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+}
+
+.co_body .content .jli-page .jli-course-price,
+.form-all .jli-page .jli-course-price,
+.jli-page .jli-course-price {
+  margin-top: auto !important;
+  padding-top: 8px !important;
+  color: var(--jli-green) !important;
+  -webkit-text-fill-color: var(--jli-green) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+}
+
+/* Full-year pass */
+.co_body .content .jli-page .jli-year-pass,
+.form-all .jli-page .jli-year-pass,
+.jli-page .jli-year-pass {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 30px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 29px 32px !important;
+  background: #2d4937 !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+
+.co_body .content .jli-page .jli-year-pass p,
+.co_body .content .jli-page .jli-year-pass span,
+.co_body .content .jli-page .jli-year-pass strong,
+.form-all .jli-page .jli-year-pass p,
+.form-all .jli-page .jli-year-pass span,
+.form-all .jli-page .jli-year-pass strong,
+.jli-page .jli-year-pass p,
+.jli-page .jli-year-pass span,
+.jli-page .jli-year-pass strong {
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+}
+
+.co_body .content .jli-page .jli-year-title,
+.form-all .jli-page .jli-year-title,
+.jli-page .jli-year-title {
+  margin: 0 0 10px !important;
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 29px !important;
+  font-weight: 400 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.co_body .content .jli-page .jli-year-copy,
+.form-all .jli-page .jli-year-copy,
+.jli-page .jli-year-copy {
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  opacity: 0.88 !important;
+}
+
+.co_body .content .jli-page .jli-year-price,
+.form-all .jli-page .jli-year-price,
+.jli-page .jli-year-price {
+  min-width: 165px !important;
+  text-align: right !important;
+}
+
+.co_body .content .jli-page .jli-year-price-main,
+.form-all .jli-page .jli-year-price-main,
+.jli-page .jli-year-price-main {
+  display: block !important;
+  margin: 0 0 6px !important;
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 31px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.co_body .content .jli-page .jli-year-price-label,
+.form-all .jli-page .jli-year-price-label,
+.jli-page .jli-year-price-label {
+  margin: 0 0 12px !important;
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  font-size: 13px !important;
+  opacity: 0.8 !important;
+}
+
+.co_body .content .jli-page .jli-couple-price,
+.form-all .jli-page .jli-couple-price,
+.jli-page .jli-couple-price {
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  font-size: 14px !important;
+}
+
+/* Note and form heading */
+.co_body .content .jli-page .jli-note,
+.form-all .jli-page .jli-note,
+.jli-page .jli-note {
+  padding: 18px 2px 28px !important;
+  color: #655f50 !important;
+  -webkit-text-fill-color: #655f50 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+}
+
+.co_body .content .jli-page .jli-form-heading,
+.form-all .jli-page .jli-form-heading,
+.jli-page .jli-form-heading {
+  margin: 0 !important;
+  padding: 27px 0 10px !important;
+  border-top: 1px solid #d8d0bd !important;
+  background: transparent !important;
+}
+
+.co_body .content .jli-page .jli-form-title,
+.form-all .jli-page .jli-form-title,
+.jli-page .jli-form-title {
+  margin: 0 0 8px !important;
+  color: var(--jli-green-soft) !important;
+  -webkit-text-fill-color: var(--jli-green-soft) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 30px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.co_body .content .jli-page .jli-form-copy,
+.form-all .jli-page .jli-form-copy,
+.jli-page .jli-form-copy {
+  color: var(--jli-ink) !important;
+  -webkit-text-fill-color: var(--jli-ink) !important;
+  font-size: 16px !important;
+}
+
+/* Narrow desktop / tablet */
+@media screen and (max-width: 900px) {
+  .co_body .content .jli-page .jli-hero-copy,
+  .form-all .jli-page .jli-hero-copy,
+  .jli-page .jli-hero-copy {
+    padding: 38px 28px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-grid,
+  .form-all .jli-page .jli-course-grid,
+  .jli-page .jli-course-grid {
+    gap: 14px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-content,
+  .form-all .jli-page .jli-course-content,
+  .jli-page .jli-course-content {
+    padding: 17px 15px 18px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-title,
+  .form-all .jli-page .jli-course-title,
+  .jli-page .jli-course-title {
+    font-size: 20px !important;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+  .co_body .content .jli-page .jli-brand,
+  .form-all .jli-page .jli-brand,
+  .jli-page .jli-brand {
+    padding-bottom: 19px !important;
+  }
+
+  .co_body .content .jli-page .jli-hero,
+  .form-all .jli-page .jli-hero,
+  .jli-page .jli-hero {
+    grid-template-columns: minmax(0, 1fr) !important;
+    border-radius: 18px !important;
+  }
+
+  .co_body .content .jli-page .jli-hero-copy,
+  .form-all .jli-page .jli-hero-copy,
+  .jli-page .jli-hero-copy {
+    padding: 31px 23px 29px !important;
+  }
+
+  .co_body .content .jli-page .jli-hero-title,
+  .form-all .jli-page .jli-hero-title,
+  .jli-page .jli-hero-title {
+    font-size: 38px !important;
+  }
+
+  .co_body .content .jli-page .jli-register-button,
+  .form-all .jli-page .jli-register-button,
+  .jli-page .jli-register-button {
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  .co_body .content .jli-page .jli-hero-art,
+  .form-all .jli-page .jli-hero-art,
+  .jli-page .jli-hero-art,
+  .co_body .content .jli-page .jli-hero-art img,
+  .form-all .jli-page .jli-hero-art img,
+  .jli-page .jli-hero-art img {
+    min-height: 300px !important;
+    height: 300px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-grid,
+  .form-all .jli-page .jli-course-grid,
+  .jli-page .jli-course-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-card,
+  .form-all .jli-page .jli-course-card,
+  .jli-page .jli-course-card {
+    display: grid !important;
+    grid-template-columns: 40% minmax(0, 1fr) !important;
+  }
+
+  .co_body .content .jli-page .jli-course-image,
+  .form-all .jli-page .jli-course-image,
+  .jli-page .jli-course-image {
+    height: 100% !important;
+    min-height: 245px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-content,
+  .form-all .jli-page .jli-course-content,
+  .jli-page .jli-course-content {
+    padding: 20px 18px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-title,
+  .form-all .jli-page .jli-course-title,
+  .jli-page .jli-course-title {
+    font-size: 21px !important;
+  }
+
+  .co_body .content .jli-page .jli-year-pass,
+  .form-all .jli-page .jli-year-pass,
+  .jli-page .jli-year-pass {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 21px !important;
+    padding: 25px 23px !important;
+    border-radius: 16px !important;
+  }
+
+  .co_body .content .jli-page .jli-year-price,
+  .form-all .jli-page .jli-year-price,
+  .jli-page .jli-year-price {
+    min-width: 0 !important;
+    text-align: left !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .co_body .content .jli-page .jli-hero-title,
+  .form-all .jli-page .jli-hero-title,
+  .jli-page .jli-hero-title {
+    font-size: 35px !important;
+  }
+
+  .co_body .content .jli-page .jli-course-card,
+  .form-all .jli-page .jli-course-card,
+  .jli-page .jli-course-card {
+    display: flex !important;
+  }
+
+  .co_body .content .jli-page .jli-course-image,
+  .form-all .jli-page .jli-course-image,
+  .jli-page .jli-course-image {
+    width: 100% !important;
+    height: 230px !important;
+    min-height: 230px !important;
+  }
+
+  .co_body .content .jli-page .jli-form-title,
+  .form-all .jli-page .jli-form-title,
+  .jli-page .jli-form-title {
+    font-size: 27px !important;
+  }
+}
