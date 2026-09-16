@@ -1,0 +1,22 @@
+/* JLI Kabbalah course page: visually replace the auto-generated street address.
+   This stylesheet is intended to be loaded only on the Kabbalah course section. */
+
+.jlik-cd-echo-address {
+  display: block !important;
+  position: relative !important;
+  visibility: hidden !important;
+}
+
+.jlik-cd-echo-address::after {
+  content: "Address and Zoom link provided upon registering.";
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  visibility: visible !important;
+  white-space: normal !important;
+  color: inherit !important;
+  font: inherit !important;
+  letter-spacing: inherit !important;
+  line-height: inherit !important;
+  text-transform: inherit !important;
+}
