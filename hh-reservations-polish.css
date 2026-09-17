@@ -1,0 +1,310 @@
+/* ============================================================
+   TRI-CITIES CHABAD — HIGH HOLIDAY RESERVATIONS POLISH
+   Page/form scoped override for aid 7431739.
+   Load AFTER site-shell.css.
+   ============================================================ */
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final {
+  --hh-polish-maroon: #a71938;
+  --hh-polish-gold: #b58a45;
+  --hh-polish-ink: #2e2a25;
+  --hh-polish-muted: #69635d;
+  --hh-polish-line: #e8e1d9;
+  --hh-polish-paper: #fbf8f3;
+}
+
+/* ------------------------------------------------------------
+   DAY HEADING
+   Remove the floating gold ornament and let the type lead.
+   ------------------------------------------------------------ */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_52, #id_53, #id_56).form-line {
+  margin: 26px 0 17px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_52, #id_53, #id_56) table {
+  width: 100% !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_52, #id_53, #id_56) table td {
+  padding: 0 !important;
+}
+
+/* Catch older decorative treatments that can leave a small gold dash. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_52, #id_53, #id_56) hr {
+  display: none !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_52, #id_53, #id_56) h3 {
+  margin: 0 0 4px !important;
+  color: var(--hh-polish-maroon) !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: 34px !important;
+  font-weight: 600 !important;
+  line-height: 1.03 !important;
+  letter-spacing: -.018em !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_52, #id_53, #id_56) p {
+  margin: 0 !important;
+  color: var(--hh-polish-muted) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+/* ------------------------------------------------------------
+   ATTEND ALL
+   The checkbox text already explains the action, so remove the
+   redundant ALL SERVICES micro-heading and make this one clean row.
+   ------------------------------------------------------------ */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57).form-line {
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 0 20px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57) > .form-label-left {
+  display: none !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57) > .form-input,
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57) .form-single-column {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57) .form-checkbox-item {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  margin: 0 !important;
+  padding: 13px 15px !important;
+  border: 1px solid rgba(181, 138, 69, .32) !important;
+  border-radius: 12px !important;
+  background: var(--hh-polish-paper) !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57) .form-checkbox-item label {
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  line-height: 1.4 !important;
+}
+
+/* ------------------------------------------------------------
+   INDIVIDUAL SERVICES
+   One calm list instead of a grid of floating boxes. This removes
+   the awkward orphaned full-width fifth choice on Yom Kippur.
+   ------------------------------------------------------------ */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39).form-line {
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 0 22px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39) > .form-label-left {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39) > .form-label-left > label:first-child {
+  color: var(--hh-polish-muted) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  line-height: 1.35 !important;
+  letter-spacing: .11em !important;
+  text-transform: uppercase !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39) > .form-input {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39) .form-single-column {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid var(--hh-polish-line) !important;
+  border-radius: 12px !important;
+  background: #fff !important;
+  box-shadow: 0 6px 22px rgba(46, 42, 37, .035) !important;
+  overflow: hidden !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39) .form-checkbox-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  margin: 0 !important;
+  padding: 14px 15px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  box-sizing: border-box !important;
+  grid-column: auto !important;
+}
+
+/* Add separators only where another service follows. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39)
+  .form-checkbox-item:has(~ .form-checkbox-item) {
+  border-bottom: 1px solid #eee8e1 !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
+  .form-checkbox-item input[type="checkbox"] {
+  flex: 0 0 18px !important;
+  width: 18px !important;
+  height: 18px !important;
+  margin: 1px 11px 0 0 !important;
+  accent-color: var(--hh-polish-maroon) !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_51, #id_44, #id_39) .form-checkbox-item label {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  color: var(--hh-polish-ink) !important;
+  font-family: Montserrat, Arial, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 580 !important;
+  line-height: 1.4 !important;
+}
+
+/* Selected state stays refined but unmistakable. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
+  .form-checkbox-item:has(input:checked) {
+  border-color: rgba(167, 25, 56, .42) !important;
+  background: #fcf8f3 !important;
+  box-shadow: inset 3px 0 0 var(--hh-polish-gold) !important;
+}
+
+@media (hover: hover) {
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
+    .form-checkbox-item:hover {
+    background: #fffdf9 !important;
+  }
+}
+
+/* Keep ChabadOne's conditional show/hide behavior intact. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39).form-line.form-field-hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 720px) {
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#id_52, #id_53, #id_56).form-line {
+    margin-top: 21px !important;
+    margin-bottom: 15px !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#id_52, #id_53, #id_56) h3 {
+    font-size: 30px !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#id_35, #id_54, #id_57) .form-checkbox-item {
+    min-height: 50px !important;
+    padding: 12px 13px !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#id_51, #id_44, #id_39) .form-checkbox-item {
+    min-height: 49px !important;
+    padding: 12px 13px !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#id_35, #id_54, #id_57, #id_51, #id_44, #id_39)
+    .form-checkbox-item label {
+    font-size: 13.5px !important;
+  }
+}
