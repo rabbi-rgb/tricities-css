@@ -1,8 +1,11 @@
 (function () {
   "use strict";
 
-  var pageAddress = window.location.pathname + window.location.search;
-  if (!/5995797/.test(pageAddress)) return;
+  var pageAddress = (window.location.pathname + window.location.search).toLowerCase();
+  var isChaiAddress = /5995797|shachai/.test(pageAddress);
+  var hasChaiForm = !!document.getElementById("5995797");
+
+  if (!isChaiAddress && !hasChaiForm) return;
 
   document.documentElement.classList.add("tc-chai");
 
