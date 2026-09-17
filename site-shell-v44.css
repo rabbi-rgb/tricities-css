@@ -1,0 +1,7 @@
+/* Tri-Cities Chabad site shell v44
+   Fresh cache-busted shell + scoped JLI + High Holiday reservation polish. */
+
+@import url("./site-shell.css?v=44");
+@import url("./jli-registration.css?v=2");
+@import url("./hh-reservations-v2.css?v=1");
+@import url("./hh-reservations-final-tweaks.css?v=1");
