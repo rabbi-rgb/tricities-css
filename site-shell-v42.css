@@ -1,6 +1,7 @@
 /* Tri-Cities Chabad site shell v42
-   Loads the stable site shell plus scoped JLI registration styles.
-   Safe globally because JLI rules are scoped to .jli-page. */
+   Loads the stable site shell plus scoped page-specific refinements.
+   Safe globally because the JLI and High Holiday rules are tightly scoped. */
 
 @import url("./site-shell.css?v=41");
 @import url("./jli-registration.css?v=2");
+@import url("./hh-reservations-v2.css?v=1");
