@@ -2634,3 +2634,76 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
 html body #formContainer form#\37 431739 .form-line.always-hidden[id] {
   display: none !important;
 }
+
+
+/* ============================================================
+   CHAI CLUB — FINAL PALETTE LOCK
+   One authoritative palette. High specificity prevents the
+   global site theme from recoloring the Chai Club page.
+   ============================================================ */
+html.tc-chai:has(form[id="5995797"]) {
+  --chai-flow-ink: #15303a;
+  --chai-flow-copy: #536b73;
+  --chai-flow-teal: #217f83;
+  --chai-flow-teal-dark: #14585d;
+  --chai-flow-gold: #b88732;
+  --chai-flow-paper: #fbfaf7;
+  --chai-flow-line: rgba(21, 48, 58, .13);
+
+  --chai-ink: #15303a;
+  --chai-copy: #536b73;
+  --chai-blue: #217f83;
+  --chai-blue-dark: #14585d;
+  --chai-gold: #b88732;
+  --chai-paper: #fbfaf7;
+  --chai-line: rgba(21, 48, 58, .13);
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body,
+html.tc-chai:has(form[id="5995797"]) #content,
+html.tc-chai:has(form[id="5995797"]) #BodyContainer,
+html.tc-chai:has(form[id="5995797"]) .body_wrapper,
+html.tc-chai:has(form[id="5995797"]) #co_content_container {
+  background-color: var(--chai-flow-paper) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  .body_wrapper #co_content_container > .clearfix > .master-content-wrapper {
+  background-color: #0a6077 !important;
+  background-image:
+    radial-gradient(circle at 14% 18%, rgba(111, 224, 224, .20), transparent 34%),
+    radial-gradient(circle at 88% 76%, rgba(225, 181, 99, .14), transparent 36%),
+    linear-gradient(135deg, #0d8395 0%, #0b627a 52%, #093f67 100%) !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] #id_2 .form-submit-button {
+  background: linear-gradient(135deg, var(--chai-flow-teal), var(--chai-flow-teal-dark)) !important;
+  border-color: var(--chai-flow-teal-dark) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  form[id="5995797"] :is(#id_8, #id_18, #id_19)
+  .form-radio-item:has(input:checked) {
+  border-color: var(--chai-flow-teal) !important;
+  background: var(--chai-flow-teal-dark) !important;
+  color: #fff !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  #co_menu_container a[href="/4970020"] {
+  background: var(--chai-flow-gold) !important;
+  border-color: var(--chai-flow-gold) !important;
+  color: #0a3443 !important;
+  -webkit-text-fill-color: #0a3443 !important;
+}
+
+html.tc-chai:has(form[id="5995797"]) body.cco_body
+  #co_menu_container a[href="/4970020"]:hover {
+  background: var(--chai-flow-teal-dark) !important;
+  border-color: var(--chai-flow-teal-dark) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
