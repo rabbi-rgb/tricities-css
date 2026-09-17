@@ -1,0 +1,143 @@
+/* ============================================================
+   TRI-CITIES CHABAD — HIGH HOLIDAY RESERVATIONS FINAL TWEAKS
+   Final spacing + step-heading consistency for form 7431739 only.
+   Load AFTER hh-reservations-v2.css.
+   ============================================================ */
+
+/* 1) Tighten the handoff from the intro/security block into Step 1. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  #hh-form-intro {
+  margin-bottom: 0 !important;
+  padding-bottom: 4px !important;
+}
+
+/* Normalize the four step-heading form rows so ChabadOne's default
+   form-line spacing cannot create oversized blank bands. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_45, #id_43, #id_46, #id_34).form-line:not(.form-field-hidden) {
+  display: block !important;
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 30px 0 10px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Step 1 sits a little closer to the intro than the later steps. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  #id_45.form-line:not(.form-field-hidden) {
+  margin-top: 20px !important;
+}
+
+/* 2) Remove the oversized gap between the attendee counters and Step 2. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  #id_43.form-line:not(.form-field-hidden) {
+  margin-top: 28px !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_45, #id_43, #id_46, #id_34)
+  :is(.form-input-wide, .form-html),
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_45, #id_43, #id_46, #id_34) .form-html > div {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+/* Remove older per-step top margins that were stacking with the form-line margins. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#hh-step-1, #hh-step-2, #hh-step-3, #hh-step-4) {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Keep every main step title on the same scale.
+   It should read above a holiday/day subheading, but not dwarf it. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#hh-step-1, #hh-step-2, #hh-step-3, #hh-step-4) h2 {
+  margin-top: 0 !important;
+  margin-bottom: 5px !important;
+  font-size: clamp(35px, 2.7vw, 40px) !important;
+  line-height: 1.04 !important;
+  letter-spacing: -.02em !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#hh-step-1, #hh-step-2, #hh-step-3, #hh-step-4) p {
+  margin-top: 0 !important;
+}
+
+/* The first holiday heading follows Step 2 more closely. Later holiday
+   headings keep a touch more separation between service groups. */
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  #id_52.form-line {
+  margin-top: 18px !important;
+}
+
+html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+  #cco_body #co_content_container #formContainer form[id="7431739"]
+  :is(#id_53, #id_56).form-line {
+  margin-top: 27px !important;
+}
+
+/* The intro composition itself is already working well. Keep the editorial
+   balance, but make the title just slightly less dominant on very wide screens. */
+@media screen and (min-width: 1100px) {
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    .hh-welcome-title h2 {
+    font-size: clamp(50px, 3.75vw, 57px) !important;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    #hh-form-intro {
+    padding-bottom: 2px !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#id_45, #id_43, #id_46, #id_34).form-line:not(.form-field-hidden) {
+    margin-top: 22px !important;
+    margin-bottom: 8px !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    #id_45.form-line:not(.form-field-hidden) {
+    margin-top: 16px !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    :is(#hh-step-1, #hh-step-2, #hh-step-3, #hh-step-4) h2 {
+    font-size: clamp(31px, 9vw, 36px) !important;
+  }
+
+  html.tc-high-holidays-minisite.tc-hh-reservations-final body.cco_body
+    #cco_body #co_content_container #formContainer form[id="7431739"]
+    #id_52.form-line {
+    margin-top: 15px !important;
+  }
+}
