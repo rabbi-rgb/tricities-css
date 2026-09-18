@@ -4923,3 +4923,21 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
     padding: 18px 14px !important;
   }
 }
+
+/* Match the normal-flow header, and keep selected custom amounts legible. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body #content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19) .form-radio-item:has(input[id$="_2"]) {
+  grid-column: 1 / -1 !important;
+}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19) .form-radio-item:has(input:checked) .form-radio-other-input,
+html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19) .form-radio-item:has(input:checked) .form-radio-other-input::placeholder {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="5995797"] #id_24 input:checked + label::before {
+  background: #0a7187 !important;
+  border-color: #0a7187 !important;
+}
