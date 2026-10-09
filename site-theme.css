@@ -5081,7 +5081,7 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
 @media screen and (max-width: 600px) {
   #candle_lighting #ChangeDateContainer { margin-left: 16px; margin-right: auto; }
   /* Retain readable dates rather than the native icon-only mobile date. */
-  #candle_lighting #ChangeDateContainer :is(label, #DateContainer span) {
+  #candle_lighting #ChangeDateContainer:not(.active) :is(label, #DateContainer span) {
     visibility: visible !important;
   }
   #candle_lighting #ChangeDateContainer #DateContainer {
