@@ -4941,3 +4941,168 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
   background: #0a7187 !important;
   border-color: #0a7187 !important;
 }
+
+/* Native candle-lighting calendar: presentation only. Preserve ChabadOne's
+   location, loading, tool-panel and weekly-content visibility states. */
+@media screen {
+  #candle_lighting {
+    color: var(--tc-text, #293633);
+    background: var(--tc-ivory, #FBFAF6);
+    border-color: var(--tc-border, #D9E5E0) !important;
+  }
+  #candle_lighting #ChangeLocation,
+  #candle_lighting .tools_area {
+    background: var(--tc-soft-gray, #F3F5F3) !important;
+    border-color: var(--tc-border, #D9E5E0) !important;
+  }
+  /* Native 15px height cannot contain the site's larger text. */
+  #candle_lighting #LocationInformation {
+    height: auto !important;
+    line-height: 1.5;
+    color: var(--tc-muted, #65706D) !important;
+  }
+  #candle_lighting #SaveThisLocation { margin-top: 12px; }
+  #candle_lighting #SaveLocationButton_wrapper {
+    float: none;
+    display: inline-block;
+    max-width: 100%;
+  }
+  /* Keep the date in flow, clear of long city names and other controls. */
+  #candle_lighting #ChangeDateContainer {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: max-content;
+    max-width: calc(100% - 32px);
+    margin: 16px 16px 0 auto;
+  }
+  #candle_lighting .location-input-wrapper { padding: 12px 16px 16px; }
+  #candle_lighting #SetLocationField { max-width: 100%; line-height: 1.45; }
+  #candle_lighting :is(.blue, .co_global_label, .parshah_cards_header) {
+    color: var(--tc-text, #293633) !important;
+  }
+  #candle_lighting :is(#CurrentLocation, .date_time) {
+    color: var(--tc-green-dark, #315F3C) !important;
+  }
+  #candle_lighting :is(a, #DateContainer, #SetLocationField > div > .f-small) {
+    color: var(--tc-teal-dark, #0E6E7B) !important;
+  }
+  #candle_lighting a:hover { color: var(--tc-green-dark, #315F3C) !important; }
+  #candle_lighting :is(.co_global_button .button, .load_more_weeks, .expand_button) {
+    box-sizing: border-box;
+    min-height: 44px;
+    max-width: 100%;
+    height: auto;
+    padding: 10px 14px;
+    line-height: 1.4;
+    white-space: normal;
+    background-color: var(--tc-teal-dark, #0E6E7B) !important;
+    background-image: none;
+    border: 1px solid var(--tc-teal-dark, #0E6E7B) !important;
+    border-radius: 6px;
+    color: #FFF !important;
+  }
+  #candle_lighting :is(.co_global_button .button, .load_more_weeks, .expand_button):hover {
+    background-color: var(--tc-green-dark, #315F3C) !important;
+    border-color: var(--tc-green-dark, #315F3C) !important;
+  }
+  #candle_lighting .co_global_button .button :is(span, a),
+  #candle_lighting .expand_button span { color: inherit !important; }
+  #candle_lighting .co_global_button { background: transparent !important; }
+  #candle_lighting #Mobile_Options .clearfix {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: auto !important;
+    max-width: 100%;
+  }
+  #candle_lighting #Mobile_Options .co_global_button {
+    float: none;
+    margin: 0 !important;
+  }
+  #candle_lighting .tool :is(input[type="text"], select, textarea) {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  #candle_lighting #LocationOptionsToggle { top: auto; margin-bottom: 8px; }
+  #candle_lighting #LocationOptionsToggle .expand_button {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    width: max-content;
+    margin-left: auto;
+  }
+  #candle_lighting #LocationOptionsToggle .arrow {
+    border-top-color: currentColor;
+    border-bottom-color: currentColor;
+  }
+  #candle_lighting #LocationCoordinateOptionsToggle {
+    background: var(--tc-soft-gray, #F3F5F3);
+  }
+  #candle_lighting :is(input, select, textarea) {
+    color: var(--tc-text, #293633);
+    accent-color: var(--tc-teal-dark, #0E6E7B);
+  }
+  #candle_lighting :is(button, a, input, select, textarea):focus-visible {
+    outline: 3px solid var(--tc-teal-dark, #0E6E7B) !important;
+    outline-offset: 3px;
+  }
+  /* Let long weekly article titles contribute to the cards' real height. */
+  #candle_lighting .parshah_cards_content { gap: 16px; align-items: start; }
+  #candle_lighting .parshah_card_item { height: auto; min-width: 0; padding: 0 0 16px; }
+  #candle_lighting .parshah_card_title { line-height: 1.5; overflow-wrap: anywhere; }
+  /* Relax font/image clipping only when the native loader is resting. */
+  #candle_lighting #LocationDataContainer:not(.loading):not(.suspend) #LocationDataWrapper:not(.loading) {
+    max-height: none !important;
+  }
+  #candle_lighting .tools_area .items { display: flex; flex-wrap: wrap; gap: 6px; }
+  #candle_lighting .tools_area .items .item {
+    float: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    padding: 8px 12px;
+    line-height: 1.4;
+    color: var(--tc-teal-dark, #0E6E7B) !important;
+    border-radius: 6px;
+  }
+  #candle_lighting .tools_area .items .item:is(.current, .selected) {
+    background: var(--tc-border, #D9E5E0) !important;
+  }
+  #candle_lighting .tool .close_layer {
+    height: auto !important;
+    min-height: 32px;
+    line-height: 1.5;
+    color: var(--tc-teal-dark, #0E6E7B) !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  #candle_lighting #ChangeDateContainer { margin-left: 16px; margin-right: auto; }
+  /* Retain readable dates rather than the native icon-only mobile date. */
+  #candle_lighting #ChangeDateContainer :is(label, #DateContainer span) {
+    visibility: visible !important;
+  }
+  #candle_lighting #ChangeDateContainer #DateContainer {
+    width: auto !important;
+    height: auto !important;
+    padding-right: 25px !important;
+    background-position: right center !important;
+  }
+  #candle_lighting .parshah_cards_content { flex-direction: column; }
+  #candle_lighting .parshah_card_item { flex: none; width: 100%; }
+  #candle_lighting .parshah_card_image { width: auto; max-width: 100%; max-height: 130px; }
+  #candle_lighting #LocationDataContainer .group .item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  #candle_lighting #LocationDataContainer .group .item :is(.title, .date_time) {
+    display: block;
+    min-width: 0;
+    margin: 0;
+    white-space: normal;
+  }
+  #candle_lighting #LocationDataContainer .group .item .date_time { margin-left: auto; }
+}
