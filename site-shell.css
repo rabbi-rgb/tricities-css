@@ -2689,6 +2689,30 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
 html.tc-chai:has(form[id="5995797"]) .page-tools-sidebar {
   display: none !important;
 }
+html.tc-chai:has(form[id="5995797"]) form[id="5995797"] #id_12 .chai-community-photo {
+  margin: 0 !important;
+  min-width: 0;
+}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .chai-community-photo img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border: 0 !important;
+  border-radius: 8px;
+}
+html.tc-chai:has(form[id="5995797"]) .chai-community-photo figcaption {
+  margin: 16px 0 0;
+  color: var(--chai-flow-ink);
+  font: 600 24px/1.25 "Cormorant Garamond", Georgia, serif;
+}
+html.tc-chai:has(form[id="5995797"]) .chai-community-photo figcaption span {
+  display: block;
+  margin-top: 7px;
+  color: var(--chai-flow-copy);
+  font: 500 11px/1.5 Montserrat, Arial, sans-serif;
+  letter-spacing: .03em;
+}
 html.tc-chai:has(form[id="5995797"]) .article-header.tc-chai-hero-ready::after {
   content: none !important;
   display: none !important;
