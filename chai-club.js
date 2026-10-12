@@ -14,7 +14,7 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=4";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=5";
     document.head.appendChild(refinementStyles);
   }
 
@@ -120,6 +120,18 @@
       action.innerHTML = '<p>Monthly partners sustaining Jewish life in the Tri-Cities</p><a href="#tc-chai-head">Join the Chai Club <span aria-hidden="true">&#8594;</span></a>';
       hero.appendChild(action);
       hero.classList.add("tc-chai-hero-ready");
+    }
+
+    // Skip the pinned story when a visitor chooses to join.
+    var heroJoin = hero && hero.querySelector(".tc-chai-hero-action a");
+    if (heroJoin && !heroJoin.dataset.chaiJumpReady) {
+      heroJoin.dataset.chaiJumpReady = "true";
+      heroJoin.addEventListener("click", function (event) {
+        var target = form.querySelector("#tc-chai-head");
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ block: "start", behavior: "instant" });
+      });
     }
 
     var submitRow = form.querySelector("#id_2");
