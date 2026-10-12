@@ -9,6 +9,13 @@
 
   document.documentElement.classList.add("tc-chai");
 
+  // ChabadOne can serve an older cached custom header after a save.
+  // Refresh the existing stylesheet link; do not add another design layer.
+  var shellStyles = document.querySelector('link[href*="rabbi-rgb.github.io/tricities-css/site-shell.css"]');
+  if (shellStyles && shellStyles.href.indexOf("v=20261012-final") === -1) {
+    shellStyles.href = "https://rabbi-rgb.github.io/tricities-css/site-shell.css?v=20261012-final";
+  }
+
   function polishChaiForm() {
     var form = document.getElementById("5995797");
     if (!form) return;
