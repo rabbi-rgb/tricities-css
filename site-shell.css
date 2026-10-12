@@ -2686,6 +2686,9 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
 
 /* Chai Club invitation and native-field flow, October 2026.
    Keep this in the shared source rather than the form's HTML content. */
+html.tc-chai:has(form[id="5995797"]) .page-tools-sidebar {
+  display: none !important;
+}
 html.tc-chai:has(form[id="5995797"]) .article-header.tc-chai-hero-ready::after {
   content: none !important;
   display: none !important;
