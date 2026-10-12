@@ -9,11 +9,13 @@
 
   document.documentElement.classList.add("tc-chai");
 
-  // ChabadOne can serve an older cached custom header after a save.
-  // Refresh the existing stylesheet link; do not add another design layer.
-  var shellStyles = document.querySelector('link[href*="rabbi-rgb.github.io/tricities-css/site-shell.css"]');
-  if (shellStyles && shellStyles.href.indexOf("v=20261012-final") === -1) {
-    shellStyles.href = "https://rabbi-rgb.github.io/tricities-css/site-shell.css?v=20261012-final";
+  // Load this page's small stylesheet independently of cached site headers.
+  if (!document.getElementById("tc-chai-refinement-styles")) {
+    var refinementStyles = document.createElement("link");
+    refinementStyles.id = "tc-chai-refinement-styles";
+    refinementStyles.rel = "stylesheet";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=1";
+    document.head.appendChild(refinementStyles);
   }
 
   function polishChaiForm() {
