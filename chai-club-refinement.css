@@ -360,3 +360,17 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .chai-impact-item p {font-size:14px !important;line-height:1.65 !important;margin:0 !important;}
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-nav {display:none !important;}
 }
+
+/* Keep native name and custom amount controls inside the narrow form panel. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #cid_3 > .form-sub-label-container {min-width:0 !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] :is(#first_3,#last_3) {min-width:0 !important;width:100% !important;box-sizing:border-box !important;}
+@media(max-width:520px) {
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom .tc-chai-custom-input {width:100% !important;min-width:0 !important;max-width:100% !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom .form-radio-item {width:100% !important;min-width:0 !important;max-width:100% !important;box-sizing:border-box !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom .form-radio-item > span {flex:1 1 0 !important;min-width:0 !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom #input_8.form-radio-other-input {width:100% !important;min-width:0 !important;max-width:100% !important;font-size:16px !important;}
+}
+@media(max-width:380px) {
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #cid_3 {display:grid !important;grid-template-columns:minmax(0,1fr) !important;gap:14px !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #cid_3 > .form-sub-label-container {width:100% !important;margin:0 !important;}
+}
