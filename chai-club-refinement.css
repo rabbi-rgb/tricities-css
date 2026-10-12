@@ -307,3 +307,41 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id
   font: 500 14px/1.5 Montserrat,Arial,sans-serif !important;
 }
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_7 .form-address-table table {margin: 0 !important;}
+
+
+/* Scroll-driven impact cards. Without motion, the original text stays in order. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .chai-intro {display:block !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-scene {display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(36px,5vw,64px);align-items:center;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-stage {min-width:0;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-nav {display:none;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .chai-intro.tc-chai-story-on {padding:0 0 48px !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .tc-chai-story-track {height:250vh;position:relative;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .tc-chai-story-scene {position:sticky;top:24px;height:calc(100vh - 48px);}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-list {display:grid !important;position:relative;min-height:330px;gap:0 !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-item {grid-area:1/1;display:flex !important;flex-direction:column !important;gap:28px !important;justify-content:center;box-sizing:border-box;min-height:330px;margin:0 !important;padding:38px !important;border:1px solid #dcd8ca !important;border-top:3px solid #b78b42 !important;border-radius:20px;background:#fffdf8 !important;box-shadow:0 14px 34px rgba(21,48,58,.06);opacity:0;transform:translateY(55px) scale(.96);pointer-events:none;transition:opacity .5s ease,transform .65s cubic-bezier(.22,1,.36,1);}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-item.tc-chai-card-active {opacity:1;transform:translateY(0) scale(1);pointer-events:auto;z-index:2;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-item.tc-chai-card-past {transform:translateY(-38px) scale(.96);}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-number {font:500 14px/1.2 Montserrat,Arial,sans-serif !important;letter-spacing:2px !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-item h3 {font-size:32px !important;line-height:1.15 !important;margin:0 0 16px !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-item p {font-size:16px !important;line-height:1.7 !important;margin:0 !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .tc-chai-story-nav {display:flex;align-items:center;justify-content:center;gap:12px;padding:22px 0 0;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-nav button {width:42px;height:42px;border:1px solid #dcd8ca;border-radius:50%;background:transparent;color:#637075;font:600 12px Montserrat,Arial,sans-serif;cursor:pointer;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-nav button[aria-current="step"] {background:#15303a;color:#fffdf8;border-color:#15303a;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-nav button:focus-visible {outline:3px solid #b78b42;outline-offset:4px;}
+@media(max-width:760px) {
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-scene {grid-template-columns:1fr;gap:24px;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-on > .chai-intro-copy {padding:38px 0 20px !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-on .tc-chai-story-track {height:225vh;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-on .tc-chai-story-scene {height:calc(100svh - 48px);}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-on .chai-impact-item {padding:28px !important;min-height:300px;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-on .chai-impact-list {min-height:300px;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-on .chai-impact-item h3 {font-size:30px !important;}
+}
+@media(prefers-reduced-motion:reduce), (max-height:620px) {
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .tc-chai-story-nav {display:none !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12  .chai-impact-item {transition:none !important;}
+}
+
+/* Native template clipping must not create an inner scroll container. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body {height:auto !important;min-height:100vh !important;overflow:visible !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container {overflow:visible !important;}
