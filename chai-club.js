@@ -14,7 +14,7 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=3";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=4";
     document.head.appendChild(refinementStyles);
   }
 
@@ -192,7 +192,7 @@
     track.appendChild(scene);
     intro.appendChild(track);
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var narrow = window.matchMedia("(max-width: 760px)");
+    var narrow = window.matchMedia("(max-width: 960px)");
     var short = window.matchMedia("(max-height: 620px)");
     var enabled = false, queued = false, current = -1;
     function update() {
@@ -215,7 +215,7 @@
       if (!queued) { queued = true; window.requestAnimationFrame(update); }
     }
     function sync() {
-      enabled = !reduce.matches && !short.matches;
+      enabled = !reduce.matches && !short.matches && !narrow.matches;
       intro.classList.toggle("tc-chai-story-on", enabled);
       // On phones the explanation scrolls normally, leaving room for the cards.
       if (enabled && narrow.matches) intro.insertBefore(copy, track);
