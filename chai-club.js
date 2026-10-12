@@ -134,6 +134,12 @@
       });
     }
 
+    // Repair a duplicated Instagram URL in this page's inherited footer.
+    document.querySelectorAll('a[href*="instagram.com/https://"]').forEach(function (link) {
+      var match = link.href.match(/^https:\/\/(?:www\.)?instagram\.com\/(https:\/\/(?:www\.)?instagram\.com\/.+)$/);
+      if (match) link.href = match[1];
+    });
+
     var submitRow = form.querySelector("#id_2");
     if (submitRow && !submitRow.querySelector(".tc-chai-reassurance")) {
       var reassurance = document.createElement("p");
