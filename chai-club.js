@@ -14,7 +14,7 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=1";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=2";
     document.head.appendChild(refinementStyles);
   }
 
@@ -70,6 +70,26 @@
       form.dataset.chaiFlowReady = "true";
     }
 
+    // One continuous giving panel, inspired by the course page's calm sections.
+    // Move existing rows intact; keep all field IDs, names and native handlers.
+    var joinStart = form.querySelector("#tc-chai-head");
+    var joinEnd = form.querySelector("#id_2");
+    if (joinStart && joinEnd && joinStart.parentNode === joinEnd.parentNode && !form.querySelector("#tc-chai-join-panel")) {
+      var panel = document.createElement("li");
+      panel.id = "tc-chai-join-panel";
+      panel.className = "form-line";
+      panel.innerHTML = '<section aria-labelledby="tc-chai-join-title"><ul class="tc-chai-join-fields"></ul></section>';
+      joinStart.querySelector("h2").id = "tc-chai-join-title";
+      joinStart.parentNode.insertBefore(panel, joinStart);
+      var row = joinStart;
+      while (row) {
+        var nextRow = row.nextSibling;
+        panel.querySelector(".tc-chai-join-fields").appendChild(row);
+        if (row === joinEnd) break;
+        row = nextRow;
+      }
+    }
+
     if (!form.dataset.chaiAmountListener) {
       form.dataset.chaiAmountListener = "true";
       form.addEventListener("change", function (event) {
@@ -96,7 +116,7 @@
     if (hero && !hero.querySelector(".tc-chai-hero-action")) {
       var action = document.createElement("div");
       action.className = "tc-chai-hero-action";
-      action.innerHTML = '<p>Monthly partners sustaining Jewish life in the Tri-Cities</p><a href="#id_28">Join the Chai Club <span aria-hidden="true">&#8594;</span></a>';
+      action.innerHTML = '<p>Monthly partners sustaining Jewish life in the Tri-Cities</p><a href="#tc-chai-head">Join the Chai Club <span aria-hidden="true">&#8594;</span></a>';
       hero.appendChild(action);
       hero.classList.add("tc-chai-hero-ready");
     }
