@@ -1,6 +1,10 @@
 (function () {
   "use strict";
   function start() {
+    // Refresh only pages that already use the shared main theme.
+    document.querySelectorAll('link[rel="stylesheet"][href^="https://rabbi-rgb.github.io/tricities-css/site-theme.css"]').forEach(function (link) {
+      link.href = "https://rabbi-rgb.github.io/tricities-css/site-theme.css?v=20261012-mobile-menu";
+    });
     function labelMenus() {
       var open = document.body.classList.contains("menu-open");
       document.querySelectorAll("#header .cs-mobile-menu-open").forEach(function (button) {
