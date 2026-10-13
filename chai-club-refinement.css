@@ -315,8 +315,8 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-stage {min-width:0;}
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-nav {display:none;}
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .chai-intro.tc-chai-story-on {padding:0 0 48px !important;}
-html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .tc-chai-story-track {height:250vh;position:relative;}
-html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .tc-chai-story-scene {position:sticky;top:24px;height:calc(100vh - 48px);}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .tc-chai-story-track {height:calc(clamp(400px,60vh,480px) + 720px);position:relative;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .tc-chai-story-scene {position:sticky;top:24px;height:clamp(400px,60vh,480px);}
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-list {display:grid !important;position:relative;min-height:330px;gap:0 !important;}
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-item {grid-area:1/1;display:flex !important;flex-direction:column !important;gap:28px !important;justify-content:center;box-sizing:border-box;min-height:330px;margin:0 !important;padding:38px !important;border:1px solid #dcd8ca !important;border-top:3px solid #b78b42 !important;border-radius:20px;background:#fffdf8 !important;box-shadow:0 14px 34px rgba(21,48,58,.06);opacity:0;transform:translateY(55px) scale(.96);pointer-events:none;transition:opacity .5s ease,transform .65s cubic-bezier(.22,1,.36,1);}
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #id_12 .tc-chai-story-on .chai-impact-item.tc-chai-card-active {opacity:1;transform:translateY(0) scale(1);pointer-events:auto;z-index:2;}
@@ -373,4 +373,15 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id
 @media(max-width:380px) {
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #cid_3 {display:grid !important;grid-template-columns:minmax(0,1fr) !important;gap:14px !important;}
 html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #cid_3 > .form-sub-label-container {width:100% !important;margin:0 !important;}
+}
+
+/* Keep the native custom amount control aligned with the tier cards. */
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom::after {content:none !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom .form-radio-item {padding:0 !important;border:0 !important;background:transparent !important;box-shadow:none !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom #input_8.form-radio-other-input {border:1px solid #d9d6cf !important;font:500 14px/1.5 Montserrat,Arial,sans-serif !important;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom #input_8.form-radio-other-input:focus-visible {outline:2px solid var(--chai-flow-teal-dark);outline-offset:2px;}
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom #input_8::-webkit-inner-spin-button,
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom #input_8::-webkit-outer-spin-button {-webkit-appearance:none;margin:0;}
+@media(max-width:520px) {
+html.tc-chai:has(form[id="5995797"]) body.cco_body #co_content_container form[id="5995797"] #tc-chai-custom #input_8.form-radio-other-input {font-size:16px !important;}
 }
