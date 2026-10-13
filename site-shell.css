@@ -2708,3 +2708,100 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
 }
+
+/* Shared mobile navigation: readable drawer and current header controls.
+   Native opening, closing and submenu handlers stay in place. */
+@media screen and (max-width: 767px) {
+  html body.cco_body #header #co_menu_container,
+  html body.cco_body.menu-open #header .header-wrapper #co_menu_container_wrapper #co_menu_container {
+    background: #15303a !important;
+    background-image: none !important;
+  }
+  html body.cco_body.menu-open #header .header-wrapper .site-nav-wrapper,
+  html body.cco_body.menu-open #header .header-wrapper #co_menu_container_wrapper,
+  html body.cco_body #header #co_menu_container_wrapper .mobile-menu-bottom-links {
+    background: #15303a !important;
+    border-top: 1px solid rgba(255,255,255,.16) !important;
+  }
+  html body.cco_body #header #co_menu_container #tabContentMain .co_menu_item :is(span.parent, a.parent, a.parent *, a.item, a.item *, a.child_item, a.child_item *),
+  html body.cco_body #header #co_menu_container_wrapper .mobile-menu-bottom-links a {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+  html body.cco_body #header #co_menu_container #tabContentMain a.parent {
+    font-family: Montserrat, Arial, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+  }
+  html body.cco_body #header .cs-mobile-menu-open {
+    box-sizing: border-box !important;
+    position: absolute !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    top: 3px !important;
+    right: 12px !important;
+    border: 1px solid #dedbd0 !important;
+    border-radius: 11px !important;
+    background: #f4f1e9 !important;
+    background-image: none !important;
+    color: #15303a !important;
+    -webkit-text-fill-color: #15303a !important;
+    box-shadow: none !important;
+  }
+  html body.cco_body #header .cs-mobile-menu-open i {
+    display: none !important;
+  }
+  html body.cco_body #header .cs-mobile-menu-open::before {
+    content: "" !important;
+    position: absolute;
+    top: 17px;
+    left: 11px;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    background: #15303a;
+    box-shadow: 0 7px 0 #15303a;
+  }
+  html body.cco_body #header .cs-mobile-menu-open::after {
+    content: none !important;
+  }
+  html body.cco_body #header .cs-mobile-menu-open:focus-visible,
+  html body.cco_body #header #co_menu_container button:focus-visible,
+  html body.cco_body #header #co_menu_container a:focus-visible {
+    outline: 3px solid #d9bc82 !important;
+    outline-offset: 3px !important;
+  }
+  html body.cco_body #header #co_menu_container .cs-mobile-menu-close {
+    box-sizing: border-box !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    top: 10px !important;
+    right: 12px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 1px solid rgba(255,255,255,.24) !important;
+    border-radius: 11px !important;
+    background: rgba(255,255,255,.06) !important;
+    box-shadow: none !important;
+  }
+  html body.cco_body #header #co_menu_container :is(.cs-mobile-menu-close, .cs-mobile-menu-close i),
+  html body.cco_body #header #co_menu_container .cs-menu-item-toggle::after {
+    color: #fff !important;
+    -webkit-text-fill-color: #fff !important;
+  }
+  html body.cco_body #header #co_menu_container #tabContentMain .donate_link a.parent {
+    background: #f1e5cd !important;
+    border: 1px solid #f1e5cd !important;
+    border-radius: 999px !important;
+    color: #15303a !important;
+    -webkit-text-fill-color: #15303a !important;
+  }
+}

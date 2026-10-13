@@ -4690,12 +4690,20 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #header #header_container > .
   opacity: 1 !important;
   box-shadow: none !important;
 }
-html.tc-chai:has(form[id="5995797"]) body.cco_body #header #header_container *,
-html.tc-chai:has(form[id="5995797"]) body.cco_body #header #header_branding .site_title,
-html.tc-chai:has(form[id="5995797"]) body.cco_body #header #tabContentMain a.parent {
+html.tc-chai:has(form[id="5995797"]) body.cco_body #header #header_container > .links,
+html.tc-chai:has(form[id="5995797"]) body.cco_body #header #header_container > .links *,
+html.tc-chai:has(form[id="5995797"]) body.cco_body #header #header_branding .site_title {
   color: #0a7187 !important;
   -webkit-text-fill-color: #0a7187 !important;
   opacity: 1 !important;
+}
+/* Desktop links sit on white; mobile links sit inside the dark drawer. */
+@media screen and (min-width: 768px) {
+  html.tc-chai:has(form[id="5995797"]) body.cco_body #header #tabContentMain a.parent {
+    color: #0a7187 !important;
+    -webkit-text-fill-color: #0a7187 !important;
+    opacity: 1 !important;
+  }
 }
 html.tc-chai:has(form[id="5995797"]) body.cco_body #header #tabContentMain a[href="/4970020"] {
   background: #0a7187 !important;
