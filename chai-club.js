@@ -14,7 +14,7 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=8";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=9";
     document.head.appendChild(refinementStyles);
   }
 
