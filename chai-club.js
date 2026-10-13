@@ -14,14 +14,13 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=7";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=8";
     document.head.appendChild(refinementStyles);
   }
 
   function polishChaiForm() {
     var form = document.getElementById("5995797");
     if (!form) return;
-    initImpactStory(form);
 
     var firstField = form.querySelector("#id_3");
     if (firstField && !form.querySelector("#tc-chai-head")) {
@@ -122,7 +121,7 @@
       hero.classList.add("tc-chai-hero-ready");
     }
 
-    // Skip the pinned story when a visitor chooses to join.
+    // Bring the giving section directly into view.
     var heroJoin = hero && hero.querySelector(".tc-chai-hero-action a");
     if (heroJoin && !heroJoin.dataset.chaiJumpReady) {
       heroJoin.dataset.chaiJumpReady = "true";
@@ -172,81 +171,6 @@
     }
   }
 
-
-  // Pin the original impact copy and advance its cards with natural page scroll.
-  function initImpactStory(form) {
-    var intro = form.querySelector(".chai-intro");
-    if (!intro || intro.dataset.chaiStoryReady) return;
-    var copy = intro.querySelector(".chai-intro-copy");
-    var list = intro.querySelector(".chai-impact-list");
-    var cards = list ? Array.from(list.querySelectorAll(".chai-impact-item")) : [];
-    if (!copy || cards.length !== 3) return;
-    intro.dataset.chaiStoryReady = "true";
-    var track = document.createElement("div");
-    track.className = "tc-chai-story-track";
-    var scene = document.createElement("div");
-    scene.className = "tc-chai-story-scene";
-    var stage = document.createElement("div");
-    stage.className = "tc-chai-story-stage";
-    var nav = document.createElement("nav");
-    nav.className = "tc-chai-story-nav";
-    nav.setAttribute("aria-label", "Monthly giving benefits");
-    cards.forEach(function (card, i) {
-      var button = document.createElement("button");
-      button.type = "button";
-      button.textContent = String(i + 1).padStart(2, "0");
-      button.setAttribute("aria-label", card.querySelector("h3").textContent);
-      button.addEventListener("click", function () {
-        var top = track.getBoundingClientRect().top + window.scrollY;
-        var span = track.offsetHeight - scene.offsetHeight;
-        window.scrollTo({ top: top - 24 + span * ((i + 0.45) / cards.length), behavior: "smooth" });
-      });
-      nav.appendChild(button);
-    });
-    stage.appendChild(list);
-    stage.appendChild(nav);
-    scene.appendChild(copy);
-    scene.appendChild(stage);
-    track.appendChild(scene);
-    intro.appendChild(track);
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    var narrow = window.matchMedia("(max-width: 960px)");
-    var short = window.matchMedia("(max-height: 620px)");
-    var enabled = false, queued = false, current = -1;
-    function update() {
-      queued = false;
-      if (!enabled) return;
-      var span = track.offsetHeight - scene.offsetHeight;
-      var progress = span > 0 ? (24 - track.getBoundingClientRect().top) / span : 0;
-      var active = Math.min(cards.length - 1, Math.max(0, Math.floor(progress * cards.length)));
-      if (active === current) return;
-      current = active;
-      cards.forEach(function (card, i) {
-        card.classList.toggle("tc-chai-card-active", i === active);
-        card.classList.toggle("tc-chai-card-past", i < active);
-      });
-      Array.from(nav.children).forEach(function (button, i) {
-        button.setAttribute("aria-current", i === active ? "step" : "false");
-      });
-    }
-    function requestUpdate() {
-      if (!queued) { queued = true; window.requestAnimationFrame(update); }
-    }
-    function sync() {
-      enabled = !reduce.matches && !short.matches && !narrow.matches;
-      intro.classList.toggle("tc-chai-story-on", enabled);
-      // On phones the explanation scrolls normally, leaving room for the cards.
-      if (enabled && narrow.matches) intro.insertBefore(copy, track);
-      else scene.insertBefore(copy, stage);
-      current = -1;
-      update();
-    }
-    [reduce, narrow, short].forEach(function (query) { query.addEventListener("change", sync); });
-    window.addEventListener("scroll", requestUpdate, { passive: true, capture: true });
-    window.addEventListener("resize", requestUpdate, { passive: true });
-    document.getElementById("tc-chai-refinement-styles").addEventListener("load", sync);
-    sync();
-  }
 
   function start() {
     polishChaiForm();
