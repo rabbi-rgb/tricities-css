@@ -14,13 +14,14 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=9";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=12";
     document.head.appendChild(refinementStyles);
   }
 
   function polishChaiForm() {
     var form = document.getElementById("5995797");
     if (!form) return;
+    document.documentElement.classList.add("tc-chai-refined");
 
     var firstField = form.querySelector("#id_3");
     if (firstField && !form.querySelector("#tc-chai-head")) {
@@ -30,7 +31,7 @@
       welcome.innerHTML =
         "<b>Become a monthly partner</b>" +
         "<h2>Join the Chai Club</h2>" +
-        "<p>Choose the giving level that feels right, then complete your details and secure payment information.</p>";
+        "<p>Choose your monthly gift. Every amount helps sustain our community.</p>";
       firstField.parentNode.insertBefore(welcome, firstField);
     }
 
@@ -129,7 +130,9 @@
         var target = form.querySelector("#tc-chai-head");
         if (!target) return;
         event.preventDefault();
+        target.setAttribute("tabindex", "-1");
         target.scrollIntoView({ block: "start", behavior: "instant" });
+        target.focus({ preventScroll: true });
       });
     }
 
@@ -138,6 +141,53 @@
       var match = link.href.match(/^https:\/\/(?:www\.)?instagram\.com\/(https:\/\/(?:www\.)?instagram\.com\/.+)$/);
       if (match) link.href = match[1];
     });
+
+    // Use real text nodes so the visible copy and accessible names agree.
+    if (!form.dataset.chaiEditorialReady) {
+      var introHeading = form.querySelector("#chai-intro-title");
+      if (introHeading) introHeading.innerHTML = "A community supported<br>by its people.";
+      var introCopy = form.querySelectorAll(".chai-intro-copy > p:not(.chai-kicker)");
+      if (introCopy[0]) introCopy[0].innerHTML = "In Hebrew, <strong>chai</strong> means life. The Chai Club is a circle of monthly donors who help sustain Jewish life in Coquitlam, Port Coquitlam, and Port Moody.";
+      if (introCopy[1]) introCopy[1].textContent = "Your support makes room for Shabbat dinners, holiday celebrations, Hebrew School, Torah learning, and care when someone needs it.";
+      var impacts = [
+        ["A place to gather", "Shabbat meals, holidays, and community events that bring people together."],
+        ["A place to learn", "Jewish learning for children, teens, and adults, throughout the year."],
+        ["A place to turn", "Hospital visits, personal support, and a listening ear when it matters."]
+      ];
+      form.querySelectorAll(".chai-impact-item").forEach(function (item, index) {
+        if (!impacts[index]) return;
+        item.querySelector("h3").textContent = impacts[index][0];
+        item.querySelector("p").textContent = impacts[index][1];
+      });
+      var amountCopy = form.querySelector("#id_28 .form-html");
+      if (amountCopy) amountCopy.innerHTML = '<p class="tc-chai-amount-note">All gifts below are monthly, in Canadian dollars.</p>';
+      var currencyCopy = form.querySelector(".tc-chai-currency");
+      if (currencyCopy) currencyCopy.remove();
+      ["8", "18", "19"].forEach(function (tier) {
+        var label = form.querySelector("#label_" + tier + " > label:first-child");
+        if (label) label.textContent = tier === "8" ? "Bronze" : tier === "18" ? "Silver" : "Gold";
+        var group = form.querySelector("#cid_" + tier);
+        if (group && label) {
+          group.setAttribute("role", "group");
+          group.setAttribute("aria-label", label.textContent + " monthly gift options in CAD");
+        }
+      });
+      var customAmount = form.querySelector("#input_8");
+      if (customAmount) {
+        customAmount.setAttribute("aria-label", "Your monthly gift in Canadian dollars");
+        customAmount.setAttribute("inputmode", "decimal");
+      }
+      var minimumAnswer = form.querySelector(".chai-faq .chai-answer");
+      if (minimumAnswer) minimumAnswer.textContent = "We welcome gifts of every size. The suggested amounts are a starting point; every monthly gift makes a difference.";
+      var faqTitle = form.querySelector("#chai-faq-title");
+      if (faqTitle) faqTitle.textContent = "About your monthly gift";
+      var detailsFields = { first_3: "given-name", last_3: "family-name", input_4: "email", input_6_full: "tel" };
+      Object.keys(detailsFields).forEach(function (id) {
+        var field = form.querySelector("#" + id);
+        if (field) field.setAttribute("autocomplete", detailsFields[id]);
+      });
+      form.dataset.chaiEditorialReady = "true";
+    }
 
     var submitRow = form.querySelector("#id_2");
     if (submitRow && !submitRow.querySelector(".tc-chai-reassurance")) {
