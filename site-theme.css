@@ -5108,6 +5108,7 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
 }
 
 
+
 /* Photo albums refresh — 2026-10-14.
    Scope to the album index and native photo galleries. No cover URLs or
    visibility-state overrides: ChabadOne owns pagination and slideshow state. */
@@ -5440,4 +5441,19 @@ html:has(#photos) #lightbox :is(#previous,#next,#close):hover { background: #0e6
     border-radius: 8px;
   }
   html:has(#photos) #co_body_container { padding: 0 !important; }
+}
+
+/* Allow the card title to grow with its text instead of the old fixed tile. */
+@media screen {
+ html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .title {
+   height: auto !important;
+   padding: 0 !important;
+ }
+ html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .title a {
+   position: relative !important;
+   inset: auto !important;
+ }
+ html:has(#photos) #co_content_container .breadcrumbs a.breadcrumbs__crumb {
+   padding: 0 16px !important;
+ }
 }
