@@ -5457,3 +5457,18 @@ html:has(#photos) #lightbox :is(#previous,#next,#close):hover { background: #0e6
    padding: 0 16px !important;
  }
 }
+
+@media screen {
+ html:has(#photos) #lightbox :is(#left,#right) {
+   top: 50%; bottom: auto; margin-top: -22px;
+   width: 44px; height: 44px; padding: 0;
+   text-indent: 0; font-size: 0; background-image: none;
+   border: 1px solid rgba(255,255,255,.4); border-radius: 50%;
+ }
+ html:has(#photos) #lightbox :is(#left,#right)::after {
+   display: block; color: #fff;
+   font: 400 30px/40px Arial,sans-serif; text-align: center;
+ }
+ html:has(#photos) #lightbox #left::after {content: "‹"}
+ html:has(#photos) #lightbox #right::after {content: "›"}
+}
