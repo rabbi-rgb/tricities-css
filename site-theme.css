@@ -5472,3 +5472,81 @@ html:has(#photos) #lightbox :is(#previous,#next,#close):hover { background: var(
  html:has(#photos) #lightbox #left::after {content: "‹"}
  html:has(#photos) #lightbox #right::after {content: "›"}
 }
+
+/* Native album covers use a separate image element. Keep images, titles and
+   dates in normal flow as covers are added through ChabadOne. */
+@media screen {
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .item_contents {
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .item_contents > div.synopsis_icon {
+  position: relative !important;
+  float: none !important;
+  width: 100% !important;
+  height: 210px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: var(--tc-soft-gray, #F3F5F3) !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .item_contents > div.synopsis_icon a {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .item_contents > div.synopsis_icon img {
+  display: block !important;
+  position: static !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
+  opacity: 1 !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .item_contents > div.synopsis_icon img[src*="/images/global/spacer.gif"] {
+  visibility: hidden;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .inner {
+  position: static !important;
+  float: none !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  background: #fff !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .inner .title {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  background: #fff !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .inner .title a {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 18px 20px 10px !important;
+  color: var(--tc-green-dark, #315F3C) !important;
+  -webkit-text-fill-color: var(--tc-green-dark, #315F3C) !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  text-shadow: none !important;
+  background: transparent !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:has(> .item_contents > div.synopsis_icon) .inner .subtitle {
+  height: auto !important;
+  padding: 0 20px 18px !important;
+}
+}
