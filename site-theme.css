@@ -5117,7 +5117,7 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
   --tc-gallery-ink: var(--tc-green, #578A45);
   --tc-gallery-accent: var(--tc-teal-dark, #0E6E7B);
 }
-:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .master-content-wrapper {
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .master-content-wrapper:not([style*="background-image"]) {
   width: 100% !important;
   max-width: 1160px !important;
   margin: 0 auto !important;
@@ -5125,12 +5125,12 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
   box-sizing: border-box;
   background: transparent !important;
 }
-:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) .article-header {
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) .master-content-wrapper:not([style*="background-image"]) .article-header {
   padding: 0 !important;
   background: transparent !important;
   border: 0 !important;
 }
-:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) h1.article-header__title {
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) .master-content-wrapper:not([style*="background-image"]) h1.article-header__title {
   max-width: 940px;
   margin: 0 !important;
   color: var(--tc-gallery-ink) !important;
@@ -5141,7 +5141,7 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
   letter-spacing: -.035em;
   text-shadow: none !important;
 }
-:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) .article-header__subtitle {
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) .master-content-wrapper:not([style*="background-image"]) .article-header__subtitle {
   margin: 14px 0 0 !important;
   color: var(--tc-muted, #65706D) !important;
   font: 400 16px/1.5 Inter, Arial, sans-serif !important;
@@ -5418,7 +5418,7 @@ html:has(#photos) #lightbox :is(#previous,#next,#close):hover { background: var(
   html:has(#photos) #photos { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
 }
 @media screen and (max-width:600px) {
-  :is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .master-content-wrapper { padding: 28px 18px 24px !important; }
+  :is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .master-content-wrapper:not([style*="background-image"]) { padding: 28px 18px 24px !important; }
   :is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .body_wrapper { padding: 0 18px 36px !important; }
   html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index { grid-template-columns: 1fr; gap: 20px !important; }
   html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .title a { min-height: 200px !important; }
