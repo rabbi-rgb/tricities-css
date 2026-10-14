@@ -5106,3 +5106,338 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body #formContainer form[id="59957
   }
   #candle_lighting #LocationDataContainer .group .item .date_time { margin-left: auto; }
 }
+
+
+/* Photo albums refresh — 2026-10-14.
+   Scope to the album index and native photo galleries. No cover URLs or
+   visibility-state overrides: ChabadOne owns pagination and slideshow state. */
+@media screen {
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) {
+  --tc-gallery-ink: #173f43;
+  --tc-gallery-accent: #0e6e7b;
+}
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .master-content-wrapper {
+  width: 100% !important;
+  max-width: 1160px !important;
+  margin: 0 auto !important;
+  padding: 42px 28px 30px !important;
+  box-sizing: border-box;
+  background: transparent !important;
+}
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) .article-header {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) h1.article-header__title {
+  max-width: 940px;
+  margin: 0 !important;
+  color: var(--tc-gallery-ink) !important;
+  -webkit-text-fill-color: var(--tc-gallery-ink) !important;
+  font-size: clamp(30px, 4vw, 48px) !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -.035em;
+  text-shadow: none !important;
+}
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) .article-header__subtitle {
+  margin: 14px 0 0 !important;
+  color: #65706d !important;
+  font: 400 16px/1.5 Inter, Arial, sans-serif !important;
+}
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .body_wrapper {
+  width: 100% !important;
+  max-width: 1160px !important;
+  margin: 0 auto !important;
+  padding: 0 28px 56px !important;
+  box-sizing: border-box;
+}
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_body_container,
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #ContentBody,
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #cco_body,
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) #cco_body #co_content_container {
+  width: 100% !important;
+  max-width: none !important;
+  float: none !important;
+  box-sizing: border-box;
+}
+html:has(#photos) #co_content_container > .clearfix > .body_wrapper > .g260 {
+  display: none !important;
+}
+html:has(#photos) .breadcrumbs { margin: 0 0 22px !important; }
+html:has(#photos) .breadcrumbs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid #d9e5e0;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--tc-gallery-accent) !important;
+  font-size: 13px;
+  text-decoration: none !important;
+}
+html:has(#photos) .breadcrumbs a::before { content: "←"; font-size: 18px; }
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index_container { border: 0 !important; }
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index::before,
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index::after,
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row::before,
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row::after { content: none !important; }
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row {
+  display: contents !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item {
+  width: auto !important;
+  min-width: 0;
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #dce5e1 !important;
+  border-radius: 18px !important;
+  overflow: hidden;
+  background: #fff !important;
+  box-shadow: 0 4px 18px rgba(23,63,67,.04);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .item_contents,
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .inner {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .title {
+  border-radius: 0 !important;
+  overflow: hidden;
+  background-color: #315f63;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .title a {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  min-height: 210px !important;
+  height: auto !important;
+  box-sizing: border-box;
+  padding: 24px !important;
+  text-align: left !important;
+  font-size: 20px !important;
+  line-height: 1.35 !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.65) !important;
+  background-color: transparent !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .subtitle {
+  min-height: 22px;
+  margin: 0 !important;
+  padding: 15px 22px !important;
+  color: #65706d !important;
+  font: 400 13px/1.6 Inter, Arial, sans-serif !important;
+  text-align: left !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .synopsis:empty { display: none; }
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .paginator {
+  padding: 18px 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .paginator .navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  float: none !important;
+  color: #65706d;
+  font-size: 13px;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .paginator .navigator a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d9e5e0;
+  border-radius: 50%;
+  background: #fff;
+}
+html:has(meta[property="og:url"][content*="/aid/6736431/"]) .paginator .pageNumber {
+  width: 42px !important;
+  height: 40px !important;
+  margin: 0 6px !important;
+  border: 1px solid #d9e5e0 !important;
+  border-radius: 10px;
+  background: #fff;
+  color: #173f43;
+  text-align: center;
+}
+html:has(#photos) #photos {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+html:has(#photos) #photos::before,
+html:has(#photos) #photos::after { content: none !important; }
+html:has(#photos) #photos .photo {
+  width: auto !important;
+  height: auto !important;
+  min-width: 0;
+  float: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #e5ece8;
+  box-shadow: 0 3px 12px rgba(23,63,67,.06);
+}
+html:has(#photos) #photos .photo a { display: block; width: 100%; }
+html:has(#photos) #photos .photo img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 4 / 3;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+:is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) :is(.article_index a, .paginator a, .paginator input, #photos a, .breadcrumbs a):focus-visible {
+  outline: 3px solid #0e6e7b !important;
+  outline-offset: -4px;
+}
+/* Preserve the native slideshow's hidden classes, image loading, sizing,
+   thumbnail offsets and previous/next boundary logic. */
+html:has(#photos) #lightbox { background: #101e23 !important; }
+html:has(#photos) #lightbox #details-panel {
+  background: #173f43 !important;
+  color: #fff !important;
+  min-height: 56px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+html:has(#photos) #lightbox #album-name {
+  display: block;
+  max-width: calc(100% - 88px);
+  margin: 0 !important;
+  padding: 17px 22px;
+  font-size: 15px !important;
+  line-height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+html:has(#photos) #lightbox #close {
+  position: absolute !important;
+  margin: 0 !important;
+  top: 6px !important;
+  right: 12px !important;
+  width: 44px !important;
+  height: 44px !important;
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 50%;
+  background: #173f43 !important;
+  color: #fff !important;
+  font: 500 20px/42px Inter,Arial,sans-serif !important;
+  text-align: center;
+}
+html:has(#photos) #lightbox #img-panel { top: 56px !important; }
+html:has(#photos) #lightbox #controls :is(#previous,#next) {
+  width: 48px !important;
+  height: 48px !important;
+  margin-top: -24px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  top: 50% !important;
+  bottom: auto !important;
+  border: 1px solid rgba(255,255,255,.5);
+  border-radius: 50%;
+  background: #173f43 !important;
+  color: #fff !important;
+  opacity: 1 !important;
+  font-size: 0 !important;
+  text-indent: 0 !important;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  z-index: 5;
+}
+html:has(#photos) #lightbox #previous { left: 16px !important; }
+html:has(#photos) #lightbox #next { right: 16px !important; }
+html:has(#photos) #lightbox #controls :is(#previous,#next)::after {
+  display: block;
+  color: #fff;
+  font: 400 34px/42px Arial,sans-serif;
+  text-align: center;
+}
+html:has(#photos) #lightbox #previous::after { content: "‹"; }
+html:has(#photos) #lightbox #next::after { content: "›"; }
+html:has(#photos) #lightbox #thumbnails-wrapper {
+  background: #101e23;
+  border-top: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px 16px 0 0;
+}
+html:has(#photos) #lightbox .thumbnail { border-radius: 10px; overflow: hidden; }
+html:has(#photos) #lightbox .thumbnail.selected {
+  outline: 3px solid #4cbece;
+  outline-offset: -3px;
+}
+html:has(#photos) #lightbox #count {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #173f43;
+  color: #fff;
+  font-size: 13px;
+}
+html:has(#photos) #lightbox :is(a):focus-visible {
+  outline: 3px solid #4cbece !important;
+  outline-offset: -3px;
+}
+html:has(#photos) #lightbox :is(#previous,#next,#close):hover { background: #0e6e7b !important; }
+}
+@media screen and (hover:hover) and (prefers-reduced-motion:no-preference) {
+  html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(23,63,67,.12);
+  }
+  html:has(#photos) #photos .photo a:hover img { transform: scale(1.035); }
+}
+@media screen and (max-width:900px) {
+  html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px !important; }
+  html:has(#photos) #photos { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+}
+@media screen and (max-width:600px) {
+  :is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .master-content-wrapper { padding: 28px 18px 24px !important; }
+  :is(html:has(meta[property="og:url"][content*="/aid/6736431/"]), html:has(#photos)) #co_content_container > .clearfix > .body_wrapper { padding: 0 18px 36px !important; }
+  html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index { grid-template-columns: 1fr; gap: 20px !important; }
+  html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row .item .title a { min-height: 200px !important; }
+  html:has(#photos) #photos { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  html:has(#photos) #photos .photo { border-radius: 10px; }
+  html:has(#photos) #lightbox #previous { left: 8px !important; }
+  html:has(#photos) #lightbox #next { right: 8px !important; }
+  html:has(#photos) #lightbox #controls :is(#previous,#next) { width: 44px !important; height: 44px !important; }
+}
+
+@media screen {
+  html:has(#photos) #photos .photo:hover { opacity: 1; }
+  html:has(#photos) #lightbox #close span {
+    width: auto; height: auto; background: none;
+  }
+  html:has(#photos) #lightbox :is(#left,#right) {
+    opacity: 1;
+    width: 32px;
+    background-color: #173f43;
+    border-radius: 8px;
+  }
+  html:has(#photos) #co_body_container { padding: 0 !important; }
+}
