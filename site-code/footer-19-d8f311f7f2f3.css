@@ -1,0 +1,28 @@
+
+
+/* Keep gallery breadcrumbs readable over inherited image heroes. */
+@media screen {
+  html:has(#photos) body.cco_body #co_content_container .master-content-wrapper .article-header .breadcrumbs a.breadcrumbs__crumb,
+  html:has(#photos) body.cco_body #co_content_container .master-content-wrapper .article-header .breadcrumbs a.breadcrumbs__crumb::before {
+    color: var(--tc-teal-dark, #0E6E7B) !important;
+    -webkit-text-fill-color: var(--tc-teal-dark, #0E6E7B) !important;
+    text-shadow: none !important;
+  }
+  html:has(#photos) body.cco_body #co_content_container .master-content-wrapper .article-header .breadcrumbs a.breadcrumbs__crumb {
+    background: #fff !important;
+    border: 1px solid var(--tc-border, #D9E5E0) !important;
+    padding: 0 18px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+  }
+  html:has(#photos) body.cco_body #co_content_container > .clearfix > .body_wrapper {
+    padding-top: 32px !important;
+  }
+}
+@media screen and (max-width:600px) {
+  html:has(#photos) body.cco_body #co_content_container > .clearfix > .body_wrapper {
+    padding-top: 24px !important;
+  }
+}
+
+

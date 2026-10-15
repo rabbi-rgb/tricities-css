@@ -1,0 +1,35 @@
+
+/* A single clean ticket selector; native booking controls remain intact. */
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options[style*="display: none"],body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options[style*="display:none"] {display:none !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .performance,
+body.tc-shabbat-night-page-v5 #performance_32450_reservations {background:transparent !important;border:0 !important;border-radius:0 !important;padding:0 !important;margin:0 !important;overflow:visible !important;}
+body.tc-shabbat-night-page-v5 #performance_32450_reservations:empty {display:none !important;}
+body.tc-shabbat-night-page-v5 #Performances > .regular {font-size:15px !important;line-height:1.6 !important;color:#80654e !important;margin-bottom:20px !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .additionals_toggle {background:transparent !important;border:0 !important;box-shadow:none !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options {display:grid !important;grid-template-columns:minmax(0,1fr) 130px 180px !important;gap:18px !important;align-items:end !important;padding:22px !important;background:#fbf4eb !important;border:1px solid #e8d9c4 !important;border-radius:16px !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options > .inline_block {min-width:0 !important;margin:0 !important;padding:0 !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options > .inline_block > div:first-child {font-size:13px !important;font-weight:600 !important;line-height:1.4 !important;margin-bottom:8px !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options > .inline_block:nth-child(4) {grid-column:1/-1 !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options > .float_right {grid-column:1/-1 !important;justify-self:end !important;margin:0 !important;}
+body.tc-shabbat-night-page-v5 .performance:has(.reservations:empty) .toggle_options > .float_right {display:none !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options select {height:48px !important;min-height:48px !important;padding:10px 12px !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options > .inline_block:nth-child(3) > .co_global_button {float:none !important;width:100% !important;margin:0 !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options:before,body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options:after {display:none !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .co_global_button button.button,
+body.tc-shabbat-night-page-v5 #RegisterBody .co_global_button button.button span {font-family:Inter,Arial,sans-serif !important;font-size:15px !important;font-weight:600 !important;letter-spacing:0 !important;text-transform:none !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options .co_global_button button.button {width:100% !important;height:48px !important;padding:10px 18px !important;border-radius:10px !important;background:#934920 !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options .co_global_button button.button:disabled {background:#b49c87 !important;opacity:1 !important;cursor:not-allowed !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options .co_global_button button.button:hover:not(:disabled) {background:#75381b !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_message {margin-top:12px !important;padding:14px 16px !important;border:1px dashed #d7b995 !important;border-radius:12px !important;background:#fbf4eb !important;color:#934920 !important;font-size:14px !important;font-weight:600 !important;cursor:pointer !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .reservation {border-color:#e8d9c4 !important;background:#fbf4eb !important;box-shadow:none !important;margin:0 0 12px !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .subtotal {background:transparent !important;border:0 !important;border-top:1px solid #e8d9c4 !important;border-radius:0 !important;padding:18px 0 0 !important;margin-top:18px !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .title.large:before {font-size:30px !important;}
+body.tc-shabbat-night-page-v5 #ReserversInformation .label,body.tc-shabbat-night-page-v5 #Payment .label {font-size:14px !important;line-height:1.45 !important;}
+body.tc-shabbat-night-page-v5 #AdditionalInformation .form-multiple-column {grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:12px !important;}
+body.tc-shabbat-night-page-v5 #AdditionalInformation .form-checkbox-item {font-size:14px !important;line-height:1.45 !important;font-weight:500 !important;padding:16px !important;background:#fbf4eb !important;border-color:#e8d9c4 !important;min-height:68px !important;}
+body.tc-shabbat-night-page-v5 #AdditionalInformation .form-checkbox-item:has(input:checked) {background:#f3e3cd !important;border-color:#bd8549 !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody input[type=checkbox] {accent-color:#934920 !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody input.co_form_input,body.tc-shabbat-night-page-v5 #RegisterBody select.co_form_input {min-height:46px !important;border-radius:10px !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .cancel {width:32px !important;height:32px !important;border:0 !important;border-radius:50% !important;background:#efe1d0 !important;color:#934920 !important;font-size:20px !important;cursor:pointer !important;}
+@media(max-width:900px){body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options {grid-template-columns:minmax(0,1fr) 110px !important;}body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options > .inline_block:nth-child(3) {grid-column:1/-1 !important;}body.tc-shabbat-night-page-v5 #AdditionalInformation .form-multiple-column {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}
+@media(max-width:560px){body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options {grid-template-columns:1fr !important;padding:16px !important;gap:16px !important;}body.tc-shabbat-night-page-v5 #AdditionalInformation .form-multiple-column {grid-template-columns:1fr !important;}body.tc-shabbat-night-page-v5 #RegisterBody .title.large:before {font-size:27px !important;}}

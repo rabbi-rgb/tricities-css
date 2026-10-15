@@ -1,0 +1,68 @@
+
+/* ============================================================
+   HEADER SUBSCRIBE DROPDOWN — UNCLIP (desktop)
+   Every ancestor between the dropdown and #header must not clip.
+   ============================================================ */
+@media screen and (min-width: 768px) {
+
+  #header,
+  #header_container,
+  #header_container > div.clearfix.links,
+  #header_container > div.clearfix.links > .float_right,
+  #header_container > div.clearfix.links .top_bar_item,
+  #HeaderSubscribe {
+    overflow: visible !important;
+    clip-path: none !important;
+    clip: auto !important;
+    contain: none !important;
+    max-height: none !important;
+  }
+
+  /* The bar keeps its own height; the dropdown hangs out of it */
+  #header_container > div.clearfix.links {
+    position: relative !important;
+    z-index: 500 !important;
+  }
+
+  #header_container > div.clearfix.links > .float_right {
+    position: relative !important;
+    z-index: 501 !important;
+  }
+
+  #HeaderSubscribe {
+    position: relative !important;
+    z-index: 502 !important;
+  }
+
+  /* The dropdown layer itself */
+  #HeaderSubscribe .topBarLayer,
+  #HeaderSubscribeContainer {
+    position: absolute !important;
+    top: 100% !important;
+    z-index: 999 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(31, 57, 52, 0.16) !important;
+  }
+
+  /* Anything after the bar in the header stays underneath it */
+  #header_container > .branding-search,
+  #header_container .site-nav-wrapper,
+  #co_menu_container_wrapper,
+  #co_menu_container {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+}
+
+#header.on-scroll, #header.on-scroll #header_container, body.sites-article #header, body.sites-article #header_container{
+box-shadow: unset !important;}
+.co_global_button .button, .co_global_submit .button, #co_ads_container #MosadInformation .small_header { background: #178f9f !important;}
+   @media (max-width:769px) {
+     #js-donate-form #tc-us-donate-note { flex: 0 0 0% !important; }
+#donate-wrapper main .custom-amount-wrapper input.custom-amount{ width: 100% !important;}
+   }

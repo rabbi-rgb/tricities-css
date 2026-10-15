@@ -1,0 +1,8 @@
+
+body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) {display:grid !important;grid-template-columns:180px minmax(0,1fr) minmax(0,1fr) !important;gap:18px !important;align-items:center !important;}
+body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div {width:auto !important;min-width:0 !important;margin:0 !important;float:none !important;}
+body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > .label {grid-column:1 !important;}
+body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(2) {grid-column:2 !important;}
+body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(3) {grid-column:3 !important;}
+body.tc-shabbat-night-page-v5 #PaymentCardExpirationMonth,body.tc-shabbat-night-page-v5 #PaymentCardExpirationYear {width:100% !important;max-width:100% !important;min-width:0 !important;box-sizing:border-box !important;}
+@media(max-width:900px){body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) {grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:12px !important;}body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > .label {grid-column:1/-1 !important;}body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(2) {grid-column:1 !important;}body.tc-shabbat-night-page-v5 #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(3) {grid-column:2 !important;}}

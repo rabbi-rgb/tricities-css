@@ -1,0 +1,173 @@
+[
+  {
+    "path": "site-code/footer-01-ddefc112e453.css",
+    "filename": "footer-01-ddefc112e453.css",
+    "tag": "style",
+    "attributes": "",
+    "sha256": "ddefc112e453ed07ff70ce0aabadb552bd712ec23d5e189cbf2a8a63c9ad049f",
+    "bytes": 29131,
+    "characters": 29129
+  },
+  {
+    "path": "site-code/footer-02-880f8663c552.css",
+    "filename": "footer-02-880f8663c552.css",
+    "tag": "style",
+    "attributes": "",
+    "sha256": "880f8663c552ff8c12142a36874fe08c4ce45a586dc1a75528dd82b6cc872f54",
+    "bytes": 233,
+    "characters": 233
+  },
+  {
+    "path": "site-code/footer-03-fb51d203f6b0.css",
+    "filename": "footer-03-fb51d203f6b0.css",
+    "tag": "style",
+    "attributes": "",
+    "sha256": "fb51d203f6b011036b43cd2be73726b7141dbe27d4e65dc9ac4314638d6977ee",
+    "bytes": 2251,
+    "characters": 2249
+  },
+  {
+    "path": "site-code/footer-04-24a6da190494.css",
+    "filename": "footer-04-24a6da190494.css",
+    "tag": "style",
+    "attributes": " id=\"tc-fall-clean-form\"",
+    "sha256": "24a6da19049464afbf4dabfca3542d452f7e6ef11eb45a0b1e8ad45deb6ba6b9",
+    "bytes": 6260,
+    "characters": 6260
+  },
+  {
+    "path": "site-code/footer-05-a5b8779e8032.css",
+    "filename": "footer-05-a5b8779e8032.css",
+    "tag": "style",
+    "attributes": " id=\"tc-flexible-contribution-style\"",
+    "sha256": "a5b8779e803262216667313dfb28365dd7d69eec5085b4209d2a7fec05fe8e5d",
+    "bytes": 3742,
+    "characters": 3742
+  },
+  {
+    "path": "site-code/footer-06-eaf16ca3cd3f.css",
+    "filename": "footer-06-eaf16ca3cd3f.css",
+    "tag": "style",
+    "attributes": " id=\"tc-fall-expiry-row\"",
+    "sha256": "eaf16ca3cd3f3066415e58c8eb7d85c564f7c97b35f6cea3d7c8de8b691b8fcc",
+    "bytes": 1716,
+    "characters": 1716
+  },
+  {
+    "path": "site-code/footer-07-1167682953d0.css",
+    "filename": "footer-07-1167682953d0.css",
+    "tag": "style",
+    "attributes": " id=\"tc-ente-event-style\"",
+    "sha256": "1167682953d0529f744d988367c047bff41dcafc2b3ada7d125855ce29118934",
+    "bytes": 46007,
+    "characters": 46005
+  },
+  {
+    "path": "site-code/footer-08-6c8ca0a92d77.css",
+    "filename": "footer-08-6c8ca0a92d77.css",
+    "tag": "style",
+    "attributes": " id=\"tc-ente-receipt-style\"",
+    "sha256": "6c8ca0a92d7723c5759f8a2692eca2e2850dab23e38cb32a000e62c05eaeb33e",
+    "bytes": 6998,
+    "characters": 6998
+  },
+  {
+    "path": "site-code/footer-09-8b9c7b211476.js",
+    "filename": "footer-09-8b9c7b211476.js",
+    "tag": "script",
+    "attributes": "",
+    "sha256": "8b9c7b2114764ce74b9ea2d7e80f18f06ee19e32199e29a03af2c2fa68221d6e",
+    "bytes": 1532,
+    "characters": 1532
+  },
+  {
+    "path": "site-code/footer-10-acda200d9c56.js",
+    "filename": "footer-10-acda200d9c56.js",
+    "tag": "script",
+    "attributes": "",
+    "sha256": "acda200d9c567baa782d326040ae2fad93b14995436f65858c1b322a7516423a",
+    "bytes": 15137,
+    "characters": 15137
+  },
+  {
+    "path": "site-code/footer-11-a78634d7e133.js",
+    "filename": "footer-11-a78634d7e133.js",
+    "tag": "script",
+    "attributes": "",
+    "sha256": "a78634d7e133fad02ed8cb3d42552803de92f419bb9ebbbebf580a812426b131",
+    "bytes": 9301,
+    "characters": 9298
+  },
+  {
+    "path": "site-code/footer-12-d510064376dd.js",
+    "filename": "footer-12-d510064376dd.js",
+    "tag": "script",
+    "attributes": "",
+    "sha256": "d510064376dddce9280816b18197f98e95acb86211111bb0e87d83885e00e5d9",
+    "bytes": 1257,
+    "characters": 1257
+  },
+  {
+    "path": "site-code/footer-13-b65b8b0c5495.js",
+    "filename": "footer-13-b65b8b0c5495.js",
+    "tag": "script",
+    "attributes": "",
+    "sha256": "b65b8b0c5495be2f1a04af36c5b9fcf4aa34c04ab6bf4f57212139ebc39504db",
+    "bytes": 910,
+    "characters": 910
+  },
+  {
+    "path": "site-code/footer-14-2d79b5d761e9.js",
+    "filename": "footer-14-2d79b5d761e9.js",
+    "tag": "script",
+    "attributes": " id=\"tc-flexible-contribution\"",
+    "sha256": "2d79b5d761e9b026110e0f05bbd421d6ec4b080fba65bdd5ff963c432ef9fb1d",
+    "bytes": 7485,
+    "characters": 7467
+  },
+  {
+    "path": "site-code/footer-15-81696745f8ae.js",
+    "filename": "footer-15-81696745f8ae.js",
+    "tag": "script",
+    "attributes": " id=\"tc-fall-labels\"",
+    "sha256": "81696745f8ae3a28cbd240995b20f485793c2a688517dc442e16bf26b36e22d3",
+    "bytes": 1537,
+    "characters": 1530
+  },
+  {
+    "path": "site-code/footer-16-fac38d0fecb8.js",
+    "filename": "footer-16-fac38d0fecb8.js",
+    "tag": "script",
+    "attributes": " id=\"tc-ente-event-contribution\"",
+    "sha256": "fac38d0fecb87804a72f52e322b38eaaea13c2b3abc127f4b8aab9254fbd9f70",
+    "bytes": 7840,
+    "characters": 7831
+  },
+  {
+    "path": "site-code/footer-17-366d742d0b4b.js",
+    "filename": "footer-17-366d742d0b4b.js",
+    "tag": "script",
+    "attributes": " id=\"tc-ente-receipt-script\"",
+    "sha256": "366d742d0b4bd56c5c604e1ebd10922fbd6047b514401e415e7b755f80d01a6a",
+    "bytes": 2382,
+    "characters": 2380
+  },
+  {
+    "path": "site-code/footer-18-a56ff37a517e.css",
+    "filename": "footer-18-a56ff37a517e.css",
+    "tag": "style",
+    "attributes": " id=\"tc-album-cover-fix\"",
+    "sha256": "a56ff37a517eebad77171aa464ae45466ee3ed07b3db272e608c11d85caa2b7a",
+    "bytes": 3270,
+    "characters": 3270
+  },
+  {
+    "path": "site-code/footer-19-d8f311f7f2f3.css",
+    "filename": "footer-19-d8f311f7f2f3.css",
+    "tag": "style",
+    "attributes": " id=\"tc-gallery-header-fix\"",
+    "sha256": "d8f311f7f2f31b0d220dff0e5755bc9f7cbcaf672c269e381b5604c87736b2c5",
+    "bytes": 1137,
+    "characters": 1137
+  }
+]

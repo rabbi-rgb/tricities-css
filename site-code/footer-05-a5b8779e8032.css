@@ -1,0 +1,31 @@
+
+body.tc-shabbat-night-page-v5 #RegisterBody #Summary {display:block !important;}
+body.tc-shabbat-night-page-v5 #Summary .title.large:before {content:"Your contribution" !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody #Performances .reservation .price-display,body.tc-shabbat-night-page-v5 #RegisterBody .subtotal,body.tc-shabbat-night-page-v5 #performance_32450_priceInfo {display:none !important;}
+body.tc-shabbat-night-page-v5 #RegisterBody .reservation > .clearfix {grid-template-columns:26px minmax(0,1fr) minmax(0,1fr) minmax(115px,.8fr) 36px !important;}
+body.tc-shabbat-night-page-v5 .tc-native-donation-row {display:none !important;}
+body.tc-shabbat-night-page-v5 #tcContributionChoice {margin:0 0 22px;color:#67452f;font-size:15px;line-height:1.6;}
+body.tc-shabbat-night-page-v5 #tcContributionChoice p {margin:0 0 16px;}
+body.tc-shabbat-night-page-v5 .tc-contribution-option {display:flex;align-items:flex-start;gap:12px;margin:10px 0;padding:16px 18px;border:1px solid #e8d9c4;border-radius:13px;background:#fbf4eb;cursor:pointer;}
+body.tc-shabbat-night-page-v5 .tc-contribution-option:has(input:checked) {border-color:#bd8549;background:#f3e3cd;}
+body.tc-shabbat-night-page-v5 .tc-contribution-option input[type=radio] {width:18px;height:18px;flex:0 0 18px;margin:3px 0;accent-color:#934920;}
+body.tc-shabbat-night-page-v5 .tc-contribution-option strong {display:block;color:#60351e;font-size:16px;}
+body.tc-shabbat-night-page-v5 .tc-contribution-option small {display:block;color:#80654e;font-size:14px;}
+body.tc-shabbat-night-page-v5 #tcCustomContributionWrap {margin:16px 0;max-width:320px;}
+body.tc-shabbat-night-page-v5 #tcCustomContributionWrap label {display:block;font-size:14px;font-weight:600;margin-bottom:8px;}
+body.tc-shabbat-night-page-v5 .tc-amount-input {display:flex;align-items:center;gap:10px;}
+body.tc-shabbat-night-page-v5 #RegisterBody #tcCustomAmount {font-size:18px !important;min-height:48px !important;padding:10px 14px !important;}
+body.tc-shabbat-night-page-v5 #tcContributionReassurance {font-size:14px;color:#80654e;margin-top:16px;}
+body.tc-shabbat-night-page-v5 #tcContributionError {color:#8c2e1b;font-size:14px;}
+body.tc-shabbat-night-page-v5 #Summary #Totals {padding:18px !important;font-size:15px !important;line-height:1.6 !important;}
+body.tc-shabbat-night-page-v5 #Summary #Totals .clearfix {display:flex !important;justify-content:space-between !important;gap:16px !important;}
+body.tc-shabbat-night-page-v5 #Summary #Totals .clearfix:before,body.tc-shabbat-night-page-v5 #Summary #Totals .clearfix:after {display:none !important;}
+body.tc-shabbat-night-page-v5 #Payment[style*="display: none"],body.tc-shabbat-night-page-v5 #Payment[style*="display:none"] {display:none !important;}
+@media(max-width:900px){body.tc-shabbat-night-page-v5 #RegisterBody .reservation > .clearfix {grid-template-columns:1fr !important;}}
+
+body.tc-shabbat-night-page-v5 #tcMoreSponsorship {border-top:1px solid #e8d9c4;margin-top:22px;padding-top:18px;}
+body.tc-shabbat-night-page-v5 #tcMoreSponsorship > summary {cursor:pointer;color:#934920;font-size:15px;font-weight:600;line-height:1.6;}
+body.tc-shabbat-night-page-v5 #Summary #AdditionalInformation {background:transparent !important;box-shadow:none !important;border:0 !important;border-radius:0 !important;padding:18px 0 0 !important;margin:0 !important;width:100% !important;}
+body.tc-shabbat-night-page-v5 #Summary #AdditionalInformation .title.large {display:none !important;}
+body.tc-shabbat-night-page-v5 #Summary #AdditionalInformation .large_top_padding {padding-top:0 !important;}
+body.tc-shabbat-night-page-v5 #Summary #AdditionalInformation .form-html {font-size:14px !important;line-height:1.6 !important;color:#80654e !important;}

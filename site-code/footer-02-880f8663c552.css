@@ -1,0 +1,9 @@
+
+body.tc-shabbat-night-page-v5 #RegisterBody .reservation input::placeholder {
+  color: #7c8684 !important;
+  opacity: 1 !important;
+}
+
+body.tc-shabbat-night-page-v5 #RegisterBody .reservation input {
+  font-size: 15px !important;
+}

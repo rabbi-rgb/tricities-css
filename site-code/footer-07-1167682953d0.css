@@ -1,0 +1,887 @@
+
+/* ============================================================
+   TRI-CITIES CHABAD — SHABBAT NIGHT REGISTRATION V5
+   Modern/classy/lively version. Complete replacement.
+   Safe globally: all CSS is scoped to body.tc-ente-event.
+   Page: /tools/events/register_cdo/eventid/23975
+   ============================================================ */
+
+body.tc-ente-event {
+  --sn-page: #f3eee4;
+  --sn-page-2: #e4ded2;
+  --sn-card: #fffdf8;
+  --sn-card-soft: #f4f3ed;
+  --sn-ink: #344936;
+  --sn-text: #535d52;
+  --sn-muted: #697168;
+  --sn-gold: #8b987e;
+  --sn-gold-dark: #344936;
+  --sn-teal: #74876a;
+  --sn-teal-dark: #344936;
+  --sn-green: #74876a;
+  --sn-border: rgba(52,73,54, 0.12);
+  --sn-gold-border: rgba(116,135,106, 0.24);
+  --sn-shadow: 0 20px 52px rgba(52,73,54, 0.14);
+  --sn-soft-shadow: 0 11px 28px rgba(52,73,54, 0.08);
+
+  background:
+    radial-gradient(circle at 15% 8%, rgba(116,135,106,.18) 0%, transparent 32%),
+    radial-gradient(circle at 88% 14%, rgba(116,135,106,.18) 0%, transparent 30%),
+    linear-gradient(180deg, var(--sn-page) 0%, var(--sn-page-2) 100%) !important;
+}
+
+body.tc-ente-event,
+body.tc-ente-event * {
+  box-sizing: border-box !important;
+}
+
+/* Keep site/header normal, but make this event canvas clean */
+body.tc-ente-event #BodyContainer,
+body.tc-ente-event .body_wrapper,
+body.tc-ente-event #ContentBody,
+body.tc-ente-event .content_full_width,
+body.tc-ente-event .master-content-wrapper {
+  background: transparent !important;
+}
+
+/* Hide ChabadOne duplicate event/article header */
+body.tc-ente-event .master-content-wrapper.g960:has(header.article-header),
+body.tc-ente-event .master-content-wrapper.g960:has(.article-header__title),
+body.tc-ente-event header.article-header,
+body.tc-ente-event .article-header,
+body.tc-ente-event .article-header__title,
+body.tc-ente-event #RegisterHeader {
+  display: none !important;
+}
+
+/* Remove old generated intros if older test code is still cached */
+body.tc-ente-event #tcShabbatIntro,
+body.tc-ente-event #tcShabbatNightIntro,
+body.tc-ente-event #tcShabbatNightIntroV3 {
+  display: none !important;
+}
+
+/* Main shell */
+body.tc-ente-event #RegisterSinglePage {
+  width: 100% !important;
+  max-width: 1060px !important;
+  margin: 48px auto 72px auto !important;
+  padding: 0 22px !important;
+  float: none !important;
+  display: block !important;
+  background: transparent !important;
+  color: var(--sn-ink) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* ============================================================
+   INTRO / HERO
+   ============================================================ */
+
+body.tc-ente-event #tcEntebbeIntro {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto 22px auto !important;
+  background: var(--sn-card) !important;
+  border: 1px solid rgba(255,255,255,.68) !important;
+  border-radius: 30px !important;
+  box-shadow: var(--sn-shadow) !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro:before {
+  content: "" !important;
+  display: block !important;
+  height: 7px !important;
+  background: linear-gradient(90deg, var(--sn-teal) 0%, var(--sn-green) 46%, var(--sn-gold) 100%) !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-hero-main {
+  padding: 60px 54px 40px !important;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(116,135,106,.14) 0%, transparent 34%),
+    radial-gradient(circle at 84% 6%, rgba(116,135,106,.16) 0%, transparent 35%),
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.76) 38%, transparent 72%),
+    linear-gradient(180deg, #f4efe3 0%, #f4efe3 100%) !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-kicker {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  color: var(--sn-teal-dark) !important;
+  background: rgba(116,135,106,.09) !important;
+  border: 1px solid rgba(116,135,106,.16) !important;
+  border-radius: 999px !important;
+  padding: 9px 14px !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.8px !important;
+  text-transform: uppercase !important;
+  margin: 0 0 18px 0 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-kicker:before,
+body.tc-ente-event #tcEntebbeIntro .tc-kicker:after {
+  content: "" !important;
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: var(--sn-gold) !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro h1 {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  color: var(--sn-ink) !important;
+  font-size: 62px !important;
+  line-height: 1.04 !important;
+  font-weight: 400 !important;
+  letter-spacing: -1.5px !important;
+  margin: 0 auto 18px auto !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-rule {
+  width: 96px !important;
+  height: 3px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, var(--sn-teal) 0%, var(--sn-green) 52%, var(--sn-gold) 100%) !important;
+  margin: 0 auto 24px auto !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-copy {
+  max-width: 690px !important;
+  margin: 0 auto !important;
+  color: var(--sn-text) !important;
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+  font-weight: 400 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-vibe-row {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 26px auto 0 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-vibe-row span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 9px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.78) !important;
+  border: 1px solid rgba(116,135,106,.24) !important;
+  color: var(--sn-ink) !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-detail-row {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  border-top: 1px solid var(--sn-gold-border) !important;
+  background:
+    linear-gradient(180deg, #fffdf8 0%, #f5f2e9 100%) !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-detail {
+  padding: 23px 20px !important;
+  text-align: center !important;
+  border-left: 1px solid rgba(116,135,106,.18) !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-detail:first-child {
+  border-left: 0 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-detail-label {
+  display: block !important;
+  color: var(--sn-teal-dark) !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.25px !important;
+  text-transform: uppercase !important;
+  margin: 0 0 8px 0 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-detail-main {
+  display: block !important;
+  color: var(--sn-ink) !important;
+  font-size: 15px !important;
+  line-height: 1.48 !important;
+  font-weight: 700 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-help-note {
+  padding: 17px 24px 21px !important;
+  border-top: 1px solid rgba(116,135,106,.14) !important;
+  background: rgba(251,244,235,.72) !important;
+  color: var(--sn-muted) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-help-note strong {
+  color: var(--sn-ink) !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================================
+   REGISTRATION CARDS
+   ============================================================ */
+
+body.tc-ente-event #RegisterBody {
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  float: none !important;
+  display: block !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  color: var(--sn-ink) !important;
+}
+
+body.tc-ente-event #Performances,
+body.tc-ente-event #AdditionalInformation,
+body.tc-ente-event #Summary,
+body.tc-ente-event #ReserversInformation,
+body.tc-ente-event #Payment,
+body.tc-ente-event #Buttons {
+  width: 100% !important;
+  max-width: 880px !important;
+  display: block !important;
+  float: none !important;
+  clear: both !important;
+  margin: 0 auto 16px auto !important;
+  padding: 32px !important;
+  background: rgba(255,253,248,.98) !important;
+  border: 1px solid rgba(255,255,255,.60) !important;
+  border-radius: 24px !important;
+  box-shadow: var(--sn-soft-shadow) !important;
+  overflow: hidden !important;
+}
+
+/* Hide ChabadOne clutter / duplicate reservation column headings */
+body.tc-ente-event #RegisterBody .separator,
+body.tc-ente-event #RegisterBody .performance > .title,
+body.tc-ente-event #Performances .performance > .clearfix.medium_top_margin,
+body.tc-ente-event #Performances .medium_top_margin.clearfix,
+body.tc-ente-event #performance_32472_reservations > .clearfix.medium_top_margin {
+  display: none !important;
+}
+
+body.tc-ente-event #RegisterBody .large_top_padding,
+body.tc-ente-event #RegisterBody .medium_bottom_padding,
+body.tc-ente-event #RegisterBody .top_padding,
+body.tc-ente-event #RegisterBody .bottom_padding {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Card headings */
+body.tc-ente-event #RegisterBody .title.large {
+  font-size: 0 !important;
+  margin: 0 0 20px 0 !important;
+  text-align: center !important;
+}
+
+body.tc-ente-event #RegisterBody .title.large span.bold {
+  display: none !important;
+}
+
+body.tc-ente-event #Performances > .title.large:before { content: "Reserve your seats"; }
+body.tc-ente-event #AdditionalInformation .title.large:before { content: "Sponsorship"; }
+body.tc-ente-event #Summary .title.large:before { content: "Order summary"; }
+body.tc-ente-event #ReserversInformation .title.large:before { content: "Your information"; }
+body.tc-ente-event #Payment .title.large:before { content: "Payment"; }
+
+body.tc-ente-event #RegisterBody .title.large:before {
+  display: block !important;
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  font-size: 32px !important;
+  line-height: 1.18 !important;
+  font-weight: 400 !important;
+  color: var(--sn-ink) !important;
+  letter-spacing: -0.45px !important;
+}
+
+body.tc-ente-event #RegisterBody .title.large:after {
+  content: "" !important;
+  display: block !important;
+  width: 52px !important;
+  height: 1px !important;
+  background: rgba(116,135,106,.68) !important;
+  margin: 12px auto 0 !important;
+}
+
+/* Performance wrapper */
+body.tc-ente-event #RegisterBody .performance,
+body.tc-ente-event #performance_32472_reservations {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: #f4efe3 !important;
+  border: 1px solid rgba(116,135,106,.18) !important;
+  border-radius: 18px !important;
+  padding: 18px !important;
+  margin-top: 12px !important;
+  overflow: hidden !important;
+}
+
+body.tc-ente-event #RegisterBody .performance .name,
+body.tc-ente-event #RegisterBody .performance .date {
+  color: var(--sn-ink) !important;
+}
+
+/* Desktop reservation row */
+body.tc-ente-event #RegisterBody .reservation {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: var(--sn-card) !important;
+  border: 1px solid rgba(116,135,106,.22) !important;
+  border-radius: 16px !important;
+  padding: 14px !important;
+  margin: 10px 0 !important;
+  overflow: hidden !important;
+}
+
+body.tc-ente-event #RegisterBody .reservation > .clearfix {
+  display: grid !important;
+  grid-template-columns: 32px minmax(125px, 1fr) minmax(125px, 1fr) minmax(115px, .78fr) 38px 90px !important;
+  gap: 12px !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+body.tc-ente-event #RegisterBody .reservation > .clearfix > *,
+body.tc-ente-event #RegisterBody .g20,
+body.tc-ente-event #RegisterBody .g40,
+body.tc-ente-event #RegisterBody .g100,
+body.tc-ente-event #RegisterBody .g120,
+body.tc-ente-event #RegisterBody .g140,
+body.tc-ente-event #RegisterBody .g220,
+body.tc-ente-event #RegisterBody .g240,
+body.tc-ente-event #RegisterBody .g400,
+body.tc-ente-event #RegisterBody .ml140,
+body.tc-ente-event #RegisterBody .float_left {
+  float: none !important;
+  width: auto !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Form fields */
+body.tc-ente-event input.co_form_input,
+body.tc-ente-event select.co_form_input,
+body.tc-ente-event textarea.co_form_input,
+body.tc-ente-event .form-textbox {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  min-height: 42px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(116,135,106,.26) !important;
+  border-radius: 11px !important;
+  padding: 9px 12px !important;
+  font-size: 14px !important;
+  color: var(--sn-ink) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+body.tc-ente-event input.co_form_input:focus,
+body.tc-ente-event select.co_form_input:focus,
+body.tc-ente-event textarea.co_form_input:focus,
+body.tc-ente-event .form-textbox:focus {
+  border-color: var(--sn-gold) !important;
+  box-shadow: 0 0 0 3px rgba(116,135,106,.12) !important;
+}
+
+body.tc-ente-event textarea.co_form_input {
+  min-height: 88px !important;
+}
+
+/* Add reservation / subtotal */
+body.tc-ente-event .subtotal,
+body.tc-ente-event #Summary #Totals {
+  width: 100% !important;
+  background: #f4efe3 !important;
+  border: 1px solid rgba(116,135,106,.20) !important;
+  border-radius: 14px !important;
+  padding: 14px 16px !important;
+  color: var(--sn-ink) !important;
+  font-weight: 700 !important;
+  overflow: hidden !important;
+}
+
+/* Additional information / sponsorship */
+body.tc-ente-event #AdditionalInformation .form-all,
+body.tc-ente-event #AdditionalInformation .form-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.tc-ente-event #AdditionalInformation .form-line {
+  padding: 0 !important;
+  margin: 0 0 14px 0 !important;
+  border: none !important;
+}
+
+body.tc-ente-event #AdditionalInformation .form-label-left {
+  display: block !important;
+  float: none !important;
+  width: 100% !important;
+  margin: 0 0 12px 0 !important;
+  color: var(--sn-ink) !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+}
+
+body.tc-ente-event #AdditionalInformation .form-input,
+body.tc-ente-event #AdditionalInformation .form-input-wide {
+  display: block !important;
+  float: none !important;
+  width: 100% !important;
+}
+
+body.tc-ente-event #AdditionalInformation .form-multiple-column {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)) !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+body.tc-ente-event #AdditionalInformation .form-multiple-column > .clearfix {
+  display: none !important;
+}
+
+body.tc-ente-event #AdditionalInformation .form-checkbox-item,
+body.tc-ente-event #AdditionalInformation .form-checkbox-item.clear-left {
+  display: flex !important;
+  clear: none !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #f4efe3 !important;
+  border: 1px solid rgba(116,135,106,.20) !important;
+  border-radius: 13px !important;
+  padding: 11px 12px !important;
+  margin: 0 !important;
+  min-height: 52px !important;
+  width: 100% !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: var(--sn-ink) !important;
+}
+
+/* User/payment rows */
+body.tc-ente-event #ReserversInformation .clearfix.small_vertical_padding,
+body.tc-ente-event #Payment .clearfix.small_vertical_padding {
+  display: grid !important;
+  grid-template-columns: 180px minmax(0, 1fr) !important;
+  gap: 14px !important;
+  align-items: center !important;
+  padding: 8px 0 !important;
+}
+
+body.tc-ente-event #ReserversInformation .label,
+body.tc-ente-event #Payment .label {
+  display: block !important;
+  color: var(--sn-ink) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+}
+
+/* Buttons */
+body.tc-ente-event #Buttons {
+  text-align: center !important;
+}
+
+body.tc-ente-event #SubmitButton,
+body.tc-ente-event #SubmitButton_wrapper button,
+body.tc-ente-event .co_global_button button.button {
+  background: linear-gradient(135deg, var(--sn-teal-dark) 0%, var(--sn-green) 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 999px !important;
+  padding: 15px 38px !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  letter-spacing: .2px !important;
+  box-shadow: none !important;
+}
+
+body.tc-ente-event #SubmitButton:hover,
+body.tc-ente-event #SubmitButton_wrapper button:hover,
+body.tc-ente-event .co_global_button button.button:hover {
+  background: linear-gradient(135deg, var(--sn-green) 0%, var(--sn-gold-dark) 100%) !important;
+}
+
+body.tc-ente-event #SubmitButton span,
+body.tc-ente-event .co_global_button button.button span {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Notices / helper */
+body.tc-ente-event #ValidationNotice {
+  background: #f4efe3 !important;
+  border: 1px solid rgba(116,135,106,.24) !important;
+  color: #535d52 !important;
+  border-radius: 14px !important;
+  padding: 12px 14px !important;
+  margin: 0 0 14px 0 !important;
+  font-size: 13px !important;
+}
+
+body.tc-ente-event .tc-hide-original-transfer-note {
+  display: none !important;
+}
+
+body.tc-ente-event #tcBankTransferInfo {
+  display: none !important;
+  margin: 16px 0 0 0 !important;
+  padding: 15px 16px !important;
+  background: #f4efe3 !important;
+  border: 1px solid rgba(116,135,106,.30) !important;
+  border-radius: 14px !important;
+  color: var(--sn-ink) !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+  text-align: left !important;
+}
+
+body.tc-ente-event #tcBankTransferInfo strong {
+  color: var(--sn-ink) !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================================
+   MOBILE: simpler, no broken reservation grid
+   ============================================================ */
+
+@media only screen and (max-width: 900px) {
+  body.tc-ente-event #RegisterSinglePage {
+    max-width: calc(100vw - 24px) !important;
+    margin: 28px auto 48px auto !important;
+    padding: 0 !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-hero-main {
+    padding: 44px 28px 32px !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro h1 {
+    font-size: 44px !important;
+    letter-spacing: -0.7px !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-copy {
+    font-size: 16px !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-vibe-row {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin: 26px auto 0 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-vibe-row span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 9px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.78) !important;
+  border: 1px solid rgba(116,135,106,.24) !important;
+  color: var(--sn-ink) !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+}
+
+body.tc-ente-event #tcEntebbeIntro .tc-detail-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-detail {
+    border-left: 0 !important;
+    border-top: 1px solid rgba(116,135,106,.18) !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-detail:first-child {
+    border-top: 0 !important;
+  }
+
+  body.tc-ente-event #Performances,
+  body.tc-ente-event #AdditionalInformation,
+  body.tc-ente-event #Summary,
+  body.tc-ente-event #ReserversInformation,
+  body.tc-ente-event #Payment,
+  body.tc-ente-event #Buttons {
+    max-width: 100% !important;
+  }
+
+  body.tc-ente-event #RegisterBody .reservation > .clearfix,
+  body.tc-ente-event #ReserversInformation .clearfix.small_vertical_padding,
+  body.tc-ente-event #Payment .clearfix.small_vertical_padding {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.tc-ente-event #RegisterBody .reservation > .clearfix > * {
+    width: 100% !important;
+    min-width: 0 !important;
+    text-align: left !important;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  body.tc-ente-event #RegisterSinglePage {
+    max-width: calc(100vw - 18px) !important;
+    margin-top: 18px !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro {
+    border-radius: 20px !important;
+    margin-bottom: 14px !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-hero-main {
+    padding: 34px 20px 26px !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro h1 {
+    font-size: 36px !important;
+    line-height: 1.12 !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-copy {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-vibe-row {
+    gap: 8px !important;
+    margin-top: 20px !important;
+  }
+
+  body.tc-ente-event #tcEntebbeIntro .tc-vibe-row span {
+    font-size: 12px !important;
+    padding: 8px 11px !important;
+  }
+
+
+  body.tc-ente-event #Performances,
+  body.tc-ente-event #AdditionalInformation,
+  body.tc-ente-event #Summary,
+  body.tc-ente-event #ReserversInformation,
+  body.tc-ente-event #Payment,
+  body.tc-ente-event #Buttons {
+    padding: 20px !important;
+    border-radius: 18px !important;
+    margin-bottom: 12px !important;
+  }
+
+  body.tc-ente-event #RegisterBody .title.large:before {
+    font-size: 27px !important;
+  }
+
+  /* Hide reservation header labels that crowd the mobile form */
+  body.tc-ente-event #Performances .medium_top_margin.clearfix,
+  body.tc-ente-event #Performances .performance > .clearfix.medium_top_margin {
+    display: none !important;
+  }
+
+  /* Mobile reservation card: make it readable, not squeezed */
+  body.tc-ente-event #RegisterBody .reservation {
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  body.tc-ente-event #RegisterBody .reservation > .clearfix {
+    display: block !important;
+  }
+
+  body.tc-ente-event #RegisterBody .reservation > .clearfix > * {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 11px 0 !important;
+    text-align: left !important;
+  }
+
+  body.tc-ente-event #RegisterBody .reservation > .clearfix > *:last-child {
+    margin-bottom: 0 !important;
+    font-weight: 700 !important;
+  }
+}
+
+
+/* Consistent card widths and comfortable form controls */
+body.tc-ente-event {height:auto !important;min-height:100vh !important;background:#f3eee4 !important;}
+body.tc-ente-event #Performances,body.tc-ente-event #AdditionalInformation,body.tc-ente-event #Summary,body.tc-ente-event #ReserversInformation,body.tc-ente-event #Payment,body.tc-ente-event #Buttons {max-width:1000px !important;}
+body.tc-ente-event #tcEntebbeIntro .tc-help-note {max-width:none !important;line-height:1.7 !important;}
+body.tc-ente-event #RegisterBody .performance {padding:16px !important;}
+body.tc-ente-event #RegisterBody .reservation > .clearfix {grid-template-columns:26px minmax(0,1fr) minmax(0,1fr) minmax(105px,.8fr) 36px 78px !important;gap:12px !important;}
+body.tc-ente-event #RegisterBody input,body.tc-ente-event #RegisterBody select,body.tc-ente-event #RegisterBody textarea {font-size:16px !important;}
+body.tc-ente-event #RegisterBody .reservation input::placeholder {color:#697168 !important;}
+body.tc-ente-event #RegisterBody .remove_reservation {min-width:36px !important;min-height:36px !important;border-radius:50% !important;color:#344936 !important;}
+body.tc-ente-event #RegisterBody .remove_reservation:hover {background:#e4eadf !important;}
+body.tc-ente-event #RegisterBody input:focus-visible,body.tc-ente-event #RegisterBody select:focus-visible,body.tc-ente-event #RegisterBody button:focus-visible {outline:2px solid #344936 !important;outline-offset:3px !important;}
+body.tc-ente-event #RegisterBody .co_global_button button.button {min-height:44px !important;}
+body.tc-ente-event #RegisterBody .tc-hide-original-transfer-note {display:none !important;}
+@media(max-width:900px){body.tc-ente-event #RegisterBody .reservation > .clearfix {grid-template-columns:1fr !important;}body.tc-ente-event #RegisterBody .reservation .remove_reservation {width:36px !important;}body.tc-ente-event #RegisterBody .reservation .price-display {text-align:left !important;}}
+@media(max-width:560px){body.tc-ente-event #RegisterBody .performance {padding:10px !important;}body.tc-ente-event #RegisterBody .reservation {padding:12px !important;}body.tc-ente-event #tcEntebbeIntro .tc-hero-main {padding-left:22px !important;padding-right:22px !important;}body.tc-ente-event #tcEntebbeIntro .tc-copy {font-size:16px !important;}}
+
+@media(max-width:900px){body.tc-ente-event #RegisterSinglePage {width:calc(100% - 24px) !important;max-width:100% !important;}}
+/* Fall flyer palette and arched invitation */
+body.tc-ente-event #tcEntebbeIntro {border-radius: 180px 180px 26px 26px !important;}
+body.tc-ente-event #tcEntebbeIntro:before {height:0 !important;}
+body.tc-ente-event #tcEntebbeIntro .tc-hero-main {padding-top:72px !important; background:radial-gradient(ellipse at 0% 0%,rgba(205,126,55,.30),transparent 55%),linear-gradient(135deg,#344936,#293b2c) !important;}
+body.tc-ente-event #tcEntebbeIntro h1 {color:#f5f0e5 !important; font-size:clamp(36px,6vw,70px) !important;}
+body.tc-ente-event #tcEntebbeIntro .tc-copy {color:#e0e6da !important;}
+body.tc-ente-event #tcEntebbeIntro .tc-kicker {color:#f5f0e5 !important;background:transparent !important;border-color:rgba(248,220,164,.35) !important;}
+body.tc-ente-event #tcEntebbeIntro .tc-vibe-row span {background:rgba(248,220,164,.09) !important;color:#f5f0e5 !important;border-color:rgba(248,220,164,.3) !important;}
+body.tc-ente-event #tcEntebbeIntro .tc-rule {background:#a8b398 !important;}
+body.tc-ente-event #tcEntebbeIntro .tc-kicker:before,body.tc-ente-event #tcEntebbeIntro .tc-kicker:after {background:#a8b398 !important;}
+@media(max-width:560px){body.tc-ente-event #tcEntebbeIntro {border-radius:90px 90px 20px 20px !important;}body.tc-ente-event #tcEntebbeIntro .tc-hero-main {padding-top:52px !important;}}
+
+
+body.tc-ente-event #RegisterBody .reservation input::placeholder {
+  color: #697168 !important;
+  opacity: 1 !important;
+}
+
+body.tc-ente-event #RegisterBody .reservation input {
+  font-size: 15px !important;
+}
+
+
+/* A single clean ticket selector; native booking controls remain intact. */
+body.tc-ente-event #RegisterBody .toggle_options[style*="display: none"],body.tc-ente-event #RegisterBody .toggle_options[style*="display:none"] {display:none !important;}
+body.tc-ente-event #RegisterBody .performance,
+body.tc-ente-event #performance_32472_reservations {background:transparent !important;border:0 !important;border-radius:0 !important;padding:0 !important;margin:0 !important;overflow:visible !important;}
+body.tc-ente-event #performance_32472_reservations:empty {display:none !important;}
+body.tc-ente-event #Performances > .regular {font-size:15px !important;line-height:1.6 !important;color:#697168 !important;margin-bottom:20px !important;}
+body.tc-ente-event #RegisterBody .additionals_toggle {background:transparent !important;border:0 !important;box-shadow:none !important;}
+body.tc-ente-event #RegisterBody .toggle_options {display:grid !important;grid-template-columns:minmax(0,1fr) 130px 180px !important;gap:18px !important;align-items:end !important;padding:22px !important;background:#f4f3ed !important;border:1px solid #d9dfd2 !important;border-radius:16px !important;}
+body.tc-ente-event #RegisterBody .toggle_options > .inline_block {min-width:0 !important;margin:0 !important;padding:0 !important;}
+body.tc-ente-event #RegisterBody .toggle_options > .inline_block > div:first-child {font-size:13px !important;font-weight:600 !important;line-height:1.4 !important;margin-bottom:8px !important;}
+body.tc-ente-event #RegisterBody .toggle_options > .inline_block:nth-child(4) {grid-column:1/-1 !important;}
+body.tc-ente-event #RegisterBody .toggle_options > .float_right {grid-column:1/-1 !important;justify-self:end !important;margin:0 !important;}
+body.tc-ente-event .performance:has(.reservations:empty) .toggle_options > .float_right {display:none !important;}
+body.tc-ente-event #RegisterBody .toggle_options select {height:48px !important;min-height:48px !important;padding:10px 12px !important;}
+body.tc-ente-event #RegisterBody .toggle_options > .inline_block:nth-child(3) > .co_global_button {float:none !important;width:100% !important;margin:0 !important;}
+body.tc-ente-event #RegisterBody .toggle_options:before,body.tc-ente-event #RegisterBody .toggle_options:after {display:none !important;}
+body.tc-ente-event #RegisterBody .co_global_button button.button,
+body.tc-ente-event #RegisterBody .co_global_button button.button span {font-family:Inter,Arial,sans-serif !important;font-size:15px !important;font-weight:600 !important;letter-spacing:0 !important;text-transform:none !important;}
+body.tc-ente-event #RegisterBody .toggle_options .co_global_button button.button {width:100% !important;height:48px !important;padding:10px 18px !important;border-radius:10px !important;background:#344936 !important;}
+body.tc-ente-event #RegisterBody .toggle_options .co_global_button button.button:disabled {background:#a4ad9b !important;opacity:1 !important;cursor:not-allowed !important;}
+body.tc-ente-event #RegisterBody .toggle_options .co_global_button button.button:hover:not(:disabled) {background:#293b2c !important;}
+body.tc-ente-event #RegisterBody .toggle_message {margin-top:12px !important;padding:14px 16px !important;border:1px dashed #a8b398 !important;border-radius:12px !important;background:#f4f3ed !important;color:#344936 !important;font-size:14px !important;font-weight:600 !important;cursor:pointer !important;}
+body.tc-ente-event #RegisterBody .reservation {border-color:#d9dfd2 !important;background:#f4f3ed !important;box-shadow:none !important;margin:0 0 12px !important;}
+body.tc-ente-event #RegisterBody .subtotal {background:transparent !important;border:0 !important;border-top:1px solid #d9dfd2 !important;border-radius:0 !important;padding:18px 0 0 !important;margin-top:18px !important;}
+body.tc-ente-event #RegisterBody .title.large:before {font-size:30px !important;}
+body.tc-ente-event #ReserversInformation .label,body.tc-ente-event #Payment .label {font-size:14px !important;line-height:1.45 !important;}
+body.tc-ente-event #AdditionalInformation .form-multiple-column {grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:12px !important;}
+body.tc-ente-event #AdditionalInformation .form-checkbox-item {font-size:14px !important;line-height:1.45 !important;font-weight:500 !important;padding:16px !important;background:#f4f3ed !important;border-color:#d9dfd2 !important;min-height:68px !important;}
+body.tc-ente-event #AdditionalInformation .form-checkbox-item:has(input:checked) {background:#e4eadf !important;border-color:#74876a !important;}
+body.tc-ente-event #RegisterBody input[type=checkbox] {accent-color:#344936 !important;}
+body.tc-ente-event #RegisterBody input.co_form_input,body.tc-ente-event #RegisterBody select.co_form_input {min-height:46px !important;border-radius:10px !important;}
+body.tc-ente-event #RegisterBody .cancel {width:32px !important;height:32px !important;border:0 !important;border-radius:50% !important;background:#e4eadf !important;color:#344936 !important;font-size:20px !important;cursor:pointer !important;}
+@media(max-width:900px){body.tc-ente-event #RegisterBody .toggle_options {grid-template-columns:minmax(0,1fr) 110px !important;}body.tc-ente-event #RegisterBody .toggle_options > .inline_block:nth-child(3) {grid-column:1/-1 !important;}body.tc-ente-event #AdditionalInformation .form-multiple-column {grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}
+@media(max-width:560px){body.tc-ente-event #RegisterBody .toggle_options {grid-template-columns:1fr !important;padding:16px !important;gap:16px !important;}body.tc-ente-event #AdditionalInformation .form-multiple-column {grid-template-columns:1fr !important;}body.tc-ente-event #RegisterBody .title.large:before {font-size:27px !important;}}
+
+
+body.tc-ente-event #RegisterBody #Summary {display:block !important;}
+body.tc-ente-event #Summary .title.large:before {content:"Your contribution" !important;}
+body.tc-ente-event #RegisterBody #Performances .reservation .price-display,body.tc-ente-event #RegisterBody .subtotal,body.tc-ente-event #performance_32472_priceInfo {display:none !important;}
+body.tc-ente-event #RegisterBody .reservation > .clearfix {grid-template-columns:26px minmax(0,1fr) minmax(0,1fr) minmax(115px,.8fr) 36px !important;}
+body.tc-ente-event .tc-native-donation-row {display:none !important;}
+body.tc-ente-event #tcContributionChoice {margin:0 0 22px;color:#535d52;font-size:15px;line-height:1.6;}
+body.tc-ente-event #tcContributionChoice p {margin:0 0 16px;}
+body.tc-ente-event .tc-contribution-option {display:flex;align-items:flex-start;gap:12px;margin:10px 0;padding:16px 18px;border:1px solid #d9dfd2;border-radius:13px;background:#f4f3ed;cursor:pointer;}
+body.tc-ente-event .tc-contribution-option:has(input:checked) {border-color:#74876a;background:#e4eadf;}
+body.tc-ente-event .tc-contribution-option input[type=radio] {width:18px;height:18px;flex:0 0 18px;margin:3px 0;accent-color:#344936;}
+body.tc-ente-event .tc-contribution-option strong {display:block;color:#344936;font-size:16px;}
+body.tc-ente-event .tc-contribution-option small {display:block;color:#697168;font-size:14px;}
+body.tc-ente-event #tcCustomContributionWrap {margin:16px 0;max-width:320px;}
+body.tc-ente-event #tcCustomContributionWrap label {display:block;font-size:14px;font-weight:600;margin-bottom:8px;}
+body.tc-ente-event .tc-amount-input {display:flex;align-items:center;gap:10px;}
+body.tc-ente-event #RegisterBody #tcCustomAmount {font-size:18px !important;min-height:48px !important;padding:10px 14px !important;}
+body.tc-ente-event #tcContributionReassurance {font-size:14px;color:#697168;margin-top:16px;}
+body.tc-ente-event #tcContributionError {color:#8c2e1b;font-size:14px;}
+body.tc-ente-event #Summary #Totals {padding:18px !important;font-size:15px !important;line-height:1.6 !important;}
+body.tc-ente-event #Summary #Totals .clearfix {display:flex !important;justify-content:space-between !important;gap:16px !important;}
+body.tc-ente-event #Summary #Totals .clearfix:before,body.tc-ente-event #Summary #Totals .clearfix:after {display:none !important;}
+body.tc-ente-event #Payment[style*="display: none"],body.tc-ente-event #Payment[style*="display:none"] {display:none !important;}
+@media(max-width:900px){body.tc-ente-event #RegisterBody .reservation > .clearfix {grid-template-columns:1fr !important;}}
+
+body.tc-ente-event #tcMoreSponsorship {border-top:1px solid #d9dfd2;margin-top:22px;padding-top:18px;}
+body.tc-ente-event #tcMoreSponsorship > summary {cursor:pointer;color:#344936;font-size:15px;font-weight:600;line-height:1.6;}
+body.tc-ente-event #Summary #AdditionalInformation {background:transparent !important;box-shadow:none !important;border:0 !important;border-radius:0 !important;padding:18px 0 0 !important;margin:0 !important;width:100% !important;}
+body.tc-ente-event #Summary #AdditionalInformation .title.large {display:none !important;}
+body.tc-ente-event #Summary #AdditionalInformation .large_top_padding {padding-top:0 !important;}
+body.tc-ente-event #Summary #AdditionalInformation .form-html {font-size:14px !important;line-height:1.6 !important;color:#697168 !important;}
+
+
+body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) {display:grid !important;grid-template-columns:180px minmax(0,1fr) minmax(0,1fr) !important;gap:18px !important;align-items:center !important;}
+body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div {width:auto !important;min-width:0 !important;margin:0 !important;float:none !important;}
+body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > .label {grid-column:1 !important;}
+body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(2) {grid-column:2 !important;}
+body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(3) {grid-column:3 !important;}
+body.tc-ente-event #PaymentCardExpirationMonth,body.tc-ente-event #PaymentCardExpirationYear {width:100% !important;max-width:100% !important;min-width:0 !important;box-sizing:border-box !important;}
+@media(max-width:900px){body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) {grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:12px !important;}body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > .label {grid-column:1/-1 !important;}body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(2) {grid-column:1 !important;}body.tc-ente-event #Payment .clearfix:has(> .float_left > #PaymentCardExpirationMonth) > div:nth-child(3) {grid-column:2 !important;}}
+
+body.tc-ente-event #tcEntebbeIntro {border-radius:26px!important;}
+body.tc-ente-event #tcEntebbeIntro .tc-hero-main {padding:52px 48px 38px!important;background:#344936!important;}
+body.tc-ente-event #tcEntebbeIntro h1 {font-size:clamp(36px,5vw,60px)!important;}
+body.tc-ente-event #tcEntebbeIntro .tc-kicker {border:0!important;padding:0!important;}
+body.tc-ente-event #tcEntebbeIntro .tc-kicker:before,body.tc-ente-event #tcEntebbeIntro .tc-kicker:after {display:none!important;}
+body.tc-ente-event .tc-ente-speaker {display:flex;gap:18px;align-items:center;text-align:left;max-width:540px;margin:28px auto 0;color:#e0e6da;}
+body.tc-ente-event .tc-ente-speaker img {width:72px;height:90px;object-fit:cover;object-position:top;border-radius:8px;}
+body.tc-ente-event .tc-ente-speaker strong {display:block;font-size:18px;color:#f5f0e5!important;}
+body.tc-ente-event .tc-ente-speaker span {display:block;margin-top:6px;font-size:14px;line-height:1.6;}
+body.tc-ente-event .tc-ente-native-amount,body.tc-ente-event #AdditionalInformation,body.tc-ente-event #Summary .title.large,body.tc-ente-event #RegisterBody .seat_selection {display:none!important;}
+body.tc-ente-event #tcEntebbeContribution h2 {font:400 30px/1.2 Georgia,serif!important;color:#344936!important;text-align:center;margin:0 0 24px!important;}
+body.tc-ente-event #tcEntebbeContribution p {font:15px/1.6 Arial,sans-serif;color:#697168;}
+body.tc-ente-event .tc-ente-choices {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0;}
+body.tc-ente-event .tc-ente-choices label {display:flex;gap:12px;align-items:center;padding:16px 18px;border:1px solid #d9dfd2;border-radius:10px;background:#fffdf8;cursor:pointer;font:500 15px/1.5 Arial,sans-serif;color:#344936;}
+body.tc-ente-event .tc-ente-choices label:has(input:checked) {background:#e4eadf;border-color:#74876a;}
+body.tc-ente-event .tc-ente-choices input {width:18px!important;height:18px!important;min-height:0!important;margin:0!important;flex:0 0 18px;accent-color:#344936;}
+body.tc-ente-event .tc-ente-amount-label {display:block;font:600 14px Arial,sans-serif;margin:22px 0 10px;color:#344936;}
+body.tc-ente-event .tc-ente-amount {display:flex;gap:10px;align-items:center;max-width:320px;color:#344936;}
+body.tc-ente-event #tcEntebbeAmount {width:100%;min-height:48px;border:1px solid #d9dfd2;border-radius:10px;padding:10px 14px;background:white;color:#344936;font-size:18px!important;}
+body.tc-ente-event #tcEntebbeError {color:#8c2e1b!important;}
+body.tc-ente-event #Summary #Totals {background:transparent!important;border:0!important;border-top:1px solid #d9dfd2!important;border-radius:0!important;margin-top:24px!important;padding:20px 0 0!important;}
+body.tc-ente-event #Summary #Totals>.clearfix:not(.bold) {display:none!important;}
+body.tc-ente-event #RegisterBody .toggle_options {background:transparent!important;border:0!important;padding:0!important;border-radius:0!important;}
+body.tc-ente-event #RegisterBody .toggle_message {background:transparent!important;border:0!important;border-radius:0!important;padding:12px 0!important;}
+body.tc-ente-event #Buttons {background:transparent!important;box-shadow:none!important;border:0!important;padding:12px!important;}
+body.tc-ente-event #SubmitButton {border-radius:10px!important;background:#344936!important;}
+@media(max-width:560px){body.tc-ente-event #tcEntebbeIntro{border-radius:18px!important;}body.tc-ente-event #tcEntebbeIntro .tc-hero-main{padding:32px 22px!important;}body.tc-ente-event .tc-ente-choices{grid-template-columns:1fr;}body.tc-ente-event #RegisterBody .reservation>.clearfix{display:grid!important;grid-template-columns:1fr!important;}}
+body.tc-ente-event #Summary #Totals>.clearfix:has(.bold){display:flex!important;}body.tc-ente-event #Payment .inline_block:has(>#PaymentMethod){display:block!important;width:100%!important;}body.tc-ente-event #PaymentMethod{width:100%!important;}body.tc-ente-event #RegisterBody #SubmitButton{border-radius:10px!important;background:#344936!important;}body.tc-ente-event #Summary .large_top_padding:has(#Totals){margin:0!important;padding:0!important;}body.tc-ente-event #RegisterBody .reservation>.clearfix:before,body.tc-ente-event #RegisterBody .reservation>.clearfix:after{display:none!important;}body.tc-ente-event #RegisterBody .reservation .g100{display:none!important;}body.tc-ente-event #RegisterBody .reservation>.clearfix{grid-template-columns:26px minmax(0,1fr) minmax(0,1fr) 36px!important;}body.tc-ente-event #RegisterBody .reservation>.clearfix>div{margin:0!important;padding:0!important;}body.tc-ente-event #Summary .inline_block:has(>#Totals){display:block!important;width:100%!important;}body.tc-ente-event #Summary .align_right:has(#Totals){text-align:left!important;}@media(max-width:560px){body.tc-ente-event #RegisterBody .reservation>.clearfix{grid-template-columns:minmax(0,1fr) 36px!important;gap:12px!important;}body.tc-ente-event #RegisterBody .reservation .g20{grid-column:1!important;grid-row:1!important;}body.tc-ente-event #RegisterBody .reservation .g40{grid-column:2!important;grid-row:1!important;justify-self:end!important;}body.tc-ente-event #RegisterBody .reservation .g120,body.tc-ente-event #RegisterBody .reservation .g140{grid-column:1/-1!important;}body.tc-ente-event #RegisterBody .reservation>.clearfix>div{margin:0!important;}body.tc-ente-event #ReserversInformation .clearfix.small_vertical_padding,body.tc-ente-event #Payment .clearfix.small_vertical_padding{gap:8px!important;margin-bottom:12px!important;}body.tc-ente-event #ReserversInformation .small_top_margin,body.tc-ente-event #Payment .small_top_margin{margin-top:8px!important;}}body.tc-ente-event #tcEntebbeIntro .tc-hero-main{display:grid!important;grid-template-columns:minmax(0,1fr) 240px!important;gap:36px!important;align-items:center!important;text-align:left!important;padding:48px 48px 0!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-hero-copy{padding-bottom:48px;}body.tc-ente-event #tcEntebbeIntro h1{font-size:54px!important;line-height:1.08!important;max-width:560px!important;}body.tc-ente-event #tcEntebbeIntro .tc-rule{margin:22px 0!important;background:#a8b398!important;}body.tc-ente-event #tcEntebbeIntro .tc-copy{font-size:18px!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-speaker{display:block!important;margin:24px 0 0!important;max-width:none!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-speaker strong{font-size:22px!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-speaker span{font-size:15px!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-portrait{display:block!important;width:240px!important;height:auto!important;max-width:100%!important;align-self:end!important;object-fit:contain!important;}body.tc-ente-event .tc-ente-choices strong{font:500 15px/1.5 Arial,sans-serif!important;color:#344936!important;display:block;}body.tc-ente-event .tc-ente-choices small{display:block;font:14px/1.5 Arial,sans-serif;color:#697168;}@media(max-width:700px){body.tc-ente-event #tcEntebbeIntro .tc-hero-main{grid-template-columns:1fr!important;gap:0!important;padding:32px 24px 0!important;text-align:center!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-hero-copy{padding-bottom:24px!important;}body.tc-ente-event #tcEntebbeIntro h1{font-size:40px!important;}body.tc-ente-event #tcEntebbeIntro .tc-rule{margin:20px auto!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-portrait{width:185px!important;margin:0 auto!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-speaker{text-align:center!important;}}
+body.tc-ente-event #tcEntebbeIntro .tc-ente-story{padding:34px 48px 38px!important;text-align:left!important;background:#fffdf8!important;border-top:1px solid #d9dfd2!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-story h2{font:400 30px/1.2 Georgia,serif!important;color:#344936!important;margin:0 0 18px!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-story p{font:16px/1.75 Arial,sans-serif!important;color:#535d52!important;margin:0 0 16px!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-story .tc-ente-refreshments{font-weight:600!important;color:#344936!important;margin-bottom:0!important;}@media(max-width:560px){body.tc-ente-event #tcEntebbeIntro .tc-ente-story{padding:28px 24px!important;}body.tc-ente-event #tcEntebbeIntro .tc-ente-story h2{font-size:27px!important;}}
