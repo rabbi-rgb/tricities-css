@@ -61,3 +61,19 @@ body.home .hp-table .sneak_peek .widget_content:focus-within {
   outline: 2px solid var(--tc-teal, #1595a5);
   outline-offset: 3px;
 }
+
+/* Keep the existing external arrows inside the viewport on small laptops
+   and landscape tablets, while preserving the full-size desktop layout. */
+@media (min-width: 801px) and (max-width: 1090px) {
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-prevNav {
+    left: 8px !important;
+  }
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav {
+    right: 8px !important;
+  }
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .95);
+    box-shadow: 0 2px 12px rgba(14, 110, 123, .15);
+  }
+}
