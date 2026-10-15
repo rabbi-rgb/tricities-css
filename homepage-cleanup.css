@@ -1,0 +1,45 @@
+/* Small homepage refinements. Remove this stylesheet to restore the prior layout. */
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset > small:not(#response) {
+  justify-self: center;
+  width: fit-content !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px !important;
+  border-radius: 8px;
+  background: rgba(0, 51, 60, .78);
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-shadow: none !important;
+}
+@media (max-width: 800px) {
+  html body.home #BodyContainer #injected-upcoming-events-section {
+    padding: 48px 22px !important;
+  }
+  html body.home #BodyContainer #injected-upcoming-events-section .injected-events-carousel-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    scroll-padding-left: 0;
+  }
+  html body.home #BodyContainer .sneak-peek-container,
+  html body.home #BodyContainer .latest_photos .wrapper {
+    width: calc(100% - 24px) !important;
+  }
+  html body.home #BodyContainer .tc-home-mission .bottom_padding {
+    padding-bottom: 0 !important;
+  }
+  html body.home #BodyContainer .tc-home-mission a.readMore {
+    margin-top: 24px !important;
+  }
+  html body.home #BodyContainer .hp-table > .hp-row.hp_subscribe {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body.home #BodyContainer .hp_subscribe .wrapper {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
