@@ -72,6 +72,9 @@ body.home .hp-table .sneak_peek .widget_content:focus-within {
     right: 8px !important;
   }
   body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+    top: auto !important;
+    bottom: 8px !important;
+    margin-top: 0 !important;
     border-radius: 50%;
     background: rgba(255, 255, 255, .95);
     box-shadow: 0 2px 12px rgba(14, 110, 123, .15);
