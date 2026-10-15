@@ -1,0 +1,63 @@
+/* TC HOMEPAGE CORNERS — 2026-10-14.
+   Homepage corners matching existing 16px event cards / 8px buttons.
+   Scope: programs, latest photos, lower learning slider and signup controls. */
+body.home .hp-table {
+  --tc-home-card-radius: 16px;
+  --tc-home-button-radius: 8px;
+  --tc-home-card-shadow: 0 10px 40px -10px rgba(14, 110, 123, .15);
+}
+
+body.home .hp-table .sneak_peek .widget_content {
+  border-radius: var(--tc-home-card-radius) !important;
+  overflow: hidden;
+  box-shadow: var(--tc-home-card-shadow);
+}
+body.home .hp-table .sneak_peek .thumbnail,
+body.home .hp-table .sneak_peek .thumbnail img,
+body.home .hp-table .sneak_peek .thumbnail span {
+  border-radius: inherit;
+}
+
+body.home .hp-table .latest_photos .widget_content li {
+  border-radius: var(--tc-home-card-radius) !important;
+  box-shadow: var(--tc-home-card-shadow);
+}
+body.home .hp-table .latest_photos .widget_content li > a,
+body.home .hp-table .latest_photos .widget_content li img {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+
+/* Clip individual surfaces so the external slider arrows remain visible.
+   Exclude the full-width hero at the top of the homepage. */
+body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .slides {
+  border-radius: var(--tc-home-card-radius) !important;
+  box-shadow: var(--tc-home-card-shadow);
+}
+body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+  border-radius: 0 var(--tc-home-card-radius) var(--tc-home-card-radius) 0 !important;
+}
+
+body.home .hp-table .latest_photos a.readMore,
+body.home .hp-table .latest_photos a.readMore span,
+body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider a.readMore,
+body.home .hp-table .hp_subscribe input[type="text"],
+body.home .hp-table .hp_subscribe input[type="email"],
+body.home .hp-table .hp_subscribe input[type="submit"],
+body.home .hp-table .hp_subscribe button {
+  border-radius: var(--tc-home-button-radius) !important;
+}
+
+/* At 800px the existing caption becomes a centered overlay band.
+   Keep that band flush with the straight card sides. */
+@media (max-width: 800px) {
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+    border-radius: 0 !important;
+  }
+}
+
+
+/* Keep a clear focus indicator when the image surface clips its contents. */
+body.home .hp-table .sneak_peek .widget_content:focus-within {
+  outline: 2px solid var(--tc-teal, #1595a5);
+  outline-offset: 3px;
+}
