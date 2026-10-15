@@ -370,6 +370,12 @@ html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-co
 
 /* Compact hero through tablet widths, where the main navigation is collapsed. */
 @media (min-width: 801px) and (max-width: 1090px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+    padding: 20px !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p big {
+    font-size: 24px !important;
+  }
   /* Keep the mobile hero caption, CTA and controls in separate regions. */
   html body.home #BodyContainer .hp-row-first .promo_slider .slider,
   html body.home #BodyContainer .hp-row-first .promo_slider .slides,
