@@ -670,6 +670,28 @@ html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a:hove
   background: #edf7f6 !important;
   border-color: #178f9f !important;
 }
+/* The hero controls stay quiet over the photography, with a full tap target. */
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  opacity: .72 !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a::before {
+  width: 11px !important;
+  height: 11px !important;
+  border-color: #fff !important;
+  border-width: 0 2px 2px 0 !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a:hover,
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a:focus-visible {
+  background: #ffffff18 !important;
+  border-color: #ffffff30 !important;
+  opacity: 1 !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a:focus-visible {
+  outline-color: #fff !important;
+}
 html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
   top: 50% !important;
   bottom: auto !important;
