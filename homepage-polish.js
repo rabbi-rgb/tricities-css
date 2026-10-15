@@ -1,7 +1,9 @@
 (function () {
   'use strict';
   function start() {
-    if (!document.body.classList.contains('home')) return;
+    // The theme can assign body.home after this deferred script runs.
+    // The parsed homepage structure is available without that timing dependency.
+    if (!document.querySelector('.hp-table')) return;
     var mission = Array.from(document.querySelectorAll('.hp-table .message')).find(function (el) {
       var heading = el.querySelector('h5');
       return heading && heading.textContent.trim().toLowerCase() === 'our mission';
