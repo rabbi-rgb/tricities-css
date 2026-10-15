@@ -535,15 +535,15 @@ html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { right
 html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav { max-width: none !important; }
 
 /* October 15: explicit alternating bands, independent of injected widgets. */
-html body.home #BodyContainer .hp-table > .hp-row:has(.sneak-peek-container),
-html body.home #BodyContainer .hp-table > .hp-row:has(.latest_photos),
-html body.home #BodyContainer .hp-table > .hp-row:has(.icon-updates) {
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.sneak-peek-container),
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.latest_photos),
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.icon-updates) {
   background: #fbfaf6 !important;
 }
-html body.home #BodyContainer #injected-upcoming-events-section,
-html body.home #BodyContainer .hp-table > .hp-row:has(.tc-home-mission),
-html body.home #BodyContainer .hp-table > .hp-row.hp_content_wrapper,
-html body.home #BodyContainer .hp-table > .hp-row:not(.hp-row-first):has(.promo_slider) {
+html body.home.cco_body #BodyContainer #injected-upcoming-events-section,
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.tc-home-mission),
+html body.home.cco_body #BodyContainer .hp-table > .hp-row.hp_content_wrapper,
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:not(.hp-row-first):has(.promo_slider) {
   background: #ececec !important;
 }
 
