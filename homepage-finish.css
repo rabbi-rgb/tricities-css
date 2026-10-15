@@ -125,7 +125,7 @@ html body.home #BodyContainer .promo_slider a.readMore:focus-visible { outline-c
 }
 
 /* Existing form fields and submission behavior stay native. */
-html body.home #BodyContainer .hp-row.hp_subscribe {
+html body.home.cco_body #BodyContainer .hp-table > .hp-row.hp_subscribe {
   background: linear-gradient(135deg, #167887, #0e6e7b) !important;
 }
 html body.home #BodyContainer .hp_subscribe .widget_header { margin-bottom: 28px !important; }
@@ -149,7 +149,7 @@ html body.home #BodyContainer .hp_subscribe input:not([type="hidden"]) {
   font-size: 16px !important;
   line-height: 1.4 !important;
 }
-html body.home #BodyContainer .hp_subscribe input[type="submit"] {
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset input[type="submit"] {
   background: #4f7f3e !important;
   border-color: #4f7f3e !important;
   color: #fff !important;
@@ -158,7 +158,11 @@ html body.home #BodyContainer .hp_subscribe input[type="submit"] {
   letter-spacing: 0 !important;
   text-transform: none !important;
 }
-html body.home #BodyContainer .hp_subscribe fieldset > small {
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset input[type="submit"]:hover {
+  background: #426d34 !important;
+  border-color: #426d34 !important;
+}
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset > small:not(#response) {
   display: block !important;
   grid-column: 1 / -1;
   margin: 4px 0 0 !important;
