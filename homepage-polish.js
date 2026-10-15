@@ -4,6 +4,8 @@
     // The theme can assign body.home after this deferred script runs.
     // The parsed homepage structure is available without that timing dependency.
     if (!document.querySelector('.hp-table')) return;
+    var signupNote = document.querySelector('.hp_subscribe fieldset > small');
+    if (signupNote) signupNote.textContent = 'Stay in the know about what’s happening in our community.';
     var mission = Array.from(document.querySelectorAll('.hp-table .message')).find(function (el) {
       var heading = el.querySelector('h5');
       return heading && heading.textContent.trim().toLowerCase() === 'our mission';
