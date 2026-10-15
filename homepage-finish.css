@@ -7,7 +7,7 @@ html body.home #BodyContainer .hp-table .widget_header h5 {
   font-weight: 700 !important;
   line-height: 1.22 !important;
   letter-spacing: -.025em !important;
-  text-transform: none !important;
+  text-transform: uppercase !important;
 }
 html body.home #BodyContainer #injected-upcoming-events-section h2 {
   font-family: Montserrat, sans-serif !important;
@@ -15,7 +15,7 @@ html body.home #BodyContainer #injected-upcoming-events-section h2 {
   font-weight: 700 !important;
   line-height: 1.22 !important;
   letter-spacing: -.025em !important;
-  text-transform: none !important;
+  text-transform: uppercase !important;
 }
 html body.home #BodyContainer .hp_content_wrapper .widget_header h5 {
   font-size: 18px !important;
@@ -26,11 +26,11 @@ html body.home #BodyContainer .sneak_peek h6 a {
   font-size: 19px !important;
   font-weight: 600 !important;
   line-height: 1.3 !important;
-  text-transform: none !important;
+  text-transform: uppercase !important;
   letter-spacing: 0 !important;
 }
 
-/* Secondary actions are calm outlines; registration and hero CTAs are solid. */
+/* Secondary actions are outlines; event registration remains solid green. */
 html body.home #BodyContainer .hp-table a.readMore,
 html body.home #BodyContainer .hp-table a.readMore > span,
 html body.home #BodyContainer .injected-event-card .event-card-button {
@@ -68,7 +68,6 @@ html body.home #BodyContainer .hp-table a.readMore:hover {
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
 }
-html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore,
 html body.home #BodyContainer .injected-event-card .event-card-button {
   background: #4f7f3e !important;
   border-color: #4f7f3e !important;
@@ -78,12 +77,21 @@ html body.home #BodyContainer .injected-event-card .event-card-button {
   border-radius: 8px !important;
   text-decoration: none !important;
 }
-html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore:hover,
 html body.home #BodyContainer .injected-event-card .event-card-button:hover {
   background: #426d34 !important;
   border-color: #426d34 !important;
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore {
+  background: transparent !important;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore:hover {
+  background: #ffffff18 !important;
+  border-color: #fff !important;
 }
 html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption a.readMore {
   color: #b5edf0 !important;
@@ -126,7 +134,7 @@ html body.home #BodyContainer .promo_slider a.readMore:focus-visible { outline-c
 
 /* Existing form fields and submission behavior stay native. */
 html body.home.cco_body #BodyContainer .hp-table > .hp-row.hp_subscribe {
-  background: linear-gradient(135deg, #167887, #0e6e7b) !important;
+  background: linear-gradient(135deg, #4cbece 0%, #2bafbe 38%, #178f9f 72%, #137c8b 100%) !important;
 }
 html body.home #BodyContainer .hp_subscribe .widget_header { margin-bottom: 28px !important; }
 html body.home #BodyContainer .hp_subscribe fieldset {
