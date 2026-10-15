@@ -533,3 +533,183 @@ html body.home #BodyContainer .hp-row-first .promo_slider .cycle-nextNav { left:
 html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { right: auto !important; }
 
 html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav { max-width: none !important; }
+
+/* October 15: explicit alternating bands, independent of injected widgets. */
+html body.home #BodyContainer .hp-table > .hp-row:has(.sneak-peek-container),
+html body.home #BodyContainer .hp-table > .hp-row:has(.latest_photos),
+html body.home #BodyContainer .hp-table > .hp-row:has(.icon-updates) {
+  background: #fbfaf6 !important;
+}
+html body.home #BodyContainer #injected-upcoming-events-section,
+html body.home #BodyContainer .hp-table > .hp-row:has(.tc-home-mission),
+html body.home #BodyContainer .hp-table > .hp-row.hp_content_wrapper,
+html body.home #BodyContainer .hp-table > .hp-row:not(.hp-row-first):has(.promo_slider) {
+  background: #ececec !important;
+}
+
+/* Five current photos fill a complete row instead of leaving one orphan. */
+@media (min-width: 1101px) {
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) > li {
+    aspect-ratio: 1.25;
+  }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) > li { grid-column: span 2; }
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) > li:nth-child(n+4) {
+    grid-column: span 3;
+    aspect-ratio: 2.4;
+  }
+}
+@media (max-width: 600px) {
+  html body.home #BodyContainer .latest_photos .widget_content > ul > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    aspect-ratio: 2.3;
+  }
+}
+
+/* Equal card surfaces; compact Shabbat details into useful groups. */
+html body.home #BodyContainer .hp-row.hp_content_wrapper { align-items: stretch !important; }
+html body.home #BodyContainer .hp_content_wrapper > .g320 {
+  display: flex;
+  flex-direction: column;
+  padding: 28px !important;
+}
+html body.home #BodyContainer .hp_content_wrapper > .g320 > [class*="widget-"] { flex: 1; }
+html body.home #BodyContainer .hp_content_wrapper .widget_header { margin-bottom: 24px !important; }
+html body.home #BodyContainer .candlelighting .widget_content > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+}
+html body.home #BodyContainer .candlelighting .widget_content > div > .clearfix {
+  padding: 0 !important;
+  min-width: 0;
+}
+html body.home #BodyContainer .candlelighting .widget_content > div > .clearfix:first-child { grid-column: 1 / -1; }
+html body.home #BodyContainer .candlelighting .widget_content > div > .separator { display: none !important; }
+html body.home #BodyContainer .candlelighting .large_left_margin,
+html body.home #BodyContainer .candlelighting .medium_left_margin { margin-left: 0 !important; }
+html body.home #BodyContainer .candlelighting .candlelighting_heading { margin-bottom: 20px !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  height: auto !important;
+  overflow: visible !important;
+}
+html body.home #BodyContainer .candlelighting .times_wrapper > .clearfix { padding: 0 !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper .float_left { float: none !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper small {
+  display: block !important;
+  margin: 0 0 6px !important;
+}
+html body.home #BodyContainer .candlelighting .times_wrapper a { display: block; font-size: 13px !important; line-height: 1.6 !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper .bold.large { display: block; font-size: 23px !important; }
+html body.home #BodyContainer .candlelighting .section_heading { font-size: 12px !important; line-height: 1.4 !important; }
+html body.home #BodyContainer .candlelighting .candlelighting_heading .section_heading { font-size: 20px !important; }
+html body.home #BodyContainer .candlelighting .section_subheading { font-size: 15px !important; line-height: 1.5 !important; }
+html body.home #BodyContainer .hp_content_wrapper .daily_thought .title { margin-bottom: 18px !important; }
+html body.home #BodyContainer .hp_content_wrapper .daily_thought .body { font-size: 17px !important; line-height: 1.65 !important; }
+
+/* Use the same teal chevrons in every carousel, without inherited icon colors. */
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
+  pointer-events: none;
+  z-index: 25;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a {
+  display: block !important;
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #d9e5e0 !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  color: #178f9f !important;
+  -webkit-text-fill-color: #178f9f !important;
+  box-shadow: 0 3px 14px #0e6e7b26 !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-indent: 0 !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+  overflow: visible !important;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 !important;
+  border: solid #178f9f !important;
+  border-width: 0 3px 3px 0 !important;
+  background: none !important;
+  transform: translate(-65%, -50%) rotate(-45deg) !important;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav .cycle-prevNav::before {
+  transform: translate(-35%, -50%) rotate(135deg) !important;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a::after { display: none !important; }
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a span { display: none !important; }
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a:hover {
+  background: #edf7f6 !important;
+  border-color: #178f9f !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-prevNav { left: -20px !important; right: auto !important; }
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav { right: -20px !important; left: auto !important; }
+/* Keep caption text opaque while its native slide transition is running. */
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+  opacity: 1 !important;
+  color: #fff !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p,
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p > span { color: #fff !important; }
+
+@media (min-width: 1091px) {
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption p { font-size: 23px !important; line-height: 1.45 !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore { font-size: 18px !important; }
+}
+@media (min-width: 801px) {
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { left: 28px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-nextNav { right: 28px !important; }
+}
+@media (max-width: 800px) {
+  html body.home #BodyContainer .hp_content_wrapper > .g320 { padding: 24px 20px !important; }
+  html body.home #BodyContainer .hp_content_wrapper .daily_thought .body { font-size: 16px !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+    top: 115px !important;
+    bottom: auto !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-prevNav { left: 10px !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav { right: 10px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+    bottom: 28px !important;
+    transform: none !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-controlNav { bottom: 44px !important; }
+}
