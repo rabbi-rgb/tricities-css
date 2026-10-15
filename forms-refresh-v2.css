@@ -1,0 +1,232 @@
+/* Three native community forms only. Remove the two header tags to roll back. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer { --tc-form-green: #4f7f3e; --tc-form-teal: #0e6e7b; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer > .body_wrapper { background: #fbfaf6 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .master-content-wrapper {
+  width: calc(100% - 48px) !important; max-width: 1120px !important; margin: 0 auto !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header {
+  padding: 36px 0 24px !important; margin: 0 !important;
+  border: 0 !important; background: none !important; text-align: left !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header::before, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header::after { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header h1 {
+  font-family: Montserrat, sans-serif !important; font-size: clamp(32px, 3vw, 42px) !important;
+  line-height: 1.18 !important; font-weight: 700 !important; letter-spacing: -.015em !important;
+  text-transform: uppercase !important; color: #426d34 !important; -webkit-text-fill-color: #426d34 !important;
+  margin: 0 0 14px !important; text-shadow: none !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header__subtitle {
+  display: block !important; font: 400 17px/1.6 Inter, sans-serif !important;
+  color: #516660 !important; -webkit-text-fill-color: #516660 !important; margin: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .breadcrumbs { margin-bottom: 18px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .breadcrumbs a { color: #0e6e7b !important; -webkit-text-fill-color: #0e6e7b !important; font-size: 13px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_content_container > .clearfix > .body_wrapper {
+  display: grid !important; grid-template-columns: minmax(0, 1fr) 300px; align-items: start;
+  gap: 32px; width: calc(100% - 48px) !important; max-width: 1120px !important;
+  padding: 8px 0 56px !important; margin: 0 auto !important; border: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_body_container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .content-area-parent,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu {
+  float: none !important; width: 100% !important; min-width: 0 !important;
+  max-width: none !important; padding: 0 !important; margin: 0 !important; border: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container { display: grid; gap: 24px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody { font: 400 16px/1.6 Inter, sans-serif !important; color: #29403b !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="subscribe"], form[name="feedback"]) input:not([type="hidden"]):not([type="checkbox"]),
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="subscribe"], form[name="feedback"]) textarea,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] input[type="text"] {
+  box-sizing: border-box !important; display: block; width: 100% !important; min-width: 0 !important;
+  max-width: 100% !important; min-height: 48px !important;
+  padding: 12px 14px !important; margin: 0 !important; border: 1px solid #7b9086 !important;
+  border-radius: 8px !important; background: #fff !important; color: #29403b !important;
+  -webkit-text-fill-color: #29403b !important; box-shadow: none !important;
+  font: 400 16px/1.5 Inter, sans-serif !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="feedback"]) textarea {
+  height: 180px; min-height: 160px !important; max-height: 600px !important; resize: vertical !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody input::placeholder, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody textarea::placeholder {
+  color: #63766e !important; -webkit-text-fill-color: #63766e !important; opacity: 1 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody label, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form td:first-child {
+  color: #29403b !important; -webkit-text-fill-color: #29403b !important; font: 600 14px/1.5 Inter, sans-serif !important; text-transform: none !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody label:not(.co_optin label) { display: block; padding: 0 !important; margin: 0 0 8px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody label b { font-weight: 600 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody input[type="checkbox"] {
+  box-sizing: border-box !important; width: 22px !important; height: 22px !important;
+  min-width: 22px !important; margin: 2px 0 0 !important; accent-color: #4f7f3e;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody input:focus-visible, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody textarea:focus-visible,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody button:focus-visible, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody a:focus-visible {
+  outline: 3px solid #0e6e7b !important; outline-offset: 3px !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_submit {
+  background: none !important; border: 0 !important; padding: 0 !important;
+  box-shadow: none !important; border-radius: 8px !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button {
+  display: inline-flex !important; align-items: center; justify-content: center;
+  min-height: 48px !important; min-width: 140px !important; padding: 12px 24px !important;
+  border: 1px solid #4f7f3e !important; border-radius: 8px !important;
+  background: #4f7f3e !important; color: #fff !important; -webkit-text-fill-color: #fff !important;
+  box-shadow: none !important; cursor: pointer; font: 600 16px/1.4 Inter, sans-serif !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button span, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button span {
+  padding: 0 !important; background: none !important; color: inherit !important;
+  -webkit-text-fill-color: inherit !important; font: inherit !important; text-transform: none !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button:hover, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button:hover { background: #426d34 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin { display: flex !important; gap: 12px; align-items: start; width: 100% !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin .optin_checkbox { float: none !important; width: 22px !important; flex: 0 0 22px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin .optin_message_text { float: none !important; width: auto !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin label { font-size: 14px !important; font-weight: 400 !important; line-height: 1.6 !important; }
+
+/* Question form: names, email confirmation, then a full-width question. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi { width: 100% !important; margin: 0 0 24px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi > .rounded_box, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"], html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"],
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu {
+  box-sizing: border-box !important; background: #fff !important; border: 1px solid #d9e5de !important;
+  border-radius: 16px !important; padding: 28px !important; box-shadow: 0 8px 30px #0e6e7b0b !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi > .rounded_box { padding: 0 !important; margin-bottom: 24px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .b_inside { padding: 28px !important; border: 0 !important; background: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .b_header, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .small_header {
+  background: none !important; border: 0 !important; padding: 0 !important; margin: 0 0 20px !important;
+  height: auto !important; color: #426d34 !important; font: 700 18px/1.4 Montserrat, sans-serif !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #AskTheRabbi_Div { margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .small_header > div { background: none !important; color: #426d34 !important; -webkit-text-fill-color: #426d34 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #AskTheRabbi_Div > .ATR_text { text-align: left !important; margin: 0 0 24px !important; font-size: 14px !important; line-height: 1.6 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-row {
+  width: 100% !important; margin: 0 !important; padding: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-row::before, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-row::after { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-container > .bs-row { display: block !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .col-sm-6 { float: none !important; width: 100% !important; max-width: 100% !important; flex: none !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea > .bs-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; grid-column: 1 / -1; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea > div { margin: 0 !important; min-width: 0; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #AskCell { margin-top: 20px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix { display: flex; flex-direction: row-reverse; align-items: center; gap: 24px; margin: 24px 0 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .tc-form-actions { flex-direction: row; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix > div { float: none !important; width: auto !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix > div:has(.co_optin) { flex: 1; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] { display: flex; gap: 12px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_input_container { order: -1; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; height: 48px !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_submit { float: none !important; flex: 0 0 auto !important; width: auto !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .break_floats { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button { min-width: 100px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .co_form_container { width: 100% !important; margin: 0 0 24px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; column-count: auto !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-group { float: none !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-group .sub_category { width: 100% !important; font: 400 14px/1.7 Inter,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-group .ATR_category { font: 600 17px/1.4 Montserrat,sans-serif !important; color: #426d34 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keywords-border { display: none !important; }
+
+/* Contact form, retaining all native validation and recipient behavior. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] { margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] > .medium_top_margin { margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] hr { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] div[style*="max-width: 506px"] { max-width: none !important; box-sizing: border-box !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .name_wrapper { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .name_wrapper > div { float: none !important; margin: 0 !important; min-width: 0; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .medium_top_margin { margin-top: 20px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .small_top_margin { margin: 24px 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .left { text-align: right !important; }
+
+/* Newsletter choices stay in their native table and keep their IDs/click handlers. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] { clear: both; margin-top: 20px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .w96:has(> form[name="subscribe"]) { width: 100% !important; margin: 0 !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody a[href*="/tools/login/settings.asp?v=sub"] { display: inline-block; float: none !important; padding: 0 !important; border: 0 !important; background: none !important; font-size: 14px !important; font-weight: 500 !important; text-transform: none !important; letter-spacing: 0 !important; color: #0e6e7b !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > .container { padding: 0 !important; margin: 0 0 12px !important; border: 0 !important; background: none !important; box-shadow: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form { display: block !important; width: 100% !important; margin: 0 0 12px !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form > tbody { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form tr, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form td { display: block !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form tr:last-child { grid-column: 1 / -1; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form td:first-child { margin-bottom: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form .hide_for_mobile { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table { display: block; width: 100% !important; border: 1px solid #d9e5de !important; border-radius: 12px !important; overflow: hidden; margin: 0 0 24px !important; box-shadow: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table > tbody { display: block; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr { background: #fff !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:first-child > td { display: block; padding: 18px !important; font: 400 14px/1.6 Inter,sans-serif !important; color: #516660 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[id^="checkAll"]) { display: block; padding: 16px 18px !important; background: #eff5ec !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[id^="checkAll"]) td { display: inline; padding: 0 !important; background: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[id^="checkAll"]) label { display: inline !important; margin: 0 0 0 10px !important; vertical-align: top; font-weight: 600 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) { display: grid; grid-template-columns: 22px minmax(0,1fr) 22px minmax(0,1fr); gap: 12px; padding: 20px 18px !important; border-bottom: 1px solid #e4ece7; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) td { padding: 0 !important; border: 0 !important; background: none !important; font: 400 14px/1.6 Inter,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) label { display: inline !important; margin: 0 !important; font-weight: 600 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table label { display: inline !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] input[id^="checkAll"] { margin-right: 10px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table font { color: #657a70 !important; font-size: 12px !important; background: none !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:last-child:not(:has(input)) { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] #submitButton { text-align: right !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] .bottom_margin { margin-bottom: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] .comenu_popup { max-width: calc(100vw - 32px) !important; z-index: 2000 !important; border-radius: 10px; background: #fff; }
+
+/* Supporting information uses the same clear visual hierarchy. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container .small_header, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .header,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu .section_title { background: none !important; padding: 0 !important; margin: 0 0 18px !important; height: auto !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container .small_header span, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .header,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu .section_title a { background: none !important; color: #426d34 !important; font: 700 16px/1.4 Montserrat,sans-serif !important; text-transform: uppercase; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container a, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_local_menu a { color: #0e6e7b !important; -webkit-text-fill-color: #0e6e7b !important; line-height: 1.6 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation { width: 100% !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks { width: 100% !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion > .small_horizontal_padding { padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion a { font: 600 20px/1.4 Montserrat,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions ul, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions li { margin: 0 0 16px !important; padding: 0 !important; font: 400 14px/1.6 Inter,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation { font: 400 14px/1.7 Inter,sans-serif !important; color: #29403b !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation li { margin: 16px 0 0 !important; font: inherit !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation :is(.regular, .small_links, li, b, a) { font-size: 14px !important; line-height: 1.7 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .item { padding: 8px 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .item a { font-size: 15px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .sidebar-local-navigation .co_local_menu { padding: 0 !important; border: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools-sidebar { position: static !important; float: none !important; top: auto !important; left: auto !important; width: calc(100% - 48px) !important; max-width: 1120px; height: auto !important; margin: 0 auto 32px !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools__section { display: flex !important; position: static !important; transform: none !important; width: auto !important; height: auto !important; padding: 0 !important; margin: 0 !important; opacity: 1 !important; visibility: visible !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; gap: 8px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools-sidebar .fab-wrapper { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools__tool { width: 40px !important; height: 40px !important; margin: 0 !important; border: 1px solid #d9e5de !important; border-radius: 8px; background: #fff !important; }
+
+@media (max-width: 1000px) {
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_content_container > .clearfix > .body_wrapper { grid-template-columns: minmax(0,1fr); }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container > * { min-width: 0; }
+}
+@media (max-width: 600px) {
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .master-content-wrapper, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_content_container > .clearfix > .body_wrapper,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools-sidebar { width: calc(100% - 32px) !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header { padding: 28px 0 20px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header h1 { font-size: 28px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header__subtitle { font-size: 16px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"], html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"], html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .b_inside,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu { padding: 20px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea > .bs-row,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .name_wrapper, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form > tbody,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-columns, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container { grid-template-columns: minmax(0,1fr); }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix { flex-direction: column !important; align-items: stretch; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix > div { width: 100% !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button { width: 100% !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) { grid-template-columns: 22px minmax(0,1fr); gap: 14px 10px; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] { flex-wrap: wrap; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_input_container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_submit { flex-basis: 100%; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button { width: 100% !important; }
+}
+
+/* Readable newsletter details and clear instructions, preserving native handlers. */
+html body.cco_body #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="subscribe"], form[name="feedback"]) > .tc-form-guidance {
+  font: 400 14px/1.6 Inter, sans-serif !important; color: #405b51 !important;
+  -webkit-text-fill-color: #405b51 !important; margin: 0 0 24px !important;
+}
+html body.cco_body #BodyContainer #ContentBody form[name="subscribe"] a.tc-newsletter-details {
+  display: inline-flex !important; align-items: center; justify-content: center;
+  box-sizing: border-box; min-height: 44px; min-width: 60px; padding: 8px 6px !important;
+  font: 600 14px/1.5 Inter, sans-serif !important; color: #0e6e7b !important;
+  -webkit-text-fill-color: #0e6e7b !important; text-decoration: underline !important;
+  text-underline-offset: 3px; vertical-align: middle;
+}
+html body.cco_body #BodyContainer #ContentBody .tc-optional-label {
+  font: inherit !important; color: inherit !important; -webkit-text-fill-color: inherit !important;
+}
