@@ -44,6 +44,10 @@
       var submitLabel = form.querySelector('button[type="submit"] > span');
       if (submitLabel && form.name === 'asktherabbi') submitLabel.textContent = 'Send Question';
       if (submitLabel && form.name === 'feedback') submitLabel.textContent = 'Send Message';
+      if (form.name === 'feedback') {
+        var location = document.querySelector('#MosadInformation a[href*="maps.google.com"]');
+        if (location) location.textContent = 'Located in Coquitlam';
+      }
       var guidance = document.createElement('p');
       guidance.className = 'tc-form-guidance';
       guidance.textContent = form.name === 'subscribe'
