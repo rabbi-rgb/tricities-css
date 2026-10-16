@@ -1,0 +1,37 @@
+/* Homepage corner system. Additive: remove this stylesheet link to revert. */
+html body.home,
+html body.home .hp-table {
+  --tc-home-card-radius: 12px;
+  --tc-home-button-radius: 8px;
+}
+html body.home #BodyContainer .hp_content_wrapper > .g320,
+html body.home #BodyContainer #injected-upcoming-events-section .injected-event-card,
+html body.home #BodyContainer .sneak_peek .widget_content,
+html body.home #BodyContainer .latest_photos .widget_content li,
+html body.home #BodyContainer .latest_photos .widget_content li > a,
+html body.home #BodyContainer .latest_photos .widget_content li img {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slides {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+  border-radius: 0 var(--tc-home-card-radius) var(--tc-home-card-radius) 0 !important;
+}
+html body.home #header a.parent[href="/4970020"] {
+  border-radius: var(--tc-home-button-radius) !important;
+}
+html body.home.cco_body #header #HeaderSubscribeContainer {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+html body.home.cco_body #header #HeaderSubscribeContainer .footer_box {
+  border-radius: 0 0 var(--tc-home-card-radius) var(--tc-home-card-radius) !important;
+}
+@media (max-width: 800px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slides {
+    border-radius: var(--tc-home-card-radius) var(--tc-home-card-radius) 0 0 !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+    border-radius: 0 0 var(--tc-home-card-radius) var(--tc-home-card-radius) !important;
+  }
+}
