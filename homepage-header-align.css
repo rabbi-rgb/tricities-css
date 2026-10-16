@@ -1,0 +1,14 @@
+/* Center the desktop navigation beside the homepage branding. Remove this link to revert. */
+@media (min-width: 1025px) {
+  html body.home.cco_body #header:not(.on-scroll) .site-nav-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+  html body.home.cco_body #header:not(.on-scroll) .site-nav-wrapper #co_menu_container_wrapper,
+  html body.home.cco_body #header:not(.on-scroll) .site-nav-wrapper #co_menu_container {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+  }
+}
