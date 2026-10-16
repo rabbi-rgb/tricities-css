@@ -1,0 +1,19 @@
+/* Restore ChabadOne's full-width artwork behind the caption. Remove this link to revert. */
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .wrapper {
+  max-width: 1060px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper > a {
+  width: 100% !important;
+}
+@media (min-width: 1001px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider :is(.slider, .slides, .slide_wrapper, .cycle-caption) {
+    height: 400px !important;
+  }
+}
+@media (max-width: 600px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper img {
+    background-position: left center !important;
+  }
+}
