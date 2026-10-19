@@ -2724,3 +2724,14 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
     -webkit-text-fill-color: var(--tc-teal, #178f9f) !important;
   }
 }
+
+
+/* Homepage desktop dropdown accent: replace the native theme's bright turquoise. */
+@media screen and (min-width: 1025px) {
+  html body.home.cco_body #header #tabContentMain .co_menu_item.multi_level .co_submenu_container {
+    border-top-color: #0E6E7B !important;
+  }
+  html body.home.cco_body #header #tabContentMain .co_menu_item.multi_level::before {
+    border-bottom-color: #0E6E7B !important;
+  }
+}
