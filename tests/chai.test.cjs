@@ -57,9 +57,31 @@ test('all repeated initialization preserves original controls, listeners and for
     assert.equal(changes, 1);
     assert.equal(p.document.querySelector('.chai-intro-copy'), intro);
     assert.equal(p.document.querySelector('.chai-faq-list'), faq);
-    for (const selector of ['.chai-intro', '.chai-faq', '#tc-chai-refinement-styles', '#tc-chai-join-panel', '.tc-chai-hero-action']) {
+    for (const selector of ['.chai-intro', '.chai-faq', '#tc-chai-refinement-styles', '#tc-chai-join-panel', '#tc-chai-continuity', '.tc-chai-hero-action', '.tc-chai-hero-grid', '.tc-chai-hero-art']) {
       assert.equal(p.document.querySelectorAll(selector).length, 1, selector);
     }
+    assert.equal(p.document.querySelectorAll('.tc-chai-impact-art').length, 3);
+  } finally { p.close(); }
+});
+
+test('editorial imagery is decorative, remote, and does not alter native fields', () => {
+  const p = page();
+  try {
+    const images = [...p.document.querySelectorAll('.tc-chai-hero-art img, .tc-chai-impact-art img')];
+    assert.equal(images.length, 6);
+    images.forEach(image => {
+      assert.equal(image.alt, '');
+      assert.match(image.src, /^https:\/\/w2\.chabad\.org\/media\/images\//);
+      assert.ok(Number(image.getAttribute('width')) > 0);
+      assert.ok(Number(image.getAttribute('height')) > 0);
+    });
+    const sources = images.map(image => image.src);
+    for (const source of [
+      'https://w2.chabad.org/media/images/1270/oAfo12706892.jpg',
+      'https://w2.chabad.org/media/images/1270/yPnp12706783.jpg',
+      'https://w2.chabad.org/media/images/1324/bSEH13243362.jpg'
+    ]) assert.equal(sources.filter(item => item === source).length, 2);
+    p.originalControls.forEach(control => assert.ok([...p.document.getElementById('5995797').elements].includes(control)));
   } finally { p.close(); }
 });
 

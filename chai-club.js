@@ -14,7 +14,7 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=12";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=16";
     document.head.appendChild(refinementStyles);
   }
 
@@ -142,16 +142,56 @@
     }
 
     var hero = document.querySelector(".article-header");
-    if (hero && !hero.querySelector(".tc-chai-hero-action")) {
-      var action = document.createElement("div");
+    var action = hero && hero.querySelector(".tc-chai-hero-action");
+    if (hero && !action) {
+      action = document.createElement("div");
       action.className = "tc-chai-hero-action";
-      action.innerHTML = '<p>Monthly partners sustaining Jewish life in the Tri-Cities</p><a href="#tc-chai-head">Join the Chai Club <span aria-hidden="true">&#8594;</span></a>';
       hero.appendChild(action);
+    }
+    if (action && !action.dataset.chaiEditorialHero) {
+      action.innerHTML =
+        '<p>Monthly partners sustaining Jewish life in the Tri-Cities.</p>' +
+        '<div class="tc-chai-hero-actions">' +
+          '<a class="tc-chai-hero-primary" href="#tc-chai-head">Join the Chai Club <span aria-hidden="true">&#8594;</span></a>' +
+          '<a class="tc-chai-hero-secondary" href="#chai-intro-title">See what your gift sustains</a>' +
+        '</div>';
+      action.dataset.chaiEditorialHero = "true";
       hero.classList.add("tc-chai-hero-ready");
     }
 
+    // Build one art-directed hero composition from images already hosted in
+    // the Tri-Cities Chabad media library. The images remain decorative while
+    // the adjacent copy carries the page's meaning and accessible name.
+    var heroShell = hero && hero.closest(".master-content-wrapper");
+    if (hero && heroShell && !heroShell.querySelector(".tc-chai-hero-grid")) {
+      var heroGrid = document.createElement("div");
+      heroGrid.className = "tc-chai-hero-grid";
+      hero.parentNode.insertBefore(heroGrid, hero);
+      heroGrid.appendChild(hero);
+
+      var heroArt = document.createElement("div");
+      heroArt.className = "tc-chai-hero-art";
+      heroArt.setAttribute("aria-hidden", "true");
+      heroArt.innerHTML =
+        '<span class="tc-chai-art-shape tc-chai-art-shape--gold"></span>' +
+        '<span class="tc-chai-art-shape tc-chai-art-shape--sage"></span>' +
+        '<span class="tc-chai-art-orbit"></span>' +
+        '<figure class="tc-chai-art-photo tc-chai-art-photo--main">' +
+          '<img src="https://w2.chabad.org/media/images/1270/oAfo12706892.jpg" alt="" width="1000" height="750" decoding="async" fetchpriority="high">' +
+        '</figure>' +
+        '<figure class="tc-chai-art-photo tc-chai-art-photo--detail">' +
+          '<img src="https://w2.chabad.org/media/images/1270/yPnp12706783.jpg" alt="" width="1000" height="750" decoding="async">' +
+        '</figure>' +
+        '<figure class="tc-chai-art-photo tc-chai-art-photo--table">' +
+          '<img src="https://w2.chabad.org/media/images/1324/bSEH13243362.jpg" alt="" width="1000" height="667" decoding="async">' +
+        '</figure>' +
+        '<span class="tc-chai-art-mark" lang="he">חי</span>' +
+        '<span class="tc-chai-art-caption">Gather · Learn · Belong</span>';
+      heroGrid.appendChild(heroArt);
+    }
+
     // Bring the giving section directly into view.
-    var heroJoin = hero && hero.querySelector(".tc-chai-hero-action a");
+    var heroJoin = hero && hero.querySelector('.tc-chai-hero-action a[href="#tc-chai-head"]');
     if (heroJoin && !heroJoin.dataset.chaiJumpReady) {
       heroJoin.dataset.chaiJumpReady = "true";
       heroJoin.addEventListener("click", function (event) {
@@ -215,6 +255,41 @@
         if (field) field.setAttribute("autocomplete", detailsFields[id]);
       });
       form.dataset.chaiEditorialReady = "true";
+    }
+
+    // Add curated community-event crops even when the editorial copy was
+    // initialized during an earlier asset version. This keeps the enhancement
+    // safe and idempotent across cache updates.
+    var impactImages = [
+      ["https://w2.chabad.org/media/images/1270/yPnp12706783.jpg", "1000", "750"],
+      ["https://w2.chabad.org/media/images/1270/oAfo12706892.jpg", "1000", "750"],
+      ["https://w2.chabad.org/media/images/1324/bSEH13243362.jpg", "1000", "667"]
+    ];
+    form.querySelectorAll(".chai-impact-item").forEach(function (item, index) {
+      if (!impactImages[index] || item.querySelector(".tc-chai-impact-art")) return;
+      var impactArt = document.createElement("span");
+      impactArt.className = "tc-chai-impact-art";
+      impactArt.setAttribute("aria-hidden", "true");
+      impactArt.innerHTML = '<img src="' + impactImages[index][0] + '" alt="" width="' + impactImages[index][1] + '" height="' + impactImages[index][2] + '" loading="lazy" decoding="async">';
+      item.appendChild(impactArt);
+    });
+
+    // A brief tonal pause separates the community story from the giving form.
+    // It adds narrative rhythm without making an unverifiable claim.
+    var joinPanel = form.querySelector("#tc-chai-join-panel");
+    if (joinPanel && !form.querySelector("#tc-chai-continuity")) {
+      var continuity = document.createElement("li");
+      continuity.id = "tc-chai-continuity";
+      continuity.className = "form-line";
+      continuity.innerHTML =
+        '<section aria-labelledby="tc-chai-continuity-title">' +
+          '<div>' +
+            '<p class="tc-chai-continuity-kicker">The strength of steady support</p>' +
+            '<h2 id="tc-chai-continuity-title">Monthly giving turns generosity into continuity.</h2>' +
+          '</div>' +
+          '<p>It helps Chabad plan ahead, keep the doors open, and be ready for the celebrations, learning, and care that bring Jewish life into focus.</p>' +
+        '</section>';
+      joinPanel.parentNode.insertBefore(continuity, joinPanel);
     }
 
     var submitRow = form.querySelector("#id_2");
