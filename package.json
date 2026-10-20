@@ -1,0 +1,12 @@
+{
+  "name": "tricities-website-checks",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "check:markup": "node tests/check-chai-markup.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  },
+  "packageManager": "pnpm@10.18.3"
+}
