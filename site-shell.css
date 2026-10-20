@@ -2836,3 +2836,11 @@ html:not(.tc-high-holidays-minisite):not(.tc-chai) body.cco_body #BodyContainer 
   -webkit-text-fill-color: #0E6E7B !important;
 }
 
+
+
+/* Expanded phone/tablet submenus use the same current accent. */
+@media screen and (max-width: 1024px) {
+  html body.cco_body #header #tabContentMain .co_menu_item.multi_level .co_submenu_container {
+    border-top-color: #0E6E7B !important;
+  }
+}
