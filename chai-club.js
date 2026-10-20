@@ -48,7 +48,7 @@
     refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=19";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=20";
     document.head.appendChild(refinementStyles);
   }
 
@@ -92,6 +92,19 @@
       faqHeading.parentNode.insertBefore(faqSection, faqHeading);
       faqSection.appendChild(faqHeading);
       faqSection.appendChild(faqList);
+    }
+
+    // Keep optional information easy to find without making every visitor
+    // scroll through the full FAQ. Existing FAQ nodes stay intact inside the
+    // disclosure, preserving their native behaviour and event listeners.
+    var faq = form.querySelector("#id_25 .chai-faq");
+    if (faq && !faq.closest(".tc-chai-faq-disclosure")) {
+      var faqDisclosure = document.createElement("details");
+      faqDisclosure.className = "tc-chai-faq-disclosure";
+      faqDisclosure.innerHTML =
+        '<summary><span>Questions about monthly giving</span><small>FAQ</small></summary>';
+      faq.parentNode.insertBefore(faqDisclosure, faq);
+      faqDisclosure.appendChild(faq);
     }
 
     var firstField = form.querySelector("#id_3");
@@ -217,7 +230,6 @@
       heroArt.setAttribute("aria-hidden", "true");
       heroArt.innerHTML =
         '<span class="tc-chai-art-shape tc-chai-art-shape--gold"></span>' +
-        '<span class="tc-chai-art-orbit"></span>' +
         '<figure class="tc-chai-art-photo tc-chai-art-photo--main">' +
           '<img src="https://w2.chabad.org/media/images/1324/sOqZ13243323.jpg" alt="" width="1000" height="667" decoding="async" fetchpriority="high">' +
         '</figure>' +
@@ -310,36 +322,26 @@
     // initialized during an earlier asset version. This keeps the enhancement
     // safe and idempotent across cache updates.
     var impactImages = [
-      ["https://w2.chabad.org/media/images/1270/yPnp12706783.jpg", "1000", "750"],
-      ["https://w2.chabad.org/media/images/1324/sOqZ13243323.jpg", "1000", "667"],
-      ["https://w2.chabad.org/media/images/1324/bSEH13243362.jpg", "1000", "667"]
+      ["https://w2.chabad.org/media/images/1324/ceDq13243376.jpg", "667", "1000"],
+      ["https://w2.chabad.org/media/images/1324/uKEc13243378.jpg", "1000", "667"],
+      ["https://w2.chabad.org/media/images/1324/IPBx13243386.jpg", "667", "1000"]
     ];
     form.querySelectorAll(".chai-impact-item").forEach(function (item, index) {
-      if (!impactImages[index] || item.querySelector(".tc-chai-impact-art")) return;
-      var impactArt = document.createElement("span");
-      impactArt.className = "tc-chai-impact-art";
-      impactArt.setAttribute("aria-hidden", "true");
-      impactArt.innerHTML = '<img src="' + impactImages[index][0] + '" alt="" width="' + impactImages[index][1] + '" height="' + impactImages[index][2] + '">';
-      item.appendChild(impactArt);
+      if (!impactImages[index]) return;
+      var impactArt = item.querySelector(".tc-chai-impact-art");
+      if (!impactArt) {
+        impactArt = document.createElement("span");
+        impactArt.className = "tc-chai-impact-art";
+        impactArt.setAttribute("aria-hidden", "true");
+        item.appendChild(impactArt);
+      }
+      impactArt.innerHTML = '<img src="' + impactImages[index][0] + '" alt="" width="' + impactImages[index][1] + '" height="' + impactImages[index][2] + '" loading="lazy" decoding="async">';
     });
 
-    // A brief tonal pause separates the community story from the giving form.
-    // It adds narrative rhythm without making an unverifiable claim.
-    var joinPanel = form.querySelector("#tc-chai-join-panel");
-    if (joinPanel && !form.querySelector("#tc-chai-continuity")) {
-      var continuity = document.createElement("li");
-      continuity.id = "tc-chai-continuity";
-      continuity.className = "form-line";
-      continuity.innerHTML =
-        '<section aria-labelledby="tc-chai-continuity-title">' +
-          '<div>' +
-            '<p class="tc-chai-continuity-kicker">The strength of steady support</p>' +
-            '<h2 id="tc-chai-continuity-title">Monthly giving turns generosity into continuity.</h2>' +
-          '</div>' +
-          '<p>It helps Chabad plan ahead, keep the doors open, and be ready for the celebrations, learning, and care that bring Jewish life into focus.</p>' +
-        '</section>';
-      joinPanel.parentNode.insertBefore(continuity, joinPanel);
-    }
+    // Remove the former full-width interstitial if this upgrade runs over an
+    // already-enhanced DOM. The story now flows directly into the giving form.
+    var oldContinuity = form.querySelector("#tc-chai-continuity");
+    if (oldContinuity) oldContinuity.remove();
 
     var submitRow = form.querySelector("#id_2");
     if (submitRow && !submitRow.querySelector(".tc-chai-reassurance")) {
