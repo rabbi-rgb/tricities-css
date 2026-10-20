@@ -23,6 +23,34 @@
     if (!form) return;
     document.documentElement.classList.add("tc-chai-refined");
 
+    // Some published form content lacks the structural wrappers expected by
+    // the Chai stylesheet. Restore only these presentation containers while
+    // keeping the original content, controls, and event listeners intact.
+    var introSystem = form.querySelector("#id_12 .chai-inline-system");
+    if (introSystem && !form.querySelector("#id_12 .chai-intro")) {
+      var introCopyBlock = introSystem.querySelector(".chai-intro-copy");
+      var impactList = introSystem.querySelector(".chai-impact-list");
+      if (introCopyBlock && impactList &&
+          introCopyBlock.parentNode === introSystem &&
+          impactList.parentNode === introSystem) {
+        introSystem.classList.add("chai-intro");
+      }
+    }
+
+    var faqHeading = form.querySelector("#id_25 .chai-faq-head");
+    var faqList = form.querySelector("#id_25 .chai-faq-list");
+    if (faqHeading && faqList &&
+        faqHeading.parentNode === faqList.parentNode &&
+        faqHeading.nextElementSibling === faqList &&
+        !faqHeading.closest(".chai-faq")) {
+      var faqSection = document.createElement("div");
+      faqSection.className = "chai-faq";
+      faqSection.setAttribute("aria-labelledby", "chai-faq-title");
+      faqHeading.parentNode.insertBefore(faqSection, faqHeading);
+      faqSection.appendChild(faqHeading);
+      faqSection.appendChild(faqList);
+    }
+
     var firstField = form.querySelector("#id_3");
     if (firstField && !form.querySelector("#tc-chai-head")) {
       var welcome = document.createElement("li");
