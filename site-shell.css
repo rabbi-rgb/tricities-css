@@ -2735,3 +2735,104 @@ html.tc-chai:has(form[id="5995797"]) body.cco_body
     border-bottom-color: #0E6E7B !important;
   }
 }
+
+/* ============================================================
+   2026-10-19: finish replacing the native bright turquoise accent.
+   Colour only. Remove this block to roll back this repair.
+   ============================================================ */
+
+/* Shared desktop navigation, including inside pages. */
+@media screen and (min-width: 1025px) {
+  html body.cco_body #header #tabContentMain .co_menu_item.multi_level .co_submenu_container {
+    border-top-color: #0E6E7B !important;
+  }
+  html body.cco_body #header #tabContentMain .co_menu_item.multi_level::before {
+    border-bottom-color: #0E6E7B !important;
+  }
+}
+
+/* Native navigation stays in its mobile layout through 1024px.
+   Extend the existing phone palette into the tablet range. */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  html body.cco_body #header .header-wrapper .site-nav-wrapper,
+  html body.cco_body #header .header-wrapper .site-nav-wrapper #co_menu_container_wrapper,
+  html body.cco_body #header .header-wrapper .mobile-menu-bottom-links {
+    background: #315F3C !important;
+  }
+  html body.cco_body #header .header-wrapper #co_menu_container_wrapper #co_menu_container {
+    background: linear-gradient(165deg, #0E6E7B 0%, #176E73 52%, #315F3C 100%) !important;
+  }
+  html body.cco_body #header #co_menu_container #tabContentMain .co_menu_item:not(.donate_link) a.parent,
+  html body.cco_body #header #co_menu_container #tabContentMain .co_submenu_container :is(a.item, a.item span, a.child_item, a.child_item span),
+  html body.cco_body #header .header-wrapper .mobile-menu-bottom-links a {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+  html body.cco_body #header .header-wrapper :is(.cs-menu-item-toggle, .cs-mobile-menu-close),
+  html body.cco_body #header .header-wrapper :is(.cs-menu-item-toggle, .cs-mobile-menu-close)::before,
+  html body.cco_body #header .header-wrapper :is(.cs-menu-item-toggle, .cs-mobile-menu-close) i,
+  html body.cco_body #header .header-wrapper :is(.cs-menu-item-toggle, .cs-mobile-menu-close) i::before {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+  }
+  html body.cco_body #header .header-wrapper .cs-mobile-menu-open,
+  html body.cco_body #header .header-wrapper .cs-mobile-menu-open i,
+  html body.cco_body #header .header-wrapper .cs-mobile-menu-open i::before {
+    color: #178F9F !important;
+    -webkit-text-fill-color: #178F9F !important;
+  }
+}
+
+/* Calendar view controls; preserve native sizing and selection behavior. */
+html body.cco_body #BodyContainer .cal_header_buttons .co_toggle_buttons .item {
+  border-color: #178F9F !important;
+  color: #0E6E7B !important;
+  -webkit-text-fill-color: #0E6E7B !important;
+}
+
+/* Native daily-study date arrows (the button backgrounds are already themed). */
+html:not(.tc-high-holidays-minisite):not(.tc-chai) body.cco_body #BodyContainer #co_content_container.syndicated :is(#PreviousButton, #NextButton) .fa::before {
+  color: #0E6E7B !important;
+  -webkit-text-fill-color: #0E6E7B !important;
+}
+
+/* The Chanukah landing page has its own counter widget and introduction.
+   This marker excludes its articles and other holiday minisites. */
+html body.cco_body #BodyContainer #co_content_container.syndicated #ContentBody:has(#chanukah_counter_widget) .article-body > .container > section > h2,
+html body.cco_body #BodyContainer #co_content_container.syndicated #ContentBody:has(#chanukah_counter_widget) .h_clmc.notice.info > h3 {
+  color: #0E6E7B !important;
+  -webkit-text-fill-color: #0E6E7B !important;
+}
+
+html body.cco_body #BodyContainer .cal_header_buttons .co_toggle_buttons .item.selected {
+  background-color: #0E6E7B !important;
+  border-color: #0E6E7B !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* Breadcrumbs on text-page headers only. Image-hero breadcrumbs are excluded. */
+html:not(.tc-high-holidays-minisite):not(.tc-chai) body.cco_body #BodyContainer .no-hero-image #co_content_container .article-header .breadcrumbs :is(.breadcrumbs__crumb, .breadcrumbs__divider),
+html:not(.tc-high-holidays-minisite):not(.tc-chai) body.cco_body #BodyContainer .no-hero-image #co_content_container .article-header .breadcrumbs .breadcrumbs__divider::before {
+  color: #0E6E7B !important;
+  -webkit-text-fill-color: #0E6E7B !important;
+}
+
+/* Chabad syndicated content: resource headings, book/article navigation,
+   recommendations, and study labels. Local forms/minisites are excluded. */
+html:not(.tc-high-holidays-minisite):not(.tc-chai) body.cco_body #BodyContainer #co_content_container.syndicated :is(
+  .small_header,
+  .small_header > span,
+  .small_header a,
+  .small_header_light a,
+  .small-links__item--more a,
+  .article_navigation_text a,
+  .article_navigation_text a span,
+  .lt_blue,
+  .lt_blue > div,
+  .lt_blue a
+) {
+  color: #0E6E7B !important;
+  -webkit-text-fill-color: #0E6E7B !important;
+}
+
