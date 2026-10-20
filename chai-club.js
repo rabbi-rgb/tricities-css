@@ -14,7 +14,7 @@
     var refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=17";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=18";
     document.head.appendChild(refinementStyles);
   }
 
@@ -174,19 +174,12 @@
       heroArt.setAttribute("aria-hidden", "true");
       heroArt.innerHTML =
         '<span class="tc-chai-art-shape tc-chai-art-shape--gold"></span>' +
-        '<span class="tc-chai-art-shape tc-chai-art-shape--sage"></span>' +
         '<span class="tc-chai-art-orbit"></span>' +
         '<figure class="tc-chai-art-photo tc-chai-art-photo--main">' +
           '<img src="https://w2.chabad.org/media/images/1324/sOqZ13243323.jpg" alt="" width="1000" height="667" decoding="async" fetchpriority="high">' +
         '</figure>' +
-        '<figure class="tc-chai-art-photo tc-chai-art-photo--detail">' +
-          '<img src="https://w2.chabad.org/media/images/1270/yPnp12706783.jpg" alt="" width="1000" height="750" decoding="async">' +
-        '</figure>' +
-        '<figure class="tc-chai-art-photo tc-chai-art-photo--table">' +
-          '<img src="https://w2.chabad.org/media/images/1324/bSEH13243362.jpg" alt="" width="1000" height="667" decoding="async">' +
-        '</figure>' +
         '<span class="tc-chai-art-mark" lang="he">חי</span>' +
-        '<span class="tc-chai-art-caption">Gather · Learn · Belong</span>';
+        '<span class="tc-chai-art-caption">Jewish life, together</span>';
       heroGrid.appendChild(heroArt);
     }
 
@@ -270,7 +263,7 @@
       var impactArt = document.createElement("span");
       impactArt.className = "tc-chai-impact-art";
       impactArt.setAttribute("aria-hidden", "true");
-      impactArt.innerHTML = '<img src="' + impactImages[index][0] + '" alt="" width="' + impactImages[index][1] + '" height="' + impactImages[index][2] + '" loading="lazy" decoding="async">';
+      impactArt.innerHTML = '<img src="' + impactImages[index][0] + '" alt="" width="' + impactImages[index][1] + '" height="' + impactImages[index][2] + '">';
       item.appendChild(impactArt);
     });
 

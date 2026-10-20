@@ -68,7 +68,7 @@ test('editorial imagery is decorative, remote, and does not alter native fields'
   const p = page();
   try {
     const images = [...p.document.querySelectorAll('.tc-chai-hero-art img, .tc-chai-impact-art img')];
-    assert.equal(images.length, 6);
+    assert.equal(images.length, 4);
     images.forEach(image => {
       assert.equal(image.alt, '');
       assert.match(image.src, /^https:\/\/w2\.chabad\.org\/media\/images\//);
@@ -76,11 +76,9 @@ test('editorial imagery is decorative, remote, and does not alter native fields'
       assert.ok(Number(image.getAttribute('height')) > 0);
     });
     const sources = images.map(image => image.src);
-    for (const source of [
-      'https://w2.chabad.org/media/images/1324/sOqZ13243323.jpg',
-      'https://w2.chabad.org/media/images/1270/yPnp12706783.jpg',
-      'https://w2.chabad.org/media/images/1324/bSEH13243362.jpg'
-    ]) assert.equal(sources.filter(item => item === source).length, 2);
+    assert.equal(sources.filter(item => item === 'https://w2.chabad.org/media/images/1324/sOqZ13243323.jpg').length, 2);
+    assert.equal(sources.filter(item => item === 'https://w2.chabad.org/media/images/1270/yPnp12706783.jpg').length, 1);
+    assert.equal(sources.filter(item => item === 'https://w2.chabad.org/media/images/1324/bSEH13243362.jpg').length, 1);
     p.originalControls.forEach(control => assert.ok([...p.document.getElementById('5995797').elements].includes(control)));
   } finally { p.close(); }
 });
