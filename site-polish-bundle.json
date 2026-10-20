@@ -1,0 +1,61 @@
+{
+  "output": "site-polish-bundle.4e48c0370e624e0d.css",
+  "sha256": "4e48c0370e624e0d0449df51c9492b5c31cf01962fe9179be2976d34439df50b",
+  "sources": [
+    {
+      "path": "homepage-corners.css",
+      "sha256": "d60d4cb7fe4cc741a8bf11ed88e4b38b907f0b02bd1647fde7f2835ca83768b5",
+      "bytes": 3140
+    },
+    {
+      "path": "homepage-polish.css",
+      "sha256": "0f3a52e7c05263cc1069c43d992744a3a0851761e7c83a86fce1693202e0a59e",
+      "bytes": 31448
+    },
+    {
+      "path": "homepage-finish.css",
+      "sha256": "1614c6a8133b94c3c37ef2279842df29801ae06a65a9bf5ceea6a7c97c93f737",
+      "bytes": 10053
+    },
+    {
+      "path": "forms-refresh-v2.css",
+      "sha256": "72bd6a1bf6723422c2b406c57efb22ff1c44610c00251af3cbf40de394d81b38",
+      "bytes": 37896
+    },
+    {
+      "path": "homepage-cleanup.css",
+      "sha256": "eb0a0abf29054bdd3670e1e2f8ba7a75033e4f40f11d6dada631540e1c018da5",
+      "bytes": 1566
+    },
+    {
+      "path": "homepage-signup-simple.css",
+      "sha256": "c9e82dd9fbb14a8e6ac6623e5f2b872d8818f503cd51becde43a375b1fd29e19",
+      "bytes": 1413
+    },
+    {
+      "path": "forms-alignment.css",
+      "sha256": "34ab7cc4671c8b7f1cd93823a879e9fafc042f70c098fba5d8952a6efcd83594",
+      "bytes": 10316
+    },
+    {
+      "path": "learning-image-fix.css",
+      "sha256": "28322cfe050abe7516e6ce33bbf2651a57c8f9661172b38d26ce42f226564cb0",
+      "bytes": 765
+    },
+    {
+      "path": "homepage-radius.css",
+      "sha256": "0b29aa580438bb12a6379560651366127ebe2aeb878765cb65ca2fe947ba5f33",
+      "bytes": 1748
+    },
+    {
+      "path": "homepage-blue-outline.css",
+      "sha256": "6e00c74f2ecb8f32bf89533402ab692c5b5d28699b0b6a0c26e7b12b1e082a4b",
+      "bytes": 1638
+    },
+    {
+      "path": "homepage-header-align.css",
+      "sha256": "487643e3ce52e092c6c4b4b99247424002f028ec37525bc439351335c863370b",
+      "bytes": 591
+    }
+  ]
+}

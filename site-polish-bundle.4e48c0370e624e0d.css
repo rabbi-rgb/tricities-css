@@ -1,0 +1,1581 @@
+/* Source: homepage-corners.css — unchanged, in original header order. */
+/* TC HOMEPAGE CORNERS — 2026-10-14.
+   Homepage corners matching existing 16px event cards / 8px buttons.
+   Scope: programs, latest photos, lower learning slider and signup controls. */
+body.home .hp-table {
+  --tc-home-card-radius: 16px;
+  --tc-home-button-radius: 8px;
+  --tc-home-card-shadow: 0 10px 40px -10px rgba(14, 110, 123, .15);
+}
+
+body.home .hp-table .sneak_peek .widget_content {
+  border-radius: var(--tc-home-card-radius) !important;
+  overflow: hidden;
+  box-shadow: var(--tc-home-card-shadow);
+}
+body.home .hp-table .sneak_peek .thumbnail,
+body.home .hp-table .sneak_peek .thumbnail img,
+body.home .hp-table .sneak_peek .thumbnail span {
+  border-radius: inherit;
+}
+
+body.home .hp-table .latest_photos .widget_content li {
+  border-radius: var(--tc-home-card-radius) !important;
+  box-shadow: var(--tc-home-card-shadow);
+}
+body.home .hp-table .latest_photos .widget_content li > a,
+body.home .hp-table .latest_photos .widget_content li img {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+
+/* Clip individual surfaces so the external slider arrows remain visible.
+   Exclude the full-width hero at the top of the homepage. */
+body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .slides {
+  border-radius: var(--tc-home-card-radius) !important;
+  box-shadow: var(--tc-home-card-shadow);
+}
+body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+  border-radius: 0 var(--tc-home-card-radius) var(--tc-home-card-radius) 0 !important;
+}
+
+body.home .hp-table .latest_photos a.readMore,
+body.home .hp-table .latest_photos a.readMore span,
+body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider a.readMore,
+body.home .hp-table .hp_subscribe input[type="text"],
+body.home .hp-table .hp_subscribe input[type="email"],
+body.home .hp-table .hp_subscribe input[type="submit"],
+body.home .hp-table .hp_subscribe button {
+  border-radius: var(--tc-home-button-radius) !important;
+}
+
+/* At 800px the existing caption becomes a centered overlay band.
+   Keep that band flush with the straight card sides. */
+@media (max-width: 800px) {
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+    border-radius: 0 !important;
+  }
+}
+
+
+/* Keep a clear focus indicator when the image surface clips its contents. */
+body.home .hp-table .sneak_peek .widget_content:focus-within {
+  outline: 2px solid var(--tc-teal, #1595a5);
+  outline-offset: 3px;
+}
+
+/* Keep the existing external arrows inside the viewport on small laptops
+   and landscape tablets, while preserving the full-size desktop layout. */
+@media (min-width: 801px) and (max-width: 1090px) {
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-prevNav {
+    left: 8px !important;
+  }
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav {
+    right: 8px !important;
+  }
+  body.home .hp-table .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+    top: auto !important;
+    bottom: 8px !important;
+    margin-top: 0 !important;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .95);
+    box-shadow: 0 2px 12px rgba(14, 110, 123, .15);
+  }
+}
+
+
+/* Source: homepage-polish.css — unchanged, in original header order. */
+/* Homepage refinements, isolated for rollback. 2026-10-14. */
+html body.home #BodyContainer .hp-table {
+  --tc-home-content-width: 1200px;
+}
+html body.home #BodyContainer .hp-table a.readMore,
+html body.home #BodyContainer .hp-table a.readMore > span {
+  border-radius: 8px !important;
+}
+html body.home #BodyContainer .hp-table a:focus-visible {
+  outline: 2px solid #0e6e7b;
+  outline-offset: 4px;
+}
+.tc-hero-short-copy { display: none !important; }
+
+/* One shared content width; keep three program columns on desktop. */
+html body.home #BodyContainer .sneak-peek-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px !important;
+  width: calc(100% - 48px) !important;
+  max-width: var(--tc-home-content-width) !important;
+  margin: 0 auto !important;
+}
+html body.home #BodyContainer .sneak-peek-container::after { display: none !important; }
+html body.home #BodyContainer .sneak-peek-container > .header-title {
+  grid-column: 1 / -1;
+  margin-bottom: 16px !important;
+}
+html body.home #BodyContainer .sneak-peek-container .sneak-peek-item,
+html body.home #BodyContainer .sneak_peek,
+html body.home #BodyContainer .sneak_peek .wrapper {
+  float: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+html body.home #BodyContainer .sneak-peek-container .sneak-peek-item {
+  height: auto !important;
+  aspect-ratio: 1.64;
+}
+html body.home #BodyContainer .sneak_peek,
+html body.home #BodyContainer .sneak_peek .wrapper {
+  height: 100% !important;
+}
+html body.home #BodyContainer .sneak_peek .widget_content {
+  height: 100% !important;
+  aspect-ratio: auto;
+}
+html body.home #BodyContainer .sneak_peek .thumbnail,
+html body.home #BodyContainer .sneak_peek .thumbnail img {
+  width: 100% !important;
+  height: 100% !important;
+}
+html body.home #BodyContainer .latest_photos .wrapper,
+html body.home #BodyContainer .icon-updates .wrapper,
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .wrapper {
+  width: calc(100% - 48px) !important;
+  max-width: var(--tc-home-content-width) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+html body.home #BodyContainer .latest_photos .widget_content > ul {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body.home #BodyContainer .latest_photos .widget_content > ul > li {
+  float: none !important;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 1.6;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Short mission summary; the existing Learn More link retains full context. */
+html body.home #BodyContainer .tc-home-mission .wrapper {
+  width: calc(100% - 48px) !important;
+  max-width: 780px !important;
+  margin: 0 auto !important;
+}
+html body.home #BodyContainer .tc-home-mission .bottom_padding {
+  font-size: 20px !important;
+  line-height: 1.65 !important;
+  padding-bottom: 24px !important;
+}
+
+/* Keep native events as a fallback if the main event carousel cannot load. */
+html body.home #BodyContainer .hp-row.hp_content_wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 384px));
+  justify-content: center;
+  align-items: start !important;
+  gap: 24px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+html body.home:has(#injected-upcoming-events-section .injected-event-card) #BodyContainer .hp-row.hp_content_wrapper {
+  grid-template-columns: repeat(2, minmax(0, 588px));
+}
+html body.home:has(#injected-upcoming-events-section .injected-event-card) #BodyContainer .hp_content_wrapper > .g320:has(.upcoming_events) {
+  display: none !important;
+}
+html body.home #BodyContainer .hp_content_wrapper > .clear { display: none !important; }
+html body.home #BodyContainer .hp_content_wrapper > .g320::before,
+html body.home #BodyContainer .hp_content_wrapper > .g320::after { display: none !important; }
+html body.home #BodyContainer .hp_content_wrapper > .g320 {
+  float: none !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 24px !important;
+  border: 0 !important;
+  border-radius: 16px;
+  background: #fff;
+}
+html body.home #BodyContainer .hp_content_wrapper > .g320 > [class*="widget-"],
+html body.home #BodyContainer .hp_content_wrapper > .g320 > [class*="widget-"] > .wrapper,
+html body.home #BodyContainer .hp_content_wrapper .daily_thought .widget_content {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+}
+html body.home #BodyContainer .hp_content_wrapper .daily_thought .body {
+  font-size: 16px !important;
+  line-height: 1.65 !important;
+  text-align: left !important;
+}
+html body.home #BodyContainer .hp_content_wrapper .daily_thought .title {
+  font-size: 20px !important;
+  line-height: 1.35 !important;
+  margin-bottom: 16px !important;
+}
+
+/* A distinct image and an opaque text panel for the learning carousel. */
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slider {
+  position: relative !important;
+  height: 354px !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slides,
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper {
+  width: 100% !important;
+  height: 354px !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper > a {
+  display: block !important;
+  width: 62% !important;
+  height: 100% !important;
+  text-align: left !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: 0 !important;
+  transform: none !important;
+  width: 38% !important;
+  height: 354px !important;
+  margin: 0 !important;
+  padding: 28px 32px !important;
+  background: #173f45 !important;
+  border-radius: 0 16px 16px 0 !important;
+  pointer-events: auto !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  text-align: left !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p big {
+  font-size: 27px !important;
+  line-height: 1.2 !important;
+  margin: 0 0 14px !important;
+  color: #9de3e9 !important;
+  -webkit-text-fill-color: #9de3e9 !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p > span {
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption a.readMore {
+  display: inline-block !important;
+  margin-top: 22px !important;
+  min-height: 44px;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+  top: auto !important;
+  bottom: 12px !important;
+  margin: 0 !important;
+  width: 44px !important;
+  height: 44px !important;
+  line-height: 44px !important;
+  border-radius: 50%;
+  background: rgba(255,255,255,.96);
+  box-shadow: 0 2px 10px #173f4520;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-prevNav { left: 12px !important; }
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav { right: calc(38% + 12px) !important; }
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-controlNav {
+  width: 62% !important;
+  left: 0 !important;
+  bottom: 24px !important;
+}
+
+@media (max-width: 800px) {
+  html body.home #BodyContainer .hp-table > .hp-row:not(.hp-row-first):not(.hp_subscribe) {
+    padding-top: 36px !important;
+    padding-bottom: 36px !important;
+  }
+  html body.home #BodyContainer .sneak-peek-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px !important;
+    width: calc(100% - 32px) !important;
+  }
+  html body.home #BodyContainer .sneak-peek-container .sneak-peek-item { aspect-ratio: 1; }
+  html body.home #BodyContainer .sneak_peek h6 a { font-size: 16px !important; }
+  html body.home #BodyContainer .latest_photos .wrapper,
+  html body.home #BodyContainer .icon-updates .wrapper,
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .wrapper,
+  html body.home #BodyContainer .tc-home-mission .wrapper {
+    width: calc(100% - 32px) !important;
+  }
+  html body.home #BodyContainer .latest_photos .widget_content > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  html body.home #BodyContainer .tc-home-mission .bottom_padding { font-size: 18px !important; line-height: 1.55 !important; }
+  html body.home #BodyContainer .icon-updates .widget_content {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+    width: 100% !important;
+  }
+  html body.home #BodyContainer .icon-updates .widget_content > .separator { display: none !important; }
+  html body.home #BodyContainer .icon-updates .item {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body.home #BodyContainer .icon-updates .item .icon { height: 70px !important; }
+  html body.home #BodyContainer .icon-updates .item .icon img { width: 64px !important; height: 64px !important; object-fit: contain; }
+  html body.home #BodyContainer .icon-updates .item .title { margin-top: 12px !important; padding: 0 !important; font-size: 14px !important; }
+  html body.home #BodyContainer .hp-row.hp_content_wrapper,
+  html body.home:has(#injected-upcoming-events-section .injected-event-card) #BodyContainer .hp-row.hp_content_wrapper {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    gap: 20px !important;
+  }
+  html body.home #BodyContainer .hp_content_wrapper > .g320 { padding: 24px 16px !important; }
+  html body.home #BodyContainer .hp-table .header-title,
+  html body.home #BodyContainer .hp-table .widget_header h5 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+  html body.home #BodyContainer .hp_content_wrapper .widget_header h5 { font-size: 20px !important; }
+
+  /* Keep the mobile hero caption, CTA and controls in separate regions. */
+  html body.home #BodyContainer .hp-row-first .promo_slider .slider,
+  html body.home #BodyContainer .hp-row-first .promo_slider .slides,
+  html body.home #BodyContainer .hp-row-first .promo_slider .slide_wrapper {
+    position: relative !important;
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .slide_wrapper { position: absolute !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption {
+    position: absolute !important;
+    top: 70px !important;
+    bottom: 86px !important;
+    left: 24px !important;
+    right: 24px !important;
+    width: auto !important;
+    height: 344px !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: visible !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption p {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption big {
+    font-size: 28px !important;
+    line-height: 1.12 !important;
+    margin: 0 auto 18px !important;
+    padding: 0 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .tc-hero-full-copy { display: none !important; }
+  html body.home #BodyContainer .hp-row-first .tc-hero-short-copy { display: block !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin: 24px auto 0 !important;
+    padding: 10px 16px !important;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+    top: auto !important;
+    bottom: 12px !important;
+    margin: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    pointer-events: auto;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+    pointer-events: none;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { left: 24px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-nextNav { right: 24px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-controlNav { bottom: 26px !important; }
+
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slider { height: auto !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slides,
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper { height: 230px !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slides { border-radius: 16px 16px 0 0 !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper > a { width: 100% !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 230px;
+    padding: 24px !important;
+    border-radius: 0 0 16px 16px !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p big { font-size: 24px !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+    display: block !important;
+    top: 174px !important;
+    bottom: auto !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav { right: 12px !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-controlNav {
+    width: 100% !important;
+    top: 200px !important;
+    bottom: auto !important;
+  }
+}
+
+/* Compact hero through tablet widths, where the main navigation is collapsed. */
+@media (min-width: 801px) and (max-width: 1090px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+    padding: 20px !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p big {
+    font-size: 24px !important;
+  }
+  /* Keep the mobile hero caption, CTA and controls in separate regions. */
+  html body.home #BodyContainer .hp-row-first .promo_slider .slider,
+  html body.home #BodyContainer .hp-row-first .promo_slider .slides,
+  html body.home #BodyContainer .hp-row-first .promo_slider .slide_wrapper {
+    position: relative !important;
+    height: 500px !important;
+    min-height: 500px !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .slide_wrapper { position: absolute !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption {
+    position: absolute !important;
+    top: 70px !important;
+    bottom: 86px !important;
+    left: 24px !important;
+    right: 24px !important;
+    width: auto !important;
+    height: 344px !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: visible !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption p {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption big {
+    font-size: 28px !important;
+    line-height: 1.12 !important;
+    margin: 0 auto 18px !important;
+    padding: 0 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .tc-hero-full-copy { display: none !important; }
+  html body.home #BodyContainer .hp-row-first .tc-hero-short-copy { display: block !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin: 24px auto 0 !important;
+    padding: 10px 16px !important;
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+    top: auto !important;
+    bottom: 12px !important;
+    margin: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    pointer-events: auto;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+    pointer-events: none;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { left: 24px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-nextNav { right: 24px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-controlNav { bottom: 26px !important; }
+
+}
+
+/* A stable desktop hero leaves space for the overlaid header and controls. */
+@media (min-width: 1091px) {
+  html body.home #BodyContainer .hp-row-first .promo_slider .slider,
+  html body.home #BodyContainer .hp-row-first .promo_slider .slides,
+  html body.home #BodyContainer .hp-row-first .promo_slider .slide_wrapper {
+    height: 620px !important;
+    min-height: 620px !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .slider { position: relative !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption {
+    top: 140px !important;
+    bottom: 84px !important;
+    left: 50% !important;
+    width: calc(100% - 200px) !important;
+    max-width: 1040px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    overflow: visible !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption p {
+    width: 100% !important;
+    margin: 0 !important;
+    max-width: 1040px !important;
+    font-size: 20px !important;
+    line-height: 1.45 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption big {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 880px !important;
+    font-size: clamp(36px, 3.3vw, 52px) !important;
+    line-height: 1.1 !important;
+    margin: 0 auto 18px !important;
+    padding: 0 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 18px !important;
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+    margin: 24px auto 0 !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+    pointer-events: none;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+    top: auto !important;
+    bottom: 12px !important;
+    margin: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    line-height: 44px !important;
+    pointer-events: auto;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { left: 40px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-nextNav { right: 40px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-controlNav { bottom: 26px !important; }
+}
+
+/* Clear the native opposing offsets before placing arrow controls. */
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-nextNav { left: auto !important; }
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { right: auto !important; }
+
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav { max-width: none !important; }
+
+/* October 15: explicit alternating bands, independent of injected widgets. */
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.sneak-peek-container),
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.latest_photos),
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.icon-updates) {
+  background: #fbfaf6 !important;
+}
+html body.home.cco_body #BodyContainer #injected-upcoming-events-section,
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:has(.tc-home-mission),
+html body.home.cco_body #BodyContainer .hp-table > .hp-row.hp_content_wrapper,
+html body.home.cco_body #BodyContainer .hp-table > .hp-row:not(.hp-row-first):has(.promo_slider) {
+  background: #ececec !important;
+}
+
+/* Five current photos fill a complete row instead of leaving one orphan. */
+@media (min-width: 1101px) {
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) > li {
+    aspect-ratio: 1.25;
+  }
+}
+@media (min-width: 601px) and (max-width: 1100px) {
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) > li { grid-column: span 2; }
+  html body.home #BodyContainer .latest_photos .widget_content > ul:has(> li:nth-child(5):last-child) > li:nth-child(n+4) {
+    grid-column: span 3;
+    aspect-ratio: 2.4;
+  }
+}
+@media (max-width: 600px) {
+  html body.home #BodyContainer .latest_photos .widget_content > ul > li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    aspect-ratio: 2.3;
+  }
+}
+
+/* Equal card surfaces; compact Shabbat details into useful groups. */
+html body.home #BodyContainer .hp-row.hp_content_wrapper { align-items: stretch !important; }
+html body.home #BodyContainer .hp_content_wrapper > .g320 {
+  display: flex;
+  flex-direction: column;
+  padding: 28px !important;
+}
+html body.home #BodyContainer .hp_content_wrapper > .g320 > [class*="widget-"] { flex: 1; }
+html body.home #BodyContainer .hp_content_wrapper .widget_header { margin-bottom: 24px !important; }
+html body.home #BodyContainer .candlelighting .widget_content > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 16px;
+}
+html body.home #BodyContainer .candlelighting .widget_content > div > .clearfix {
+  padding: 0 !important;
+  min-width: 0;
+}
+html body.home #BodyContainer .candlelighting .widget_content > div > .clearfix:first-child { grid-column: 1 / -1; }
+html body.home #BodyContainer .candlelighting .widget_content > div > .separator { display: none !important; }
+html body.home #BodyContainer .candlelighting .large_left_margin,
+html body.home #BodyContainer .candlelighting .medium_left_margin { margin-left: 0 !important; }
+html body.home #BodyContainer .candlelighting .candlelighting_heading { margin-bottom: 20px !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  height: auto !important;
+  overflow: visible !important;
+}
+html body.home #BodyContainer .candlelighting .times_wrapper > .clearfix { padding: 0 !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper .float_left { float: none !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper small {
+  display: block !important;
+  margin: 0 0 6px !important;
+}
+html body.home #BodyContainer .candlelighting .times_wrapper a { display: block; font-size: 13px !important; line-height: 1.6 !important; }
+html body.home #BodyContainer .candlelighting .times_wrapper .bold.large { display: block; font-size: 23px !important; }
+html body.home #BodyContainer .candlelighting .section_heading { font-size: 12px !important; line-height: 1.4 !important; }
+html body.home #BodyContainer .candlelighting .candlelighting_heading .section_heading { font-size: 20px !important; }
+html body.home #BodyContainer .candlelighting .section_subheading { font-size: 15px !important; line-height: 1.5 !important; }
+html body.home #BodyContainer .hp_content_wrapper .daily_thought .title { margin-bottom: 18px !important; }
+html body.home #BodyContainer .hp_content_wrapper .daily_thought .body { font-size: 17px !important; line-height: 1.65 !important; }
+
+/* Use the same teal chevrons in every carousel, without inherited icon colors. */
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100% !important;
+  margin: 0 !important;
+  transform: none !important;
+  pointer-events: none;
+  z-index: 25;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a {
+  display: block !important;
+  width: 48px !important;
+  height: 48px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #d9e5e0 !important;
+  border-radius: 50% !important;
+  background: #fff !important;
+  color: #178f9f !important;
+  -webkit-text-fill-color: #178f9f !important;
+  box-shadow: 0 3px 14px #0e6e7b26 !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-indent: 0 !important;
+  opacity: 1 !important;
+  pointer-events: auto;
+  overflow: visible !important;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 !important;
+  border: solid #178f9f !important;
+  border-width: 0 3px 3px 0 !important;
+  background: none !important;
+  transform: translate(-65%, -50%) rotate(-45deg) !important;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav .cycle-prevNav::before {
+  transform: translate(-35%, -50%) rotate(135deg) !important;
+}
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a::after { display: none !important; }
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a span { display: none !important; }
+html body.home #BodyContainer .hp-table .promo_slider .cycle-directionNav a:hover {
+  background: #edf7f6 !important;
+  border-color: #178f9f !important;
+}
+/* The hero controls stay quiet over the photography, with a full tap target. */
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  opacity: .72 !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a::before {
+  width: 11px !important;
+  height: 11px !important;
+  border-color: #fff !important;
+  border-width: 0 2px 2px 0 !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a:hover,
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a:focus-visible {
+  background: #ffffff18 !important;
+  border-color: #ffffff30 !important;
+  opacity: 1 !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a:focus-visible {
+  outline-color: #fff !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-prevNav { left: -20px !important; right: auto !important; }
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav { right: -20px !important; left: auto !important; }
+/* Keep caption text opaque while its native slide transition is running. */
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+  opacity: 1 !important;
+  color: #fff !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p,
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption p > span { color: #fff !important; }
+
+@media (min-width: 1091px) {
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption p { font-size: 23px !important; line-height: 1.45 !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore { font-size: 18px !important; }
+}
+@media (min-width: 801px) {
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+    top: 50% !important;
+    bottom: auto !important;
+    transform: translateY(-50%) !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-prevNav { left: 28px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-nextNav { right: 28px !important; }
+}
+@media (max-width: 800px) {
+  html body.home #BodyContainer .hp_content_wrapper > .g320 { padding: 24px 20px !important; }
+  html body.home #BodyContainer .hp_content_wrapper .daily_thought .body { font-size: 16px !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-directionNav a {
+    top: 115px !important;
+    bottom: auto !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-prevNav { left: 10px !important; }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-nextNav { right: 10px !important; }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-directionNav a {
+    bottom: 28px !important;
+    transform: none !important;
+  }
+  html body.home #BodyContainer .hp-row-first .promo_slider .cycle-controlNav { bottom: 44px !important; }
+}
+
+
+/* Source: homepage-finish.css — unchanged, in original header order. */
+/* Optional homepage finishing layer. Remove its header link to restore the
+   approved October 15 version. Typography, buttons and gentle interactions. */
+html body.home #BodyContainer .hp-table .header-title,
+html body.home #BodyContainer .hp-table .widget_header h5 {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 1.22 !important;
+  letter-spacing: -.025em !important;
+  text-transform: uppercase !important;
+}
+html body.home #BodyContainer #injected-upcoming-events-section h2 {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 36px !important;
+  font-weight: 700 !important;
+  line-height: 1.22 !important;
+  letter-spacing: -.025em !important;
+  text-transform: uppercase !important;
+}
+html body.home #BodyContainer .hp_content_wrapper .widget_header h5 {
+  font-size: 18px !important;
+  letter-spacing: 0 !important;
+}
+html body.home #BodyContainer .sneak_peek h6 a {
+  font-family: Montserrat, sans-serif !important;
+  font-size: 19px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+}
+
+/* Secondary actions are outlines; event registration remains solid green. */
+html body.home #BodyContainer .hp-table a.readMore,
+html body.home #BodyContainer .hp-table a.readMore > span,
+html body.home #BodyContainer .injected-event-card .event-card-button {
+  font-family: Inter, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+html body.home #BodyContainer .hp-table a.readMore {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px !important;
+  padding: 11px 22px !important;
+  border-width: 1.5px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  color: #0e6e7b !important;
+  -webkit-text-fill-color: #0e6e7b !important;
+  border-color: #0e6e7b !important;
+  transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease !important;
+}
+html body.home #BodyContainer .hp-table a.readMore > span {
+  padding: 0 !important;
+  border: 0 !important;
+  background: none !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+html body.home #BodyContainer .hp-table a.readMore:hover {
+  background: #0e6e7b !important;
+  border-color: #0e6e7b !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html body.home #BodyContainer .injected-event-card .event-card-button {
+  background: #4f7f3e !important;
+  border-color: #4f7f3e !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  min-height: 46px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+}
+html body.home #BodyContainer .injected-event-card .event-card-button:hover {
+  background: #426d34 !important;
+  border-color: #426d34 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore {
+  background: transparent !important;
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+html body.home #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore:hover {
+  background: #ffffff18 !important;
+  border-color: #fff !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption a.readMore {
+  color: #b5edf0 !important;
+  -webkit-text-fill-color: #b5edf0 !important;
+  border-color: #8ed2d9 !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption a.readMore:hover {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  background: #ffffff18 !important;
+  border-color: #fff !important;
+}
+html body.home #BodyContainer .hp-table a.readMore:focus-visible,
+html body.home #BodyContainer .injected-event-card .event-card-button:focus-visible {
+  outline: 3px solid #0e6e7b !important;
+  outline-offset: 4px !important;
+}
+html body.home #BodyContainer .promo_slider a.readMore:focus-visible { outline-color: #fff !important; }
+
+/* Only hover-capable devices receive movement; touch cards remain stationary. */
+@media (hover: hover) and (pointer: fine) {
+  html body.home #BodyContainer .sneak_peek .widget_content,
+  html body.home #BodyContainer .latest_photos .widget_content li {
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  html body.home #BodyContainer .sneak_peek .thumbnail img,
+  html body.home #BodyContainer .latest_photos .widget_content li img {
+    transition: transform .3s ease;
+  }
+  html body.home #BodyContainer .sneak_peek .widget_content:hover,
+  html body.home #BodyContainer .latest_photos .widget_content li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px #0e6e7b20;
+  }
+  html body.home #BodyContainer .sneak_peek .widget_content:hover .thumbnail img,
+  html body.home #BodyContainer .latest_photos .widget_content li:hover img {
+    transform: scale(1.025);
+  }
+}
+
+/* Existing form fields and submission behavior stay native. */
+html body.home.cco_body #BodyContainer .hp-table > .hp-row.hp_subscribe {
+  background: linear-gradient(135deg, #4cbece 0%, #2bafbe 38%, #178f9f 72%, #137c8b 100%) !important;
+}
+html body.home #BodyContainer .hp_subscribe .widget_header { margin-bottom: 28px !important; }
+html body.home #BodyContainer .hp_subscribe fieldset {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1.5fr auto;
+  gap: 12px;
+  width: 100% !important;
+  max-width: 1080px;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+html body.home #BodyContainer .hp_subscribe input:not([type="hidden"]) {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 52px !important;
+  margin: 0 !important;
+  border-radius: 8px !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset input[type="submit"] {
+  background: #4f7f3e !important;
+  border-color: #4f7f3e !important;
+  color: #fff !important;
+  padding: 12px 28px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset input[type="submit"]:hover {
+  background: #426d34 !important;
+  border-color: #426d34 !important;
+}
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset > small:not(#response) {
+  display: block !important;
+  grid-column: 1 / -1;
+  margin: 4px 0 0 !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  text-align: center;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+}
+html body.home #BodyContainer .hp_subscribe input:focus-visible {
+  outline: 3px solid #fff !important;
+  outline-offset: 3px !important;
+  box-shadow: 0 0 0 5px #0e6e7b !important;
+}
+
+/* Readable contact text and larger, consistent social targets. Homepage only. */
+html body.home #footer .footer_inner_container,
+html body.home #footer .footer_inner_container > a {
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+}
+html body.home #footer .footer3 {
+  max-width: 760px !important;
+  margin: 0 auto 14px !important;
+  text-wrap: balance;
+}
+html body.home #footer .footer3,
+html body.home #footer .footer3 b {
+  font-family: Inter, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0 !important;
+}
+html body.home #footer .cs-f-social-icons { gap: 16px !important; margin-top: 24px !important; }
+html body.home #footer .cs-f-social-icons a {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  border: 1px solid #ffffff38 !important;
+  border-radius: 50% !important;
+  background: #ffffff08 !important;
+  color: #ffffffd9 !important;
+}
+html body.home #footer .cs-f-social-icons a::before {
+  color: #ffffffd9 !important;
+  font-size: 18px !important;
+}
+html body.home #footer .cs-f-social-icons a:hover,
+html body.home #footer .cs-f-social-icons a:focus-visible {
+  background: #ffffff20 !important;
+  border-color: #ffffffa0 !important;
+  outline-color: #fff !important;
+}
+html body.home #footer .cs-f-social-icons a:focus-visible {
+  outline: 2px solid #fff !important;
+  outline-offset: 4px !important;
+}
+
+@media (max-width: 800px) {
+  html body.home #BodyContainer .hp-table .header-title,
+  html body.home #BodyContainer .hp-table .widget_header h5,
+  html body.home #BodyContainer #injected-upcoming-events-section h2 { font-size: 28px !important; }
+  html body.home #BodyContainer .hp_content_wrapper .widget_header h5 { font-size: 18px !important; }
+  html body.home #BodyContainer .sneak_peek h6 a { font-size: 16px !important; }
+  html body.home #BodyContainer .hp_subscribe fieldset { grid-template-columns: 1fr 1fr; }
+  html body.home #BodyContainer .hp_subscribe input[type="email"],
+  html body.home #BodyContainer .hp_subscribe input[type="submit"] { grid-column: 1 / -1; }
+}
+@media (max-width: 360px) {
+  html body.home #BodyContainer .hp_subscribe fieldset { grid-template-columns: minmax(0, 1fr); }
+  html body.home #BodyContainer .hp-table a.readMore { padding-left: 16px !important; padding-right: 16px !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html body.home #BodyContainer .sneak_peek .widget_content,
+  html body.home #BodyContainer .sneak_peek .thumbnail img,
+  html body.home #BodyContainer .latest_photos .widget_content li,
+  html body.home #BodyContainer .latest_photos .widget_content li img,
+  html body.home #BodyContainer .hp-table a.readMore,
+  html body.home #footer .cs-f-social-icons a {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+
+/* Source: forms-refresh-v2.css — unchanged, in original header order. */
+/* Three native community forms only. Remove the two header tags to roll back. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer { --tc-form-green: #4f7f3e; --tc-form-teal: #0e6e7b; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer > .body_wrapper { background: #fbfaf6 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .master-content-wrapper {
+  width: calc(100% - 48px) !important; max-width: 1120px !important; margin: 0 auto !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header {
+  padding: 36px 0 24px !important; margin: 0 !important;
+  border: 0 !important; background: none !important; text-align: left !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header::before, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header::after { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header h1 {
+  font-family: Montserrat, sans-serif !important; font-size: clamp(32px, 3vw, 42px) !important;
+  line-height: 1.18 !important; font-weight: 700 !important; letter-spacing: -.015em !important;
+  text-transform: uppercase !important; color: #426d34 !important; -webkit-text-fill-color: #426d34 !important;
+  margin: 0 0 14px !important; text-shadow: none !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header__subtitle {
+  display: block !important; font: 400 17px/1.6 Inter, sans-serif !important;
+  color: #516660 !important; -webkit-text-fill-color: #516660 !important; margin: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .breadcrumbs { margin-bottom: 18px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .breadcrumbs a { color: #0e6e7b !important; -webkit-text-fill-color: #0e6e7b !important; font-size: 13px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_content_container > .clearfix > .body_wrapper {
+  display: grid !important; grid-template-columns: minmax(0, 1fr) 300px; align-items: start;
+  gap: 32px; width: calc(100% - 48px) !important; max-width: 1120px !important;
+  padding: 8px 0 56px !important; margin: 0 auto !important; border: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_body_container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .content-area-parent,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu {
+  float: none !important; width: 100% !important; min-width: 0 !important;
+  max-width: none !important; padding: 0 !important; margin: 0 !important; border: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container { display: grid; gap: 24px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody { font: 400 16px/1.6 Inter, sans-serif !important; color: #29403b !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="subscribe"], form[name="feedback"]) input:not([type="hidden"]):not([type="checkbox"]),
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="subscribe"], form[name="feedback"]) textarea,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] input[type="text"] {
+  box-sizing: border-box !important; display: block; width: 100% !important; min-width: 0 !important;
+  max-width: 100% !important; min-height: 48px !important;
+  padding: 12px 14px !important; margin: 0 !important; border: 1px solid #7b9086 !important;
+  border-radius: 8px !important; background: #fff !important; color: #29403b !important;
+  -webkit-text-fill-color: #29403b !important; box-shadow: none !important;
+  font: 400 16px/1.5 Inter, sans-serif !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="feedback"]) textarea {
+  height: 180px; min-height: 160px !important; max-height: 600px !important; resize: vertical !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody input::placeholder, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody textarea::placeholder {
+  color: #63766e !important; -webkit-text-fill-color: #63766e !important; opacity: 1 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody label, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form td:first-child {
+  color: #29403b !important; -webkit-text-fill-color: #29403b !important; font: 600 14px/1.5 Inter, sans-serif !important; text-transform: none !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody label:not(.co_optin label) { display: block; padding: 0 !important; margin: 0 0 8px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody label b { font-weight: 600 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody input[type="checkbox"] {
+  box-sizing: border-box !important; width: 22px !important; height: 22px !important;
+  min-width: 22px !important; margin: 2px 0 0 !important; accent-color: #4f7f3e;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody input:focus-visible, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody textarea:focus-visible,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody button:focus-visible, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody a:focus-visible {
+  outline: 3px solid #0e6e7b !important; outline-offset: 3px !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_submit {
+  background: none !important; border: 0 !important; padding: 0 !important;
+  box-shadow: none !important; border-radius: 8px !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button {
+  display: inline-flex !important; align-items: center; justify-content: center;
+  min-height: 48px !important; min-width: 140px !important; padding: 12px 24px !important;
+  border: 1px solid #4f7f3e !important; border-radius: 8px !important;
+  background: #4f7f3e !important; color: #fff !important; -webkit-text-fill-color: #fff !important;
+  box-shadow: none !important; cursor: pointer; font: 600 16px/1.4 Inter, sans-serif !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button span, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button span {
+  padding: 0 !important; background: none !important; color: inherit !important;
+  -webkit-text-fill-color: inherit !important; font: inherit !important; text-transform: none !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button:hover, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button:hover { background: #426d34 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin { display: flex !important; gap: 12px; align-items: start; width: 100% !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin .optin_checkbox { float: none !important; width: 22px !important; flex: 0 0 22px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin .optin_message_text { float: none !important; width: auto !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_optin label { font-size: 14px !important; font-weight: 400 !important; line-height: 1.6 !important; }
+
+/* Question form: names, email confirmation, then a full-width question. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi { width: 100% !important; margin: 0 0 24px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi > .rounded_box, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"], html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"],
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu {
+  box-sizing: border-box !important; background: #fff !important; border: 1px solid #d9e5de !important;
+  border-radius: 16px !important; padding: 28px !important; box-shadow: 0 8px 30px #0e6e7b0b !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi > .rounded_box { padding: 0 !important; margin-bottom: 24px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .b_inside { padding: 28px !important; border: 0 !important; background: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .b_header, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .small_header {
+  background: none !important; border: 0 !important; padding: 0 !important; margin: 0 0 20px !important;
+  height: auto !important; color: #426d34 !important; font: 700 18px/1.4 Montserrat, sans-serif !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #AskTheRabbi_Div { margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .small_header > div { background: none !important; color: #426d34 !important; -webkit-text-fill-color: #426d34 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #AskTheRabbi_Div > .ATR_text { text-align: left !important; margin: 0 0 24px !important; font-size: 14px !important; line-height: 1.6 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-row {
+  width: 100% !important; margin: 0 !important; padding: 0 !important;
+}
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-row::before, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-row::after { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .bs-container > .bs-row { display: block !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] .col-sm-6 { float: none !important; width: 100% !important; max-width: 100% !important; flex: none !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea > .bs-row { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; grid-column: 1 / -1; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea > div { margin: 0 !important; min-width: 0; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #AskCell { margin-top: 20px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix { display: flex; flex-direction: row-reverse; align-items: center; gap: 24px; margin: 24px 0 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .tc-form-actions { flex-direction: row; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix > div { float: none !important; width: auto !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix > div:has(.co_optin) { flex: 1; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] { display: flex; gap: 12px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_input_container { order: -1; flex: 1 1 0 !important; width: auto !important; min-width: 0 !important; height: 48px !important; overflow: visible !important; margin: 0 !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_submit { float: none !important; flex: 0 0 auto !important; width: auto !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .break_floats { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button { min-width: 100px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .co_form_container { width: 100% !important; margin: 0 0 24px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-columns { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; column-count: auto !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-group { float: none !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-group .sub_category { width: 100% !important; font: 400 14px/1.7 Inter,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-group .ATR_category { font: 600 17px/1.4 Montserrat,sans-serif !important; color: #426d34 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keywords-border { display: none !important; }
+
+/* Contact form, retaining all native validation and recipient behavior. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] { margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] > .medium_top_margin { margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] hr { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] div[style*="max-width: 506px"] { max-width: none !important; box-sizing: border-box !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .name_wrapper { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .name_wrapper > div { float: none !important; margin: 0 !important; min-width: 0; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .medium_top_margin { margin-top: 20px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .small_top_margin { margin: 24px 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .left { text-align: right !important; }
+
+/* Newsletter choices stay in their native table and keep their IDs/click handlers. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] { clear: both; margin-top: 20px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .w96:has(> form[name="subscribe"]) { width: 100% !important; margin: 0 !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody a[href*="/tools/login/settings.asp?v=sub"] { display: inline-block; float: none !important; padding: 0 !important; border: 0 !important; background: none !important; font-size: 14px !important; font-weight: 500 !important; text-transform: none !important; letter-spacing: 0 !important; color: #0e6e7b !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > .container { padding: 0 !important; margin: 0 0 12px !important; border: 0 !important; background: none !important; box-shadow: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form { display: block !important; width: 100% !important; margin: 0 0 12px !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form > tbody { display: grid !important; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form tr, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form td { display: block !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form tr:last-child { grid-column: 1 / -1; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form td:first-child { margin-bottom: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form .hide_for_mobile { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table { display: block; width: 100% !important; border: 1px solid #d9e5de !important; border-radius: 12px !important; overflow: hidden; margin: 0 0 24px !important; box-shadow: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table > tbody { display: block; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr { background: #fff !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:first-child > td { display: block; padding: 18px !important; font: 400 14px/1.6 Inter,sans-serif !important; color: #516660 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[id^="checkAll"]) { display: block; padding: 16px 18px !important; background: #eff5ec !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[id^="checkAll"]) td { display: inline; padding: 0 !important; background: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[id^="checkAll"]) label { display: inline !important; margin: 0 0 0 10px !important; vertical-align: top; font-weight: 600 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) { display: grid; grid-template-columns: 22px minmax(0,1fr) 22px minmax(0,1fr); gap: 12px; padding: 20px 18px !important; border-bottom: 1px solid #e4ece7; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) td { padding: 0 !important; border: 0 !important; background: none !important; font: 400 14px/1.6 Inter,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) label { display: inline !important; margin: 0 !important; font-weight: 600 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table label { display: inline !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] input[id^="checkAll"] { margin-right: 10px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table font { color: #657a70 !important; font-size: 12px !important; background: none !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:last-child:not(:has(input)) { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] #submitButton { text-align: right !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] .bottom_margin { margin-bottom: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] .comenu_popup { max-width: calc(100vw - 32px) !important; z-index: 2000 !important; border-radius: 10px; background: #fff; }
+
+/* Supporting information uses the same clear visual hierarchy. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container .small_header, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .header,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu .section_title { background: none !important; padding: 0 !important; margin: 0 0 18px !important; height: auto !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container .small_header span, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .header,
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu .section_title a { background: none !important; color: #426d34 !important; font: 700 16px/1.4 Montserrat,sans-serif !important; text-transform: uppercase; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container a, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_local_menu a { color: #0e6e7b !important; -webkit-text-fill-color: #0e6e7b !important; line-height: 1.6 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation { width: 100% !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks { width: 100% !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion > .small_horizontal_padding { padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion a { font: 600 20px/1.4 Montserrat,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions ul, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions li { margin: 0 0 16px !important; padding: 0 !important; font: 400 14px/1.6 Inter,sans-serif !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation { font: 400 14px/1.7 Inter,sans-serif !important; color: #29403b !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation li { margin: 16px 0 0 !important; font: inherit !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation :is(.regular, .small_links, li, b, a) { font-size: 14px !important; line-height: 1.7 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .item { padding: 8px 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks .item a { font-size: 15px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .sidebar-local-navigation .co_local_menu { padding: 0 !important; border: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools-sidebar { position: static !important; float: none !important; top: auto !important; left: auto !important; width: calc(100% - 48px) !important; max-width: 1120px; height: auto !important; margin: 0 auto 32px !important; padding: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools__section { display: flex !important; position: static !important; transform: none !important; width: auto !important; height: auto !important; padding: 0 !important; margin: 0 !important; opacity: 1 !important; visibility: visible !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; gap: 8px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools-sidebar .fab-wrapper { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools__tool { width: 40px !important; height: 40px !important; margin: 0 !important; border: 1px solid #d9e5de !important; border-radius: 8px; background: #fff !important; }
+
+@media (max-width: 1000px) {
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_content_container > .clearfix > .body_wrapper { grid-template-columns: minmax(0,1fr); }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container > * { min-width: 0; }
+}
+@media (max-width: 600px) {
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .master-content-wrapper, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_content_container > .clearfix > .body_wrapper,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .page-tools-sidebar { width: calc(100% - 32px) !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header { padding: 28px 0 20px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header h1 { font-size: 28px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .article-header__subtitle { font-size: 16px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"], html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"], html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .ask_the_rabbi .b_inside,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #FeaturedQuestion, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #RecentQuestions, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #MosadInformation,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #LocalNavigationQuickLinks, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .body_wrapper > .co_local_menu { padding: 20px !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #InputFieldsArea > .bs-row,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="feedback"] .name_wrapper, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .subscribe_form > tbody,
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .keyword-columns, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container { grid-template-columns: minmax(0,1fr); }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix { flex-direction: column !important; align-items: stretch; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="asktherabbi"] > .clearfix > div { width: 100% !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .co_global_button button { width: 100% !important; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="subscribe"] > table tr:has(input[name="subscriptions"]) { grid-template-columns: 22px minmax(0,1fr); gap: 14px 10px; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] { flex-wrap: wrap; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_input_container, html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] .co_global_submit { flex-basis: 100%; }
+  html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer form[name="SearchKB"] button { width: 100% !important; }
+}
+
+/* Readable newsletter details and clear instructions, preserving native handlers. */
+html body.cco_body #BodyContainer #ContentBody :is(form[name="asktherabbi"], form[name="subscribe"], form[name="feedback"]) > .tc-form-guidance {
+  font: 400 14px/1.6 Inter, sans-serif !important; color: #405b51 !important;
+  -webkit-text-fill-color: #405b51 !important; margin: 0 0 24px !important;
+}
+html body.cco_body #BodyContainer #ContentBody form[name="subscribe"] a.tc-newsletter-details {
+  display: inline-flex !important; align-items: center; justify-content: center;
+  box-sizing: border-box; min-height: 44px; min-width: 60px; padding: 8px 6px !important;
+  font: 600 14px/1.5 Inter, sans-serif !important; color: #0e6e7b !important;
+  -webkit-text-fill-color: #0e6e7b !important; text-decoration: underline !important;
+  text-underline-offset: 3px; vertical-align: middle;
+}
+html body.cco_body #BodyContainer #ContentBody .tc-optional-label {
+  font: inherit !important; color: inherit !important; -webkit-text-fill-color: inherit !important;
+}
+
+
+/* Source: homepage-cleanup.css — unchanged, in original header order. */
+/* Small homepage refinements. Remove this stylesheet to restore the prior layout. */
+html body.home #BodyContainer .hp_subscribe #formContainer fieldset > small:not(#response) {
+  justify-self: center;
+  width: fit-content !important;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 8px 12px !important;
+  border-radius: 8px;
+  background: rgba(0, 51, 60, .78);
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  text-shadow: none !important;
+}
+@media (max-width: 800px) {
+  html body.home #BodyContainer #injected-upcoming-events-section {
+    padding: 48px 22px !important;
+  }
+  html body.home #BodyContainer #injected-upcoming-events-section .injected-events-carousel-container {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    scroll-padding-left: 0;
+  }
+  html body.home #BodyContainer .sneak-peek-container,
+  html body.home #BodyContainer .latest_photos .wrapper {
+    width: calc(100% - 24px) !important;
+  }
+  html body.home #BodyContainer .tc-home-mission .bottom_padding {
+    padding-bottom: 0 !important;
+  }
+  html body.home #BodyContainer .tc-home-mission a.readMore {
+    margin-top: 24px !important;
+  }
+  html body.home #BodyContainer .hp-table > .hp-row.hp_subscribe {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+  html body.home #BodyContainer .hp_subscribe .wrapper {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+
+/* Source: homepage-signup-simple.css — unchanged, in original header order. */
+/* Homepage signup only. Remove this stylesheet and its script to revert. */
+html body.home.cco_body #BodyContainer .hp_subscribe .widget_header {
+  margin-bottom: 12px !important;
+}
+html body.home.cco_body #BodyContainer .hp_subscribe .widget_header h5 {
+  margin-bottom: 0 !important;
+}
+html body.home.cco_body #BodyContainer .hp_subscribe .tc-home-signup-note {
+  display: block !important;
+  max-width: 560px;
+  margin: 0 auto 28px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: none !important;
+  color: #001217 !important;
+  -webkit-text-fill-color: #001217 !important;
+  font: 500 16px/1.5 Inter, sans-serif !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-align: center;
+  text-shadow: none !important;
+}
+html body.home.cco_body #BodyContainer .hp_subscribe input:not([type="hidden"]):not([type="submit"]):focus {
+  outline: 2px solid #0e6e7b !important;
+  outline-offset: -3px !important;
+  border-color: #0e6e7b !important;
+  box-shadow: none !important;
+}
+html body.home.cco_body #BodyContainer .hp_subscribe input[type="submit"]:focus-visible {
+  outline: 2px solid #fff !important;
+  outline-offset: -4px !important;
+  box-shadow: none !important;
+}
+@media (max-width: 600px) {
+  html body.home.cco_body #BodyContainer .hp_subscribe fieldset {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+
+/* Source: forms-alignment.css — unchanged, in original header order. */
+/* Alignment of native Subscribe/Contact forms and header signup. Remove both asset tags to revert. */
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] { margin-top: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody .tc-subscription-login { display: block !important; margin: 0 0 20px !important; line-height: 1.6 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="subscribe"],form[name="feedback"]) label { letter-spacing: 0 !important; font-weight: 600 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="subscribe"],form[name="feedback"]) button { letter-spacing: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table tr:has(input[name="subscriptions"]) { align-items: start; column-gap: 12px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table tr:has(input[name="subscriptions"]) > td { display: block !important; box-sizing: border-box; width: auto !important; min-width: 0; text-align: left !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table .tc-choice-check input { margin: 0 !important; display: block; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table tr:has(input[name="subscriptions"]) > td.tc-choice-copy { display: flex !important; flex-direction: column; align-items: flex-start; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table .tc-choice-copy label { display: block !important; min-height: 42px; line-height: 21px !important; margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table .tc-choice-copy > span[id^="navbar_help"] { display: block; order: 2; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table .tc-choice-copy > font { display: block; order: 1; line-height: 20px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table .tc-choice-copy > br { display: none; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table tr:has(input[id^="checkAll"]) > td:first-child { display: flex !important; align-items: flex-start; gap: 12px; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table tr:has(input[id^="checkAll"]) > td:last-child { display: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table tr:has(input[id^="checkAll"]) label { margin: 0 !important; line-height: 22px !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] input[id^="checkAll"] { margin: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .co_local_menu.tc-aligned-side-menu { display: grid !important; gap: 24px; padding: 0 !important; margin: 0 !important; border: 0 !important; background: none !important; box-shadow: none !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .tc-aligned-side-menu .tc-nav-card { box-sizing: border-box; padding: 28px; border: 1px solid #d9e5de; border-radius: 16px; background: #fff; box-shadow: 0 8px 30px #0e6e7b0b; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .tc-aligned-side-menu .tc-nav-card > .body { margin-bottom: 0 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #co_ads_container .sidebar-local-navigation { margin: 0 !important; padding: 0 !important; }
+html body.cco_body #header #HeaderSubscribeContainer { box-sizing: border-box !important; width: 380px !important; max-width: calc(100vw - 32px) !important; border: 1px solid #d9e5de !important; border-radius: 16px !important; background: #fff !important; box-shadow: 0 12px 36px #143f3b26 !important; overflow: visible !important; text-align: left !important; }
+html body.cco_body #header #HeaderSubscribeContainer #SubscribeFormContainer { padding: 20px !important; }
+html body.cco_body #header #HeaderSubscribeContainer form > .container { width: 100% !important; padding: 0 !important; margin: 0 !important; border: 0 !important; background: none !important; }
+html body.cco_body #header #HeaderSubscribeContainer form > .container > div { margin: 0 !important; }
+html body.cco_body #header #HeaderSubscribeContainer .tc-popup-fields { display: grid !important; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 12px; width: 100% !important; }
+html body.cco_body #header #HeaderSubscribeContainer .tc-popup-fields > .form_group { display: contents !important; }
+html body.cco_body #header #HeaderSubscribeContainer .tc-popup-fields .break_floats { display: none !important; }
+html body.cco_body #header #HeaderSubscribeContainer input:not([type="hidden"]) { box-sizing: border-box !important; display: block !important; float: none !important; width: 100% !important; min-width: 0 !important; height: 48px !important; margin: 0 !important; padding: 12px !important; border: 1px solid #7b9086 !important; border-radius: 8px !important; background: #fff !important; color: #29403b !important; -webkit-text-fill-color: #29403b !important; font: 400 16px/1.5 Inter,sans-serif !important; text-transform: none !important; letter-spacing: 0 !important; }
+html body.cco_body #header #HeaderSubscribeContainer input::placeholder { color: #63766e !important; -webkit-text-fill-color: #63766e !important; opacity: 1; }
+html body.cco_body #header #HeaderSubscribeContainer input[name="email"], html body.cco_body #header #HeaderSubscribeContainer .co_global_submit, html body.cco_body #header #HeaderSubscribeContainer .tc-popup-fields > .light_grey { grid-column: 1 / -1; }
+html body.cco_body #header #HeaderSubscribeContainer .co_global_submit { padding: 0 !important; margin: 0 !important; border: 0 !important; background: none !important; width: 100% !important; }
+html body.cco_body #header #HeaderSubscribeContainer #CoButton { display: block !important; box-sizing: border-box; width: 100% !important; min-height: 48px; border: 1px solid #4f7f3e !important; border-radius: 8px !important; background: #4f7f3e !important; color: #fff !important; -webkit-text-fill-color: #fff !important; font: 600 16px/1.5 Inter,sans-serif !important; padding: 12px !important; box-shadow: none !important; text-transform: none !important; }
+html body.cco_body #header #HeaderSubscribeContainer #CoButton span { padding: 0 !important; background: none !important; color: inherit !important; -webkit-text-fill-color: inherit !important; font: inherit !important; text-transform: none !important; letter-spacing: 0 !important; }
+html body.cco_body #header #HeaderSubscribeContainer #CoButton:hover { background: #426d34 !important; }
+html body.cco_body #header #HeaderSubscribeContainer .tc-popup-fields > .light_grey { font: 400 13px/1.5 Inter,sans-serif !important; color: #516660 !important; -webkit-text-fill-color: #516660 !important; text-transform: none !important; letter-spacing: 0 !important; text-align: left !important; padding: 0 !important; }
+html body.cco_body #header #HeaderSubscribeContainer .footer_box { box-sizing: border-box; padding: 14px 20px !important; margin: 0 !important; border: 0 !important; border-top: 1px solid #e4ece7 !important; border-radius: 0 0 16px 16px; background: #f4f7f3 !important; text-align: center !important; }
+html body.cco_body #header #HeaderSubscribe #HeaderSubscribeContainer .footer_box a { display: inline-block !important; color: #0e6e7b !important; -webkit-text-fill-color: #0e6e7b !important; font: 600 14px/1.5 Inter,sans-serif !important; text-transform: none !important; letter-spacing: 0 !important; }
+html body.cco_body #header #HeaderSubscribeContainer input:focus, html body.cco_body #header #HeaderSubscribeContainer button:focus-visible, html body.cco_body #header #HeaderSubscribeContainer a:focus-visible { outline: 2px solid #0e6e7b !important; outline-offset: -3px !important; box-shadow: none !important; }
+@media (max-width: 600px) { html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] > table .tc-choice-copy label { min-height: 0; } html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer .tc-aligned-side-menu .tc-nav-card { padding: 20px; } }
+
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody :is(form[name="subscribe"],form[name="feedback"]) .co_optin label { font-weight: 400 !important; }
+html body.cco_body:has(#AskTheRabbi_Div, form[name="subscribe"], form[name="feedback"]) #BodyContainer #ContentBody form[name="subscribe"] a.tc-newsletter-details { padding-left: 0 !important; justify-content: flex-start !important; }
+
+html body.cco_body #header #HeaderSubscribeContainer #CoButton:focus-visible { outline-color: #fff !important; }
+
+html body.cco_body:has(form[name="feedback"]) #BodyContainer #ContentBody form[name="feedback"] { width: 100% !important; box-sizing: border-box; }
+
+
+/* Source: learning-image-fix.css — unchanged, in original header order. */
+/* Restore ChabadOne's full-width artwork behind the caption. Remove this link to revert. */
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .wrapper {
+  max-width: 1060px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper > a {
+  width: 100% !important;
+}
+@media (min-width: 1001px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider :is(.slider, .slides, .slide_wrapper, .cycle-caption) {
+    height: 400px !important;
+  }
+}
+@media (max-width: 600px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slide_wrapper img {
+    background-position: left center !important;
+  }
+}
+
+
+/* Source: homepage-radius.css — unchanged, in original header order. */
+/* Homepage corner system. Additive: remove this stylesheet link to revert. */
+html body.home,
+html body.home .hp-table {
+  --tc-home-card-radius: 12px;
+  --tc-home-button-radius: 8px;
+}
+html body.home #BodyContainer .hp_content_wrapper > .g320,
+html body.home #BodyContainer #injected-upcoming-events-section .injected-event-card,
+html body.home #BodyContainer .sneak_peek .widget_content,
+html body.home #BodyContainer .latest_photos .widget_content li,
+html body.home #BodyContainer .latest_photos .widget_content li > a,
+html body.home #BodyContainer .latest_photos .widget_content li img {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slides {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+  border-radius: 0 var(--tc-home-card-radius) var(--tc-home-card-radius) 0 !important;
+}
+html body.home #header a.parent[href="/4970020"] {
+  border-radius: var(--tc-home-button-radius) !important;
+}
+html body.home.cco_body #header #HeaderSubscribeContainer {
+  border-radius: var(--tc-home-card-radius) !important;
+}
+html body.home.cco_body #header #HeaderSubscribeContainer .footer_box {
+  border-radius: 0 0 var(--tc-home-card-radius) var(--tc-home-card-radius) !important;
+}
+@media (max-width: 800px) {
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .slides {
+    border-radius: var(--tc-home-card-radius) var(--tc-home-card-radius) 0 0 !important;
+  }
+  html body.home #BodyContainer .hp-row:not(.hp-row-first) .promo_slider .cycle-caption {
+    border-radius: 0 0 var(--tc-home-card-radius) var(--tc-home-card-radius) !important;
+  }
+}
+
+
+/* Source: homepage-blue-outline.css — unchanged, in original header order. */
+/* Transparent homepage CTAs in the existing hero-title teal. Remove this link to revert. */
+html body.home.cco_body #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore {
+  background: transparent !important;
+  border-color: #4cbece !important;
+  color: #4cbece !important;
+  -webkit-text-fill-color: #4cbece !important;
+}
+html body.home.cco_body #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore:hover {
+  background: transparent !important;
+  border-color: #8ed2d9 !important;
+  color: #8ed2d9 !important;
+  -webkit-text-fill-color: #8ed2d9 !important;
+}
+html body.home.cco_body #BodyContainer .hp-row-first .promo_slider .cycle-caption a.readMore:focus-visible {
+  outline: 2px solid #8ed2d9 !important;
+  outline-offset: 4px !important;
+}
+
+/* The mobile navigation retains its own readable menu colors. */
+@media (min-width: 1025px) {
+html body.home.cco_body #header:not(.on-scroll) #co_menu_container #tabContentMain .co_menu_item.donate_link a.parent {
+  background: transparent !important;
+  border-color: #4cbece !important;
+  color: #4cbece !important;
+  -webkit-text-fill-color: #4cbece !important;
+}
+html body.home.cco_body #header:not(.on-scroll) #co_menu_container #tabContentMain .co_menu_item.donate_link a.parent:hover {
+  background: transparent !important;
+  border-color: #8ed2d9 !important;
+  color: #8ed2d9 !important;
+  -webkit-text-fill-color: #8ed2d9 !important;
+}
+html body.home.cco_body #header:not(.on-scroll) #co_menu_container #tabContentMain .co_menu_item.donate_link a.parent:focus-visible {
+  outline: 2px solid #8ed2d9 !important;
+  outline-offset: 4px !important;
+}
+}
+
+
+/* Source: homepage-header-align.css — unchanged, in original header order. */
+/* Center the desktop navigation beside the homepage branding. Remove this link to revert. */
+@media (min-width: 1025px) {
+  html body.home.cco_body #header:not(.on-scroll) .site-nav-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+  html body.home.cco_body #header:not(.on-scroll) .site-nav-wrapper #co_menu_container_wrapper,
+  html body.home.cco_body #header:not(.on-scroll) .site-nav-wrapper #co_menu_container {
+    display: flex !important;
+    align-items: center !important;
+    height: auto !important;
+  }
+}
+
+
