@@ -2792,8 +2792,8 @@ html body.cco_body #BodyContainer .cal_header_buttons .co_toggle_buttons .item {
 
 /* Native daily-study date arrows (the button backgrounds are already themed). */
 html:not(.tc-high-holidays-minisite):not(.tc-chai) body.cco_body #BodyContainer #co_content_container.syndicated :is(#PreviousButton, #NextButton) .fa::before {
-  color: #0E6E7B !important;
-  -webkit-text-fill-color: #0E6E7B !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
 }
 
 /* The Chanukah landing page has its own counter widget and introduction.
