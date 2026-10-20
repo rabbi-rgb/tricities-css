@@ -7,21 +7,64 @@
 
   if (!isChaiAddress && !hasChaiForm) return;
 
-  document.documentElement.classList.add("tc-chai");
+  document.documentElement.classList.add("tc-chai", "tc-chai-loading");
+
+  // Prevent the native form from painting before the one final layout is ready.
+  // This tiny guard is removed as soon as both the DOM enhancement and the
+  // consolidated stylesheet are available.
+  var bootStyles = document.getElementById("tc-chai-boot-styles");
+  if (!bootStyles) {
+    bootStyles = document.createElement("style");
+    bootStyles.id = "tc-chai-boot-styles";
+    bootStyles.textContent = "html.tc-chai-loading body.cco_body #co_content_container{visibility:hidden!important}";
+    document.head.appendChild(bootStyles);
+  }
+
+  var enhancementReady = false;
+  var stylesheetReady = false;
+  var formObserver = null;
+
+  function removeLoadingGuard() {
+    document.documentElement.classList.remove("tc-chai-loading");
+    if (bootStyles && bootStyles.parentNode) bootStyles.parentNode.removeChild(bootStyles);
+  }
+
+  function revealChaiPage() {
+    if (!enhancementReady || !stylesheetReady) return;
+    window.clearTimeout(failOpenTimer);
+    if (formObserver) formObserver.disconnect();
+    removeLoadingGuard();
+  }
+
+  // Network or CMS markup failures must never strand the public page hidden.
+  var failOpenTimer = window.setTimeout(function () {
+    if (formObserver) formObserver.disconnect();
+    removeLoadingGuard();
+  }, 3000);
 
   // Load this page's small stylesheet independently of cached site headers.
-  if (!document.getElementById("tc-chai-refinement-styles")) {
-    var refinementStyles = document.createElement("link");
+  var refinementStyles = document.getElementById("tc-chai-refinement-styles");
+  if (!refinementStyles) {
+    refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=18";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=19";
     document.head.appendChild(refinementStyles);
   }
 
+  refinementStyles.addEventListener("load", function () {
+    stylesheetReady = true;
+    revealChaiPage();
+  }, { once: true });
+  refinementStyles.addEventListener("error", function () {
+    stylesheetReady = true;
+    revealChaiPage();
+  }, { once: true });
+  if (refinementStyles.sheet) stylesheetReady = true;
+
   function polishChaiForm() {
     var form = document.getElementById("5995797");
-    if (!form) return;
-    document.documentElement.classList.add("tc-chai-refined");
+    if (!form) return false;
 
     // Some published form content lacks the structural wrappers expected by
     // the Chai stylesheet. Restore only these presentation containers while
@@ -197,6 +240,19 @@
       });
     }
 
+    var heroExplore = hero && hero.querySelector('.tc-chai-hero-action a[href="#chai-intro-title"]');
+    if (heroExplore && !heroExplore.dataset.chaiJumpReady) {
+      heroExplore.dataset.chaiJumpReady = "true";
+      heroExplore.addEventListener("click", function (event) {
+        var target = form.querySelector("#chai-intro-title");
+        if (!target) return;
+        event.preventDefault();
+        target.setAttribute("tabindex", "-1");
+        target.scrollIntoView({ block: "start", behavior: "instant" });
+        target.focus({ preventScroll: true });
+      });
+    }
+
     // Repair a duplicated Instagram URL in this page's inherited footer.
     document.querySelectorAll('a[href*="instagram.com/https://"]').forEach(function (link) {
       var match = link.href.match(/^https:\/\/(?:www\.)?instagram\.com\/(https:\/\/(?:www\.)?instagram\.com\/.+)$/);
@@ -315,18 +371,24 @@
         });
       }
     }
+
+    document.documentElement.classList.add("tc-chai-refined");
+    enhancementReady = true;
+    revealChaiPage();
+    return true;
   }
 
 
   function start() {
-    polishChaiForm();
+    if (polishChaiForm()) return;
 
-    var attempts = 0;
-    var timer = window.setInterval(function () {
-      polishChaiForm();
-      attempts += 1;
-      if (attempts > 40) window.clearInterval(timer);
-    }, 250);
+    // Only observe when ChabadOne has not inserted the native form yet.
+    // Disconnect immediately after the single successful enhancement.
+    formObserver = new MutationObserver(function () {
+      if (!polishChaiForm()) return;
+      formObserver.disconnect();
+    });
+    formObserver.observe(document.documentElement, { childList: true, subtree: true });
   }
 
   if (document.readyState === "loading") {
