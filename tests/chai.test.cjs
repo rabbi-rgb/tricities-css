@@ -77,7 +77,7 @@ test('editorial imagery is decorative, remote, and does not alter native fields'
     });
     const sources = images.map(image => image.src);
     for (const source of [
-      'https://w2.chabad.org/media/images/1270/oAfo12706892.jpg',
+      'https://w2.chabad.org/media/images/1324/sOqZ13243323.jpg',
       'https://w2.chabad.org/media/images/1270/yPnp12706783.jpg',
       'https://w2.chabad.org/media/images/1324/bSEH13243362.jpg'
     ]) assert.equal(sources.filter(item => item === source).length, 2);
