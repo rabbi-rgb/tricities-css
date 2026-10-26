@@ -3,7 +3,14 @@ const assert = require('node:assert/strict');
 const { readFileSync } = require('node:fs');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const source = readFileSync('chai-club.js', 'utf8');
+const styles = readFileSync('chai-club-refinement.css', 'utf8');
 const fixture = readFileSync('tests/fixtures/chai.html', 'utf8');
+
+test('tier cards stay restrained and FAQ icons remain in the flex layout', () => {
+  assert.match(source, /chai-club-refinement\.css\?v=26/);
+  assert.match(styles, /:is\(#id_8,#id_18,#id_19\)\.form-line \{[\s\S]*?background: #fdfcf9 !important;[\s\S]*?box-shadow: none !important;/);
+  assert.match(styles, /\.chai-faq summary::after \{[\s\S]*?position: static !important;[\s\S]*?inset: auto !important;[\s\S]*?width: auto !important;/);
+});
 
 function page(html = fixture, path = '/chai', options = {}) {
   const errors = [];

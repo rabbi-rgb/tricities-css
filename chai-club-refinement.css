@@ -507,7 +507,6 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) form[id="5995797"] :is(#id_
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19).form-line {
   --tc-tier-accent: var(--chai-teal-deep);
-  --tc-tier-wash: #f7faf9;
   display: inline-block !important;
   vertical-align: top !important;
   box-sizing: border-box !important;
@@ -515,33 +514,31 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
   min-height: 0 !important;
   margin: 0 18px 18px 0 !important;
   padding: 18px 18px 20px !important;
-  border: 1px solid #dfddd6 !important;
-  border-top: 4px solid var(--tc-tier-accent) !important;
-  border-radius: 9px !important;
-  background: linear-gradient(180deg,var(--tc-tier-wash),#fff 46%) !important;
-  box-shadow: 0 8px 24px rgba(21,48,58,.055) !important;
-  transition: border-color .2s ease,box-shadow .2s ease !important;
+  border: 1px solid #d8d7d1 !important;
+  border-top-color: var(--tc-tier-accent) !important;
+  border-radius: 7px !important;
+  background: #fdfcf9 !important;
+  box-shadow: none !important;
+  transition: border-color .2s ease,background-color .2s ease !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_8.form-line {
   --tc-tier-accent: #9b6746;
-  --tc-tier-wash: #fbf6f1;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_18.form-line {
   --tc-tier-accent: #5e727a;
-  --tc-tier-wash: #f4f7f8;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_19.form-line {
   --tc-tier-accent: #89681f;
-  --tc-tier-wash: #fbf8ef;
   margin-right: 0 !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19).form-line:has(input:checked) {
   border-color: var(--tc-tier-accent) !important;
-  box-shadow: 0 0 0 1px var(--tc-tier-accent),0 12px 28px rgba(21,48,58,.09) !important;
+  background: #fff !important;
+  box-shadow: none !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19) > .form-label-left {
@@ -555,7 +552,7 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19) > .form-label-left > label:first-child {
-  color: var(--chai-ink) !important;
+  color: var(--tc-tier-accent) !important;
   font: 500 25px/1.2 "Cormorant Garamond",Georgia,serif !important;
   letter-spacing: 0 !important;
   text-transform: none !important;
@@ -623,8 +620,8 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19) .form-radio-item:hover {
-  border-color: var(--chai-teal) !important;
-  background: #edf5f4 !important;
+  border-color: #9ca8a8 !important;
+  background: #f5f4f0 !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] :is(#id_8,#id_18,#id_19) .form-radio-item:has(input:checked) {
@@ -648,8 +645,8 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
   padding: 17px 20px !important;
   border: 1px solid #dbe2df !important;
   border-radius: 8px !important;
-  background: #f7faf9 !important;
-  transition: border-color .2s ease,box-shadow .2s ease,background-color .2s ease !important;
+  background: #fdfcf9 !important;
+  transition: border-color .2s ease,background-color .2s ease !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-custom-copy {
@@ -687,8 +684,8 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom:hover,
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom:focus-within,
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom:has(#other_8:checked) {
   border-color: var(--chai-teal) !important;
-  background: #f2f8f7 !important;
-  box-shadow: 0 0 0 1px rgba(22,104,120,.08) !important;
+  background: #f8f7f3 !important;
+  box-shadow: none !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom input.form-radio-other-input:disabled {
@@ -958,6 +955,7 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_25 .chai-faq summary {
+  position: relative !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
@@ -971,7 +969,12 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_25 .chai-faq summary::after {
   content: "+" !important;
+  position: static !important;
+  inset: auto !important;
   flex: 0 0 auto;
+  align-self: center;
+  width: auto !important;
+  height: auto !important;
   margin-left: 16px;
   color: var(--chai-teal) !important;
   font: 400 22px/1 Inter,Arial,sans-serif !important;
