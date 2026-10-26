@@ -178,5 +178,23 @@
     "sha256": "9edaba2cee187be4cd934208a81c4d398ad51cb54c774d5643a16bca3f3bf6ea",
     "bytes": 9117,
     "characters": 9115
+  },
+  {
+    "path": "site-code/footer-21-81351837868a.js",
+    "filename": "footer-21-81351837868a.js",
+    "tag": "script",
+    "attributes": " id=\"tc-fall-welcome-note\"",
+    "sha256": "81351837868a9f6c5ae5286a963c3939598913fdfbfe858c13b5dc9f30a375fd",
+    "bytes": 1031,
+    "characters": 1031
+  },
+  {
+    "path": "site-code/footer-22-300e977e0dd1.css",
+    "filename": "footer-22-300e977e0dd1.css",
+    "tag": "style",
+    "attributes": " id=\"tc-fall-kicker-cleanup\"",
+    "sha256": "300e977e0dd1e91f0c8b59f5c08fac2d9969cc543769aa64300cb99eca06e02a",
+    "bytes": 974,
+    "characters": 974
   }
 ]
