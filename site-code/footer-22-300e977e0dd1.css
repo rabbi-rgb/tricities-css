@@ -1,0 +1,30 @@
+/* Event-only cleanup: make the hero eyebrow feel editorial rather than badge-like. */
+body.tc-shabbat-night-page-v5 #tcShabbatNightIntroV5 .tc-kicker {
+  display: inline-block !important;
+  justify-content: flex-start !important;
+  gap: 0 !important;
+  margin: 0 0 18px 0 !important;
+  padding: 0 !important;
+  color: #f2c987 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  backdrop-filter: none !important;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px !important;
+}
+
+body.tc-shabbat-night-page-v5 #tcShabbatNightIntroV5 .tc-kicker::before,
+body.tc-shabbat-night-page-v5 #tcShabbatNightIntroV5 .tc-kicker::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  body.tc-shabbat-night-page-v5 #tcShabbatNightIntroV5 .tc-kicker {
+    font-size: 10px !important;
+    letter-spacing: 1.7px !important;
+  }
+}
