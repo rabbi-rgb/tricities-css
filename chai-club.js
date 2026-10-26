@@ -23,10 +23,22 @@
   var enhancementReady = false;
   var stylesheetReady = false;
   var formObserver = null;
+  var loadingGuardRemoved = false;
+  var revealObservationStarter = null;
+
+  function startQueuedRevealObservation() {
+    if (!revealObservationStarter) return;
+    var startObservation = revealObservationStarter;
+    revealObservationStarter = null;
+    if (window.requestAnimationFrame) window.requestAnimationFrame(startObservation);
+    else window.setTimeout(startObservation, 0);
+  }
 
   function removeLoadingGuard() {
     document.documentElement.classList.remove("tc-chai-loading");
     if (bootStyles && bootStyles.parentNode) bootStyles.parentNode.removeChild(bootStyles);
+    loadingGuardRemoved = true;
+    startQueuedRevealObservation();
   }
 
   function revealChaiPage() {
@@ -48,7 +60,7 @@
     refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=21";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=23";
     document.head.appendChild(refinementStyles);
   }
 
@@ -136,6 +148,20 @@
       });
     }
 
+    // Derive the public count from the names that are actually rendered so it
+    // cannot drift when the ChabadOne content is updated. Anonymous entries
+    // remain distinct because each one represents a separate listed partner.
+    if (partners && partnerList) {
+      var partnerCount = partnerList.querySelectorAll(".tc-chai-partner-name").length;
+      var partnerCountCopy = partners.querySelector(".tc-chai-partner-count");
+      if (!partnerCountCopy) {
+        partnerCountCopy = document.createElement("p");
+        partnerCountCopy.className = "tc-chai-partner-count";
+        partners.querySelector(".tc-chai-partners-head").appendChild(partnerCountCopy);
+      }
+      partnerCountCopy.textContent = partnerCount + " active Chai Club " + (partnerCount === 1 ? "partner" : "partners") + "—and growing.";
+    }
+
     if (partners && faq && partners.nextElementSibling !== faq) {
       partners.parentNode.insertBefore(faq, partners.nextSibling);
     }
@@ -200,11 +226,68 @@
       }
     }
 
+    var amountSelector = '#input_8_0, #input_8_1, #input_8_2, #other_8, #input_18_0, #input_18_1, #input_18_2, #other_18, #input_19_0, #input_19_1, #input_19_2, #other_19';
+
+    function selectedGift() {
+      var selected = form.querySelector(amountSelector.split(", ").map(function (selector) {
+        return selector + ":checked";
+      }).join(", "));
+      if (!selected) return null;
+
+      var amount = selected.value;
+      if (/^other_/i.test(selected.id)) {
+        var customField = form.querySelector("#input_" + selected.id.replace("other_", ""));
+        amount = customField && customField.value;
+      }
+      var rawAmount = String(amount || "").trim();
+      if (!/^(?:\d+|\d*\.\d+)$/.test(rawAmount)) return { amount: null };
+      amount = Number(rawAmount);
+      if (!Number.isFinite(amount) || amount < 1) return { amount: null };
+      return { amount: amount };
+    }
+
+    function formatCad(amount) {
+      try {
+        return new Intl.NumberFormat("en-CA", {
+          style: "currency",
+          currency: "CAD",
+          minimumFractionDigits: Number.isInteger(amount) ? 0 : 2,
+          maximumFractionDigits: 2
+        }).format(amount);
+      } catch (error) {
+        return "$" + amount.toFixed(Number.isInteger(amount) ? 0 : 2);
+      }
+    }
+
+    function updateGiftSummary() {
+      var summary = form.querySelector(".tc-chai-gift-summary");
+      if (!summary) return;
+      var gift = selectedGift();
+      var recurringChoice = form.querySelector("#input_24");
+      var value = summary.querySelector(".tc-chai-gift-summary-value");
+      var reassurance = form.querySelector(".tc-chai-reassurance");
+      if (!gift) {
+        value.textContent = "Select an amount above";
+      } else if (!gift.amount) {
+        value.textContent = "Enter your gift amount above";
+      } else {
+        value.textContent = formatCad(gift.amount) + " CAD" + (recurringChoice && recurringChoice.checked ? "/month" : " one-time");
+      }
+      if (reassurance) {
+        reassurance.textContent = recurringChoice && recurringChoice.checked
+          ? "Secure payment · Change or cancel your monthly gift anytime"
+          : "Secure payment · One-time gift";
+      }
+    }
+
     if (!form.dataset.chaiAmountListener) {
       form.dataset.chaiAmountListener = "true";
       form.addEventListener("change", function (event) {
         var selected = event.target;
-        if (!selected.matches('#input_8_0, #input_8_1, #input_8_2, #other_8, #input_18_0, #input_18_1, #input_18_2, #other_18, #input_19_0, #input_19_1, #input_19_2, #other_19') || !selected.checked) return;
+        if (!selected.matches(amountSelector) || !selected.checked) {
+          if (selected.id === "input_24" || selected.matches('[id^="input_"][type="number"]')) updateGiftSummary();
+          return;
+        }
         ["8", "18", "19"].forEach(function (tier) {
           form.querySelectorAll('#id_' + tier + ' input[type="radio"], #tc-chai-custom input[name="q' + tier + '_monthlyContribution"]').forEach(function (radio) {
             if (radio !== selected && radio.checked) {
@@ -219,6 +302,16 @@
           }
         });
         if (selected.id === "other_8") form.querySelector("#input_8").disabled = false;
+        updateGiftSummary();
+      });
+    }
+
+    var customGift = form.querySelector("#input_8");
+    if (customGift && !customGift.dataset.chaiSummaryListener) {
+      customGift.dataset.chaiSummaryListener = "true";
+      customGift.addEventListener("input", function () {
+        window.clearTimeout(customGift._chaiSummaryTimer);
+        customGift._chaiSummaryTimer = window.setTimeout(updateGiftSummary, 350);
       });
     }
 
@@ -261,6 +354,19 @@
         '<span class="tc-chai-art-mark" lang="he">חי</span>' +
         '<span class="tc-chai-art-caption">Jewish life, together</span>';
       heroGrid.appendChild(heroArt);
+    }
+
+    // A small page-specific landmark keeps the long fundraising journey easy
+    // to scan without competing with the site's primary navigation.
+    if (heroShell && !heroShell.querySelector(".tc-chai-section-nav")) {
+      var sectionNav = document.createElement("nav");
+      sectionNav.className = "tc-chai-section-nav";
+      sectionNav.setAttribute("aria-label", "Chai Club sections");
+      sectionNav.innerHTML =
+        '<a href="#chai-intro-title">Why it matters</a>' +
+        '<a href="#tc-chai-partners-title">Our partners</a>' +
+        '<a class="tc-chai-section-nav-join" href="#tc-chai-join-title">Join</a>';
+      heroShell.appendChild(sectionNav);
     }
 
     // Bring the giving section directly into view.
@@ -378,6 +484,17 @@
     if (oldContinuity) oldContinuity.remove();
 
     var submitRow = form.querySelector("#id_2");
+    if (submitRow && !submitRow.querySelector(".tc-chai-gift-summary")) {
+      var giftSummary = document.createElement("div");
+      giftSummary.className = "tc-chai-gift-summary";
+      giftSummary.setAttribute("role", "status");
+      giftSummary.setAttribute("aria-live", "polite");
+      giftSummary.setAttribute("aria-atomic", "true");
+      giftSummary.innerHTML =
+        '<span class="tc-chai-gift-summary-label">Your gift</span>' +
+        '<strong class="tc-chai-gift-summary-value">Select an amount above</strong>';
+      submitRow.insertBefore(giftSummary, submitRow.firstChild);
+    }
     if (submitRow && !submitRow.querySelector(".tc-chai-reassurance")) {
       var reassurance = document.createElement("p");
       reassurance.className = "tc-chai-reassurance";
@@ -404,11 +521,94 @@
         recurring.dataset.chaiListenerAdded = "true";
         recurring.addEventListener("change", function (event) {
           if (event.isTrusted) recurring.dataset.chaiChoiceMade = "true";
+          updateGiftSummary();
         });
       }
     }
 
+    updateGiftSummary();
+
+    // Offer a compact mobile return-to-form action after the hero CTA leaves
+    // view. It retires before the form begins, so it never covers payment or
+    // confirmation controls.
+    var joinPanel = form.querySelector("#tc-chai-join-panel");
+    var mobileJoin = document.querySelector(".tc-chai-mobile-join");
+    if (!mobileJoin) {
+      mobileJoin = document.createElement("a");
+      mobileJoin.className = "tc-chai-mobile-join";
+      mobileJoin.href = "#tc-chai-join-title";
+      mobileJoin.setAttribute("aria-label", "Join the Chai Club — go to the donation form");
+      mobileJoin.setAttribute("aria-hidden", "true");
+      mobileJoin.tabIndex = -1;
+      mobileJoin.innerHTML = 'Join the Chai Club <span aria-hidden="true">&#8594;</span>';
+      document.body.appendChild(mobileJoin);
+    }
+
+    if (mobileJoin && heroJoin && joinPanel && !mobileJoin.dataset.chaiObserved && "IntersectionObserver" in window) {
+      mobileJoin.dataset.chaiObserved = "true";
+      var heroActionVisible = true;
+      var formReached = false;
+      var updateMobileJoin = function () {
+        var show = !heroActionVisible && !formReached;
+        mobileJoin.classList.toggle("is-visible", show);
+        mobileJoin.setAttribute("aria-hidden", show ? "false" : "true");
+        mobileJoin.tabIndex = show ? 0 : -1;
+      };
+      var heroActionObserver = new IntersectionObserver(function (entries) {
+        heroActionVisible = entries[0].isIntersecting;
+        updateMobileJoin();
+      }, { threshold: 0.01 });
+      var joinPanelObserver = new IntersectionObserver(function (entries) {
+        var entry = entries[0];
+        formReached = entry.isIntersecting || entry.boundingClientRect.top < window.innerHeight * 0.82;
+        updateMobileJoin();
+      }, { threshold: 0, rootMargin: "0px 0px -18% 0px" });
+      heroActionObserver.observe(heroJoin);
+      joinPanelObserver.observe(joinPanel);
+    }
+
     document.documentElement.classList.add("tc-chai-refined");
+
+    // Progressive, one-time reveals. Content is visible by default and only
+    // receives the hidden starting state after this enhancement is ready.
+    if (!document.documentElement.dataset.chaiRevealReady) {
+      document.documentElement.dataset.chaiRevealReady = "true";
+      var revealTargets = [
+        hero,
+        heroShell && heroShell.querySelector(".tc-chai-hero-art"),
+        form.querySelector("#id_12 .chai-intro-copy"),
+        form.querySelector("#tc-chai-head"),
+        partners,
+        form.querySelector(".chai-faq-head")
+      ].filter(Boolean).concat(Array.from(form.querySelectorAll(".chai-impact-item")));
+
+      revealTargets.forEach(function (target, index) {
+        target.classList.add("tc-chai-reveal");
+        if (target.matches(".chai-impact-item")) {
+          target.style.setProperty("--tc-chai-reveal-delay", ((index % 3) * 80) + "ms");
+        }
+      });
+
+      var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealTargets.forEach(function (target) { target.classList.add("is-revealed"); });
+      } else {
+        document.documentElement.classList.add("tc-chai-motion-ready");
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-revealed");
+            revealObserver.unobserve(entry.target);
+          });
+        }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
+        var beginRevealObservation = function () {
+          revealTargets.forEach(function (target) { revealObserver.observe(target); });
+        };
+        revealObservationStarter = beginRevealObservation;
+        if (loadingGuardRemoved) startQueuedRevealObservation();
+      }
+    }
+
     enhancementReady = true;
     revealChaiPage();
     return true;
