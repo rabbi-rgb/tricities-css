@@ -169,5 +169,14 @@
     "sha256": "d8f311f7f2f31b0d220dff0e5755bc9f7cbcaf672c269e381b5604c87736b2c5",
     "bytes": 1137,
     "characters": 1137
+  },
+  {
+    "path": "site-code/footer-20-9edaba2cee18.css",
+    "filename": "footer-20-9edaba2cee18.css",
+    "tag": "style",
+    "attributes": " id=\"tc-fall-shabbat-photo\"",
+    "sha256": "9edaba2cee187be4cd934208a81c4d398ad51cb54c774d5643a16bca3f3bf6ea",
+    "bytes": 9117,
+    "characters": 9115
   }
 ]
