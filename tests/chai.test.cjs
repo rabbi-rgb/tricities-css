@@ -148,6 +148,21 @@ test('only one gift tier stays selected; custom amount enables and clears approp
   } finally { p.close(); }
 });
 
+test('custom amount row activates on click and updates without a debounce', () => {
+  const p = page();
+  try {
+    const row = p.document.getElementById('tc-chai-custom');
+    const custom = p.document.getElementById('input_8');
+    const other = p.document.getElementById('other_8');
+    row.dispatchEvent(new p.dom.window.MouseEvent('click', { bubbles: true }));
+    assert.equal(other.checked, true);
+    assert.equal(custom.disabled, false);
+    custom.value = '125';
+    custom.dispatchEvent(new p.dom.window.Event('input', { bubbles: true }));
+    assert.equal(p.document.querySelector('.tc-chai-gift-summary-value').textContent, '$125 CAD/month');
+  } finally { p.close(); }
+});
+
 test('partner count is derived from the rendered public names', () => {
   const p = page();
   try {
@@ -227,7 +242,7 @@ test('intersection observers reveal once and retire the mobile CTA at the form',
   const p = page(fixture, '/chai', { intersectionObserver: true });
   try {
     const hero = p.document.querySelector('.article-header');
-    const revealObserver = p.observers.find(observer => observer.options.rootMargin === '0px 0px -10% 0px');
+    const revealObserver = p.observers.find(observer => observer.options.rootMargin === '0px 0px 12% 0px');
     assert.ok(revealObserver);
     assert.equal(revealObserver.targets.length, 0);
     assert.equal(p.document.documentElement.classList.contains('tc-chai-loading'), true);
@@ -252,6 +267,14 @@ test('intersection observers reveal once and retire the mobile CTA at the form',
     assert.equal(mobileJoin.classList.contains('is-visible'), true);
     assert.equal(mobileJoin.getAttribute('aria-hidden'), 'false');
     assert.equal(mobileJoin.tabIndex, 0);
+    const stickyClick = new p.dom.window.MouseEvent('click', { bubbles: true, cancelable: true });
+    mobileJoin.dispatchEvent(stickyClick);
+    assert.equal(stickyClick.defaultPrevented, true);
+    assert.equal(p.document.getElementById('tc-chai-join-title').getAttribute('tabindex'), '-1');
+    assert.equal(mobileJoin.classList.contains('is-visible'), false);
+    assert.equal(mobileJoin.getAttribute('aria-hidden'), 'true');
+    assert.equal(mobileJoin.tabIndex, -1);
+    heroObserver.trigger(heroJoin, false);
     joinObserver.trigger(joinPanel, true, 100);
     assert.equal(mobileJoin.classList.contains('is-visible'), false);
     assert.equal(mobileJoin.getAttribute('aria-hidden'), 'true');

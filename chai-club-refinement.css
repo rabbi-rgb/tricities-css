@@ -38,17 +38,24 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .page-tools-sidebar {
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) :is(#chai-intro-title,#tc-chai-join-title,#tc-chai-partners-title,#chai-faq-title) {
-  scroll-margin-top: 112px;
+  scroll-margin-top: 76px;
+}
+
+/* The inherited article shell adds 50px above and below every form. On this
+   page those gaps duplicate the section padding and make the flow feel broken. */
+html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #co_body_container {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* Motion is progressive: all content remains visible until JavaScript has
    installed the observer, and interactive form controls are never hidden. */
 html.tc-chai.tc-chai-refined.tc-chai-motion-ready:has(form[id="5995797"]) .tc-chai-reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(16px);
   transition:
-    opacity .72s ease var(--tc-chai-reveal-delay,0ms),
-    transform .72s cubic-bezier(.22,.61,.36,1) var(--tc-chai-reveal-delay,0ms);
+    opacity .52s ease var(--tc-chai-reveal-delay,0ms),
+    transform .52s cubic-bezier(.22,.61,.36,1) var(--tc-chai-reveal-delay,0ms);
 }
 
 html.tc-chai.tc-chai-refined.tc-chai-motion-ready:has(form[id="5995797"]) .tc-chai-reveal.is-revealed {
@@ -62,7 +69,7 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
   display: block !important;
   height: auto !important;
   min-height: 0 !important;
-  padding: clamp(52px,5vw,72px) 28px clamp(56px,6vw,80px) !important;
+  padding: clamp(52px,5vw,72px) 28px clamp(30px,3.2vw,44px) !important;
   overflow: hidden !important;
   border: 0 !important;
   background: var(--chai-paper-light) !important;
@@ -254,8 +261,8 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-section-nav {
   justify-content: center;
   gap: 8px;
   width: min(1180px,100%);
-  margin: 38px auto 0;
-  padding-top: 24px;
+  margin: 30px auto 0;
+  padding-top: 18px;
   border-top: 1px solid rgba(21,48,58,.12);
 }
 
@@ -300,7 +307,7 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_12 .chai-intro {
   display: block !important;
-  padding: clamp(60px,6.5vw,84px) 0 clamp(56px,6vw,78px) !important;
+  padding: clamp(44px,5vw,62px) 0 clamp(44px,5vw,64px) !important;
   border-bottom: 0 !important;
 }
 
@@ -429,8 +436,8 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
   box-sizing: border-box !important;
   width: 100% !important;
   max-width: 100% !important;
-  margin: 0 0 clamp(38px,4vw,54px) !important;
-  padding: clamp(38px,4.5vw,54px) clamp(28px,4vw,52px) !important;
+  margin: 0 0 clamp(24px,3vw,34px) !important;
+  padding: clamp(34px,3.8vw,46px) clamp(24px,3.5vw,44px) !important;
   overflow: visible !important;
   border: 0 !important;
   border-radius: 10px !important;
@@ -593,10 +600,10 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContaine
   align-items: center;
   justify-content: flex-start !important;
   flex-direction: row !important;
-  gap: 32px !important;
+  gap: 24px !important;
   width: 100% !important;
-  margin: 0 0 12px !important;
-  padding: 18px 0 12px !important;
+  margin: 0 0 6px !important;
+  padding: 12px 0 8px !important;
   border: 0 !important;
   background: transparent !important;
 }
@@ -625,6 +632,17 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom .form-radio
   border: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
+}
+
+html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom {
+  cursor: pointer;
+}
+
+html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom input.form-radio-other-input:disabled {
+  pointer-events: none;
+  background: #f6f3ed !important;
+  color: #718087 !important;
+  -webkit-text-fill-color: #718087 !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #tc-chai-custom br {
@@ -663,8 +681,8 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #co_content_c
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #tc-chai-details.form-line {
   width: 100% !important;
-  margin: 24px 0 16px !important;
-  padding: 18px 0 0 !important;
+  margin: 18px 0 12px !important;
+  padding: 14px 0 0 !important;
   border: 0 !important;
   background: transparent !important;
 }
@@ -684,8 +702,8 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #id_7.form-line {
-  margin: 18px 0 0 !important;
-  padding: 18px 0 0 !important;
+  margin: 14px 0 0 !important;
+  padding: 14px 0 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
   background: transparent !important;
@@ -720,7 +738,7 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #id_2.form-line {
-  padding: 28px 0 0 !important;
+  padding: 22px 0 0 !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-gift-summary {
@@ -775,18 +793,18 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-reassurance {
 
 /* Partner gratitude and FAQ */
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #id_25.form-line {
-  padding: 0 0 clamp(48px,6vw,72px) !important;
+  padding: 0 0 clamp(32px,4vw,48px) !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #id_25 .chai-after-form {
   display: grid !important;
   grid-template-columns: minmax(0,1fr) !important;
-  gap: 24px !important;
+  gap: 18px !important;
 }
 
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #id_25 .tc-chai-partners-static {
   margin: 0 !important;
-  padding: clamp(30px,4vw,46px) !important;
+  padding: clamp(28px,3.4vw,40px) !important;
   border: 0 !important;
   border-radius: 10px !important;
   background: var(--chai-paper-light) !important;
@@ -828,7 +846,7 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) #id_25 .tc-chai-partner-nam
 html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] .chai-faq {
   display: block !important;
   margin: 0 !important;
-  padding: clamp(30px,4vw,46px) !important;
+  padding: clamp(28px,3.4vw,40px) !important;
   border: 0 !important;
   border-radius: 10px !important;
   background: rgba(251,250,247,.68) !important;
@@ -1041,12 +1059,12 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-mobile-join {
 
 @media (max-width: 560px) {
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container .master-content-wrapper {
-    padding: 38px 20px 46px !important;
+    padding: 34px 20px 28px !important;
   }
 
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-section-nav {
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 24px;
+    padding-top: 16px;
   }
 
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container h1.article-header__title {
@@ -1099,7 +1117,7 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-mobile-join {
   }
 
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_12 .chai-intro {
-    padding: 52px 0 56px !important;
+    padding: 38px 0 44px !important;
   }
 
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #id_12 .chai-impact-list {
@@ -1130,11 +1148,11 @@ html.tc-chai.tc-chai-refined:has(form[id="5995797"]) .tc-chai-mobile-join {
   }
 
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body #BodyContainer #co_content_container #formContainer form[id="5995797"] #tc-chai-join-panel.form-line {
-    padding: 32px 20px !important;
+    padding: 28px 20px !important;
   }
 
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #id_25 :is(.tc-chai-partners-static,.chai-faq) {
-    padding: 28px 20px !important;
+    padding: 24px 20px !important;
   }
 
   html.tc-chai.tc-chai-refined:has(form[id="5995797"]) body.cco_body form[id="5995797"] #id_25 .chai-partners-list {

@@ -60,7 +60,7 @@
     refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=23";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=24";
     document.head.appendChild(refinementStyles);
   }
 
@@ -310,8 +310,26 @@
     if (customGift && !customGift.dataset.chaiSummaryListener) {
       customGift.dataset.chaiSummaryListener = "true";
       customGift.addEventListener("input", function () {
-        window.clearTimeout(customGift._chaiSummaryTimer);
-        customGift._chaiSummaryTimer = window.setTimeout(updateGiftSummary, 350);
+        updateGiftSummary();
+      });
+    }
+
+    // The native form disables the custom input until its small radio is
+    // selected. Treat the whole custom row as the target so the field never
+    // feels unresponsive when a donor clicks directly into it.
+    var customRow = form.querySelector("#tc-chai-custom");
+    if (customRow && customGift && !customRow.dataset.chaiActivationListener) {
+      customRow.dataset.chaiActivationListener = "true";
+      customRow.addEventListener("click", function (event) {
+        var customChoice = form.querySelector("#other_8");
+        if (!customChoice) return;
+        if (!customChoice.checked) {
+          customChoice.checked = true;
+          customChoice.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+        if (event.target !== customGift) {
+          window.setTimeout(function () { customGift.focus(); }, 0);
+        }
       });
     }
 
@@ -544,15 +562,31 @@
       document.body.appendChild(mobileJoin);
     }
 
+    var setMobileJoinVisible = function (show) {
+      mobileJoin.classList.toggle("is-visible", show);
+      mobileJoin.setAttribute("aria-hidden", show ? "false" : "true");
+      mobileJoin.tabIndex = show ? 0 : -1;
+    };
+
+    if (mobileJoin && !mobileJoin.dataset.chaiClickReady) {
+      mobileJoin.dataset.chaiClickReady = "true";
+      mobileJoin.addEventListener("click", function (event) {
+        var target = form.querySelector("#tc-chai-join-title");
+        if (!target) return;
+        event.preventDefault();
+        setMobileJoinVisible(false);
+        target.setAttribute("tabindex", "-1");
+        if (target.scrollIntoView) target.scrollIntoView({ block: "start", behavior: "instant" });
+        if (target.focus) target.focus({ preventScroll: true });
+      });
+    }
+
     if (mobileJoin && heroJoin && joinPanel && !mobileJoin.dataset.chaiObserved && "IntersectionObserver" in window) {
       mobileJoin.dataset.chaiObserved = "true";
       var heroActionVisible = true;
       var formReached = false;
       var updateMobileJoin = function () {
-        var show = !heroActionVisible && !formReached;
-        mobileJoin.classList.toggle("is-visible", show);
-        mobileJoin.setAttribute("aria-hidden", show ? "false" : "true");
-        mobileJoin.tabIndex = show ? 0 : -1;
+        setMobileJoinVisible(!heroActionVisible && !formReached);
       };
       var heroActionObserver = new IntersectionObserver(function (entries) {
         heroActionVisible = entries[0].isIntersecting;
@@ -600,7 +634,10 @@
             entry.target.classList.add("is-revealed");
             revealObserver.unobserve(entry.target);
           });
-        }, { threshold: 0.08, rootMargin: "0px 0px -10% 0px" });
+        // Start just before the section enters the viewport. Waiting until a
+        // large portion is visible creates a blank-looking block while a user
+        // scrolls, especially on shorter laptop and mobile screens.
+        }, { threshold: 0.01, rootMargin: "0px 0px 12% 0px" });
         var beginRevealObservation = function () {
           revealTargets.forEach(function (target) { revealObserver.observe(target); });
         };
