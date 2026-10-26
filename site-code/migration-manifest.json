@@ -196,5 +196,14 @@
     "sha256": "300e977e0dd1e91f0c8b59f5c08fac2d9969cc543769aa64300cb99eca06e02a",
     "bytes": 974,
     "characters": 974
+  },
+  {
+    "path": "site-code/footer-23-be9674432d27.css",
+    "filename": "footer-23-be9674432d27.css",
+    "tag": "style",
+    "attributes": " id=\"tc-fall-quantity-label-center\"",
+    "sha256": "be9674432d27407c5cba0c4a1d19200abeaee02d2e0ce4b73a71443d0b5a832c",
+    "bytes": 258,
+    "characters": 258
   }
 ]
