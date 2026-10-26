@@ -60,7 +60,7 @@
     refinementStyles = document.createElement("link");
     refinementStyles.id = "tc-chai-refinement-styles";
     refinementStyles.rel = "stylesheet";
-    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=24";
+    refinementStyles.href = "https://rabbi-rgb.github.io/tricities-css/chai-club-refinement.css?v=25";
     document.head.appendChild(refinementStyles);
   }
 
@@ -191,11 +191,11 @@
         var custom = document.createElement("li");
         custom.id = "tc-chai-custom";
         custom.className = "form-line";
-        custom.innerHTML = '<div class="tc-chai-custom-copy"><label for="other_8">Prefer another amount?</label><p>Every monthly gift makes a difference.</p></div><div class="tc-chai-custom-input"></div>';
+        custom.innerHTML = '<div class="tc-chai-custom-copy"><label for="other_8">Choose a different amount</label><p>Enter any monthly gift that works for you.</p></div><div class="tc-chai-custom-input"></div>';
         custom.querySelector(".tc-chai-custom-input").appendChild(other.closest(".form-radio-item"));
         membership.parentNode.insertBefore(custom, membership);
-        form.querySelector("#input_8").setAttribute("placeholder", "Other amount");
-        form.querySelector("#input_8").setAttribute("data-otherhint", "Other amount");
+        form.querySelector("#input_8").setAttribute("placeholder", "Enter amount");
+        form.querySelector("#input_8").setAttribute("data-otherhint", "Enter amount");
       }
 
       var contactHeading = document.createElement("li");
@@ -467,10 +467,14 @@
     if (amountCopy) amountCopy.textContent = "";
     var currencyCopy = form.querySelector(".tc-chai-currency");
     if (currencyCopy) currencyCopy.remove();
+    var customLabel = form.querySelector("#tc-chai-custom .tc-chai-custom-copy label");
+    var customHelp = form.querySelector("#tc-chai-custom .tc-chai-custom-copy p");
+    if (customLabel) customLabel.textContent = "Choose a different amount";
+    if (customHelp) customHelp.textContent = "Enter any monthly gift that works for you.";
     var customAmount = form.querySelector("#input_8");
     if (customAmount) {
-      customAmount.setAttribute("placeholder", "Other amount");
-      customAmount.setAttribute("data-otherhint", "Other amount");
+      customAmount.setAttribute("placeholder", "Enter amount");
+      customAmount.setAttribute("data-otherhint", "Enter amount");
       customAmount.setAttribute("aria-label", "Your monthly gift amount");
     }
     var faqTitle = form.querySelector("#chai-faq-title");

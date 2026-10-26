@@ -154,6 +154,8 @@ test('custom amount row activates on click and updates without a debounce', () =
     const row = p.document.getElementById('tc-chai-custom');
     const custom = p.document.getElementById('input_8');
     const other = p.document.getElementById('other_8');
+    assert.equal(row.querySelector('.tc-chai-custom-copy label').textContent, 'Choose a different amount');
+    assert.equal(custom.getAttribute('placeholder'), 'Enter amount');
     row.dispatchEvent(new p.dom.window.MouseEvent('click', { bubbles: true }));
     assert.equal(other.checked, true);
     assert.equal(custom.disabled, false);
