@@ -1,0 +1,4 @@
+/* Center the quantity label over its native field on Cozy Fall Shabbat only. */
+body.tc-shabbat-night-page-v5 #RegisterBody .toggle_options > .inline_block:has(> #performance_32450_quantityOfAttendees) > div:first-child {
+  text-align: center !important;
+}
