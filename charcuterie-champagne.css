@@ -202,80 +202,6 @@ body.tc-charcuterie-event .tc-cnc-details strong {
   font-weight: 700 !important;
 }
 
-body.tc-charcuterie-event .tc-cnc-experience {
-  display: grid !important;
-  grid-template-columns: minmax(360px, 0.84fr) minmax(0, 1.16fr) !important;
-  min-height: 520px !important;
-  background: var(--cnc-paper) !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-media {
-  min-height: 520px !important;
-  overflow: hidden !important;
-  border-right: 1px solid var(--cnc-line) !important;
-  background: #eeeae6 !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-media img {
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-height: 520px !important;
-  object-fit: cover !important;
-  object-position: 50% 58% !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-copy {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  padding: 62px 70px !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-copy h2 {
-  margin: 14px 0 20px !important;
-  color: var(--cnc-wine) !important;
-  font: 400 48px/1.02 'Cormorant Garamond', Georgia, serif !important;
-  letter-spacing: -1.2px !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-copy p {
-  max-width: 520px !important;
-  margin: 0 !important;
-  color: var(--cnc-copy) !important;
-  font-size: 15px !important;
-  line-height: 1.78 !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-copy ul {
-  display: grid !important;
-  gap: 12px !important;
-  margin: 28px 0 0 !important;
-  padding: 24px 0 0 !important;
-  border-top: 1px solid var(--cnc-line) !important;
-  list-style: none !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-copy li {
-  position: relative !important;
-  margin: 0 !important;
-  padding: 0 0 0 23px !important;
-  color: var(--cnc-ink) !important;
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-  font-weight: 700 !important;
-}
-
-body.tc-charcuterie-event .tc-cnc-experience-copy li::before {
-  position: absolute !important;
-  top: 0.65em !important;
-  left: 0 !important;
-  width: 12px !important;
-  height: 1px !important;
-  background: var(--cnc-rose) !important;
-  content: '' !important;
-}
-
 body.tc-charcuterie-event #RegisterBody {
   display: block !important;
   float: none !important;
@@ -720,14 +646,6 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
     min-height: 580px !important;
   }
 
-  body.tc-charcuterie-event .tc-cnc-experience {
-    grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.1fr) !important;
-  }
-
-  body.tc-charcuterie-event .tc-cnc-experience-copy {
-    padding: 48px 44px !important;
-  }
-
   body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options {
     grid-template-columns: minmax(0, 1fr) minmax(150px, 0.55fr) !important;
   }
@@ -774,26 +692,6 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
 
   body.tc-charcuterie-event .tc-cnc-hero-media img {
     object-position: 50% 59% !important;
-  }
-
-  body.tc-charcuterie-event .tc-cnc-experience {
-    grid-template-columns: 1fr !important;
-    min-height: 0 !important;
-  }
-
-  body.tc-charcuterie-event .tc-cnc-experience-media {
-    min-height: 460px !important;
-    border-right: 0 !important;
-    border-bottom: 1px solid var(--cnc-line) !important;
-  }
-
-  body.tc-charcuterie-event .tc-cnc-experience-media img {
-    min-height: 460px !important;
-    max-height: 540px !important;
-  }
-
-  body.tc-charcuterie-event .tc-cnc-experience-copy {
-    padding: 46px 34px 50px !important;
   }
 
   body.tc-charcuterie-event #Performances,
@@ -887,20 +785,6 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
     max-height: 470px !important;
   }
 
-  body.tc-charcuterie-event .tc-cnc-experience-media,
-  body.tc-charcuterie-event .tc-cnc-experience-media img {
-    min-height: 390px !important;
-    max-height: 440px !important;
-  }
-
-  body.tc-charcuterie-event .tc-cnc-experience-copy {
-    padding: 40px 24px 44px !important;
-  }
-
-  body.tc-charcuterie-event .tc-cnc-experience-copy h2 {
-    font-size: 40px !important;
-  }
-
   body.tc-charcuterie-event #Performances,
   body.tc-charcuterie-event #Summary,
   body.tc-charcuterie-event #ReserversInformation,
@@ -931,8 +815,7 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
     font-size: 44px !important;
   }
 
-  body.tc-charcuterie-event .tc-cnc-copy,
-  body.tc-charcuterie-event .tc-cnc-experience-copy {
+  body.tc-charcuterie-event .tc-cnc-copy {
     padding-right: 20px !important;
     padding-left: 20px !important;
   }
