@@ -53,21 +53,36 @@
 
   function supportMarkup() {
     return '<section id="tcCharcuterieSupport" aria-labelledby="tcCharcuterieSupportTitle">' +
-      '<div class="tc-cnc-support-head"><div><span class="tc-cnc-eyebrow">Optional sponsorship</span>' +
-      '<h2 id="tcCharcuterieSupportTitle">Make a place possible for someone else</h2></div>' +
-      '<p>Add a gift to your registration to sponsor another woman or help underwrite the evening.</p></div>' +
-      '<div class="tc-cnc-support-options">' +
-        '<label><input type="radio" name="tc_cnc_support" value="0" checked><span><strong>No additional gift</strong><small>Your ticket remains $25</small></span></label>' +
-        '<label><input type="radio" name="tc_cnc_support" value="25"><span><strong>Sponsor another woman</strong><small>Add $25</small></span></label>' +
-        '<label><input type="radio" name="tc_cnc_support" value="50"><span><strong>Help with materials</strong><small>Add $50</small></span></label>' +
-        '<label><input type="radio" name="tc_cnc_support" value="100"><span><strong>Support the evening</strong><small>Add $100</small></span></label>' +
-        '<label><input type="radio" name="tc_cnc_support" value="custom"><span><strong>Choose my own gift</strong><small>Any amount</small></span></label>' +
+      '<div class="tc-cnc-support-head"><span class="tc-cnc-eyebrow">Community sponsorship</span>' +
+      '<h2 id="tcCharcuterieSupportTitle">Help make this evening possible</h2>' +
+      '<p>The full cost of Women’s Circle events is made possible through the generosity of our community partners. Please consider adding a contribution to help make this evening possible—or sponsoring another woman’s place.</p></div>' +
+      '<button class="tc-cnc-support-toggle" type="button" aria-expanded="false" aria-controls="tcCharcuterieSupportBody">' +
+        '<span class="tc-cnc-support-toggle-label">View sponsorship options</span><span class="tc-cnc-support-toggle-note">Optional</span>' +
+      '</button>' +
+      '<div id="tcCharcuterieSupportBody" class="tc-cnc-support-body" hidden>' +
+        '<div class="tc-cnc-support-options">' +
+          '<label><input type="radio" name="tc_cnc_support" value="0" checked><span><strong>No additional gift</strong><small>Your ticket remains $25</small></span></label>' +
+          '<label><input type="radio" name="tc_cnc_support" value="25"><span><strong>Sponsor another woman</strong><small>Add $25</small></span></label>' +
+          '<label><input type="radio" name="tc_cnc_support" value="50"><span><strong>Help with materials</strong><small>Add $50</small></span></label>' +
+          '<label><input type="radio" name="tc_cnc_support" value="100"><span><strong>Support the evening</strong><small>Add $100</small></span></label>' +
+          '<label><input type="radio" name="tc_cnc_support" value="custom"><span><strong>Choose my own gift</strong><small>Any amount</small></span></label>' +
+        '</div>' +
+        '<label class="tc-cnc-custom-label" for="tcCharcuterieGift">Your sponsorship gift (CAD)</label>' +
+        '<div class="tc-cnc-custom"><span aria-hidden="true">$</span><input id="tcCharcuterieGift" type="number" min="0" step="0.01" inputmode="decimal" disabled aria-describedby="tcCharcuterieGiftNote"></div>' +
+        '<p id="tcCharcuterieGiftNote">This gift is added to your registration total.</p>' +
+        '<p id="tcCharcuterieGiftError" role="alert" hidden>Please enter an amount of $0 or more.</p>' +
       '</div>' +
-      '<label class="tc-cnc-custom-label" for="tcCharcuterieGift">Your sponsorship gift (CAD)</label>' +
-      '<div class="tc-cnc-custom"><span aria-hidden="true">$</span><input id="tcCharcuterieGift" type="number" min="0" step="0.01" inputmode="decimal" disabled aria-describedby="tcCharcuterieGiftNote"></div>' +
-      '<p id="tcCharcuterieGiftNote">This gift is added to your registration total.</p>' +
-      '<p id="tcCharcuterieGiftError" role="alert" hidden>Please enter an amount of $0 or more.</p>' +
     '</section>';
+  }
+
+  function setSupportOpen(card, open) {
+    var button = card.querySelector('.tc-cnc-support-toggle');
+    var body = card.querySelector('#tcCharcuterieSupportBody');
+    var label = card.querySelector('.tc-cnc-support-toggle-label');
+    if (!button || !body) return;
+    body.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+    setText(label, open ? 'Hide sponsorship options' : 'View sponsorship options');
   }
 
   function enhanceSupport() {
@@ -87,6 +102,10 @@
 
       var custom = card.querySelector('#tcCharcuterieGift');
       var error = card.querySelector('#tcCharcuterieGiftError');
+      var toggle = card.querySelector('.tc-cnc-support-toggle');
+      toggle.addEventListener('click', function () {
+        setSupportOpen(card, toggle.getAttribute('aria-expanded') !== 'true');
+      });
       card.querySelectorAll('input[name="tc_cnc_support"]').forEach(function (radio) {
         radio.addEventListener('change', function () {
           var isCustom = radio.value === 'custom';
@@ -121,8 +140,10 @@
         var customInput = card.querySelector('#tcCharcuterieGift');
         customInput.value = existing.toFixed(2);
         customInput.disabled = Boolean(exact);
+        setSupportOpen(card, true);
       } else {
         setNativeDonation(0);
+        setSupportOpen(card, false);
       }
       card.dataset.synced = 'true';
     }
