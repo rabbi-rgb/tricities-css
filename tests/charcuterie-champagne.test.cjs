@@ -121,6 +121,13 @@ test('CSS parses in a browser stylesheet', () => {
   dom.window.close();
 });
 
+test('current Chabad One form markup receives the compact layout', () => {
+  assert.match(css, /#performance_32663_reservations \.reservation > \.clearfix\.medium_vertical_padding/);
+  assert.match(css, /#ReserversInformation > \.large_top_padding > \.clearfix/);
+  assert.match(css, /#Payment \.clearfix\.small_vertical_padding/);
+  assert.match(css, /#Buttons > \.large_top_padding/);
+});
+
 test('script never replaces or submits the native form', () => {
   assert.doesNotMatch(js, /cloneNode|\.submit\(|requestSubmit|outerHTML\s*=/);
   assert.match(js, /document\.getElementById\('TotalDonation'\)/);
