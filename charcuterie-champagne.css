@@ -569,6 +569,17 @@ body.tc-charcuterie-event #SubmitButton[disabled] { opacity: 0.48 !important; cu
   body.tc-charcuterie-event .tc-cnc-art { min-height: 330px !important; }
   body.tc-charcuterie-event .tc-cnc-support-options { grid-template-columns: 1fr !important; }
   body.tc-charcuterie-event .tc-cnc-support-options span { min-height: 72px !important; }
+  body.tc-charcuterie-event #ReserversInformation .g140,
+  body.tc-charcuterie-event #PaymentInformation .g140 { float: none !important; width: auto !important; max-width: 100% !important; }
+  body.tc-charcuterie-event #ReserversInformation .ml140,
+  body.tc-charcuterie-event #PaymentInformation .ml140 { margin-left: 0 !important; }
+  body.tc-charcuterie-event #ReserversInformation .optin_message_text { width: auto !important; max-width: calc(100% - 28px) !important; }
+}
+
+@media (max-width: 340px) {
+  body.tc-charcuterie-event .tc-cnc-copy { padding-right: 18px !important; padding-left: 18px !important; }
+  body.tc-charcuterie-event .tc-cnc-copy h1 { max-width: 100% !important; font-size: 38px !important; letter-spacing: -2.2px !important; }
+  body.tc-charcuterie-event .tc-cnc-copy h1 span { margin-left: 26px !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
