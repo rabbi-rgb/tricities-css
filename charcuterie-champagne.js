@@ -33,35 +33,38 @@
     return '<section id="tcCharcuterieIntro" aria-labelledby="tcCharcuterieTitle">' +
       '<div class="tc-cnc-hero">' +
         '<div class="tc-cnc-copy">' +
-          '<div class="tc-cnc-kicker">Chabad of the Tri-Cities · Women’s Circle</div>' +
-          '<h1 id="tcCharcuterieTitle">Charcuterie <span>&amp;</span> Champagne</h1>' +
-          '<p class="tc-cnc-lede">An evening for women to create, taste, and connect.</p>' +
-          '<p class="tc-cnc-description">Personalize your own wooden serving board, then arrange a beautiful charcuterie spread to take home.</p>' +
-          '<a class="tc-cnc-cta" href="#Performances">Reserve your place <span aria-hidden="true">→</span></a>' +
+          '<div class="tc-cnc-kicker">Women’s Circle · Coquitlam</div>' +
+          '<h1 id="tcCharcuterieTitle">Charcuterie <em>&amp;</em> Champagne</h1>' +
+          '<p class="tc-cnc-lede">A beautiful evening of creativity, delicious food, and great company.</p>' +
+          '<p class="tc-cnc-description">Personalize your own wooden serving board and create an elegant charcuterie spread to take home.</p>' +
+          '<a class="tc-cnc-cta" href="#Performances">Reserve your place</a>' +
         '</div>' +
-        '<div class="tc-cnc-art" aria-hidden="true">' +
-          '<div class="tc-cnc-bubbles"><i></i><i></i><i></i><i></i><i></i></div>' +
-          '<div class="tc-cnc-glass"><span></span></div>' +
-          '<div class="tc-cnc-board">' +
-            '<div class="tc-cnc-grapes"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>' +
-            '<div class="tc-cnc-cheese"></div><div class="tc-cnc-brie"></div>' +
-            '<div class="tc-cnc-crackers"><i></i><i></i><i></i><i></i></div>' +
-          '</div>' +
+        '<div class="tc-cnc-hero-media">' +
+          '<img src="https://jewishtricities.com/media/images/1392/IwTf13928094.png" alt="Champagne bottle, glasses, and a charcuterie spread in blush tones.">' +
         '</div>' +
       '</div>' +
       '<div class="tc-cnc-details">' +
-        '<div><span>When</span><strong>Thursday, November 19<br>6:30 PM</strong></div>' +
+        '<div><span>Date</span><strong>Thursday, November 19<br>6:30 PM</strong></div>' +
         '<div><span>Where</span><strong>Coquitlam<br>Address after RSVP</strong></div>' +
-        '<div><span>Admission</span><strong>$25 per person<br>All materials included</strong></div>' +
+        '<div><span>Cost</span><strong>$25 per person<br>All materials included</strong></div>' +
+      '</div>' +
+      '<div class="tc-cnc-experience">' +
+        '<div class="tc-cnc-experience-media"><img src="https://jewishtricities.com/media/images/1392/UoPK13928095.png" alt="Rose champagne bottle and charcuterie board prepared for the evening."></div>' +
+        '<div class="tc-cnc-experience-copy">' +
+          '<span class="tc-cnc-eyebrow">Make it your own</span>' +
+          '<h2>Create. Gather. Enjoy.</h2>' +
+          '<p>Design a personalized wooden serving board, then learn how to style a beautiful charcuterie spread. You’ll leave with your finished board, your spread, and a lovely evening shared with other women.</p>' +
+          '<ul><li>Personalized wooden serving board</li><li>Charcuterie ingredients and styling</li><li>Champagne and refreshments</li></ul>' +
+        '</div>' +
       '</div>' +
     '</section>';
   }
 
   function supportMarkup() {
     return '<section id="tcCharcuterieSupport" aria-labelledby="tcCharcuterieSupportTitle">' +
-      '<div class="tc-cnc-support-head"><div><span class="tc-cnc-eyebrow">Optional</span>' +
-      '<h2 id="tcCharcuterieSupportTitle">Help another woman join us</h2></div>' +
-      '<p>Your gift helps make the evening possible and can sponsor a place for someone who would love to attend.</p></div>' +
+      '<div class="tc-cnc-support-head"><div><span class="tc-cnc-eyebrow">Optional sponsorship</span>' +
+      '<h2 id="tcCharcuterieSupportTitle">Make a place possible for someone else</h2></div>' +
+      '<p>Add a gift to your registration to sponsor another woman or help underwrite the evening.</p></div>' +
       '<div class="tc-cnc-support-options">' +
         '<label><input type="radio" name="tc_cnc_support" value="0" checked><span><strong>No additional gift</strong><small>Your ticket remains $25</small></span></label>' +
         '<label><input type="radio" name="tc_cnc_support" value="25"><span><strong>Sponsor another woman</strong><small>Add $25</small></span></label>' +
