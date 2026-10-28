@@ -48,15 +48,6 @@
         '<div><span>Where</span><strong>Coquitlam<br>Address after RSVP</strong></div>' +
         '<div><span>Cost</span><strong>$25 per person<br>All materials included</strong></div>' +
       '</div>' +
-      '<div class="tc-cnc-experience">' +
-        '<div class="tc-cnc-experience-media"><img src="https://jewishtricities.com/media/images/1392/UoPK13928095.png" alt="Rose champagne bottle and charcuterie board prepared for the evening."></div>' +
-        '<div class="tc-cnc-experience-copy">' +
-          '<span class="tc-cnc-eyebrow">Make it your own</span>' +
-          '<h2>Create. Gather. Enjoy.</h2>' +
-          '<p>Design a personalized wooden serving board, then learn how to style a beautiful charcuterie spread. You’ll leave with your finished board, your spread, and a lovely evening shared with other women.</p>' +
-          '<ul><li>Personalized wooden serving board</li><li>Charcuterie ingredients and styling</li><li>Champagne and refreshments</li></ul>' +
-        '</div>' +
-      '</div>' +
     '</section>';
   }
 
