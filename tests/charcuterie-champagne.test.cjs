@@ -52,6 +52,14 @@ test('assets are scoped to only the Charcuterie event and receipt', () => {
   assert.doesNotMatch(css, /(^|\n)(html|body)(\s|,|\{)/);
 });
 
+test('hero uses one supplied event photograph and no duplicate experience card', () => {
+  assert.match(js, /IwTf13928094\.png/);
+  assert.doesNotMatch(js, /UoPK13928095\.png/);
+  assert.doesNotMatch(js, /tc-cnc-experience|Create\. Gather\. Enjoy\./);
+  assert.doesNotMatch(css, /tc-cnc-experience/);
+  assert.doesNotMatch(js, /tc-cnc-art|tc-cnc-bubbles|tc-cnc-glass|tc-cnc-board|tc-cnc-grapes|tc-cnc-cheese|tc-cnc-brie|tc-cnc-crackers/);
+});
+
 test('initialization preserves native controls and stays idempotent', () => {
   const p = page();
   try {
