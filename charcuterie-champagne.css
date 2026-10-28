@@ -11,7 +11,7 @@ body.tc-charcuterie-event {
   --cnc-copy: #66575c;
   --cnc-muted: #89777d;
   --cnc-line: rgba(87, 21, 43, 0.15);
-  --cnc-shadow: 0 26px 70px rgba(66, 25, 38, 0.14);
+  --cnc-shadow: 0 22px 58px rgba(66, 25, 38, 0.12);
   background: linear-gradient(180deg, #f2d1ce 0, #f7e9e4 620px, #f6f2ed 620px, #f6f2ed 100%) !important;
   color: var(--cnc-ink) !important;
 }
@@ -54,7 +54,7 @@ body.tc-charcuterie-event #tcCharcuterieIntro {
   margin: 0 0 20px !important;
   overflow: hidden !important;
   border: 1px solid rgba(87, 21, 43, 0.1) !important;
-  border-radius: 6px !important;
+  border-radius: 22px !important;
   background: var(--cnc-paper) !important;
   box-shadow: var(--cnc-shadow) !important;
 }
@@ -132,7 +132,7 @@ body.tc-charcuterie-event .tc-cnc-cta {
   margin: 34px 0 0 !important;
   padding: 15px 24px !important;
   border: 1px solid rgba(255, 255, 255, 0.78) !important;
-  border-radius: 2px !important;
+  border-radius: 999px !important;
   background: transparent !important;
   color: #fff !important;
   font-size: 12px !important;
@@ -222,9 +222,9 @@ body.tc-charcuterie-event #Payment {
   margin: 0 0 12px !important;
   padding: 27px 31px !important;
   border: 1px solid var(--cnc-line) !important;
-  border-radius: 4px !important;
+  border-radius: 18px !important;
   background: rgba(255, 253, 249, 0.98) !important;
-  box-shadow: 0 7px 22px rgba(66, 25, 38, 0.055) !important;
+  box-shadow: 0 12px 34px rgba(66, 25, 38, 0.07) !important;
 }
 
 body.tc-charcuterie-event #RegisterBody .title > .bold,
@@ -266,8 +266,16 @@ body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options {
   gap: 12px !important;
   padding: 14px !important;
   border: 1px solid var(--cnc-line) !important;
-  border-radius: 3px !important;
-  background: #fcf6f2 !important;
+  border-radius: 14px !important;
+  background: #fffaf7 !important;
+}
+
+body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options[style*="display"][style*="none"] {
+  display: none !important;
+}
+
+body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_message[style*="display"][style*="none"] {
+  display: none !important;
 }
 
 body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options > .inline_block {
@@ -303,7 +311,7 @@ body.tc-charcuterie-event #RegisterBody select.co_form_input {
   margin: 0 !important;
   padding: 9px 11px !important;
   border: 1px solid rgba(87, 21, 43, 0.23) !important;
-  border-radius: 2px !important;
+  border-radius: 10px !important;
   outline: 0 !important;
   background: #fff !important;
   color: var(--cnc-ink) !important;
@@ -322,7 +330,7 @@ body.tc-charcuterie-event #SubmitButton {
   min-height: 43px !important;
   padding: 11px 21px !important;
   border: 1px solid var(--cnc-wine) !important;
-  border-radius: 2px !important;
+  border-radius: 999px !important;
   background: var(--cnc-wine) !important;
   color: #fff !important;
   font: 800 12px/1 Arial, Helvetica, sans-serif !important;
@@ -339,7 +347,7 @@ body.tc-charcuterie-event #performance_32663_reservations:not(:empty) {
   margin: 0 0 13px !important;
   overflow: hidden !important;
   border: 1px solid var(--cnc-line) !important;
-  border-radius: 3px !important;
+  border-radius: 14px !important;
 }
 
 body.tc-charcuterie-event #performance_32663_reservations > .clearfix.medium_top_margin,
@@ -401,7 +409,7 @@ body.tc-charcuterie-event #performance_32663_reservations .reservation input {
   min-height: 38px !important;
   padding: 7px 9px !important;
   border: 1px solid var(--cnc-line) !important;
-  border-radius: 2px !important;
+  border-radius: 9px !important;
 }
 
 body.tc-charcuterie-event #performance_32663_reservations .reservation .seat_selection,
@@ -422,7 +430,11 @@ body.tc-charcuterie-event #performance_32663_reservations .remove_reservation {
 }
 
 body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_message {
-  padding: 9px 3px !important;
+  width: fit-content !important;
+  margin: 4px 0 0 !important;
+  padding: 9px 14px !important;
+  border-radius: 999px !important;
+  background: rgba(87, 21, 43, 0.06) !important;
   color: var(--cnc-wine) !important;
   font-size: 13px !important;
   line-height: 1.35 !important;
@@ -469,20 +481,20 @@ body.tc-charcuterie-event .tc-cnc-native-donation {
 
 body.tc-charcuterie-event #tcCharcuterieSupport {
   margin: 0 !important;
-  padding: 0 0 23px !important;
-  border-bottom: 1px solid var(--cnc-line) !important;
+  padding: 23px !important;
+  border: 1px solid rgba(87, 21, 43, 0.11) !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, #fffaf7, #fceeea) !important;
 }
 
 body.tc-charcuterie-event .tc-cnc-support-head {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr) !important;
-  gap: 28px !important;
-  align-items: end !important;
-  margin: 0 0 17px !important;
+  display: block !important;
+  max-width: 780px !important;
+  margin: 0 !important;
 }
 
 body.tc-charcuterie-event .tc-cnc-support-head h2 {
-  margin: 10px 0 0 !important;
+  margin: 8px 0 9px !important;
   color: var(--cnc-wine) !important;
   font: 400 32px/1.08 'Cormorant Garamond', Georgia, serif !important;
   letter-spacing: -0.5px !important;
@@ -493,6 +505,53 @@ body.tc-charcuterie-event .tc-cnc-support-head p {
   color: var(--cnc-copy) !important;
   font-size: 14px !important;
   line-height: 1.65 !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-toggle {
+  display: inline-flex !important;
+  min-height: 42px !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 18px 0 0 !important;
+  padding: 10px 16px !important;
+  border: 1px solid rgba(87, 21, 43, 0.28) !important;
+  border-radius: 999px !important;
+  background: #fff !important;
+  color: var(--cnc-wine) !important;
+  font: 800 12px/1.2 Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.25px !important;
+  cursor: pointer !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-toggle::after {
+  content: '+' !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  font-weight: 400 !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-toggle[aria-expanded="true"]::after {
+  content: '−' !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-toggle-note {
+  padding-left: 10px !important;
+  border-left: 1px solid var(--cnc-line) !important;
+  color: var(--cnc-muted) !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.8px !important;
+  text-transform: uppercase !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-body {
+  margin-top: 16px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid var(--cnc-line) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-body[hidden] {
+  display: none !important;
 }
 
 body.tc-charcuterie-event .tc-cnc-support-options {
@@ -522,7 +581,7 @@ body.tc-charcuterie-event .tc-cnc-support-options span {
   justify-content: center !important;
   padding: 9px 14px 9px 43px !important;
   border: 1px solid var(--cnc-line) !important;
-  border-radius: 2px !important;
+  border-radius: 12px !important;
   background: #fff !important;
   transition: border-color 150ms ease, background 150ms ease !important;
 }
@@ -596,7 +655,7 @@ body.tc-charcuterie-event #tcCharcuterieGift {
   min-height: 43px !important;
   padding: 10px 12px 10px 30px !important;
   border: 1px solid rgba(87, 21, 43, 0.23) !important;
-  border-radius: 2px !important;
+  border-radius: 10px !important;
   color: var(--cnc-ink) !important;
   font: 15px Arial, sans-serif !important;
 }
@@ -760,7 +819,7 @@ body.tc-charcuterie-event #ValidationNotice {
   max-width: 560px !important;
   margin: 0 auto 10px !important;
   padding: 9px 13px !important;
-  border-radius: 2px !important;
+  border-radius: 10px !important;
   font-size: 12px !important;
   line-height: 1.4 !important;
 }
@@ -838,8 +897,9 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
 
   body.tc-charcuterie-event .tc-cnc-hero-media,
   body.tc-charcuterie-event .tc-cnc-hero-media img {
-    min-height: 500px !important;
-    max-height: 570px !important;
+    display: none !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
   }
 
   body.tc-charcuterie-event .tc-cnc-hero-media img {
@@ -864,8 +924,12 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
   }
 
   body.tc-charcuterie-event .tc-cnc-support-head {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
+    max-width: none !important;
+  }
+
+  body.tc-charcuterie-event .tc-cnc-support-toggle {
+    width: 100% !important;
+    justify-content: center !important;
   }
 
   body.tc-charcuterie-event #ReserversInformation > .large_top_padding > .clearfix {
@@ -973,6 +1037,10 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
   body.tc-charcuterie-event #PaymentInformation,
   body.tc-charcuterie-event #Payment {
     padding: 24px 18px !important;
+  }
+
+  body.tc-charcuterie-event #tcCharcuterieSupport {
+    padding: 19px 17px !important;
   }
 
   body.tc-charcuterie-event #ReserversInformation .g140,
