@@ -103,6 +103,30 @@ test('sponsorship choices update the native Chabad One donation input', () => {
   } finally { p.close(); }
 });
 
+test('sponsorship options are an accessible optional disclosure', () => {
+  const p = page();
+  try {
+    const button = p.document.querySelector('.tc-cnc-support-toggle');
+    const body = p.document.getElementById('tcCharcuterieSupportBody');
+    assert.ok(button);
+    assert.ok(body);
+    assert.equal(button.getAttribute('aria-expanded'), 'false');
+    assert.equal(body.hidden, true);
+    button.click();
+    assert.equal(button.getAttribute('aria-expanded'), 'true');
+    assert.equal(body.hidden, false);
+    assert.equal(button.querySelector('.tc-cnc-support-toggle-label').textContent, 'Hide sponsorship options');
+    button.click();
+    assert.equal(button.getAttribute('aria-expanded'), 'false');
+    assert.equal(body.hidden, true);
+  } finally { p.close(); }
+});
+
+test('classy sponsorship copy explains how partners make the evening possible', () => {
+  assert.match(js, /full cost of Women’s Circle events is made possible through the generosity of our community partners/);
+  assert.match(js, /sponsoring another woman’s place/);
+});
+
 test('unrelated pages remain untouched', () => {
   const p = page('https://www.jewishtricities.com/about');
   try {
@@ -126,6 +150,16 @@ test('current Chabad One form markup receives the compact layout', () => {
   assert.match(css, /#ReserversInformation > \.large_top_padding > \.clearfix/);
   assert.match(css, /#Payment \.clearfix\.small_vertical_padding/);
   assert.match(css, /#Buttons > \.large_top_padding/);
+});
+
+test('native additional-ticket panel can stay collapsed after the first reservation', () => {
+  assert.match(css, /\.toggle_options\[style\*="display"\]\[style\*="none"\]\s*\{\s*display: none !important;/);
+});
+
+test('mobile hides the large hero photograph and cards use modern rounding', () => {
+  assert.match(css, /@media \(max-width: 760px\)[\s\S]*\.tc-cnc-hero-media,[\s\S]*display: none !important;/);
+  assert.match(css, /#tcCharcuterieIntro[\s\S]*border-radius: 22px !important;/);
+  assert.match(css, /#Payment \{[\s\S]*border-radius: 18px !important;/);
 });
 
 test('script never replaces or submits the native form', () => {
