@@ -1,0 +1,613 @@
+/* Charcuterie & Champagne — event 24151. Every rule is page-scoped. */
+body.tc-charcuterie-event {
+  --cnc-wine: #601b33;
+  --cnc-wine-deep: #471125;
+  --cnc-rose: #d85072;
+  --cnc-pink: #f3b6b5;
+  --cnc-blush: #f9dfd8;
+  --cnc-cream: #fffaf5;
+  --cnc-paper: #fffdf9;
+  --cnc-ink: #482333;
+  --cnc-copy: #6d5260;
+  --cnc-muted: #8b6f7a;
+  --cnc-gold: #bb8a4a;
+  --cnc-line: rgba(96, 27, 51, 0.13);
+  --cnc-shadow: 0 28px 70px rgba(86, 35, 54, 0.16);
+  background:
+    radial-gradient(circle at 8% 8%, rgba(255, 255, 255, 0.82) 0 2px, transparent 3px),
+    radial-gradient(circle at 92% 12%, rgba(255, 255, 255, 0.72) 0 3px, transparent 4px),
+    linear-gradient(160deg, #f9ded7 0%, #f6cac7 46%, #f3b9bb 100%) !important;
+  background-size: 43px 43px, 67px 67px, auto !important;
+  color: var(--cnc-ink) !important;
+}
+
+body.tc-charcuterie-event,
+body.tc-charcuterie-event * {
+  box-sizing: border-box !important;
+}
+
+body.tc-charcuterie-event #BodyContainer,
+body.tc-charcuterie-event .body_wrapper,
+body.tc-charcuterie-event #ContentBody,
+body.tc-charcuterie-event .content_full_width,
+body.tc-charcuterie-event .master-content-wrapper {
+  background: transparent !important;
+}
+
+body.tc-charcuterie-event .master-content-wrapper.g960:has(header.article-header),
+body.tc-charcuterie-event header.article-header,
+body.tc-charcuterie-event .article-header,
+body.tc-charcuterie-event #RegisterHeader {
+  display: none !important;
+}
+
+body.tc-charcuterie-event #RegisterSinglePage {
+  display: block !important;
+  float: none !important;
+  width: min(100% - 36px, 1120px) !important;
+  max-width: 1120px !important;
+  margin: 46px auto 76px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--cnc-ink) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+body.tc-charcuterie-event #tcCharcuterieIntro {
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  margin: 0 0 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.62) !important;
+  border-radius: 34px !important;
+  background: var(--cnc-blush) !important;
+  box-shadow: var(--cnc-shadow) !important;
+}
+
+body.tc-charcuterie-event #tcCharcuterieIntro::before {
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: -90px auto auto -70px !important;
+  width: 290px !important;
+  height: 290px !important;
+  border: 1px solid rgba(255, 255, 255, 0.62) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 0 34px rgba(255, 255, 255, 0.09), 0 0 0 76px rgba(255, 255, 255, 0.06) !important;
+  content: '' !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-hero {
+  position: relative !important;
+  z-index: 1 !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.14fr) minmax(320px, 0.86fr) !important;
+  min-height: 570px !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  padding: 72px 32px 64px 66px !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-kicker,
+body.tc-charcuterie-event .tc-cnc-eyebrow {
+  color: var(--cnc-rose) !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  font-weight: 800 !important;
+  letter-spacing: 2.1px !important;
+  text-transform: uppercase !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-copy h1 {
+  max-width: 670px !important;
+  margin: 18px 0 22px !important;
+  color: var(--cnc-wine) !important;
+  font-family: Georgia, 'Times New Roman', Times, serif !important;
+  font-size: clamp(52px, 6.3vw, 80px) !important;
+  line-height: 0.94 !important;
+  font-weight: 400 !important;
+  letter-spacing: -3.5px !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-copy h1 span {
+  display: block !important;
+  margin: 4px 0 2px 42px !important;
+  color: var(--cnc-rose) !important;
+  font-size: 0.62em !important;
+  font-style: italic !important;
+  letter-spacing: -1px !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-lede {
+  margin: 0 0 8px !important;
+  color: var(--cnc-ink) !important;
+  font: 700 19px/1.45 Arial, Helvetica, sans-serif !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-description {
+  max-width: 570px !important;
+  margin: 0 !important;
+  color: var(--cnc-copy) !important;
+  font: 16px/1.72 Arial, Helvetica, sans-serif !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 28px 0 0 !important;
+  padding: 14px 20px !important;
+  border-radius: 999px !important;
+  background: var(--cnc-wine) !important;
+  box-shadow: 0 12px 24px rgba(96, 27, 51, 0.2) !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+  transition: transform 160ms ease, box-shadow 160ms ease !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-cta:hover,
+body.tc-charcuterie-event .tc-cnc-cta:focus-visible {
+  box-shadow: 0 16px 30px rgba(96, 27, 51, 0.28) !important;
+  transform: translateY(-2px) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-art {
+  position: relative !important;
+  min-height: 520px !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 55% 30%, rgba(255, 255, 255, 0.82) 0 2px, transparent 3px),
+    radial-gradient(circle at 80% 16%, rgba(255, 255, 255, 0.9) 0 4px, transparent 5px),
+    linear-gradient(155deg, #ef9ca8 0%, #d8627b 52%, #a93456 100%) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-art::before {
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(90deg, rgba(249, 223, 216, 0.9), transparent 23%) !important;
+  content: '' !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-bubbles i {
+  position: absolute !important;
+  width: 14px !important;
+  height: 14px !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.78) !important;
+  border-radius: 50% !important;
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.42) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-bubbles i:nth-child(1) { top: 13%; left: 27%; }
+body.tc-charcuterie-event .tc-cnc-bubbles i:nth-child(2) { top: 23%; left: 57%; width: 9px !important; height: 9px !important; }
+body.tc-charcuterie-event .tc-cnc-bubbles i:nth-child(3) { top: 8%; left: 76%; width: 20px !important; height: 20px !important; }
+body.tc-charcuterie-event .tc-cnc-bubbles i:nth-child(4) { top: 34%; left: 18%; width: 7px !important; height: 7px !important; }
+body.tc-charcuterie-event .tc-cnc-bubbles i:nth-child(5) { top: 39%; right: 10%; width: 11px !important; height: 11px !important; }
+
+body.tc-charcuterie-event .tc-cnc-glass {
+  position: absolute !important;
+  z-index: 2 !important;
+  top: 75px !important;
+  right: 58px !important;
+  width: 148px !important;
+  height: 190px !important;
+  border: 3px solid rgba(255, 255, 255, 0.68) !important;
+  border-top: 2px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50% 50% 42% 42% / 21% 21% 72% 72% !important;
+  background: linear-gradient(to bottom, transparent 0 38%, rgba(251, 205, 166, 0.6) 39% 83%, transparent 84%) !important;
+  box-shadow: inset 10px 4px 18px rgba(255, 255, 255, 0.26) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-glass::before,
+body.tc-charcuterie-event .tc-cnc-glass::after {
+  position: absolute !important;
+  left: 50% !important;
+  background: rgba(255, 255, 255, 0.76) !important;
+  content: '' !important;
+  transform: translateX(-50%) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-glass::before { top: 185px !important; width: 3px !important; height: 100px !important; }
+body.tc-charcuterie-event .tc-cnc-glass::after { top: 282px !important; width: 112px !important; height: 3px !important; border-radius: 50% !important; }
+
+body.tc-charcuterie-event .tc-cnc-board {
+  position: absolute !important;
+  z-index: 3 !important;
+  right: 32px !important;
+  bottom: 42px !important;
+  width: 360px !important;
+  height: 172px !important;
+  border: 8px solid rgba(130, 63, 45, 0.45) !important;
+  border-radius: 50% !important;
+  background: linear-gradient(165deg, #e5aa75, #b86e4c) !important;
+  box-shadow: 0 24px 38px rgba(67, 17, 37, 0.26), inset 0 0 0 3px rgba(255, 235, 211, 0.18) !important;
+  transform: rotate(-4deg) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-grapes { position: absolute !important; top: 17px !important; right: 28px !important; width: 112px !important; height: 94px !important; }
+body.tc-charcuterie-event .tc-cnc-grapes i { position: absolute !important; width: 31px !important; height: 31px !important; border-radius: 50% !important; background: radial-gradient(circle at 32% 28%, #ad5b6d, #5c1934 66%) !important; box-shadow: 0 4px 7px rgba(64, 16, 35, 0.24) !important; }
+body.tc-charcuterie-event .tc-cnc-grapes i:nth-child(1) { top: 0; left: 29px; }
+body.tc-charcuterie-event .tc-cnc-grapes i:nth-child(2) { top: 7px; left: 58px; }
+body.tc-charcuterie-event .tc-cnc-grapes i:nth-child(3) { top: 28px; left: 13px; }
+body.tc-charcuterie-event .tc-cnc-grapes i:nth-child(4) { top: 33px; left: 43px; }
+body.tc-charcuterie-event .tc-cnc-grapes i:nth-child(5) { top: 38px; left: 72px; }
+body.tc-charcuterie-event .tc-cnc-grapes i:nth-child(6) { top: 60px; left: 30px; }
+body.tc-charcuterie-event .tc-cnc-grapes i:nth-child(7) { top: 63px; left: 59px; }
+
+body.tc-charcuterie-event .tc-cnc-cheese {
+  position: absolute !important;
+  left: 119px !important;
+  bottom: 26px !important;
+  width: 105px !important;
+  height: 86px !important;
+  background: linear-gradient(145deg, #fff3b5, #e6bc63) !important;
+  clip-path: polygon(0 100%, 100% 100%, 88% 0, 28% 18%) !important;
+  filter: drop-shadow(0 8px 7px rgba(74, 32, 28, 0.2)) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-brie {
+  position: absolute !important;
+  left: 36px !important;
+  bottom: 27px !important;
+  width: 91px !important;
+  height: 72px !important;
+  border: 3px solid #eee2c9 !important;
+  border-radius: 50% !important;
+  background: #fff8e6 !important;
+  box-shadow: 0 8px 12px rgba(74, 32, 28, 0.16) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-crackers { position: absolute !important; top: 23px !important; left: 27px !important; width: 120px !important; height: 60px !important; }
+body.tc-charcuterie-event .tc-cnc-crackers i { position: absolute !important; width: 56px !important; height: 42px !important; border: 2px solid #c98a41 !important; border-radius: 50% !important; background: radial-gradient(circle, #b97935 0 2px, transparent 3px), #efbd70 !important; background-size: 12px 12px !important; box-shadow: 0 5px 8px rgba(74, 32, 28, 0.16) !important; transform: rotate(-18deg) !important; }
+body.tc-charcuterie-event .tc-cnc-crackers i:nth-child(2) { left: 19px !important; transform: rotate(-8deg) !important; }
+body.tc-charcuterie-event .tc-cnc-crackers i:nth-child(3) { left: 39px !important; transform: rotate(3deg) !important; }
+body.tc-charcuterie-event .tc-cnc-crackers i:nth-child(4) { left: 59px !important; transform: rotate(14deg) !important; }
+
+body.tc-charcuterie-event .tc-cnc-details {
+  position: relative !important;
+  z-index: 2 !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  border-top: 1px solid rgba(96, 27, 51, 0.12) !important;
+  background: rgba(255, 250, 245, 0.86) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-details > div {
+  min-width: 0 !important;
+  padding: 22px 28px 24px !important;
+  border-left: 1px solid rgba(96, 27, 51, 0.1) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-details > div:first-child { border-left: 0 !important; }
+body.tc-charcuterie-event .tc-cnc-details span { display: block !important; margin: 0 0 7px !important; color: var(--cnc-rose) !important; font-size: 10px !important; font-weight: 800 !important; letter-spacing: 1.7px !important; text-transform: uppercase !important; }
+body.tc-charcuterie-event .tc-cnc-details strong { color: var(--cnc-ink) !important; font-size: 14px !important; line-height: 1.5 !important; font-weight: 700 !important; }
+
+body.tc-charcuterie-event #RegisterBody {
+  display: block !important;
+  float: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--cnc-ink) !important;
+}
+
+body.tc-charcuterie-event #Performances,
+body.tc-charcuterie-event #Summary,
+body.tc-charcuterie-event #ReserversInformation,
+body.tc-charcuterie-event #PaymentInformation {
+  width: 100% !important;
+  margin: 0 0 20px !important;
+  padding: 30px 34px !important;
+  border: 1px solid rgba(255, 255, 255, 0.75) !important;
+  border-radius: 24px !important;
+  background: rgba(255, 253, 249, 0.96) !important;
+  box-shadow: 0 13px 38px rgba(78, 28, 47, 0.09) !important;
+}
+
+body.tc-charcuterie-event #RegisterBody .title > .bold,
+body.tc-charcuterie-event #RegisterBody .title.large > span.bold {
+  color: var(--cnc-wine) !important;
+  font: 400 31px/1.2 Georgia, 'Times New Roman', serif !important;
+}
+
+body.tc-charcuterie-event #Performances > .regular {
+  max-width: 700px !important;
+  margin: 8px 0 22px !important;
+  color: var(--cnc-copy) !important;
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+body.tc-charcuterie-event #performance_32663 {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+body.tc-charcuterie-event #performance_32663 > .title { display: none !important; }
+body.tc-charcuterie-event #performance_32663_additionalsToggle { overflow: visible !important; border: 0 !important; background: transparent !important; }
+
+body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.55fr) minmax(150px, auto) !important;
+  align-items: end !important;
+  gap: 14px !important;
+  padding: 18px !important;
+  border: 1px solid var(--cnc-line) !important;
+  border-radius: 18px !important;
+  background: #fff8f4 !important;
+}
+
+body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options > .inline_block {
+  display: block !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: bottom !important;
+}
+
+body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options > .inline_block:nth-last-child(-n + 2) { display: none !important; }
+body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options > .inline_block > div:first-child { margin: 0 0 8px !important; color: var(--cnc-ink) !important; font-size: 12px !important; line-height: 1.3 !important; font-weight: 800 !important; text-align: left !important; }
+
+body.tc-charcuterie-event #performance_32663_priceCategory,
+body.tc-charcuterie-event #performance_32663_quantityOfAttendees,
+body.tc-charcuterie-event #RegisterBody input.co_form_input,
+body.tc-charcuterie-event #RegisterBody select.co_form_input {
+  width: 100% !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 11px 13px !important;
+  border: 1px solid rgba(96, 27, 51, 0.2) !important;
+  border-radius: 11px !important;
+  outline: 0 !important;
+  background: #fff !important;
+  color: var(--cnc-ink) !important;
+  font: 15px/1.35 Arial, Helvetica, sans-serif !important;
+}
+
+body.tc-charcuterie-event #RegisterBody input.co_form_input:focus,
+body.tc-charcuterie-event #RegisterBody select.co_form_input:focus,
+body.tc-charcuterie-event #tcCharcuterieGift:focus {
+  border-color: var(--cnc-rose) !important;
+  box-shadow: 0 0 0 4px rgba(216, 80, 114, 0.13) !important;
+}
+
+body.tc-charcuterie-event #performance_32663_addAttendeeButton,
+body.tc-charcuterie-event #SubmitButton {
+  min-height: 48px !important;
+  padding: 12px 22px !important;
+  border: 0 !important;
+  border-radius: 11px !important;
+  background: var(--cnc-wine) !important;
+  box-shadow: 0 9px 20px rgba(96, 27, 51, 0.18) !important;
+  color: #fff !important;
+  font: 800 14px/1 Arial, Helvetica, sans-serif !important;
+  text-transform: none !important;
+}
+
+body.tc-charcuterie-event #performance_32663_addAttendeeButton:hover,
+body.tc-charcuterie-event #SubmitButton:hover { background: var(--cnc-wine-deep) !important; }
+
+body.tc-charcuterie-event #performance_32663_reservations:not(:empty) {
+  margin: 0 0 18px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--cnc-line) !important;
+  border-radius: 16px !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations .reservation {
+  display: grid !important;
+  grid-template-columns: 34px minmax(130px, 1fr) minmax(130px, 1fr) minmax(130px, 0.8fr) 44px 90px !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 14px !important;
+  border-top: 1px solid var(--cnc-line) !important;
+  background: #fff !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations .reservation:first-child { border-top: 0 !important; }
+body.tc-charcuterie-event #performance_32663_reservations .reservation > * { float: none !important; width: auto !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; }
+body.tc-charcuterie-event #performance_32663_reservations .reservation input { width: 100% !important; min-height: 42px !important; padding: 9px 11px !important; border: 1px solid var(--cnc-line) !important; border-radius: 9px !important; }
+body.tc-charcuterie-event #performance_32663 .subtotal { margin: 14px 0 0 !important; color: var(--cnc-wine) !important; font-size: 16px !important; }
+
+body.tc-charcuterie-event #SecondaryFormItems { padding: 0 !important; }
+body.tc-charcuterie-event #Summary.separator,
+body.tc-charcuterie-event #Summary .separator { border: 0 !important; }
+body.tc-charcuterie-event #Summary > .clearfix:first-child { display: none !important; }
+body.tc-charcuterie-event #Summary > .large_top_padding { padding: 0 !important; margin: 0 !important; }
+body.tc-charcuterie-event #Summary > .large_top_padding > .title { margin-top: 26px !important; }
+body.tc-charcuterie-event .tc-cnc-native-donation { position: absolute !important; width: 1px !important; height: 1px !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; clip-path: inset(50%) !important; white-space: nowrap !important; }
+
+body.tc-charcuterie-event #tcCharcuterieSupport {
+  margin: 0 !important;
+  padding: 0 0 28px !important;
+  border-bottom: 1px solid var(--cnc-line) !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-head {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr) !important;
+  gap: 28px !important;
+  align-items: end !important;
+  margin: 0 0 22px !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-head h2 {
+  margin: 7px 0 0 !important;
+  color: var(--cnc-wine) !important;
+  font: 400 30px/1.12 Georgia, 'Times New Roman', serif !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-head p {
+  margin: 0 !important;
+  color: var(--cnc-copy) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-options {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 9px !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-options label {
+  position: relative !important;
+  min-width: 0 !important;
+  cursor: pointer !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-options input {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-options span {
+  display: flex !important;
+  min-height: 92px !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: 13px 12px !important;
+  border: 1px solid var(--cnc-line) !important;
+  border-radius: 13px !important;
+  background: #fff8f4 !important;
+  transition: border-color 150ms ease, background 150ms ease, transform 150ms ease !important;
+}
+
+body.tc-charcuterie-event .tc-cnc-support-options strong { color: var(--cnc-ink) !important; font-size: 13px !important; line-height: 1.28 !important; }
+body.tc-charcuterie-event .tc-cnc-support-options small { display: block !important; margin-top: 6px !important; color: var(--cnc-muted) !important; font-size: 11px !important; line-height: 1.25 !important; }
+body.tc-charcuterie-event .tc-cnc-support-options input:checked + span { border-color: var(--cnc-rose) !important; background: #fde9e7 !important; box-shadow: inset 0 0 0 1px var(--cnc-rose) !important; transform: translateY(-2px) !important; }
+body.tc-charcuterie-event .tc-cnc-support-options input:focus-visible + span { outline: 3px solid rgba(216, 80, 114, 0.22) !important; outline-offset: 2px !important; }
+
+body.tc-charcuterie-event .tc-cnc-custom-label { display: block !important; margin: 20px 0 7px !important; color: var(--cnc-ink) !important; font-size: 12px !important; font-weight: 800 !important; }
+body.tc-charcuterie-event .tc-cnc-custom { position: relative !important; width: min(100%, 260px) !important; }
+body.tc-charcuterie-event .tc-cnc-custom > span { position: absolute !important; left: 14px !important; top: 50% !important; color: var(--cnc-muted) !important; transform: translateY(-50%) !important; }
+body.tc-charcuterie-event #tcCharcuterieGift { width: 100% !important; min-height: 48px !important; padding: 10px 12px 10px 30px !important; border: 1px solid rgba(96, 27, 51, 0.2) !important; border-radius: 11px !important; color: var(--cnc-ink) !important; font: 15px Arial, sans-serif !important; }
+body.tc-charcuterie-event #tcCharcuterieGift:disabled { background: #f4efeb !important; color: #9c8d92 !important; cursor: not-allowed !important; }
+body.tc-charcuterie-event #tcCharcuterieGiftNote,
+body.tc-charcuterie-event #tcCharcuterieGiftError { margin: 7px 0 0 !important; color: var(--cnc-muted) !important; font-size: 12px !important; }
+body.tc-charcuterie-event #tcCharcuterieGiftError { color: #a82f4e !important; }
+
+body.tc-charcuterie-event #Totals { color: var(--cnc-ink) !important; font-size: 15px !important; }
+body.tc-charcuterie-event #Totals > .clearfix { padding: 4px 0 !important; }
+body.tc-charcuterie-event #Totals > .clearfix:last-child { margin-top: 8px !important; padding-top: 12px !important; border-top: 1px solid var(--cnc-line) !important; color: var(--cnc-wine) !important; font-size: 18px !important; font-weight: 800 !important; }
+
+body.tc-charcuterie-event #ReserversInformation > .large_top_padding,
+body.tc-charcuterie-event #PaymentInformation > .large_top_padding { margin: 0 !important; padding: 0 !important; }
+body.tc-charcuterie-event #ReserversInformation .clearfix.small_vertical_padding,
+body.tc-charcuterie-event #PaymentInformation .clearfix.small_vertical_padding { display: grid !important; grid-template-columns: minmax(150px, 0.35fr) minmax(0, 0.65fr) !important; align-items: start !important; gap: 18px !important; padding: 8px 0 !important; }
+body.tc-charcuterie-event #ReserversInformation .label,
+body.tc-charcuterie-event #PaymentInformation .label { float: none !important; width: auto !important; margin: 11px 0 0 !important; color: var(--cnc-ink) !important; font-size: 13px !important; }
+body.tc-charcuterie-event #ReserversInformation .float_left,
+body.tc-charcuterie-event #PaymentInformation .float_left { float: none !important; width: 100% !important; margin: 0 !important; }
+body.tc-charcuterie-event #RegisterBody .small { color: var(--cnc-muted) !important; }
+
+body.tc-charcuterie-event #SubmitButton_wrapper { width: auto !important; margin-top: 12px !important; }
+body.tc-charcuterie-event #SubmitButton { min-width: 240px !important; }
+body.tc-charcuterie-event #SubmitButton[disabled] { opacity: 0.48 !important; cursor: not-allowed !important; }
+
+@media (max-width: 900px) {
+  body.tc-charcuterie-event .tc-cnc-hero { grid-template-columns: minmax(0, 1fr) 330px !important; min-height: 510px !important; }
+  body.tc-charcuterie-event .tc-cnc-copy { padding: 54px 28px 52px 42px !important; }
+  body.tc-charcuterie-event .tc-cnc-art { min-height: 500px !important; }
+  body.tc-charcuterie-event .tc-cnc-board { right: -24px !important; width: 340px !important; }
+  body.tc-charcuterie-event .tc-cnc-glass { right: 24px !important; }
+  body.tc-charcuterie-event .tc-cnc-support-options { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options { grid-template-columns: minmax(0, 1fr) minmax(150px, 0.55fr) !important; }
+  body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options > .inline_block:nth-child(3) { grid-column: 1 / -1 !important; }
+  body.tc-charcuterie-event #performance_32663_addAttendeeButton { width: 100% !important; }
+}
+
+@media (max-width: 720px) {
+  body.tc-charcuterie-event #RegisterSinglePage { width: min(100% - 24px, 1120px) !important; margin: 24px auto 46px !important; }
+  body.tc-charcuterie-event #tcCharcuterieIntro { border-radius: 24px !important; }
+  body.tc-charcuterie-event .tc-cnc-hero { grid-template-columns: 1fr !important; min-height: 0 !important; }
+  body.tc-charcuterie-event .tc-cnc-copy { padding: 44px 28px 38px !important; }
+  body.tc-charcuterie-event .tc-cnc-copy h1 { margin-top: 15px !important; font-size: clamp(48px, 14vw, 67px) !important; letter-spacing: -2.7px !important; }
+  body.tc-charcuterie-event .tc-cnc-art { min-height: 390px !important; }
+  body.tc-charcuterie-event .tc-cnc-board { right: 4% !important; bottom: 32px !important; width: 88% !important; max-width: 360px !important; }
+  body.tc-charcuterie-event .tc-cnc-glass { top: 36px !important; right: 12% !important; transform: scale(0.78) !important; transform-origin: top right !important; }
+  body.tc-charcuterie-event .tc-cnc-details { grid-template-columns: 1fr !important; }
+  body.tc-charcuterie-event .tc-cnc-details > div { padding: 17px 24px !important; border-top: 1px solid rgba(96, 27, 51, 0.1) !important; border-left: 0 !important; }
+  body.tc-charcuterie-event .tc-cnc-details > div:first-child { border-top: 0 !important; }
+  body.tc-charcuterie-event #Performances,
+  body.tc-charcuterie-event #Summary,
+  body.tc-charcuterie-event #ReserversInformation,
+  body.tc-charcuterie-event #PaymentInformation { padding: 24px 20px !important; border-radius: 18px !important; }
+  body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options { grid-template-columns: 1fr !important; padding: 15px !important; }
+  body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options > .inline_block:nth-child(3) { grid-column: auto !important; }
+  body.tc-charcuterie-event #performance_32663_reservations .reservation { grid-template-columns: 28px minmax(0, 1fr) !important; }
+  body.tc-charcuterie-event #performance_32663_reservations .reservation > *:nth-child(n + 4) { grid-column: 2 !important; }
+  body.tc-charcuterie-event .tc-cnc-support-head { grid-template-columns: 1fr !important; gap: 12px !important; }
+  body.tc-charcuterie-event .tc-cnc-support-options { grid-template-columns: 1fr 1fr !important; }
+  body.tc-charcuterie-event #ReserversInformation .clearfix.small_vertical_padding,
+  body.tc-charcuterie-event #PaymentInformation .clearfix.small_vertical_padding { grid-template-columns: 1fr !important; gap: 6px !important; }
+  body.tc-charcuterie-event #ReserversInformation .label,
+  body.tc-charcuterie-event #PaymentInformation .label { margin: 0 !important; }
+  body.tc-charcuterie-event #SubmitButton_wrapper,
+  body.tc-charcuterie-event #SubmitButton { width: 100% !important; min-width: 0 !important; }
+}
+
+@media (max-width: 390px) {
+  body.tc-charcuterie-event #RegisterSinglePage { width: min(100% - 16px, 1120px) !important; }
+  body.tc-charcuterie-event .tc-cnc-copy { padding: 38px 22px 34px !important; }
+  body.tc-charcuterie-event .tc-cnc-copy h1 { font-size: 46px !important; }
+  body.tc-charcuterie-event .tc-cnc-art { min-height: 330px !important; }
+  body.tc-charcuterie-event .tc-cnc-support-options { grid-template-columns: 1fr !important; }
+  body.tc-charcuterie-event .tc-cnc-support-options span { min-height: 72px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.tc-charcuterie-event .tc-cnc-cta,
+  body.tc-charcuterie-event .tc-cnc-support-options span { transition: none !important; }
+}
+
+body.tc-charcuterie-receipt {
+  background: linear-gradient(155deg, #f9ded7, #f3b9bb) !important;
+  color: #482333 !important;
+}
+
+body.tc-charcuterie-receipt,
+body.tc-charcuterie-receipt * { box-sizing: border-box !important; }
+body.tc-charcuterie-receipt #BodyContainer,
+body.tc-charcuterie-receipt .body_wrapper,
+body.tc-charcuterie-receipt #ContentBody,
+body.tc-charcuterie-receipt .content_full_width,
+body.tc-charcuterie-receipt .master-content-wrapper { background: transparent !important; }
+body.tc-charcuterie-receipt .article-header,
+body.tc-charcuterie-receipt #RegisterHeader { display: none !important; }
+body.tc-charcuterie-receipt #RegisterSinglePage { width: min(100% - 32px, 940px) !important; margin: 44px auto 68px !important; padding: 0 !important; border: 0 !important; background: transparent !important; color: #482333 !important; font: 15px/1.65 Arial, sans-serif !important; }
+body.tc-charcuterie-receipt #tcCharcuterieConfirmed { margin: 0 0 20px !important; padding: 42px 44px 34px !important; border-radius: 26px !important; background: #601b33 !important; box-shadow: 0 24px 60px rgba(71, 17, 37, 0.22) !important; color: #fffaf5 !important; }
+body.tc-charcuterie-receipt .tc-cnc-receipt-kicker { color: #f3b6b5 !important; font-size: 11px !important; font-weight: 800 !important; letter-spacing: 2px !important; text-transform: uppercase !important; }
+body.tc-charcuterie-receipt #tcCharcuterieConfirmed h1 { margin: 12px 0 12px !important; color: #fffaf5 !important; font: 400 48px/1.1 Georgia, serif !important; }
+body.tc-charcuterie-receipt #tcCharcuterieConfirmed p { margin: 0 !important; color: #fbe4df !important; }
+body.tc-charcuterie-receipt .tc-cnc-receipt-details { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 24px !important; margin: 28px 0 !important; padding: 22px 0 !important; border-top: 1px solid rgba(255, 255, 255, 0.22) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.22) !important; }
+body.tc-charcuterie-receipt .tc-cnc-receipt-details span { display: block !important; margin-bottom: 7px !important; color: #f3b6b5 !important; font-size: 10px !important; font-weight: 800 !important; letter-spacing: 1.6px !important; text-transform: uppercase !important; }
+body.tc-charcuterie-receipt .tc-cnc-receipt-details strong { color: #fffaf5 !important; font-size: 15px !important; line-height: 1.5 !important; }
+body.tc-charcuterie-receipt #RegisterBody { width: 100% !important; padding: 30px 34px !important; border: 0 !important; border-radius: 24px !important; background: #fffdf9 !important; box-shadow: 0 14px 40px rgba(78, 28, 47, 0.1) !important; color: #482333 !important; }
+body.tc-charcuterie-receipt .tc-cnc-old-intro { display: none !important; }
+body.tc-charcuterie-receipt #RegisterBody a { color: #601b33 !important; }
+body.tc-charcuterie-receipt #AnotherReservationButton { padding: 13px 20px !important; border: 0 !important; border-radius: 10px !important; background: #601b33 !important; color: white !important; font: 800 14px Arial, sans-serif !important; }
+body.tc-charcuterie-receipt .tc-cnc-receipt-contact { margin: 24px 0 0 !important; color: #8b6f7a !important; }
+
+@media (max-width: 600px) {
+  body.tc-charcuterie-receipt #RegisterSinglePage { width: min(100% - 20px, 940px) !important; margin: 24px auto 44px !important; }
+  body.tc-charcuterie-receipt #tcCharcuterieConfirmed { padding: 32px 24px !important; border-radius: 20px !important; }
+  body.tc-charcuterie-receipt #tcCharcuterieConfirmed h1 { font-size: 37px !important; }
+  body.tc-charcuterie-receipt .tc-cnc-receipt-details { grid-template-columns: 1fr !important; }
+  body.tc-charcuterie-receipt #RegisterBody { padding: 24px 20px !important; border-radius: 18px !important; }
+}
