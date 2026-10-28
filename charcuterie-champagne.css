@@ -41,7 +41,7 @@ body.tc-charcuterie-event #RegisterSinglePage {
   float: none !important;
   width: min(100% - 40px, 1160px) !important;
   max-width: 1160px !important;
-  margin: 52px auto 80px !important;
+  margin: 42px auto 48px !important;
   padding: 0 !important;
   border: 0 !important;
   background: transparent !important;
@@ -51,7 +51,7 @@ body.tc-charcuterie-event #RegisterSinglePage {
 
 body.tc-charcuterie-event #tcCharcuterieIntro {
   width: 100% !important;
-  margin: 0 0 30px !important;
+  margin: 0 0 20px !important;
   overflow: hidden !important;
   border: 1px solid rgba(87, 21, 43, 0.1) !important;
   border-radius: 6px !important;
@@ -216,26 +216,27 @@ body.tc-charcuterie-event #RegisterBody {
 body.tc-charcuterie-event #Performances,
 body.tc-charcuterie-event #Summary,
 body.tc-charcuterie-event #ReserversInformation,
-body.tc-charcuterie-event #PaymentInformation {
+body.tc-charcuterie-event #PaymentInformation,
+body.tc-charcuterie-event #Payment {
   width: 100% !important;
-  margin: 0 0 18px !important;
-  padding: 34px 38px !important;
+  margin: 0 0 12px !important;
+  padding: 27px 31px !important;
   border: 1px solid var(--cnc-line) !important;
-  border-radius: 5px !important;
+  border-radius: 4px !important;
   background: rgba(255, 253, 249, 0.98) !important;
-  box-shadow: 0 10px 32px rgba(66, 25, 38, 0.07) !important;
+  box-shadow: 0 7px 22px rgba(66, 25, 38, 0.055) !important;
 }
 
 body.tc-charcuterie-event #RegisterBody .title > .bold,
 body.tc-charcuterie-event #RegisterBody .title.large > span.bold {
   color: var(--cnc-wine) !important;
-  font: 400 35px/1.15 'Cormorant Garamond', Georgia, serif !important;
+  font: 400 31px/1.15 'Cormorant Garamond', Georgia, serif !important;
   letter-spacing: -0.6px !important;
 }
 
 body.tc-charcuterie-event #Performances > .regular {
   max-width: 720px !important;
-  margin: 8px 0 24px !important;
+  margin: 6px 0 17px !important;
   color: var(--cnc-copy) !important;
   font-size: 14px !important;
   line-height: 1.65 !important;
@@ -262,8 +263,8 @@ body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options {
   display: grid !important;
   grid-template-columns: minmax(0, 1fr) minmax(150px, 0.45fr) minmax(160px, auto) !important;
   align-items: end !important;
-  gap: 16px !important;
-  padding: 20px !important;
+  gap: 12px !important;
+  padding: 14px !important;
   border: 1px solid var(--cnc-line) !important;
   border-radius: 3px !important;
   background: #fcf6f2 !important;
@@ -298,9 +299,9 @@ body.tc-charcuterie-event #performance_32663_quantityOfAttendees,
 body.tc-charcuterie-event #RegisterBody input.co_form_input,
 body.tc-charcuterie-event #RegisterBody select.co_form_input {
   width: 100% !important;
-  min-height: 49px !important;
+  min-height: 43px !important;
   margin: 0 !important;
-  padding: 11px 13px !important;
+  padding: 9px 11px !important;
   border: 1px solid rgba(87, 21, 43, 0.23) !important;
   border-radius: 2px !important;
   outline: 0 !important;
@@ -318,8 +319,8 @@ body.tc-charcuterie-event #tcCharcuterieGift:focus {
 
 body.tc-charcuterie-event #performance_32663_addAttendeeButton,
 body.tc-charcuterie-event #SubmitButton {
-  min-height: 49px !important;
-  padding: 13px 24px !important;
+  min-height: 43px !important;
+  padding: 11px 21px !important;
   border: 1px solid var(--cnc-wine) !important;
   border-radius: 2px !important;
   background: var(--cnc-wine) !important;
@@ -335,27 +336,59 @@ body.tc-charcuterie-event #SubmitButton:hover {
 }
 
 body.tc-charcuterie-event #performance_32663_reservations:not(:empty) {
-  margin: 0 0 18px !important;
+  margin: 0 0 13px !important;
   overflow: hidden !important;
   border: 1px solid var(--cnc-line) !important;
   border-radius: 3px !important;
 }
 
-body.tc-charcuterie-event #performance_32663_reservations .reservation {
+body.tc-charcuterie-event #performance_32663_reservations > .clearfix.medium_top_margin,
+body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding {
   display: grid !important;
-  grid-template-columns: 34px minmax(130px, 1fr) minmax(130px, 1fr) minmax(130px, 0.8fr) 44px 90px !important;
+  grid-template-columns: 28px minmax(120px, 1fr) minmax(120px, 1fr) minmax(68px, 0.42fr) 30px 78px !important;
   align-items: center !important;
-  gap: 10px !important;
-  padding: 12px 14px !important;
+  gap: 9px !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations > .clearfix.medium_top_margin {
+  margin: 0 !important;
+  padding: 8px 12px 6px !important;
+  color: var(--cnc-muted) !important;
+  font-size: 10px !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.35px !important;
+  text-transform: uppercase !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations > .clearfix.medium_top_margin > * {
+  float: none !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations > .clearfix.medium_top_margin .price-header {
+  grid-column: 6 !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations .reservation {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
   border-top: 1px solid var(--cnc-line) !important;
   background: #fff !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding {
+  padding: 9px 12px !important;
 }
 
 body.tc-charcuterie-event #performance_32663_reservations .reservation:first-child {
   border-top: 0 !important;
 }
 
-body.tc-charcuterie-event #performance_32663_reservations .reservation > * {
+body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding > * {
   float: none !important;
   width: auto !important;
   min-width: 0 !important;
@@ -365,10 +398,35 @@ body.tc-charcuterie-event #performance_32663_reservations .reservation > * {
 
 body.tc-charcuterie-event #performance_32663_reservations .reservation input {
   width: 100% !important;
-  min-height: 42px !important;
-  padding: 9px 11px !important;
+  min-height: 38px !important;
+  padding: 7px 9px !important;
   border: 1px solid var(--cnc-line) !important;
   border-radius: 2px !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations .reservation .seat_selection,
+body.tc-charcuterie-event #performance_32663_reservations .reservation > .embedded_form:empty {
+  display: none !important;
+}
+
+body.tc-charcuterie-event #performance_32663_reservations .remove_reservation {
+  width: 30px !important;
+  height: 30px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: var(--cnc-muted) !important;
+  font-size: 18px !important;
+  line-height: 30px !important;
+  cursor: pointer !important;
+}
+
+body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_message {
+  padding: 9px 3px !important;
+  color: var(--cnc-wine) !important;
+  font-size: 13px !important;
+  line-height: 1.35 !important;
+  cursor: pointer !important;
 }
 
 body.tc-charcuterie-event #performance_32663 .subtotal {
@@ -411,22 +469,22 @@ body.tc-charcuterie-event .tc-cnc-native-donation {
 
 body.tc-charcuterie-event #tcCharcuterieSupport {
   margin: 0 !important;
-  padding: 0 0 31px !important;
+  padding: 0 0 23px !important;
   border-bottom: 1px solid var(--cnc-line) !important;
 }
 
 body.tc-charcuterie-event .tc-cnc-support-head {
   display: grid !important;
   grid-template-columns: minmax(0, 1.08fr) minmax(280px, 0.92fr) !important;
-  gap: 38px !important;
+  gap: 28px !important;
   align-items: end !important;
-  margin: 0 0 24px !important;
+  margin: 0 0 17px !important;
 }
 
 body.tc-charcuterie-event .tc-cnc-support-head h2 {
   margin: 10px 0 0 !important;
   color: var(--cnc-wine) !important;
-  font: 400 36px/1.08 'Cormorant Garamond', Georgia, serif !important;
+  font: 400 32px/1.08 'Cormorant Garamond', Georgia, serif !important;
   letter-spacing: -0.5px !important;
 }
 
@@ -459,10 +517,10 @@ body.tc-charcuterie-event .tc-cnc-support-options input {
 body.tc-charcuterie-event .tc-cnc-support-options span {
   position: relative !important;
   display: flex !important;
-  min-height: 64px !important;
+  min-height: 54px !important;
   flex-direction: column !important;
   justify-content: center !important;
-  padding: 12px 18px 12px 48px !important;
+  padding: 9px 14px 9px 43px !important;
   border: 1px solid var(--cnc-line) !important;
   border-radius: 2px !important;
   background: #fff !important;
@@ -472,7 +530,7 @@ body.tc-charcuterie-event .tc-cnc-support-options span {
 body.tc-charcuterie-event .tc-cnc-support-options span::before {
   position: absolute !important;
   top: 50% !important;
-  left: 18px !important;
+  left: 15px !important;
   width: 15px !important;
   height: 15px !important;
   border: 1px solid rgba(87, 21, 43, 0.45) !important;
@@ -512,7 +570,7 @@ body.tc-charcuterie-event .tc-cnc-support-options input:focus-visible + span {
 
 body.tc-charcuterie-event .tc-cnc-custom-label {
   display: block !important;
-  margin: 22px 0 8px !important;
+  margin: 16px 0 7px !important;
   color: var(--cnc-ink) !important;
   font-size: 11px !important;
   font-weight: 800 !important;
@@ -535,7 +593,7 @@ body.tc-charcuterie-event .tc-cnc-custom > span {
 
 body.tc-charcuterie-event #tcCharcuterieGift {
   width: 100% !important;
-  min-height: 49px !important;
+  min-height: 43px !important;
   padding: 10px 12px 10px 30px !important;
   border: 1px solid rgba(87, 21, 43, 0.23) !important;
   border-radius: 2px !important;
@@ -579,43 +637,137 @@ body.tc-charcuterie-event #Totals > .clearfix:last-child {
 }
 
 body.tc-charcuterie-event #ReserversInformation > .large_top_padding,
-body.tc-charcuterie-event #PaymentInformation > .large_top_padding {
+body.tc-charcuterie-event #PaymentInformation > .large_top_padding,
+body.tc-charcuterie-event #Payment > .large_top_padding {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-body.tc-charcuterie-event #ReserversInformation .clearfix.small_vertical_padding,
-body.tc-charcuterie-event #PaymentInformation .clearfix.small_vertical_padding {
+body.tc-charcuterie-event #ReserversInformation > .large_top_padding > .clearfix {
   display: grid !important;
-  grid-template-columns: minmax(150px, 0.34fr) minmax(0, 0.66fr) !important;
-  align-items: start !important;
-  gap: 18px !important;
-  padding: 8px 0 !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  column-gap: 18px !important;
+  row-gap: 13px !important;
 }
 
-body.tc-charcuterie-event #ReserversInformation .label,
-body.tc-charcuterie-event #PaymentInformation .label {
+body.tc-charcuterie-event #ReserversInformation > .large_top_padding > .clearfix > .small_bottom_padding.regular {
+  grid-column: 1 / -1 !important;
+  margin: 0 0 3px !important;
+  padding: 0 !important;
+  color: var(--cnc-copy) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+body.tc-charcuterie-event #ReserversInformation .clearfix.small_vertical_padding {
+  display: block !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+
+body.tc-charcuterie-event #ReserversInformation > .large_top_padding > .clearfix > .clearfix.small_vertical_padding:nth-last-child(2) {
+  display: none !important;
+}
+
+body.tc-charcuterie-event #ReserversInformation > .large_top_padding > .clearfix > .clearfix.small_vertical_padding:last-child {
+  display: block !important;
+  grid-column: 1 / -1 !important;
+  margin-top: 2px !important;
+}
+
+body.tc-charcuterie-event #PaymentInformation .clearfix.small_vertical_padding,
+body.tc-charcuterie-event #Payment .clearfix.small_vertical_padding {
+  display: grid !important;
+  grid-template-columns: minmax(130px, 0.3fr) minmax(0, 0.7fr) !important;
+  align-items: center !important;
+  gap: 14px !important;
+  padding: 5px 0 !important;
+}
+
+body.tc-charcuterie-event #ReserversInformation .label {
   float: none !important;
   width: auto !important;
-  margin: 11px 0 0 !important;
+  margin: 0 0 6px !important;
   color: var(--cnc-ink) !important;
-  font-size: 13px !important;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+}
+
+body.tc-charcuterie-event #PaymentInformation .label,
+body.tc-charcuterie-event #Payment .label {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  color: var(--cnc-ink) !important;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
 }
 
 body.tc-charcuterie-event #ReserversInformation .float_left,
-body.tc-charcuterie-event #PaymentInformation .float_left {
+body.tc-charcuterie-event #PaymentInformation .float_left,
+body.tc-charcuterie-event #Payment .float_left {
   float: none !important;
   width: 100% !important;
   margin: 0 !important;
+}
+
+body.tc-charcuterie-event #ReserversInformation .optin_checkbox {
+  float: left !important;
+  margin: 1px 8px 0 0 !important;
+}
+
+body.tc-charcuterie-event #ReserversInformation .optin_message_text {
+  display: block !important;
+  float: none !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 0 0 25px !important;
+  color: var(--cnc-copy) !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+body.tc-charcuterie-event #PaymentInformation .small_bottom_padding.regular,
+body.tc-charcuterie-event #Payment .small_bottom_padding.regular {
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+  color: var(--cnc-copy) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+body.tc-charcuterie-event #PaymentMethod {
+  max-width: 360px !important;
 }
 
 body.tc-charcuterie-event #RegisterBody .small {
   color: var(--cnc-muted) !important;
 }
 
+body.tc-charcuterie-event #Buttons {
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  text-align: center !important;
+}
+
+body.tc-charcuterie-event #Buttons > .large_top_padding {
+  margin: 0 !important;
+  padding: 7px 0 12px !important;
+}
+
+body.tc-charcuterie-event #ValidationNotice {
+  max-width: 560px !important;
+  margin: 0 auto 10px !important;
+  padding: 9px 13px !important;
+  border-radius: 2px !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
 body.tc-charcuterie-event #SubmitButton_wrapper {
   width: auto !important;
-  margin-top: 14px !important;
+  margin-top: 0 !important;
 }
 
 body.tc-charcuterie-event #SubmitButton {
@@ -697,8 +849,9 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
   body.tc-charcuterie-event #Performances,
   body.tc-charcuterie-event #Summary,
   body.tc-charcuterie-event #ReserversInformation,
-  body.tc-charcuterie-event #PaymentInformation {
-    padding: 28px 24px !important;
+  body.tc-charcuterie-event #PaymentInformation,
+  body.tc-charcuterie-event #Payment {
+    padding: 24px 22px !important;
   }
 
   body.tc-charcuterie-event #performance_32663_additionalsToggle .toggle_options {
@@ -710,27 +863,24 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
     grid-column: auto !important;
   }
 
-  body.tc-charcuterie-event #performance_32663_reservations .reservation {
-    grid-template-columns: 28px minmax(0, 1fr) !important;
-  }
-
-  body.tc-charcuterie-event #performance_32663_reservations .reservation > *:nth-child(n + 4) {
-    grid-column: 2 !important;
-  }
-
   body.tc-charcuterie-event .tc-cnc-support-head {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
   }
 
-  body.tc-charcuterie-event #ReserversInformation .clearfix.small_vertical_padding,
-  body.tc-charcuterie-event #PaymentInformation .clearfix.small_vertical_padding {
+  body.tc-charcuterie-event #ReserversInformation > .large_top_padding > .clearfix {
+    grid-template-columns: 1fr !important;
+  }
+
+  body.tc-charcuterie-event #PaymentInformation .clearfix.small_vertical_padding,
+  body.tc-charcuterie-event #Payment .clearfix.small_vertical_padding {
     grid-template-columns: 1fr !important;
     gap: 6px !important;
   }
 
   body.tc-charcuterie-event #ReserversInformation .label,
-  body.tc-charcuterie-event #PaymentInformation .label {
+  body.tc-charcuterie-event #PaymentInformation .label,
+  body.tc-charcuterie-event #Payment .label {
     margin: 0 !important;
   }
 
@@ -758,6 +908,38 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
 
   body.tc-charcuterie-event .tc-cnc-support-options {
     grid-template-columns: 1fr !important;
+  }
+
+  body.tc-charcuterie-event #performance_32663_reservations > .clearfix.medium_top_margin {
+    display: none !important;
+  }
+
+  body.tc-charcuterie-event #performance_32663_reservations .reservation:first-of-type {
+    border-top: 0 !important;
+  }
+
+  body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding {
+    grid-template-columns: 26px minmax(0, 1fr) 30px 70px !important;
+    gap: 7px !important;
+    padding: 10px !important;
+  }
+
+  body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding > :nth-child(2),
+  body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding > :nth-child(3) {
+    grid-column: 2 / 5 !important;
+  }
+
+  body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding > :nth-child(5) {
+    grid-column: 2 !important;
+  }
+
+  body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding > :nth-child(6) {
+    grid-column: 3 !important;
+  }
+
+  body.tc-charcuterie-event #performance_32663_reservations .reservation > .clearfix.medium_vertical_padding > :nth-child(7) {
+    grid-column: 4 !important;
+    text-align: right !important;
   }
 }
 
@@ -788,19 +970,22 @@ body.tc-charcuterie-event #SubmitButton[disabled] {
   body.tc-charcuterie-event #Performances,
   body.tc-charcuterie-event #Summary,
   body.tc-charcuterie-event #ReserversInformation,
-  body.tc-charcuterie-event #PaymentInformation {
+  body.tc-charcuterie-event #PaymentInformation,
+  body.tc-charcuterie-event #Payment {
     padding: 24px 18px !important;
   }
 
   body.tc-charcuterie-event #ReserversInformation .g140,
-  body.tc-charcuterie-event #PaymentInformation .g140 {
+  body.tc-charcuterie-event #PaymentInformation .g140,
+  body.tc-charcuterie-event #Payment .g140 {
     float: none !important;
     width: auto !important;
     max-width: 100% !important;
   }
 
   body.tc-charcuterie-event #ReserversInformation .ml140,
-  body.tc-charcuterie-event #PaymentInformation .ml140 {
+  body.tc-charcuterie-event #PaymentInformation .ml140,
+  body.tc-charcuterie-event #Payment .ml140 {
     margin-left: 0 !important;
   }
 
