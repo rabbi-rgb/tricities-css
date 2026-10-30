@@ -93,6 +93,8 @@ test('ticket ages and registration labels are corrected', () => {
     assert.equal(p.document.querySelector('#SubmitButton span').textContent, 'Complete registration');
     assert.equal(p.document.querySelector('#performance_32687_addAttendeeButton span').textContent, 'Add child');
     assert.equal(p.document.getElementById('grade').getAttribute('aria-label'), 'Child 1 grade');
+    assert.equal(p.document.querySelector('.reservation .g100').textContent, '1');
+    assert.equal(p.document.querySelector('.reservation .ticket-type').textContent, 'Child');
   } finally { p.close(); }
 });
 

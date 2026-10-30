@@ -109,8 +109,6 @@
 
   function enhanceAttendeeRows() {
     document.querySelectorAll('#performance_' + PERFORMANCE_ID + '_reservations .reservation').forEach(function (row, index) {
-      var number = row.querySelector('.g100');
-      if (number) setText(number, 'Child ' + (index + 1));
       var inputs = row.querySelectorAll('input:not([type]), input[type="text"]');
       if (inputs[0]) {
         inputs[0].placeholder = 'Child first name';
