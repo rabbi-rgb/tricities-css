@@ -31,7 +31,23 @@ function fixture() {
             </div><div class="toggle_message">Add additional reservations</div></div>
           </div>
         </div>
-        <div id="Summary"></div><div id="ReserversInformation"></div><div id="PaymentInformation"></div>
+        <div id="Summary"></div>
+        <div id="ReserversInformation"><div class="large_top_padding"><div class="clearfix">
+          <div class="clearfix title large"><span class="bold">Your Information</span></div>
+          <div class="clearfix small_vertical_padding"><div class="label g140 ml140">Email</div><div class="g400 float_left left_margin"><input id="reserver-email" class="co_form_input" type="email"></div></div>
+          <div class="clearfix small_vertical_padding"><div class="g140 ml140"></div><div class="g400 float_left left_margin"><div><div class="optin_checkbox"><input type="checkbox" id="ReserversOptIn" checked></div><div class="optin_message_text"><label for="ReserversOptIn">I would like to receive news and updates.</label></div></div></div></div>
+        </div></div></div>
+        <div id="Payment" class="credit_card"><div class="large_top_padding">
+          <div class="clearfix title large"><span class="bold">Payment Information</span></div>
+          <div class="clearfix small_vertical_padding required"><div class="label g140 ml140">Payment Method</div><div class="float_left left_margin"><select id="PaymentMethod" class="co_form_input"><option>Credit Card</option></select><img id="CreditCardIcon" alt=""><img id="PaypalIcon" alt=""></div></div>
+          <div id="CreditCard">
+            <div class="clearfix small_vertical_padding"><div class="label g140 ml140">Credit Card Type</div><div class="float_left left_margin"><select id="PaymentCreditCardType" class="co_form_input"><option>Visa</option></select></div></div>
+            <div class="clearfix small_vertical_padding required"><div class="label g140 ml140">Card Number</div><div class="float_left left_margin"><input id="PaymentCreditCardNumber" class="co_form_input"></div></div>
+            <div class="clearfix small_vertical_padding required"><div class="label g140 ml140">Expiration Date</div><div class="float_left left_margin"><select id="PaymentCardExpirationMonth" class="co_form_input"><option>Month</option></select></div><div class="float_left left_margin"><select id="PaymentCardExpirationYear" class="co_form_input"><option>Year</option></select></div></div>
+            <div class="clearfix small_vertical_padding required"><div class="label g140 ml140">Security Code</div><div class="float_left left_margin"><input id="PaymentCardCode" class="co_form_input"></div></div>
+          </div>
+          <div id="Comments" class="clearfix small_vertical_padding"><div class="label g140 ml140">Comments</div><div class="float_left left_margin"><textarea id="PaymentComments" class="co_form_input"></textarea></div></div>
+        </div></div>
         <button id="SubmitButton"><span>Make Reservation</span></button>
       </div>
     </form>
@@ -137,7 +153,7 @@ test('quantity choices stop at the 15-child event capacity', () => {
 
 test('event details match the approved flyer and pricing', () => {
   assert.match(js, /Sunday, November 29/);
-  assert.match(js, /3:30–4:00 PM/);
+  assert.match(js, /3:30–5:00 PM/);
   assert.match(js, /Children ages 7–12/);
   assert.match(js, /\$12 per child/);
   assert.match(js, /Hebrew School students free/);
@@ -176,6 +192,29 @@ test('grade form is styled per child and its independent submit is hidden', () =
   assert.match(css, /#performance_32687_reservations \.embedded_form/);
   assert.match(css, /\.embedded_form button\[type="submit"\]/);
   assert.match(css, /display: none !important;/);
+});
+
+test('payment fields are compact, expiration stays together, and opt-in spans the bottom row', () => {
+  assert.match(css, /#Payment \.clearfix\.small_vertical_padding:has\(#PaymentCardExpirationMonth\)/);
+  assert.match(css, /grid-template-columns: minmax\(150px, 190px\) minmax\(0, 272px\) minmax\(0, 272px\) !important;/);
+  assert.match(css, /#Payment \.clearfix\.small_vertical_padding:has\(#PaymentCardCode\) > \.float_left\s*\{[\s\S]*?max-width: 220px !important;/);
+  assert.match(css, /#Payment #PaymentComments\s*\{[\s\S]*?min-height: 96px !important;/);
+  assert.match(css, /#ReserversInformation \.clearfix\.small_vertical_padding:has\(#ReserversOptIn\)\s*\{[\s\S]*?grid-column: 1 \/ -1 !important;[\s\S]*?order: 99 !important;/);
+  assert.doesNotMatch(css, /#Payment #(?:CreditCardIcon|PaypalIcon)[^\{]*\{[^\}]*display:/);
+
+  const p = page();
+  try {
+    const expirationRow = p.document.querySelector('#Payment .clearfix.small_vertical_padding:has(#PaymentCardExpirationMonth)');
+    const optInRow = p.document.querySelector('#ReserversInformation .clearfix.small_vertical_padding:has(#ReserversOptIn)');
+    const originalControls = ['PaymentMethod', 'PaymentCreditCardType', 'PaymentCreditCardNumber', 'PaymentCardExpirationMonth', 'PaymentCardExpirationYear', 'PaymentCardCode', 'PaymentComments', 'ReserversOptIn']
+      .map(id => p.document.getElementById(id));
+    assert.ok(expirationRow);
+    assert.equal(expirationRow.querySelectorAll('.float_left').length, 2);
+    assert.ok(optInRow);
+    assert.equal(optInRow.parentElement.lastElementChild, optInRow);
+    for (let i = 0; i < 10; i++) p.dom.window.__tcChanukahLitV1.run();
+    originalControls.forEach(control => assert.equal(p.document.getElementById(control.id), control));
+  } finally { p.close(); }
 });
 
 test('native close control does not become a stray gold action button', () => {

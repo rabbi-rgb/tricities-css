@@ -39,7 +39,7 @@
         '<div class="tc-lit-spark" aria-hidden="true"><span>✦</span><strong>LIT!</strong><small>Light · Impact · Together</small></div>' +
       '</div>' +
       '<div class="tc-lit-details" aria-label="Event details">' +
-        '<div><span>When</span><strong>Sunday, November 29<br>3:30–4:00 PM</strong></div>' +
+        '<div><span>When</span><strong>Sunday, November 29<br>3:30–5:00 PM</strong></div>' +
         '<div><span>Where</span><strong>Coquitlam</strong></div>' +
         '<div><span>Who</span><strong>Children ages 7–12</strong></div>' +
         '<div><span>Cost</span><strong>$12 per child<br>Hebrew School students free</strong></div>' +
@@ -163,7 +163,7 @@
     document.body.classList.add('tc-chanukah-lit-receipt');
     if (!document.getElementById('tcChanukahLitConfirmed')) {
       var holder = document.createElement('div');
-      holder.innerHTML = '<section id="tcChanukahLitConfirmed"><span>Registration received</span><h1>Your child is ready to get LIT!</h1><p>We look forward to an afternoon of creativity, kindness, and Chanukah fun.</p><div><strong>Sunday, November 29, 2026</strong><strong>3:30–4:00 PM · Coquitlam</strong></div></section>';
+      holder.innerHTML = '<section id="tcChanukahLitConfirmed"><span>Registration received</span><h1>Your child is ready to get LIT!</h1><p>We look forward to an afternoon of creativity, kindness, and Chanukah fun.</p><div><strong>Sunday, November 29, 2026</strong><strong>3:30–5:00 PM · Coquitlam</strong></div></section>';
       page.insertBefore(holder.firstElementChild, body);
     }
     var thanks = body.querySelector('.thank_you');
