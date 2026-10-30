@@ -9,6 +9,7 @@ const css = fs.readFileSync(path.join(root, 'chanukah-lit.css'), 'utf8');
 const js = fs.readFileSync(path.join(root, 'chanukah-lit.js'), 'utf8');
 
 function fixture() {
+  const quantityOptions = Array.from({ length: 25 }, (_, index) => `<option value="${index + 1}">${index + 1}</option>`).join('');
   return `<!doctype html><html><head><script id="asset" src="https://cdn.jsdelivr.net/gh/rabbi-rgb/tricities-css@abc123/chanukah-lit.js"></script></head><body>
     <form id="RegisterSinglePage" class="view_form">
       <div id="RegisterHeader"></div>
@@ -22,7 +23,7 @@ function fixture() {
             </div>
             <div id="performance_32687_additionalsToggle"><div class="toggle_options">
               <div><div>Old ticket</div><select id="performance_32687_priceCategory"><option value="9830">Children (3-12) - $12.00</option><option value="12304">Hebrew School Student - $0.00</option></select></div>
-              <div><div>Old quantity</div><select id="performance_32687_quantityOfAttendees"><option value="1">1</option></select></div>
+              <div><div>Old quantity</div><select id="performance_32687_quantityOfAttendees">${quantityOptions}</select></div>
               <div><button id="performance_32687_addAttendeeButton"><span>Continue</span></button></div>
             </div><div class="toggle_message">Add additional reservations</div></div>
           </div>
@@ -89,6 +90,34 @@ test('ticket ages and registration labels are corrected', () => {
     assert.equal(p.document.querySelector('#SubmitButton span').textContent, 'Complete registration');
     assert.equal(p.document.querySelector('#performance_32687_addAttendeeButton span').textContent, 'Add child');
     assert.equal(p.document.getElementById('grade').getAttribute('aria-label'), 'Child 1 grade');
+  } finally { p.close(); }
+});
+
+test('quantity choices stop at the 15-child event capacity', () => {
+  const p = page();
+  try {
+    const reservations = p.document.getElementById('performance_32687_reservations');
+    const quantity = p.document.getElementById('performance_32687_quantityOfAttendees');
+    const addButton = p.document.getElementById('performance_32687_addAttendeeButton');
+    const availableValues = () => [...quantity.options].filter(option => !option.hidden && !option.disabled).map(option => Number(option.value));
+
+    assert.deepEqual(availableValues(), Array.from({ length: 14 }, (_, index) => index + 1));
+
+    reservations.appendChild(reservations.firstElementChild.cloneNode(true));
+    p.dom.window.__tcChanukahLitV1.run();
+    assert.deepEqual(availableValues(), Array.from({ length: 13 }, (_, index) => index + 1));
+
+    while (reservations.children.length < 15) reservations.appendChild(reservations.firstElementChild.cloneNode(true));
+    p.dom.window.__tcChanukahLitV1.run();
+    assert.deepEqual(availableValues(), []);
+    assert.equal(quantity.disabled, true);
+    assert.equal(addButton.disabled, true);
+
+    reservations.lastElementChild.remove();
+    p.dom.window.__tcChanukahLitV1.run();
+    assert.deepEqual(availableValues(), [1]);
+    assert.equal(quantity.disabled, false);
+    assert.equal(addButton.disabled, false);
   } finally { p.close(); }
 });
 

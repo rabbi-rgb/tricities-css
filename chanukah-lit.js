@@ -59,6 +59,41 @@
     if (label) setText(label, 'Ticket type');
   }
 
+  function limitQuantity(quantity) {
+    if (!quantity) return;
+    var existingChildren = document.querySelectorAll('#performance_' + PERFORMANCE_ID + '_reservations .reservation').length;
+    var remainingCapacity = Math.max(0, 15 - existingChildren);
+    Array.prototype.forEach.call(quantity.options, function (option) {
+      var count = parseInt(option.value || option.textContent, 10);
+      var overCapacity = Number.isFinite(count) && count > remainingCapacity;
+      option.hidden = overCapacity;
+      option.disabled = overCapacity;
+    });
+    if (remainingCapacity === 0) {
+      if (!quantity.hasAttribute('data-tc-capacity-full')) {
+        quantity.setAttribute('data-tc-capacity-full', quantity.disabled ? 'native' : 'capacity');
+      }
+      quantity.selectedIndex = -1;
+      quantity.disabled = true;
+    } else {
+      if (quantity.getAttribute('data-tc-capacity-full') === 'capacity') quantity.disabled = false;
+      quantity.removeAttribute('data-tc-capacity-full');
+      if (!quantity.value || parseInt(quantity.value, 10) > remainingCapacity) quantity.value = '1';
+    }
+
+    var addButton = document.getElementById('performance_' + PERFORMANCE_ID + '_addAttendeeButton');
+    if (!addButton) return;
+    if (remainingCapacity === 0) {
+      if (!addButton.hasAttribute('data-tc-capacity-full')) {
+        addButton.setAttribute('data-tc-capacity-full', addButton.disabled ? 'native' : 'capacity');
+      }
+      addButton.disabled = true;
+    } else {
+      if (addButton.getAttribute('data-tc-capacity-full') === 'capacity') addButton.disabled = false;
+      addButton.removeAttribute('data-tc-capacity-full');
+    }
+  }
+
   function enhanceAttendeeRows() {
     document.querySelectorAll('#performance_' + PERFORMANCE_ID + '_reservations .reservation').forEach(function (row, index) {
       var number = row.querySelector('.g100');
@@ -99,6 +134,7 @@
     if (quantity) {
       quantity.setAttribute('aria-label', 'Number of children');
       if (quantity.previousElementSibling) setText(quantity.previousElementSibling, 'Number of children');
+      limitQuantity(quantity);
     }
 
     setText(document.querySelector('#Performances > .regular'), 'Choose one ticket for each child. Hebrew School students register free. Space is limited to 15 children.');
