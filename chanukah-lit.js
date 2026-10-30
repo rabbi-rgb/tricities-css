@@ -66,8 +66,21 @@
     Array.prototype.forEach.call(quantity.options, function (option) {
       var count = parseInt(option.value || option.textContent, 10);
       var overCapacity = Number.isFinite(count) && count > remainingCapacity;
-      option.hidden = overCapacity;
-      option.disabled = overCapacity;
+      if (overCapacity) {
+        if (!option.hasAttribute('data-tc-capacity-option')) {
+          option.setAttribute('data-tc-capacity-option', 'true');
+          option.setAttribute('data-tc-capacity-was-hidden', option.hidden ? 'true' : 'false');
+          option.setAttribute('data-tc-capacity-was-disabled', option.disabled ? 'true' : 'false');
+        }
+        option.hidden = true;
+        option.disabled = true;
+      } else if (option.hasAttribute('data-tc-capacity-option')) {
+        option.hidden = option.getAttribute('data-tc-capacity-was-hidden') === 'true';
+        option.disabled = option.getAttribute('data-tc-capacity-was-disabled') === 'true';
+        option.removeAttribute('data-tc-capacity-option');
+        option.removeAttribute('data-tc-capacity-was-hidden');
+        option.removeAttribute('data-tc-capacity-was-disabled');
+      }
     });
     if (remainingCapacity === 0) {
       if (!quantity.hasAttribute('data-tc-capacity-full')) {

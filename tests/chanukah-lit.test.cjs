@@ -9,7 +9,10 @@ const css = fs.readFileSync(path.join(root, 'chanukah-lit.css'), 'utf8');
 const js = fs.readFileSync(path.join(root, 'chanukah-lit.js'), 'utf8');
 
 function fixture() {
-  const quantityOptions = Array.from({ length: 25 }, (_, index) => `<option value="${index + 1}">${index + 1}</option>`).join('');
+  const quantityOptions = Array.from({ length: 25 }, (_, index) => {
+    const nativeState = index === 4 ? ' disabled' : index === 5 ? ' hidden' : '';
+    return `<option value="${index + 1}"${nativeState}>${index + 1}</option>`;
+  }).join('');
   return `<!doctype html><html><head><script id="asset" src="https://cdn.jsdelivr.net/gh/rabbi-rgb/tricities-css@abc123/chanukah-lit.js"></script></head><body>
     <form id="RegisterSinglePage" class="view_form">
       <div id="RegisterHeader"></div>
@@ -100,12 +103,17 @@ test('quantity choices stop at the 15-child event capacity', () => {
     const quantity = p.document.getElementById('performance_32687_quantityOfAttendees');
     const addButton = p.document.getElementById('performance_32687_addAttendeeButton');
     const availableValues = () => [...quantity.options].filter(option => !option.hidden && !option.disabled).map(option => Number(option.value));
+    const expectedThrough = maximum => Array.from({ length: maximum }, (_, index) => index + 1).filter(value => value !== 5 && value !== 6);
 
-    assert.deepEqual(availableValues(), Array.from({ length: 14 }, (_, index) => index + 1));
+    assert.deepEqual(availableValues(), expectedThrough(14));
+    assert.equal(quantity.options[4].disabled, true);
+    assert.equal(quantity.options[4].hidden, false);
+    assert.equal(quantity.options[5].disabled, false);
+    assert.equal(quantity.options[5].hidden, true);
 
     reservations.appendChild(reservations.firstElementChild.cloneNode(true));
     p.dom.window.__tcChanukahLitV1.run();
-    assert.deepEqual(availableValues(), Array.from({ length: 13 }, (_, index) => index + 1));
+    assert.deepEqual(availableValues(), expectedThrough(13));
 
     while (reservations.children.length < 15) reservations.appendChild(reservations.firstElementChild.cloneNode(true));
     p.dom.window.__tcChanukahLitV1.run();
@@ -113,11 +121,15 @@ test('quantity choices stop at the 15-child event capacity', () => {
     assert.equal(quantity.disabled, true);
     assert.equal(addButton.disabled, true);
 
-    reservations.lastElementChild.remove();
+    while (reservations.children.length > 9) reservations.lastElementChild.remove();
     p.dom.window.__tcChanukahLitV1.run();
-    assert.deepEqual(availableValues(), [1]);
+    assert.deepEqual(availableValues(), [1, 2, 3, 4]);
     assert.equal(quantity.disabled, false);
     assert.equal(addButton.disabled, false);
+    assert.equal(quantity.options[4].disabled, true);
+    assert.equal(quantity.options[4].hidden, false);
+    assert.equal(quantity.options[5].disabled, false);
+    assert.equal(quantity.options[5].hidden, true);
   } finally { p.close(); }
 });
 
