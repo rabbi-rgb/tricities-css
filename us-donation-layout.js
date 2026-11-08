@@ -31,8 +31,8 @@
     nextRow.className = 'tc-us-step-nav';
     var error = document.createElement('p');
     error.id = 'tc-us-amount-error'; error.setAttribute('role', 'alert'); error.hidden = true;
-    var next = document.createElement('button');
-    next.type = 'button'; next.className = 'tc-us-next'; next.textContent = 'Continue';
+    var next = document.createElement('p');
+    next.className = 'tc-us-flow-hint'; next.textContent = 'Choose an amount to continue.';
     nextRow.appendChild(error); nextRow.appendChild(next);
     first.forEach(function (el) { list.appendChild(el); });
     list.appendChild(nextRow); list.appendChild(backRow);
@@ -40,6 +40,7 @@
     var step = 1;
     function show(value, focus) {
       step = value;
+      clearTimeout(pendingAdvance);
       first.concat([nextRow]).forEach(function (el) { el.hidden = value !== 1; });
       second.concat([backRow]).forEach(function (el) { el.hidden = value !== 2; });
       form.dataset.tcUsStep = String(value);
@@ -60,7 +61,31 @@
       }
       show(2, true);
     }
-    next.addEventListener('click', advance);
+    var pendingAdvance;
+    function queueAdvance() {
+      clearTimeout(pendingAdvance);
+      pendingAdvance = setTimeout(function () { if (step === 1) advance(); }, 120);
+    }
+    amountGrid.addEventListener('change', function (event) {
+      if (event.target.id === 'other_8') clearTimeout(pendingAdvance);
+      else if (event.target.matches('input[type="radio"]')) queueAdvance();
+    });
+    amountGrid.addEventListener('click', function (event) {
+      var item = event.target.closest('.form-radio-item');
+      var radio = item && item.querySelector('input[type="radio"]');
+      if (radio && radio.id === 'other_8') clearTimeout(pendingAdvance);
+      else if (radio && radio.checked) queueAdvance();
+    });
+    first[0].addEventListener('click', function () { clearTimeout(pendingAdvance); });
+    other.addEventListener('blur', function (event) {
+      var destination = event.relatedTarget;
+      if (destination && destination.closest('#id_8, #id_15, .tc-us-back')) return;
+      clearTimeout(pendingAdvance);
+      pendingAdvance = setTimeout(function () {
+        var chosen = form.querySelector('#other_8');
+        if (step === 1 && chosen.checked && other.value !== '' && other.validity.valid && Number(other.value) >= Number(other.min || 1) && !form.querySelector('#id_8').contains(document.activeElement) && !first[0].contains(document.activeElement)) advance();
+      }, 120);
+    });
     back.addEventListener('click', function () { show(1, true); });
     form.addEventListener('keydown', function (event) {
       if (step === 1 && event.key === 'Enter' && event.target !== next) { event.preventDefault(); event.stopImmediatePropagation(); advance(); }
