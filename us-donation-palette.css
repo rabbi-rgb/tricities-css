@@ -157,11 +157,16 @@ html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) f
 html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #id_8 :is(.form-multiple-column,.tc-us-amount-grid) { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
 html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #id_8 .form-radio-item:has(#other_8) { grid-column: 1 / -1 !important; }
 html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .tc-us-flow-hint { color: #65706D; font: 400 14px/1.5 Inter,Arial,sans-serif; margin: 0; }
-html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"][data-tc-us-step="2"] :is(.form-line:not(#id_12),.tc-us-step-nav) { animation: tc-us-details-slide 340ms cubic-bezier(.2,.7,.2,1) both; }
-@keyframes tc-us-details-slide { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @media (min-width: 1024px) {
 html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #id_8 :is(.form-multiple-column,.tc-us-amount-grid) { grid-template-columns: repeat(4,minmax(0,1fr)) !important; }
 }
+
+/* One gentle page-panel movement per navigation; fields move together. */
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-all.tc-us-page-moving { overflow: hidden !important; }
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-section.tc-us-page-forward { animation: tc-us-page-forward 420ms cubic-bezier(.22,.68,.24,1) 1 both; }
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-section.tc-us-page-back { animation: tc-us-page-back 420ms cubic-bezier(.22,.68,.24,1) 1 both; }
+@keyframes tc-us-page-forward { from { transform: translateX(28px); } to { transform: translateX(0); } }
+@keyframes tc-us-page-back { from { transform: translateX(-28px); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) {
-html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"][data-tc-us-step="2"] :is(.form-line:not(#id_12),.tc-us-step-nav) { animation: none !important; }
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-section { animation: none !important; }
 }

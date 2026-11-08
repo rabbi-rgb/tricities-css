@@ -36,6 +36,16 @@ test('switching rapidly from preset to Other cancels automatic progression',asyn
  const {window:w}=fixture();w.eval(code);const d=w.document;d.querySelector('#input_8_0').click();d.querySelector('#other_8').click();
  await new Promise(r=>setTimeout(r,180));assert.equal(d.forms[0].dataset.tcUsStep,'1');assert(d.querySelector('#other_8').checked);w.close();
 });
+test('one panel slides per navigation, cleans up, and respects reduced motion',async()=>{
+ const {window:w}=fixture();w.eval(code);const d=w.document,list=d.querySelector('.form-section'),form=d.forms[0];
+ assert(!list.classList.contains('tc-us-page-forward'));d.querySelector('#input_8_0').click();await new Promise(r=>setTimeout(r,160));
+ assert(list.classList.contains('tc-us-page-forward'));assert(form.classList.contains('tc-us-page-moving'));
+ assert.equal(d.querySelectorAll('.tc-us-page-forward').length,1);list.dispatchEvent(new w.Event('animationend',{bubbles:true}));
+ assert(!form.classList.contains('tc-us-page-moving'));assert(!list.classList.contains('tc-us-page-forward'));
+ d.querySelector('.tc-us-back').click();assert(list.classList.contains('tc-us-page-back'));list.dispatchEvent(new w.Event('animationend',{bubbles:true}));
+ w.matchMedia=()=>({matches:true});d.querySelector('#input_8_0').click();await new Promise(r=>setTimeout(r,160));
+ assert.equal(form.dataset.tcUsStep,'2');assert(!list.classList.contains('tc-us-page-forward'));assert(!form.classList.contains('tc-us-page-moving'));w.close();
+});
 test('unrelated page remains unchanged and receives no staged controls',()=>{
  const {window:w}=fixture('4970020');const before=w.document.body.innerHTML;w.eval(code);assert.equal(w.document.body.innerHTML,before);w.close();
 });

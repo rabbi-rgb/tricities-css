@@ -38,7 +38,25 @@
     list.appendChild(nextRow); list.appendChild(backRow);
     second.forEach(function (el) { list.appendChild(el); });
     var step = 1;
+    var slideTimer;
+    var panel = form.querySelector('.form-all') || form;
+    function finishSlide() {
+      clearTimeout(slideTimer);
+      list.classList.remove('tc-us-page-forward', 'tc-us-page-back');
+      panel.classList.remove('tc-us-page-moving');
+    }
+    list.addEventListener('animationend', function (event) {
+      if (event.target === list) finishSlide();
+    });
+    function slidePage(value) {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      panel.classList.add('tc-us-page-moving');
+      void list.offsetWidth;
+      list.classList.add(value === 2 ? 'tc-us-page-forward' : 'tc-us-page-back');
+      slideTimer = setTimeout(finishSlide, 470);
+    }
     function show(value, focus) {
+      finishSlide();
       step = value;
       clearTimeout(pendingAdvance);
       first.concat([nextRow]).forEach(function (el) { el.hidden = value !== 1; });
@@ -48,6 +66,7 @@
         var target = value === 2 ? heading : form.querySelector('#id_8 input[type="radio"]:checked') || form.querySelector('#input_8_0');
         target.focus();
         (value === 2 ? backRow : first[0]).scrollIntoView({ block: 'start', behavior: 'auto' });
+        slidePage(value);
       }
     }
     function advance() {
