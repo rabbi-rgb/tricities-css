@@ -1,6 +1,10 @@
 /* Native candle-lighting calendar: presentation only. Preserve ChabadOne's
    location, loading, tool-panel and weekly-content visibility states. */
 @media screen {
+  html:has(#candle_lighting) body.cco_body h1.article-header__title {
+    font-size: clamp(28px, 4vw, 40px) !important;
+    line-height: 1.2 !important;
+  }
   #candle_lighting {
     color: var(--tc-text, #293633);
     background: var(--tc-ivory, #FBFAF6);
@@ -65,6 +69,23 @@
   #candle_lighting .co_global_button .button :is(span, a),
   #candle_lighting .expand_button span { color: inherit !important; }
   #candle_lighting .co_global_button { background: transparent !important; }
+  /* Saving a preference is secondary to the weekly times. */
+  #candle_lighting #SaveLocationButton {
+    background: transparent !important;
+    border-color: var(--tc-border, #D9E5E0) !important;
+    color: var(--tc-teal-dark, #0E6E7B) !important;
+    -webkit-text-fill-color: var(--tc-teal-dark, #0E6E7B) !important;
+    font-size: 13px;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  #candle_lighting #SaveLocationButton:hover {
+    background: var(--tc-border, #D9E5E0) !important;
+  }
+  #candle_lighting #SaveLocationButton :is(span, a) {
+    color: inherit !important;
+    -webkit-text-fill-color: inherit !important;
+  }
   #candle_lighting #Mobile_Options .clearfix {
     display: flex;
     flex-wrap: wrap;
