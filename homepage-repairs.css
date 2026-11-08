@@ -13,6 +13,16 @@ html:has(.hp-table) #injected-upcoming-events-section .event-title a {
 html:has(.hp-table) #injected-upcoming-events-section .event-card-body {
   min-width: 0;
 }
+/* Keep excerpts at three complete lines as the taller titles stretch cards. */
+html:has(.hp-table) #injected-upcoming-events-section .event-description-content {
+  font-size: 14px;
+  line-height: 1.6;
+  max-height: 4.8em;
+}
+html:has(.hp-table) #injected-upcoming-events-section .event-description-content p {
+  font-size: inherit;
+  line-height: inherit;
+}
 @media (min-width: 601px) {
   html:has(.hp-table) #injected-upcoming-events-section .injected-events-carousel-container {
     padding-bottom: 76px;
