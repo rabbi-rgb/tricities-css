@@ -1,0 +1,78 @@
+/* U.S. donation page 6406028: palette only. Native amounts, currency, totals and submission are untouched. */
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) #BodyContainer {
+  background-color: #FBFAF6 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-all {
+  background-color: #FFFFFF !important;
+  color: #293633 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #text_12 > div {
+  background-color: #FFFFFF !important;
+  border-color: #D9E5E0 !important;
+  border-top-color: #4F7F3E !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #text_12 :is(h2, strong) {
+  color: #315F3C !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #text_12 p {
+  color: #293633 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #text_12 p:first-child {
+  color: #0E6E7B !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] :is(.form-label-left, .form-label-top, .form-sub-label, .form-html, .form-header) {
+  color: #293633 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] :is(a, .form-section-header) {
+  color: #0E6E7B !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #id_7 .form-address-table th {
+  color: #0E6E7B !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-line:not(.form-line-error) :is(.form-textbox, .form-textarea, .form-dropdown) {
+  background-color: #FFFFFF !important;
+  color: #293633 !important;
+  border-color: #D9E5E0 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] :is(input[type="radio"], input[type="checkbox"]) {
+  accent-color: #4F7F3E;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #id_8 .form-radio-item {
+  background-color: #EDF3E9 !important;
+  color: #315F3C !important;
+  border-color: #D9E5E0 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #id_8 .form-radio-item :is(label, label span) {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #id_8 .form-radio-item:has(input[type="radio"]:checked) {
+  background-color: #4F7F3E !important;
+  color: #FFFFFF !important;
+  border-color: #4F7F3E !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-checkbox-item {
+  background-color: #FFFFFF !important;
+  color: #293633 !important;
+  border-color: #D9E5E0 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-checkbox-item:has(input:checked) {
+  background-color: #EDF3E9 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] #total_amount {
+  color: #315F3C !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] :is(.form-payment-field, .form-payment-methods) {
+  background-color: #FFFFFF !important;
+  border-color: #D9E5E0 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-submit-button {
+  background-color: #4F7F3E !important;
+  color: #FFFFFF !important;
+  border-color: #4F7F3E !important;
+}
+html:has(link[rel="canonical"][href*="/aid/6406028/"]):has(form[id="6406028"]) form[id="6406028"] .form-submit-button:is(:hover, :focus-visible) {
+  background-color: #315F3C !important;
+  color: #FFFFFF !important;
+  border-color: #315F3C !important;
+}
