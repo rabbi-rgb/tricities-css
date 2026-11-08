@@ -44,4 +44,27 @@ html:has(.hp-table) #injected-upcoming-events-section .event-description-content
   html:has(.hp-table) #injected-upcoming-events-section .injected-event-card {
     flex-basis: calc(100vw - 64px);
   }
+  /* Let the shadow fade inside the scroll viewport. Compensated margins keep
+     the first card, its width and its snap position on the existing grid. */
+  html body.home #BodyContainer #injected-upcoming-events-section .injected-events-carousel-container {
+    box-sizing: border-box;
+    width: calc(100% + 32px) !important;
+    margin-left: -16px !important;
+    margin-right: -16px !important;
+    margin-top: -12px;
+    padding: 12px 16px 24px !important;
+    scroll-padding-left: 16px;
+  }
+}
+/* The original unguarded :hover also fires after a touch. Keep touch cards
+   stationary and neutral even while that pseudo-class remains active. */
+@media (max-width: 600px), (hover: none), (pointer: coarse) {
+  html:has(.hp-table) #injected-upcoming-events-section .injected-event-card,
+  html:has(.hp-table) #injected-upcoming-events-section .injected-event-card:hover {
+    transform: none;
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.10);
+  }
+  html:has(.hp-table) #injected-upcoming-events-section .injected-event-card:hover .event-card-image img {
+    transform: none;
+  }
 }
