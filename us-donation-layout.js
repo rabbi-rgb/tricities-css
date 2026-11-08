@@ -14,7 +14,11 @@
     var first = firstIds.map(function (id) { return form.querySelector('#' + id); });
     var second = secondIds.map(function (id) { return form.querySelector('#' + id); });
     var other = form.querySelector('#input_8');
-    if (!list || !other || first.concat(second).some(function (el) { return !el; })) return false;
+    var amountGrid = form.querySelector('#cid_8 .form-multiple-column');
+    if (!list || !other || !amountGrid || first.concat(second).some(function (el) { return !el; })) return false;
+    // The native width equalizer temporarily clones checked radios into this same form.
+    // Our CSS owns this grid, so exclude only this container from those measurement probes.
+    amountGrid.classList.replace('form-multiple-column', 'tc-us-amount-grid');
     var backRow = document.createElement('li');
     backRow.className = 'tc-us-step-nav';
     var back = document.createElement('button');
