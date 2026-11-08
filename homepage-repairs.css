@@ -1,0 +1,37 @@
+/* Native homepage only; preserve the calendar, forms and other page families. */
+html:has(.hp-table) #injected-upcoming-events-section .event-title {
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  flex-shrink: 0;
+}
+html:has(.hp-table) #injected-upcoming-events-section .event-title a {
+  overflow-wrap: anywhere;
+}
+/* The native flex cards stretch together; their existing auto margin keeps
+   buttons aligned even when titles need different numbers of lines. */
+html:has(.hp-table) #injected-upcoming-events-section .event-card-body {
+  min-width: 0;
+}
+@media (min-width: 601px) {
+  html:has(.hp-table) #injected-upcoming-events-section .injected-events-carousel-container {
+    padding-bottom: 76px;
+  }
+  html:has(.hp-table) #injected-upcoming-events-section .events-carousel-arrow {
+    top: auto;
+    bottom: 8px;
+    transform: none;
+  }
+  html:has(.hp-table) #injected-upcoming-events-section .events-carousel-arrow.prev {
+    left: calc(50% - 56px);
+  }
+  html:has(.hp-table) #injected-upcoming-events-section .events-carousel-arrow.next {
+    right: calc(50% - 56px);
+  }
+}
+@media (max-width: 600px) {
+  /* One readable card plus a visible hint of the next card. */
+  html:has(.hp-table) #injected-upcoming-events-section .injected-event-card {
+    flex-basis: calc(100vw - 64px);
+  }
+}
