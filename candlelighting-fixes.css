@@ -1,6 +1,14 @@
 /* Native candle-lighting calendar: presentation only. Preserve ChabadOne's
    location, loading, tool-panel and weekly-content visibility states. */
 @media screen {
+  /* Native article/sidebar panels otherwise retain white/gray backgrounds. */
+  html:has(#candle_lighting) body.cco_body,
+  html:has(#candle_lighting) #BodyContainer,
+  html:has(#candle_lighting) .master-content-wrapper,
+  html:has(#candle_lighting) #co_ads_container,
+  html:has(#candle_lighting) #co_ads_container .container {
+    background-color: var(--tc-ivory, #FBFAF6) !important;
+  }
   html:has(#candle_lighting) body.cco_body h1.article-header__title {
     font-size: clamp(28px, 4vw, 40px) !important;
     line-height: 1.2 !important;
