@@ -1,0 +1,84 @@
+/* Donation page 4970020: colours only. Native layout, controls and payment handling stay intact. */
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper {
+  background: #FBFAF6 !important;
+  color: #293633;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper::after {
+  background-color: transparent !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper #donate {
+  background-color: #FFFFFF !important;
+  color: #293633 !important;
+  box-shadow: 4px 4px 16px -4px rgba(49, 95, 60, 0.14) !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper main h1 {
+  color: #315F3C !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper #js-donate-form :is(.description, .monthly-note, .disclaimer, .dedication-note, #tc-us-donate-note) {
+  color: #293633 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper #js-donate-form a {
+  color: #0E6E7B !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper main .amounts button {
+  background-color: #EDF3E9 !important;
+  color: #315F3C !important;
+  border-color: #D9E5E0 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper main .amounts button:is(.selected, :hover, :focus-visible) {
+  background-color: #4F7F3E !important;
+  color: #FFFFFF !important;
+  border-color: #4F7F3E !important;
+  box-shadow: 0 0 40px 40px #4F7F3E inset !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper main .custom-amount-wrapper {
+  background-color: #FFFFFF !important;
+  color: #293633 !important;
+  box-shadow: 0 2px 7px -5px rgba(49, 95, 60, 0.30) !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper main .custom-amount-wrapper input.custom-amount {
+  color: #293633 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper main .custom-amount-wrapper input.custom-amount::placeholder {
+  color: #65706D !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper main .currency-insert {
+  color: #0E6E7B !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper .frequency-toggle-wrapper .frequency-toggle {
+  background-color: #EDF3E9 !important;
+  box-shadow: 0 2px 7px -5px rgba(49, 95, 60, 0.30) !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper .frequency-toggle-wrapper .frequency-toggle::before {
+  background-color: #4F7F3E !important;
+  box-shadow: 0 0 15px -4px rgba(49, 95, 60, 0.30) !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper .frequency-toggle-wrapper .frequency-toggle label {
+  color: #315F3C !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper .frequency-toggle-wrapper .frequency-toggle label:has(input:checked) {
+  color: #FFFFFF !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper #js-donate-form .field-wrapper:not(.show-error) :is(.donate-text-input, input:not([type="checkbox"]):not([type="radio"]), select, textarea) {
+  background-color: #FFFFFF !important;
+  color: #293633 !important;
+  border-color: #D9E5E0 !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper #js-donate-form :is(input[type="checkbox"], input[type="radio"]) {
+  accent-color: #4F7F3E;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper :is(button.donate-button, button.next-button) {
+  background-color: #4F7F3E !important;
+  color: #FFFFFF !important;
+  border-color: #4F7F3E !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper :is(button.donate-button, button.next-button):is(:hover, :focus-visible) {
+  background-color: #315F3C !important;
+  color: #FFFFFF !important;
+  border-color: #315F3C !important;
+  box-shadow: 0 0 40px 40px #315F3C inset !important;
+}
+html:has(link[rel="canonical"][href*="/aid/4970020/"]):has(#donate-wrapper #js-donate-form[action="/templates/donate.asp"]) #donate-wrapper button.js-disable-after-submit[disabled].loading-disabled::after {
+  background-color: #4F7F3E !important;
+  color: #FFFFFF !important;
+}
