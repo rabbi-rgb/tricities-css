@@ -2853,3 +2853,121 @@ html:not(.tc-high-holidays-minisite):not(.tc-chai) body.cco_body #BodyContainer 
     z-index: 600 !important;
   }
 }
+
+/* Campaign announcement, 2026-11-15.
+   Scoped to the annual campaign link. Rollback: remove this block. */
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) {
+  position: relative !important;
+  box-sizing: border-box !important;
+  height: auto !important;
+  min-height: 64px !important;
+  padding: 10px 58px 10px 28px !important;
+  background: #173f35 !important;
+  border: 0 !important;
+  border-bottom: 3px solid #d7b86f !important;
+  color: #fffaf0 !important;
+  box-shadow: none !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .message {
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .alert-links {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  font-size: 0 !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .alert-links:before {
+  display: none !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .alert-links > a:not(.more-link) {
+  color: #fffaf0 !important;
+  -webkit-text-fill-color: #fffaf0 !important;
+  font: 600 16px/1.5 'Montserrat', Arial, sans-serif !important;
+  letter-spacing: 0 !important;
+  text-decoration: none !important;
+  white-space: normal !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .more-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 auto !important;
+  min-height: 40px !important;
+  box-sizing: border-box !important;
+  padding: 8px 20px !important;
+  margin: 0 !important;
+  border: 1px solid #d7b86f !important;
+  border-radius: 6px !important;
+  background: #d7b86f !important;
+  color: #173f35 !important;
+  -webkit-text-fill-color: #173f35 !important;
+  font: 700 14px/1.4 'Montserrat', Arial, sans-serif !important;
+  text-decoration: none !important;
+  text-transform: capitalize !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .more-link:hover {
+  background: #ebd49f !important;
+  border-color: #ebd49f !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) a:focus-visible {
+  outline: 2px solid #fffaf0 !important;
+  outline-offset: 4px !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close {
+  top: 50% !important;
+  right: 10px !important;
+  transform: translateY(-50%) !important;
+  width: 36px !important;
+  height: 36px !important;
+  background: none !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:before,
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:after {
+  content: "" !important;
+  position: absolute !important;
+  left: 17px !important;
+  top: 10px !important;
+  width: 1.5px !important;
+  height: 16px !important;
+  background: #fffaf0 !important;
+  transform: rotate(45deg) !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:after {
+  transform: rotate(-45deg) !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:hover {
+  background: rgba(255,255,255,.12) !important;
+}
+@media screen and (max-width: 767px) {
+  html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) {
+    padding: 14px 44px 14px 16px !important;
+  }
+  html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .alert-links {
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+  html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .alert-links > a:not(.more-link) {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    max-width: 440px !important;
+  }
+  html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .more-link {
+    min-height: 44px !important;
+    padding: 10px 22px !important;
+    font-size: 13px !important;
+  }
+  html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close {
+    top: 8px !important;
+    right: 4px !important;
+    transform: none !important;
+  }
+}
+/* End campaign announcement. */
