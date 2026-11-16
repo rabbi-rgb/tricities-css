@@ -2971,3 +2971,18 @@ html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:hover {
   }
 }
 /* End campaign announcement. */
+
+/* The native mobile header assumes a fixed 100px alert.
+   Keep it in normal flow so wrapped campaign text cannot overlap navigation. */
+@media screen and (max-width: 767px) {
+  html body.cco_body:has(.mosad_sitewide_alert a[href="/7621303"]) #header {
+    position: relative !important;
+    margin-top: 0 !important;
+    background: #173f35 !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  html body.cco_body:has(.mosad_sitewide_alert:not([style*="display: none"]):not([style*="display:none"]) a[href="/7621303"]) #header {
+    margin-top: 64px !important;
+  }
+}
