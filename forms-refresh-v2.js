@@ -71,3 +71,94 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start);
   else start();
 })();
+
+/* Light Up event 24229 address-flow workaround.
+   Scoped to this event because ChabadOne's custom-code publisher is currently unavailable. */
+(function () {
+  'use strict';
+
+  var path = window.location.pathname || '';
+  var search = window.location.search || '';
+  var isLightUp =
+    /\/tools\/events\/register(?:_cdo|\.asp)?\/eventid\/24229(?:\/|$)/i.test(path) ||
+    /(?:^|[?&])eventid=24229(?:&|$)/i.test(search);
+  if (!isLightUp) return;
+
+  var scheduled = false;
+
+  function setText(element, value) {
+    if (element && element.textContent !== value) element.textContent = value;
+  }
+
+  function fieldRow(id) {
+    var field = document.getElementById(id);
+    return field && field.closest('.clearfix.small_vertical_padding');
+  }
+
+  function relabel(id, labelText, ariaLabel) {
+    var field = document.getElementById(id);
+    var row = fieldRow(id);
+    if (row) setText(row.querySelector('.label'), labelText);
+    if (field && ariaLabel) field.setAttribute('aria-label', ariaLabel);
+  }
+
+  function refine() {
+    scheduled = false;
+    document.documentElement.classList.add('tc-lightup-2026');
+
+    var section = document.getElementById('ReserversInformation');
+    if (!section) return;
+
+    setText(section.querySelector('.title.large'), 'Contact details');
+
+    Array.prototype.forEach.call(section.querySelectorAll('.regular'), function (element) {
+      var value = element.textContent || '';
+      if (/review the number of adults and children|sponsorship selection before submitting/i.test(value)) {
+        setText(element, 'We’ll use these details to send your confirmation and any important event updates.');
+      }
+    });
+
+    relabel('ReserversBillingAddress1', 'Street address', 'Street address');
+    relabel('ReserversBillingPostCode', 'Postal code', 'Postal code');
+
+    var firstNameRow = fieldRow('ReserversFirstName');
+    var phoneRow = fieldRow('ReserversPhone');
+    var addressRow = fieldRow('ReserversBillingAddress1');
+    var container = firstNameRow && firstNameRow.parentNode;
+    if (!container || !addressRow) return;
+
+    var addressIntro = document.getElementById('tc-lightup-address-intro');
+    if (!addressIntro) {
+      addressIntro = document.createElement('div');
+      addressIntro.id = 'tc-lightup-address-intro';
+      addressIntro.className = 'tc-lightup-address-intro';
+      addressIntro.innerHTML =
+        '<h3>Address</h3>' +
+        '<p>Kept with your registration and used to securely process an optional donation.</p>';
+    }
+
+    if (addressIntro.parentNode !== container || addressIntro.nextElementSibling !== addressRow) {
+      container.insertBefore(addressIntro, addressRow);
+    }
+    if (phoneRow && phoneRow.nextElementSibling !== addressIntro) {
+      container.insertBefore(phoneRow, addressIntro);
+    }
+  }
+
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    window.setTimeout(refine, 40);
+  }
+
+  function start() {
+    refine();
+    var body = document.getElementById('RegisterBody');
+    if (body) new MutationObserver(schedule).observe(body, { childList: true, subtree: true });
+    window.setTimeout(refine, 400);
+    window.setTimeout(refine, 1200);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
+  else start();
+})();
