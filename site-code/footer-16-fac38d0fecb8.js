@@ -110,6 +110,108 @@
       }
     }
 `;
+  styles.textContent += `
+    html.tc-lightup-2026 #RegisterSinglePage:has(#Performances) {
+      background: #fff !important;
+      box-shadow: 0 12px 36px rgba(17, 63, 88, .06) !important;
+    }
+
+    html.tc-lightup-2026 #RegisterBody:has(#Performances) {
+      max-width: 820px;
+      margin-inline: auto !important;
+      box-sizing: border-box;
+    }
+
+    html.tc-lightup-2026 #SecondaryFormItems:not([style*="display: none"]) {
+      display: flex;
+      flex-direction: column;
+      border: 0 !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage :is(#AdditionalInformation.tc-lightup-survey, #ReserversInformation, #Payment) {
+      margin-top: 22px !important;
+      padding: 20px 0 0 !important;
+      border: 0 !important;
+      border-top: 1px solid var(--lu-line) !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #tc-lightup-donation {
+      margin-top: 20px !important;
+      padding: 14px clamp(14px, 3vw, 20px) !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #AdditionalInformation.tc-lightup-survey .form-radio-item {
+      margin: 0 !important;
+      padding: 8px 0 !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      background: transparent !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #AdditionalInformation.tc-lightup-survey .form-radio-item label {
+      cursor: pointer;
+    }
+
+    html.tc-lightup-2026 #ReserversInformation div:has(> .small_vertical_padding #ReserversFirstName) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 16px;
+      row-gap: 12px;
+    }
+
+    html.tc-lightup-2026 #ReserversInformation div:has(> .small_vertical_padding #ReserversFirstName) > div {
+      min-width: 0;
+      grid-column: 1 / -1;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    html.tc-lightup-2026 #ReserversInformation .small_vertical_padding:has(
+      :is(#ReserversFirstName, #ReserversLastName, #ReserversBillingCity,
+          #ReserversBillingState, #ReserversBillingPostCode, #ReserversCountry)
+    ) {
+      grid-column: auto !important;
+    }
+
+    html.tc-lightup-2026 #ReserversInformation .small_vertical_padding:has(> .label + .float_left) > :is(.label, .float_left) {
+      display: block;
+      float: none !important;
+      width: auto !important;
+      margin: 0 !important;
+    }
+
+    html.tc-lightup-2026 #ReserversInformation .small_vertical_padding > .label {
+      padding-bottom: 4px;
+    }
+
+    html.tc-lightup-2026 #ReserversInformation .small_vertical_padding > .float_left > :is(input, select) {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    html.tc-lightup-2026 #SecondaryFormItems > #Summary {
+      order: 1;
+      margin-top: 22px !important;
+      padding: 14px 16px !important;
+      background: #f3f8f9 !important;
+    }
+
+    html.tc-lightup-2026 #SecondaryFormItems > #Buttons {
+      order: 2;
+    }
+
+    @media (max-width: 600px) {
+      html.tc-lightup-2026 #ReserversInformation div:has(> .small_vertical_padding #ReserversFirstName) {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      html.tc-lightup-2026 #Buttons #SubmitButton {
+        width: 100% !important;
+      }
+    }
+`;
   document.head.appendChild(styles);
 
   function start() {
