@@ -1586,3 +1586,39 @@ html body.home.cco_body #header:not(.on-scroll) #co_menu_container #tabContentMa
     margin-top: 0 !important;
   }
 }
+
+/* Light Up event 24229 address-flow workaround.
+   Scoped to this event because ChabadOne's custom-code publisher is currently unavailable. */
+html.tc-lightup-2026 #ReserversInformation .tc-lightup-address-intro {
+  grid-column: 1 / -1 !important;
+  margin: 8px 0 0 !important;
+  padding: 20px 0 2px !important;
+  border-top: 1px solid #e1e5e7 !important;
+}
+
+html.tc-lightup-2026 #ReserversInformation .tc-lightup-address-intro h3 {
+  margin: 0 !important;
+  color: #1d1d1f !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 680 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -.015em !important;
+}
+
+html.tc-lightup-2026 #ReserversInformation .tc-lightup-address-intro p {
+  max-width: 620px;
+  margin: 5px 0 0 !important;
+  color: #515154 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 600px) {
+  html.tc-lightup-2026 #ReserversInformation .tc-lightup-address-intro {
+    margin-top: 4px !important;
+    padding-top: 18px !important;
+  }
+}
