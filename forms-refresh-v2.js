@@ -162,3 +162,25 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
   else start();
 })();
+
+
+/* Light Up Maple Ridge 2026 registration experience.
+   Loads only for event 24377 and receipt pages, using a pinned event asset. */
+(function () {
+  'use strict';
+
+  var path = window.location.pathname || '';
+  var search = window.location.search || '';
+  var isMapleRidge =
+    /\/tools\/events\/register(?:_cdo|\.asp)?\/eventid\/24377(?:\/|$)/i.test(path) ||
+    /(?:^|[?&])eventid=24377(?:&|$)/i.test(search);
+  var isReceiptPath = /\/tools\/events\/register(?:_cdo|\.asp)?\/code\//i.test(path);
+  if (!isMapleRidge && !isReceiptPath) return;
+  if (document.querySelector('script[data-tc-maple-ridge-2026]')) return;
+
+  var script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/gh/rabbi-rgb/jewishtricities-web-assets@398aaff91366a67081cc5673256490896831f388/light-up-maple-ridge-2026.js';
+  script.defer = true;
+  script.setAttribute('data-tc-maple-ridge-2026', 'true');
+  document.head.appendChild(script);
+})();
