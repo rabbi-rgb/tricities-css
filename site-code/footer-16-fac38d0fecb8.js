@@ -161,6 +161,11 @@
       row-gap: 12px;
     }
 
+    html.tc-lightup-2026 #ReserversInformation div:has(> .small_vertical_padding #ReserversFirstName)::before,
+    html.tc-lightup-2026 #ReserversInformation div:has(> .small_vertical_padding #ReserversFirstName)::after {
+      display: none !important;
+    }
+
     html.tc-lightup-2026 #ReserversInformation div:has(> .small_vertical_padding #ReserversFirstName) > div {
       min-width: 0;
       grid-column: 1 / -1;
