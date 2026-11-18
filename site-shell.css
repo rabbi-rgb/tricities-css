@@ -2982,7 +2982,7 @@ html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:hover {
   }
 }
 @media screen and (min-width: 768px) {
-  html body.cco_body:has(.mosad_sitewide_alert:not([style*="display: none"]):not([style*="display:none"]) a[href="/7621303"]) #header {
+  html body.cco_body:has(.mosad_sitewide_alert:not([style*="display: none"]):not([style*="display:none"]) a[href="/7621303"]) #header:not(.on-scroll) {
     margin-top: 64px !important;
   }
 }
