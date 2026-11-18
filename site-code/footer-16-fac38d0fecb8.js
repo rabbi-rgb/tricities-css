@@ -7,6 +7,111 @@
     (/^\/tools\/events\/register\.asp$/i.test(path) && new URLSearchParams(location.search).get('eventid') === '24229');
   if (!isLightUp) return;
 
+  // Keep the registration styling independent of the donation script version.
+  var styles = document.createElement('style');
+  styles.id = 'tc-lightup-registration-polish';
+  styles.textContent = `
+    html.tc-lightup-2026 #Performances > .regular {
+      max-width: 60ch;
+      margin-bottom: 16px !important;
+    }
+
+    html.tc-lightup-2026 #Performances .performance {
+      overflow: hidden;
+      border-radius: 14px !important;
+      background: #f3f8f9 !important;
+    }
+
+    html.tc-lightup-2026 #Performances .toggle_message {
+      padding: 12px 16px !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage :is(
+      #tc-lightup-donation, #AdditionalInformation.tc-lightup-survey,
+      #Summary, #ReserversInformation, #Payment
+    ) {
+      margin-top: 16px !important;
+      padding: clamp(16px, 3vw, 24px) !important;
+      border-radius: 14px !important;
+      box-shadow: none !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #tc-lightup-donation {
+      background: #f3f8f9 !important;
+    }
+
+    html.tc-lightup-2026 #tc-lightup-donation:has(#tc-lightup-donation-opt-in) .tc-lightup-section-kicker {
+      display: none;
+    }
+
+    html.tc-lightup-2026 #tc-lightup-donation-title label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 36px;
+      margin: 0;
+      color: var(--lu-night);
+      font: 700 clamp(17px, 2.4vw, 21px)/1.35 Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #tc-lightup-donation-opt-in {
+      appearance: auto !important;
+      flex: 0 0 20px;
+      width: 20px !important;
+      height: 20px !important;
+      min-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      accent-color: #087a8c;
+      box-shadow: none !important;
+    }
+
+    html.tc-lightup-2026 #tc-lightup-donation .tc-lightup-donation__intro {
+      margin: 1px 0 0 30px;
+    }
+
+    html.tc-lightup-2026 #tc-lightup-donation-options:not([hidden]) {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--lu-line);
+    }
+
+    html.tc-lightup-2026 #tc-lightup-donation-options[hidden] {
+      display: none !important;
+    }
+
+    html.tc-lightup-2026 #tc-lightup-donation .tc-lightup-donation__choice {
+      min-height: 64px;
+      border-radius: 10px;
+    }
+
+    html.tc-lightup-2026 #AdditionalInformation.tc-lightup-survey .form-radio-item {
+      padding-block: 8px !important;
+      border-radius: 10px !important;
+      background: #f7fafb !important;
+    }
+
+    html.tc-lightup-2026 #AdditionalInformation.tc-lightup-survey .form-radio-item:has(input:checked) {
+      background: #e9f4f6 !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #Summary {
+      background: #f7fafb !important;
+    }
+
+    @media (max-width: 600px) {
+      html.tc-lightup-2026 #tc-lightup-donation .tc-lightup-donation__intro {
+        margin-left: 0;
+      }
+
+      html.tc-lightup-2026 #RegisterSinglePage :is(input[type="text"], input[type="email"], input[type="tel"], select) {
+        font-size: 16px !important;
+      }
+    }
+`;
+  document.head.appendChild(styles);
+
   function start() {
     var script = document.getElementById('tc-light-up-2026-script');
     if (!script || !script.src.includes('@3368a68a623401668e271203fc60425d2158d6e1/')) return;
