@@ -217,14 +217,80 @@
       }
     }
 `;
+  styles.textContent += `
+    html.tc-lightup-2026 #Summary #Totals.tc-lightup-free-rsvp > :not(.tc-lightup-free-admission),
+    html.tc-lightup-2026 #Summary .tc-lightup-free-admission[hidden] {
+      display: none !important;
+    }
+    html.tc-lightup-2026 #Summary .tc-lightup-free-admission {
+      color: var(--lu-night);
+      font-weight: 700;
+    }
+  `;
   document.head.appendChild(styles);
 
+  function improveRsvp(body) {
+    var fields = {
+      ReserversFirstName: ['First name', 'given-name'],
+      ReserversLastName: ['Last name', 'family-name'],
+      ReserversEmailAddress: ['Email address', 'email'],
+      ReserversBillingAddress1: ['Billing address', 'address-line1'],
+      ReserversBillingCity: ['City', 'address-level2'],
+      ReserversBillingState: ['Province or state', 'address-level1'],
+      ReserversBillingPostCode: ['Postal code', 'postal-code'],
+      ReserversCountry: ['Country', 'country-name'],
+      ReserversPhone: ['Phone number', 'tel']
+    };
+
+    function update() {
+      Object.keys(fields).forEach(function (id) {
+        var input = document.getElementById(id);
+        if (!input) return;
+        if (!input.labels?.length && !input.hasAttribute('aria-labelledby')) {
+          input.setAttribute('aria-label', fields[id][0]);
+        }
+        input.setAttribute('autocomplete', fields[id][1]);
+      });
+
+      var guests = body.querySelectorAll('#performance_32755_reservations .reservation');
+      guests.forEach(function (row, index) {
+        ['firstName', 'lastName'].forEach(function (suffix) {
+          var input = row.querySelector('input[id$="_' + suffix + '"]');
+          if (input) input.setAttribute('aria-label', 'Guest ' + (index + 1) + (suffix === 'firstName' ? ' first name' : ' last name'));
+        });
+      });
+
+      var buttonText = body.querySelector('#SubmitButton span');
+      var totals = body.querySelector('#Summary #Totals');
+      var amountCell = totals && totals.lastElementChild && totals.lastElementChild.lastElementChild;
+      if (!guests.length || !buttonText || !amountCell) return;
+      var total = Number(amountCell.textContent.replace(/[^0-9.-]/g, ''));
+      if (!Number.isFinite(total)) return;
+      var buttonLabel = total === 0 ? 'Confirm free RSVP' : 'Confirm RSVP and donate ' + amountCell.textContent.trim();
+      if (buttonText.textContent !== buttonLabel) buttonText.textContent = buttonLabel;
+
+      totals.classList.toggle('tc-lightup-free-rsvp', total === 0);
+      var freeLabel = totals.querySelector('.tc-lightup-free-admission');
+      if (!freeLabel) {
+        freeLabel = document.createElement('div');
+        freeLabel.className = 'tc-lightup-free-admission';
+        freeLabel.textContent = 'Free admission';
+        totals.prepend(freeLabel);
+      }
+      freeLabel.hidden = total !== 0;
+    }
+
+    update();
+    new MutationObserver(update).observe(body, { childList: true, subtree: true, characterData: true });
+  }
+
   function start() {
-    var script = document.getElementById('tc-light-up-2026-script');
-    if (!script || !script.src.includes('@3368a68a623401668e271203fc60425d2158d6e1/')) return;
     var body = document.getElementById('RegisterBody');
     if (!body) return;
+    improveRsvp(body);
 
+    var script = document.getElementById('tc-light-up-2026-script');
+    if (!script || !script.src.includes('@3368a68a623401668e271203fc60425d2158d6e1/')) return;
     function apply() {
       var card = document.getElementById('tc-lightup-donation');
       if (!card || card.querySelector('input[type="checkbox"]')) return;
