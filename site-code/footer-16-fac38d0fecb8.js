@@ -227,6 +227,87 @@
       font-weight: 700;
     }
   `;
+
+  styles.textContent += `
+    html.tc-lightup-2026 #RegisterSinglePage:has(#Performances) {
+      border: 0 !important;
+      box-shadow: none !important;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    html.tc-lightup-2026 #RegisterBody {
+      color: #1d1d1f;
+      --lu-night: #1d1d1f;
+      --lu-ink: #1d1d1f;
+      --lu-muted: #515154;
+      --lu-teal: #006b75;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage :is(#tc-lightup-donation, #AdditionalInformation.tc-lightup-survey, #ReserversInformation, #Summary, #Payment) {
+      padding: 0 !important;
+      margin-top: 28px !important;
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #Summary .title.large:has(+ #Totals.tc-lightup-free-rsvp),
+    html.tc-lightup-2026 #RegisterSinglePage #Summary:has(#Totals.tc-lightup-free-rsvp) .title.large {
+      display: none;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #tc-lightup-donation-options {
+      border: 0;
+      padding-top: 0;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage #Performances .performance {
+      border-color: #e1e1e5 !important;
+      background: #fafafa !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage :is(#SubmitButton, #performance_32755_addAttendeeButton) {
+      min-height: 46px;
+      border: 0 !important;
+      border-radius: 9px !important;
+      background: #006b75 !important;
+      color: #fff !important;
+      box-shadow: none !important;
+      font: 650 15px/1.25 system-ui, -apple-system, sans-serif !important;
+      letter-spacing: normal !important;
+      text-transform: none !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage :is(#SubmitButton, #performance_32755_addAttendeeButton):enabled:hover {
+      background: #00555e !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage :is(#SubmitButton, #performance_32755_addAttendeeButton):disabled {
+      background: #e7e7eb !important;
+      color: #505057 !important;
+      opacity: 1 !important;
+    }
+
+    html.tc-lightup-2026 #RegisterSinglePage :is(button, [type="checkbox"], [type="radio"]):focus-visible {
+      outline: 2px solid #006b75 !important;
+      outline-offset: 3px !important;
+    }
+
+    html.tc-lightup-2026 #Summary.tc-lightup-review-in-order,
+    html.tc-lightup-2026 #Summary.tc-lightup-review-in-order + #Buttons {
+      order: 0;
+    }
+
+    html.tc-lightup-2026 .tc-lightup-guest-error {
+      margin: 0 12px 8px;
+      color: #a3211c;
+      font: 500 13px/1.4 system-ui, sans-serif;
+    }
+
+    html.tc-lightup-2026 #Performances input[aria-invalid="true"] {
+      border-color: #a3211c !important;
+    }
+  `;
   document.head.appendChild(styles);
 
   function improveRsvp(body) {
@@ -258,6 +339,50 @@
           var input = row.querySelector('input[id$="_' + suffix + '"]');
           if (input) input.setAttribute('aria-label', 'Guest ' + (index + 1) + (suffix === 'firstName' ? ' first name' : ' last name'));
         });
+      });
+
+      var contact = body.querySelector('#ReserversInformation');
+      var donation = body.querySelector('#tc-lightup-donation');
+      var survey = body.querySelector('#AdditionalInformation');
+      var summary = body.querySelector('#Summary');
+      var buttons = body.querySelector('#Buttons');
+      var payment = body.querySelector('#Payment');
+      var ordered = [contact, donation, survey, payment, summary, buttons].filter(Boolean);
+      for (var position = ordered.length - 2; position >= 0; position--) {
+        var next = ordered[position + 1];
+        if (ordered[position].parentNode === next.parentNode && ordered[position].nextElementSibling !== next) {
+          next.before(ordered[position]);
+        }
+      }
+      if (summary) summary.classList.add('tc-lightup-review-in-order');
+
+      var notice = body.querySelector('#ValidationNotice');
+      var missing = notice && notice.textContent.match(/(first|last) name for reservation #(\d+) cannot be empty/i);
+      guests.forEach(function (row, index) {
+        var error = row.querySelector('.tc-lightup-guest-error');
+        var field = missing && Number(missing[2]) === index + 1 &&
+          row.querySelector('input[id$="_' + missing[1].toLowerCase() + 'Name"]');
+        row.querySelectorAll('input[data-tc-lightup-invalid]').forEach(function (input) {
+          if (input === field) return;
+          input.removeAttribute('aria-invalid');
+          input.removeAttribute('aria-describedby');
+          input.removeAttribute('data-tc-lightup-invalid');
+        });
+        if (!field) {
+          if (error) error.remove();
+          return;
+        }
+        if (!error) {
+          error = document.createElement('p');
+          error.className = 'tc-lightup-guest-error';
+          error.id = row.id + '-name-error';
+          row.appendChild(error);
+        }
+        var message = 'Enter guest ' + (index + 1) + '’s ' + missing[1].toLowerCase() + ' name.';
+        if (error.textContent !== message) error.textContent = message;
+        field.setAttribute('aria-invalid', 'true');
+        field.setAttribute('aria-describedby', error.id);
+        field.setAttribute('data-tc-lightup-invalid', '');
       });
 
       var buttonText = body.querySelector('#SubmitButton span');
