@@ -1580,8 +1580,46 @@ html body.home.cco_body #header:not(.on-scroll) #co_menu_container #tabContentMa
 
 
 
-/* Clear the campaign banner offset when the desktop navigation sticks. */
+/* Campaign announcement. Keep the desktop offset in sync with the strip height. */
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) {
+  min-height: 40px !important;
+  padding: 9px 42px !important;
+  background: #f1f5f1 !important;
+  border-bottom: 1px solid #dae5db !important;
+  color: #284d3c !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .alert-links {
+  text-align: center !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .alert-links > a:not(.more-link) {
+  color: #284d3c !important;
+  -webkit-text-fill-color: #284d3c !important;
+  font: 500 13px/20px 'Montserrat', Arial, sans-serif !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .more-link {
+  display: none !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) a:focus-visible {
+  outline-color: #284d3c !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close {
+  top: 50% !important;
+  right: 5px !important;
+  transform: translateY(-50%) !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:before,
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:after {
+  background: #284d3c !important;
+}
+html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) .close:hover {
+  background: #e0ebe1 !important;
+}
 @media screen and (min-width: 768px) {
+  html body.cco_body:has(.mosad_sitewide_alert:not([style*="display: none"]):not([style*="display:none"]) a[href="/7621303"]) #header {
+    margin-top: 40px !important;
+  }
   html body.cco_body:has(.mosad_sitewide_alert:not([style*="display: none"]):not([style*="display:none"]) a[href="/7621303"]) #header.on-scroll {
     margin-top: 0 !important;
   }
