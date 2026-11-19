@@ -2208,7 +2208,7 @@ body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore:hover {
 @media (max-width: 1024px) {
   html body.cco_body.sites-article .co_local_menu,
   html body.cco_body.sites-article [data-list-name="local navigation"],
-  html body.cco_body.sites-article .section_title,
+  html body.cco_body.sites-article .co_local_menu .section_title,
   html body.cco_body.sites-article .co_local_menu .header,
   html body.cco_body.sites-article .co_local_menu a {
     display: none !important;
@@ -2296,30 +2296,30 @@ body:has(.hp-table) .hp_content_wrapper .upcoming_events a.readMore:hover {
 
 
 /* Reduce top space above Hebrew School registration form */
-.master-content-wrapper {
+html:not(.tc-chai):not(.tc-high-holidays-minisite) body.form:has(form[id="6458566"]) .master-content-wrapper {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-.article-header {
+html:not(.tc-chai):not(.tc-high-holidays-minisite) body.form:has(form[id="6458566"]) .article-header {
   padding-top: 10px !important;
   padding-bottom: 12px !important;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-.article-header__title {
+html:not(.tc-chai):not(.tc-high-holidays-minisite) body.form:has(form[id="6458566"]) .article-header__title {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
 /* Bring form closer to the title */
-#formContainer,
-#co_content_container,
-#ContentBody,
-.content-area-parent {
+html:not(.tc-chai):not(.tc-high-holidays-minisite) body.form:has(form[id="6458566"]) #formContainer,
+html:not(.tc-chai):not(.tc-high-holidays-minisite) body.form:has(form[id="6458566"]) #co_content_container,
+html:not(.tc-chai):not(.tc-high-holidays-minisite) body.form:has(form[id="6458566"]) #ContentBody,
+html:not(.tc-chai):not(.tc-high-holidays-minisite) body.form:has(form[id="6458566"]) .content-area-parent {
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
