@@ -75,3 +75,14 @@ test('phone recipe categories stack within the content width', () => {
   assert.equal(dom.window.getComputedStyle(dom.window.document.querySelector('td.separator')).display, 'none');
   dom.window.close();
 });
+
+
+test('school navigation wraps and registration stays in the normal flow on narrow screens', () => {
+  const rule = css.slice(css.indexOf('/* The native school menu has a fixed'));
+  const body = rule.slice(rule.indexOf('{') + 1, rule.lastIndexOf('}'));
+  const dom = new JSDOM(`<!doctype html><html><head><link rel="stylesheet" href="/themes/hebrew_school/new-styles.css"><style>${body}</style></head><body><div id="chabad_head"><div class="navLogo"><div class="NavButton"><a href="/6458566">Register Here</a></div></div><div id="navigation"><div class="chabad_menu_content"><ul id="menu"><li>Home</li><li>Curriculum</li></ul></div></div></div></body></html>`);
+  assert.equal(dom.window.getComputedStyle(dom.window.document.querySelector('#menu')).flexWrap, 'wrap');
+  assert.equal(dom.window.getComputedStyle(dom.window.document.querySelector('.NavButton')).position, 'static');
+  assert.equal(dom.window.getComputedStyle(dom.window.document.querySelector('#chabad_head')).height, 'auto');
+  dom.window.close();
+});
