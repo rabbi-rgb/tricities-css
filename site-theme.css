@@ -4616,18 +4616,18 @@ html:has(meta[name="scope-aid"][content="420700"]) #co_index_container a:focus-v
   outline-offset: 3px;
 }
 @media screen and (max-width: 640px) {
-  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index,
-  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody,
-  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row,
-  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row > td.item {
+  html:has(meta[name="scope-aid"]:is([content="420700"], [content="102819"])) #BodyWrapper.co_index,
+  html:has(meta[name="scope-aid"]:is([content="420700"], [content="102819"])) #BodyWrapper.co_index > tbody,
+  html:has(meta[name="scope-aid"]:is([content="420700"], [content="102819"])) #BodyWrapper.co_index > tbody > tr.row,
+  html:has(meta[name="scope-aid"]:is([content="420700"], [content="102819"])) #BodyWrapper.co_index > tbody > tr.row > td.item {
     display: block !important;
     width: 100% !important;
     box-sizing: border-box;
   }
-  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row > td.item {
+  html:has(meta[name="scope-aid"]:is([content="420700"], [content="102819"])) #BodyWrapper.co_index > tbody > tr.row > td.item {
     padding: 0 0 28px !important;
   }
-  html:has(meta[name="scope-aid"][content="420700"]) #BodyWrapper.co_index > tbody > tr.row > td.separator {
+  html:has(meta[name="scope-aid"]:is([content="420700"], [content="102819"])) #BodyWrapper.co_index > tbody > tr.row > td.separator {
     display: none !important;
   }
 }
@@ -5574,4 +5574,16 @@ html:has(meta[property="og:url"][content*="/aid/6736431/"]) .article_index .row 
   html:has(#photos) body.cco_body #co_content_container > .clearfix > .body_wrapper {
     padding-top: 24px !important;
   }
+}
+
+/* Native Hebrew School theme: keep long school names above the menu.
+   The legacy 32% side margins force four lines into a fixed-height hero. */
+html:not(.tc-chai):not(.tc-high-holidays-minisite):has(link[href*="/themes/hebrew_school/"]) body #chabad_head .chabad_content_head .chabad_titles .HeaderTitle {
+  width: auto !important;
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  padding: 50px 24px 24px !important;
+  box-sizing: border-box !important;
+  font-size: clamp(32px, 4.7vw, 60px) !important;
+  line-height: 1.15 !important;
 }

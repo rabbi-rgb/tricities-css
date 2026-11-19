@@ -51,3 +51,27 @@ test('protected custom sites never inherit school header spacing, even with the 
     dom.window.close();
   }
 });
+
+test('Hebrew School header has room for long names without changing other native themes', () => {
+  const rule = css.slice(css.indexOf('/* Native Hebrew School theme:'));
+  const school = new JSDOM(`<!doctype html><html><head><link rel="stylesheet" href="/themes/hebrew_school/new-styles.css"><style>${rule}</style></head><body><div id="chabad_head"><div class="chabad_content_head"><div class="chabad_titles"><p class="HeaderTitle">Tri-City Chabad Hebrew Schools</p></div></div></div></body></html>`);
+  const title = school.window.document.querySelector('.HeaderTitle');
+  assert.equal(school.window.getComputedStyle(title).marginLeft, 'auto');
+  assert.equal(school.window.getComputedStyle(title).lineHeight, '1.15');
+  school.window.document.querySelector('link').remove();
+  assert.notEqual(school.window.getComputedStyle(title).lineHeight, '1.15');
+  school.window.close();
+});
+
+test('phone recipe categories stack within the content width', () => {
+  const start = css.indexOf('@media screen and (max-width: 640px) {', css.indexOf('content="420700"'));
+  const media = css.slice(start, css.indexOf('\n}\n', start) + 3);
+  const body = media.slice(media.indexOf('{') + 1, media.lastIndexOf('}'));
+  const dom = new JSDOM(`<!doctype html><html><head><meta name="scope-aid" content="102819"><style>${body}</style></head><body><table id="BodyWrapper" class="co_index double nested"><tbody><tr class="row"><td class="item left_column">Latkes</td><td class="separator"></td><td class="item right_column">Doughnuts</td></tr></tbody></table></body></html>`);
+  for (const item of dom.window.document.querySelectorAll('td.item')) {
+    assert.equal(dom.window.getComputedStyle(item).display, 'block');
+    assert.equal(dom.window.getComputedStyle(item).width, '100%');
+  }
+  assert.equal(dom.window.getComputedStyle(dom.window.document.querySelector('td.separator')).display, 'none');
+  dom.window.close();
+});
