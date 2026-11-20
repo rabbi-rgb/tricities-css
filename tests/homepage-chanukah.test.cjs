@@ -11,7 +11,9 @@ test('waits for asynchronous event cards and inserts one compact link immediatel
  await new Promise(r=>dom.window.setTimeout(r,0));assert.equal(d.querySelector('#tc-home-chanukah'),null);
  events.innerHTML='<div class="injected-event-card"><a href="/existing">Existing event</a></div>';
  await new Promise(r=>dom.window.setTimeout(r,0));run(dom);
- const card=d.querySelector('#tc-home-chanukah');assert.equal(events.nextElementSibling,card);assert.equal(card.nextElementSibling.id,'programs');
+ const card=d.querySelector('#tc-home-chanukah'),section=d.querySelector('#tc-home-chanukah-section');assert.equal(events.nextElementSibling,section);assert.equal(section.nextElementSibling.id,'programs');assert.equal(card.parentElement,section);
+ assert.equal(d.querySelectorAll('#tc-home-chanukah-section').length,1);
+ assert.match(d.querySelector('#tc-home-chanukah-styles').textContent,/#tc-home-chanukah-section\{[^}]*padding:44px 0;[^}]*background:#fff/);
  assert.equal(d.querySelectorAll('#tc-home-chanukah').length,1);assert.equal(d.querySelectorAll('#tc-home-chanukah-styles').length,1);
  assert.equal(card.querySelector('a').href,'https://www.jewishtricities.com/7629340');
  assert.equal(card.querySelector('p').textContent,'A celebration for every age and stage here in the Tri-Cities.');
