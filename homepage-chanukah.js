@@ -11,7 +11,8 @@
       var style = document.createElement('style');
       style.id = 'tc-home-chanukah-styles';
       style.textContent = [
-        'html body #tc-home-chanukah{box-sizing:border-box;width:calc(100% - 48px);max-width:1200px;margin:0 auto 42px;padding:24px 30px;display:flex;align-items:center;gap:24px;background:#143f49;color:#fff;border-radius:11px;text-align:left;font-family:Montserrat,Arial,sans-serif;}',
+        'html body #tc-home-chanukah-section{box-sizing:border-box;width:100%;margin:0;padding:44px 0;background:#fff;border-top:1px solid #e4e9e6;border-bottom:1px solid #e4e9e6;}',
+        'html body #tc-home-chanukah{box-sizing:border-box;width:calc(100% - 48px);max-width:1200px;margin:0 auto;padding:28px 30px;display:flex;align-items:center;gap:24px;background:#143f49;color:#fff;border-radius:11px;text-align:left;font-family:Montserrat,Arial,sans-serif;}',
         'html body #tc-home-chanukah *{box-sizing:border-box;}',
         'html body #tc-home-chanukah .tc-hc-copy{flex:1;min-width:0;}',
         'html body #tc-home-chanukah h2{font-family:Montserrat,Arial,sans-serif;font-size:26px;line-height:1.2;font-weight:700;letter-spacing:-.5px;color:#fff;margin:0 0 8px;padding:0;text-transform:none;}',
@@ -26,7 +27,7 @@
         'html body #tc-home-chanukah .tc-hc-art i:nth-child(5){top:-12px;height:64px;}',
         'html body #tc-home-chanukah .tc-hc-art:before{content:"";position:absolute;left:0;top:32px;width:77px;height:26px;border:3px solid #eacd87;border-top:0;border-radius:0 0 26px 26px;}',
         'html body #tc-home-chanukah .tc-hc-art:after{content:"";position:absolute;bottom:2px;left:25px;width:27px;height:3px;background:#eacd87;}',
-        '@media(max-width:820px){html body #tc-home-chanukah{flex-wrap:wrap;gap:18px;padding:24px;width:calc(100% - 32px);}html body #tc-home-chanukah .tc-hc-copy{flex-basis:calc(100% - 100px);}html body #tc-home-chanukah .tc-hc-link{width:100%;}html body #tc-home-chanukah h2{font-size:23px;}}',
+        '@media(max-width:820px){html body #tc-home-chanukah-section{padding:28px 0;}html body #tc-home-chanukah{flex-wrap:wrap;gap:18px;padding:24px;width:calc(100% - 32px);}html body #tc-home-chanukah .tc-hc-copy{flex-basis:calc(100% - 100px);}html body #tc-home-chanukah .tc-hc-link{width:100%;}html body #tc-home-chanukah h2{font-size:23px;}}',
         '@media(max-width:380px){html body #tc-home-chanukah .tc-hc-art{display:none;}html body #tc-home-chanukah .tc-hc-copy{flex-basis:100%;}html body #tc-home-chanukah{padding:22px;}}'
       ].join('\n');
       document.head.appendChild(style);
@@ -37,7 +38,10 @@
       card.innerHTML = '<div class="tc-hc-art" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>' +
         '<div class="tc-hc-copy"><h2 id="tc-hc-heading">Chanukah in the Tri-Cities</h2><p>A celebration for every age and stage here in the Tri-Cities.</p></div>' +
         '<a class="tc-hc-link" href="/7629340">Explore Chanukah <span aria-hidden="true">&rarr;</span></a>';
-      events.insertAdjacentElement('afterend', card);
+      var section = document.createElement('div');
+      section.id = 'tc-home-chanukah-section';
+      section.appendChild(card);
+      events.insertAdjacentElement('afterend', section);
       return true;
     }
     if (insert()) return;
