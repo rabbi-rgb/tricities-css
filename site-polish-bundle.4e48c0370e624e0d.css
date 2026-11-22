@@ -1580,6 +1580,18 @@ html body.home.cco_body #header:not(.on-scroll) #co_menu_container #tabContentMa
 
 
 
+/* Separate the mobile navigation colors from the campaign alert. */
+@media screen and (max-width: 767px) {
+  html body.cco_body:has(.mosad_sitewide_alert a[href="/7621303"]) #header {
+    background: #fff !important;
+  }
+  html body.cco_body:has(.mosad_sitewide_alert a[href="/7621303"]) #header #header_branding .site_title,
+  html body.cco_body:has(.mosad_sitewide_alert a[href="/7621303"]) #header #header_branding .site_title a {
+    color: #0e6e7b !important;
+    -webkit-text-fill-color: #0e6e7b !important;
+  }
+}
+
 /* Campaign announcement. Keep the desktop offset in sync with the strip height. */
 html body.cco_body .mosad_sitewide_alert:has(a[href="/7621303"]) {
   min-height: 40px !important;
