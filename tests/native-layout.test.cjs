@@ -76,6 +76,25 @@ test('phone recipe categories stack within the content width', () => {
   dom.window.close();
 });
 
+test('mobile school homepage lets the title and subtitle flow inside the hero', () => {
+  const start = css.indexOf('@media', css.indexOf('/* Keep the school homepage copy'));
+  const rules = css.slice(start, css.indexOf('\n}\n', start) + 2);
+  const declarations = rules.slice(rules.indexOf('{') + 1, rules.lastIndexOf('}'));
+  const dom = new JSDOM(`<!doctype html><html><head><link rel="stylesheet" href="/themes/hebrew_school/new-styles.css"><style>${declarations}</style></head><body class="section_root mobile"><div id="chabad_body_page"><div id="chabad_head"><div class="chabad_content_head"><table><tbody><tr><td><p class="HeaderTitle">Tri-City Chabad Hebrew School</p></td></tr><tr><td class="chabad_text_head"><div class="HeaderDescription">Inspiring Jewish Pride and Identity in Jewish Children<br></div></td></tr></tbody></table></div></div></div></body></html>`);
+  const { document } = dom.window;
+  const style = (selector) => dom.window.getComputedStyle(document.querySelector(selector));
+
+  assert.match(rules, /max-width: 767px/);
+  assert.equal(style('.chabad_content_head').height, 'auto');
+  assert.equal(style('.chabad_content_head').minHeight, '248px');
+  assert.equal(style('.HeaderTitle').padding, '0px');
+  assert.equal(style('.HeaderDescription').lineHeight, '1.35');
+
+  document.body.classList.remove('section_root');
+  assert.equal(style('.chabad_content_head').minHeight, '');
+  dom.window.close();
+});
+
 
 test('school navigation wraps and registration stays in the normal flow on narrow screens', () => {
   const rule = css.slice(css.indexOf('/* The native school menu has a fixed'));
