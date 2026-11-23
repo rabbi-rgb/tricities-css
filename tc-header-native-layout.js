@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!isHighHolidaysPage) {
     var link = document.createElement("link");
     link.rel = "stylesheet";
-    link.href = "https://rabbi-rgb.github.io/tricities-css/site-theme.css?v=44";
+    link.href = "https://rabbi-rgb.github.io/tricities-css/site-theme.css?v=45";
     document.head.appendChild(link);
   }
 })();
