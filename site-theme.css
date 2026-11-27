@@ -5675,3 +5675,82 @@ html:not(.tc-chai):not(.tc-high-holidays-minisite):has(link[href*="/themes/hebre
     padding: 0 !important;
   }
 }
+
+/* Light Up 2026 survey. Preserve the old field for historical responses. */
+:is(#AdditionalInformation #id_tran7609191-1, #formContainer form[id="7609191"] #id_1) {
+  display: none !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) {
+  gap: 0 !important;
+  padding: 0 !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3)
+  :is(.form-label-left, .form-label-top)::after {
+  content: none !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .label-message {
+  display: block !important;
+  margin: 8px 0 0 !important;
+  color: #526477 !important;
+  font: 400 15px/1.6 Inter, Arial, sans-serif !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-single-column {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px 10px !important;
+  width: 100% !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-single-column > .clearfix {
+  display: none !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-checkbox-item {
+  display: flex !important;
+  align-items: center !important;
+  box-sizing: border-box !important;
+  clear: none !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 48px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 1px solid #dce0df !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-checkbox-item > label {
+  flex: 1;
+  align-self: stretch;
+  display: flex !important;
+  align-items: center;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 11px 12px !important;
+  color: #243b4e !important;
+  font: 500 15px/1.4 Inter, Arial, sans-serif !important;
+  cursor: pointer;
+  white-space: normal !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-checkbox-item:has(input:checked) {
+  border-color: #31536d !important;
+  background: #edf2f5 !important;
+}
+
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-checkbox-item:has(input:focus-visible) {
+  outline: 2px solid #31536d;
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  :is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-single-column {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
