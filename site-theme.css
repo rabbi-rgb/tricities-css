@@ -5725,6 +5725,11 @@ html:not(.tc-chai):not(.tc-high-holidays-minisite):has(link[href*="/themes/hebre
   box-shadow: none !important;
 }
 
+:is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-checkbox-item > input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-inline-start: 12px !important;
+}
+
 :is(#AdditionalInformation #id_tran7609191-3, #formContainer form[id="7609191"] #id_3) .form-checkbox-item > label {
   flex: 1;
   align-self: stretch;
